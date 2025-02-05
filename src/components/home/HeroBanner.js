@@ -97,7 +97,6 @@ const StatCard = ({ number, suffix, prefix, label }) => (
 
 const HeroBanner = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
-    const [statsRef, statsInView] = useInView({ threshold: 0.1 });
 
     return (
         <div className="relative z-10 px-2 md:px-4 h-full flex justify-start items-start overflow-x-hidden overflow-y-hidden">
@@ -112,31 +111,6 @@ const HeroBanner = () => {
                             onHover={(isHovered) => setHoveredIndex(isHovered ? index : null)}
                         />
                     ))}
-                </div>
-                {/* Stats Section */}
-                <div ref={statsRef} className={`
-                    w-screen bg-white/5 backdrop-blur-md
-                    transition-all duration-1000
-                    ${statsInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
-                `}>
-                    <div className='flex flex-col md:flex-row items-center justify-around gap-8 py-16'>
-                        <StatCard
-                            number={7600}
-                            suffix="+"
-                            label="Farmers Empowered"
-                        />
-                        <StatCard
-                            number={220}
-                            prefix="₹ "
-                            suffix=" Cr"
-                            label="Credit Facilitated"
-                        />
-                        <StatCard
-                            number={40000}
-                            suffix="+"
-                            label="Acres Cultivated per Season"
-                        />
-                    </div>
                 </div>
             </div>
         </div>

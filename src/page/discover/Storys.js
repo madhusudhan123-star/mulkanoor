@@ -17,10 +17,10 @@ const Storys = () => {
     <div className="min-h-screen bg-harvest">
       {/* Hero Section with Video */}
       <div className="relative h-screen">
-        <video 
+        <video
           className="w-full h-full object-cover"
-          autoPlay 
-          muted 
+          autoPlay
+          muted
           loop
           playsInline
         >
@@ -37,7 +37,7 @@ const Storys = () => {
       </div>
 
       {/* History Section */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -79,7 +79,7 @@ const Storys = () => {
       <section className="bg-farmland py-16 relative">
         <div className="absolute inset-0 pattern-leaves opacity-10"></div>
         <div className="max-w-6xl mx-auto px-4 relative">
-          <motion.p 
+          <motion.p
             className="text-xl text-center text-gray-700 mb-12 max-w-4xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -95,20 +95,41 @@ const Storys = () => {
         <div className="absolute inset-0 pattern-field opacity-10"></div>
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center text-earth-500">Our Principles</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          {/* Updated Principles Grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {principles.map((principle, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white/80 p-6 rounded-lg shadow-grain hover:shadow-xl transition-all duration-300 backdrop-blur-sm"
+                transition={{
+                  delay: index * 0.1,
+                  duration: 0.5
+                }}
+                whileHover={{
+                  scale: 1.05,
+                  rotate: [0, 1, -1, 0],
+                  transition: { duration: 0.3 }
+                }}
+                className="relative group"
               >
-                <h3 className="text-xl font-semibold mb-2 text-crop-400">{principle.title}</h3>
-                <p className="text-earth-400">{principle.description}</p>
+                <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-transparent rounded-xl transform group-hover:scale-105 transition-transform duration-300"></div>
+                <div className="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-earth-200/30 relative z-10 h-full flex flex-col">
+                  <div className="bg-earth-100/50 w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:bg-earth-200/50 transition-colors duration-300">
+                    <span className="text-2xl text-earth-600">{index + 1}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-crop-600">{principle.title}</h3>
+                  <p className="text-earth-600/90 flex-grow">{principle.description}</p>
+                  <div className="h-1 w-20 bg-gradient-to-r from-crop-400 to-crop-500 mt-4 group-hover:w-full transition-all duration-300"></div>
+                </div>
               </motion.div>
             ))}
           </div>
+
+          {/* Additional Decorative Elements */}
+          <div className="absolute -bottom-4 left-0 w-full h-8 bg-gradient-to-t from-earth-50/20 to-transparent"></div>
+          <div className="absolute -top-4 left-0 w-full h-8 bg-gradient-to-b from-earth-50/20 to-transparent"></div>
         </div>
       </section>
     </div>

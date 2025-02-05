@@ -9,7 +9,7 @@ const Navbar = () => {
     const menuItems = [
         {
             title: 'Home',
-            path: '#home'
+            path: '/'
             // Home no longer has submenu
         },
         {
@@ -18,10 +18,10 @@ const Navbar = () => {
             submenu: [
                 { title: 'Our Story', path: '/discover/story' },
                 { title: 'Mission & Vision', path: '/discover/mission' },
-                { title: 'Leadership', path: '#leadership' },
-                { title: 'Milestones', path: '#awards' },
-                { title: 'Endorsed by Esteemed Voices', path: '#awards' },
-                { title: 'Organization Structure', path: '#awards' },
+                { title: 'Leadership', path: '/discover/leadership' },
+                { title: 'Milestones', path: '/discover/milestones' },
+                { title: 'Endorsed by Esteemed Voices', path: '/discover/endorsed' },
+                { title: 'Organization Structure', path: '/discover/organization' },
             ]
         },
         {
@@ -33,9 +33,9 @@ const Navbar = () => {
             title: 'Product',
             path: '#services',
             submenu: [
-                { title: 'Rice', path: '#agri-support' },
-                { title: 'Paddy', path: '#financial' },
-                { title: 'Cotton', path: '#training' },
+                { title: 'Rice', path: '/product/rice' },
+                { title: 'Paddy', path: '/product/paddy' },
+                { title: 'Cotton', path: '/product/cotton' },
             ]
         },
         {
@@ -92,7 +92,9 @@ const Navbar = () => {
 
                     {/* Center - Logo */}
                     <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                        <img src={logo} alt="Logo" className="h-20 w-auto drop-shadow-md hover:scale-105 transition-transform" />
+                        <a href='/'>
+                            <img src={logo} alt="Logo" className="h-20 w-auto drop-shadow-md hover:scale-105 transition-transform" />
+                        </a>
                     </div>
 
                     {/* Right - Social Icons */}
