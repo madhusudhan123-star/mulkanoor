@@ -30,45 +30,47 @@ const Home = () => {
         <div className="relative overflow-x-hidden">
             {/* Background Image - Only visible after first section */}
             <div
-                className="fixed top-0 left-0 w-full bg-cover bg-center bg-no-repeat bg-fixed"
+                className="fixed top-0 left-0 w-full bg-cover bg-center bg-no-repeat"
                 style={{
                     backgroundImage: `url(${banner})`,
                     height: "100vh",
+                    width: "100vw",
                     zIndex: -1,
-                    opacity: darkOverlay ? 1 : 0,
-                    transition: 'opacity 0.7s ease-in-out'
+                    overflowX: 'hidden',
+                    objectFit: 'cover',
+                    objectPosition: 'center'
                 }}
             >
-                <div className={`absolute inset-0 transition-colors duration-700 ${darkOverlay ? 'bg-black/50' : 'bg-black/20'}`} />
+                <div className={`absolute inset-0 transition-colors duration-700`} />
             </div>
 
-            {/* Content Sections */}
-            <div className="relative">
-                {/* Video Hero Section - Full height */}
-                <section className="h-screen">
+            {/* Content Container - Add max-width and center alignment */}
+            <div className="relative max-w-[100vw] mx-auto overflow-x-hidden">
+                {/* Video Hero Section */}
+                <section className="h-[calc(100vh-60px)] md:h-screen w-full overflow-hidden">
                     <Head />
                 </section>
 
-                {/* HeroBanner Section - Starts after video */}
-                <section className="min-h-screen bg-transparent">
+                {/* HeroBanner Section */}
+                <section className="min-h-screen bg-transparent w-full overflow-hidden">
                     <HeroBanner />
                 </section>
 
                 {/* Rest of the content */}
-                <div className="bg-white text-black">
-                    <div className="container mx-auto px-4 py-16">
+                <div className="bg-white text-black w-full overflow-hidden">
+                    <div className="container mx-auto px-4 md:px-8 py-8 md:py-16">
                         <Second />
                     </div>
-                    <div className="container mx-auto px-4 py-16">
+                    <div className="container mx-auto px-4 md:px-8 py-8 md:py-16">
                         <Third />
                     </div>
-                    <div className="container mx-auto px-4 py-16">
+                    <div className="container mx-auto px-4 md:px-8 py-8 md:py-16">
                         <Fourth />
                     </div>
-                    <div className="container mx-auto px-4 py-16">
+                    <div className="container mx-auto px-4 md:px-8 py-8 md:py-16">
                         <Five />
                     </div>
-                    <div className="w-screen">
+                    <div className="w-full md:w-screen overflow-hidden">
                         <Six />
                     </div>
                 </div>

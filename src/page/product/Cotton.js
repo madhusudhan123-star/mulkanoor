@@ -57,7 +57,7 @@ const Cotton = () => {
                         transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
                     />
                 </motion.div>
-                
+
                 <div className="relative z-10 h-full flex items-center justify-center">
                     <motion.div
                         className="text-center"
@@ -122,7 +122,7 @@ const Cotton = () => {
                             Performance Metrics
                         </h2>
                     </div>
-                    
+
                     <div className="overflow-x-auto p-6">
                         <table className="w-full">
                             <thead>

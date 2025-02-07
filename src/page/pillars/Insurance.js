@@ -1,0 +1,325 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaShieldAlt, FaSun, FaGraduationCap, FaHandHoldingHeart } from 'react-icons/fa';
+import { GiReceiveMoney, GiHealthNormal } from 'react-icons/gi';
+import { BiSolidBank } from 'react-icons/bi';
+import { MdElderlyWoman } from 'react-icons/md';
+
+const Insurance = () => {
+    const services = [
+        {
+            title: "Group Insurance",
+            stats: {
+                premium: "32,69,581",
+                claimed: "272.30 Lakhs",
+                beneficiaries: 1541,
+                year: "1996-2016"
+            },
+            icon: <FaShieldAlt className="text-5xl" />,
+            description: "Coverage linked to crop loans up to ₹1,00,000 with death benefit settlement"
+        },
+        {
+            title: "Accident Coverage",
+            stats: {
+                coverage: "1,00,000",
+                claimed: "30.00 Lakhs",
+                beneficiaries: 59,
+                year: "Since 1995"
+            },
+            icon: <GiHealthNormal className="text-5xl" />,
+            description: "Janatha Group Accident Insurance with IFFCO fertilizer bonus coverage"
+        },
+        {
+            title: "Solar Initiative",
+            stats: {
+                capacity: "500 KWp",
+                facilities: 2,
+                partner: "NCDC",
+                type: "Renewable"
+            },
+            icon: <FaSun className="text-5xl" />,
+            description: "Powering cotton ginning, pressing unit and parboiled rice mill"
+        },
+        {
+            title: "Senior Pension",
+            stats: {
+                eligibility: "65+",
+                benefits: 2,
+                frequency: "Monthly",
+                type: "Dividend + Interest"
+            },
+            icon: <MdElderlyWoman className="text-5xl" />,
+            description: "Financial security through dividend and interest earnings"
+        }
+    ];
+
+    const claimData = [
+        {
+            type: "Electric Motors",
+            amount: 21.01,
+            cases: 1639,
+            period: "1996-2012"
+        },
+        {
+            type: "Milch Animals",
+            amount: 196.61,
+            cases: 4149,
+            period: "2012-2015"
+        },
+        {
+            type: "IFFCO Coverage",
+            amount: 10.60,
+            cases: 36,
+            period: "Ongoing"
+        }
+    ];
+
+    const partners = [
+        { name: "LIC", type: "Life Insurance" },
+        { name: "National Insurance", type: "General Insurance" },
+        { name: "Bajaj Allianz", type: "Multiple Coverage" },
+        { name: "IFFCO-Tokio", type: "Agricultural Insurance" }
+    ];
+
+    const educationalPartners = [
+        "Cooperative College of Canada",
+        "Carmel University College, USA",
+        "MANAGE",
+        "IRMA",
+        "DMI"
+    ];
+
+    const images = {
+        banner: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40", // Financial security
+        protection: "https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf", // Protection
+        health: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d", // Health insurance
+        solar: "https://images.unsplash.com/photo-1509391366360-2e959784a276", // Solar plant
+        pension: "https://images.unsplash.com/photo-1532178324009-7b1123e1eac3", // Pension
+        gallery: [
+            "https://images.unsplash.com/photo-1450101499163-c8848c66ca85", // Finance
+            "https://images.unsplash.com/photo-1622473590773-f588134b6ce7", // Insurance
+            "https://images.unsplash.com/photo-1518186285589-2f7649de83e0", // Solar
+            "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f"  // Welfare
+        ]
+    };
+
+    const ImageGallery = () => (
+        <div className="container mx-auto px-4 py-16">
+            <h2 className="text-3xl font-bold text-center text-white mb-12">Our Insurance Coverage</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {images.gallery.map((image, index) => (
+                    <motion.div
+                        key={index}
+                        className="relative rounded-xl overflow-hidden aspect-[4/3]"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.2 }}
+                        whileHover={{ scale: 1.05 }}
+                    >
+                        <img
+                            src={image}
+                            alt={`Insurance Service ${index + 1}`}
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent 
+                                    opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </motion.div>
+                ))}
+            </div>
+        </div>
+    );
+
+    const Banner = () => (
+        <div className="relative h-[60vh] overflow-hidden">
+            <motion.div
+                initial={{ scale: 1.2 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 1.5 }}
+                className="absolute inset-0"
+            >
+                <img
+                    src={images.banner}
+                    alt="Insurance Services"
+                    className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center px-4">
+                        <motion.h1
+                            className="text-4xl md:text-6xl font-bold text-white mb-6"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                        >
+                            Insurance & Protection
+                        </motion.h1>
+                        <motion.p
+                            className="text-xl text-white/90 max-w-3xl mx-auto"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.2 }}
+                        >
+                            Comprehensive coverage for our members and their families
+                        </motion.p>
+                    </div>
+                </div>
+            </motion.div>
+        </div>
+    );
+
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-[#1a237e] via-[#283593] to-[#3949ab] text-white">
+            <Banner />
+
+            <div className="container mx-auto px-4 py-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                    {services.map((service, index) => (
+                        <motion.div
+                            key={index}
+                            className="relative group"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: index * 0.2 }}
+                        >
+                            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 relative overflow-hidden">
+                                <div className="absolute inset-0 opacity-10">
+                                    <img
+                                        src={
+                                            index === 0 ? images.protection :
+                                                index === 1 ? images.health :
+                                                    index === 2 ? images.solar : images.pension
+                                        }
+                                        alt={service.title}
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div className="flex items-center gap-6 mb-6">
+                                    <div className="text-blue-300">{service.icon}</div>
+                                    <h3 className="text-2xl font-bold">{service.title}</h3>
+                                </div>
+                                <p className="text-blue-200 mb-6">{service.description}</p>
+                                <div className="grid grid-cols-2 gap-4">
+                                    {Object.entries(service.stats).map(([key, value], idx) => (
+                                        <div key={idx} className="bg-white/5 rounded-lg p-4">
+                                            <div className="text-xl font-bold text-blue-300">
+                                                {value}
+                                            </div>
+                                            <div className="text-sm text-blue-200 capitalize">
+                                                {key.replace(/([A-Z])/g, ' $1').trim()}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+
+                <ImageGallery />
+
+                <div className="bg-white/5 py-16">
+                    <div className="container mx-auto px-4">
+                        <h2 className="text-3xl font-bold text-center mb-12">Insurance Claims</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {claimData.map((claim, index) => (
+                                <motion.div
+                                    key={index}
+                                    className="bg-white/10 rounded-xl p-6 text-center"
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    transition={{ delay: index * 0.1 }}
+                                >
+                                    <div className="text-3xl font-bold text-blue-300 mb-2">
+                                        ₹{claim.amount} Lakhs
+                                    </div>
+                                    <div className="text-xl mb-2">{claim.type}</div>
+                                    <div className="text-blue-200">{claim.cases} Cases</div>
+                                    <div className="text-sm text-blue-300">{claim.period}</div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                <div className="container mx-auto px-4 py-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+                        <motion.div
+                            className="bg-white/10 rounded-2xl p-8"
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                        >
+                            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                                <BiSolidBank className="text-3xl" />
+                                Insurance Partners
+                            </h3>
+                            <div className="space-y-4">
+                                {partners.map((partner, index) => (
+                                    <motion.div
+                                        key={index}
+                                        className="flex justify-between items-center p-4 bg-white/5 rounded-lg"
+                                        initial={{ opacity: 0, x: -20 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: index * 0.1 }}
+                                    >
+                                        <span className="font-bold">{partner.name}</span>
+                                        <span className="text-blue-200">{partner.type}</span>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            className="bg-white/10 rounded-2xl p-8"
+                            initial={{ opacity: 0, x: 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                        >
+                            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                                <FaGraduationCap className="text-3xl" />
+                                Academic Partners
+                            </h3>
+                            <div className="space-y-4">
+                                {educationalPartners.map((partner, index) => (
+                                    <motion.div
+                                        key={index}
+                                        className="p-4 bg-white/5 rounded-lg"
+                                        initial={{ opacity: 0, x: 20 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: index * 0.1 }}
+                                    >
+                                        {partner}
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+
+                <motion.div
+                    className="relative mt-16 rounded-2xl overflow-hidden"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                >
+                    <div className="absolute inset-0">
+                        <img
+                            src={images.protection}
+                            alt="Insurance Protection"
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/60" />
+                    </div>
+                    <div className="relative z-10 p-8 md:p-16 text-center">
+                        <h2 className="text-3xl font-bold mb-4">Secure Your Future</h2>
+                        <p className="text-blue-200 mb-6 max-w-2xl mx-auto">
+                            Join our comprehensive insurance and pension programs for complete peace of mind
+                        </p>
+                        <button className="bg-blue-500 text-white px-8 py-3 rounded-full font-semibold 
+                                       hover:bg-blue-600 transition-colors duration-300">
+                            Contact Us
+                        </button>
+                    </div>
+                </motion.div>
+            </div>
+        </div>
+    );
+};
+
+export default Insurance;

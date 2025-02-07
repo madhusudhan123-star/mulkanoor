@@ -11,10 +11,22 @@ import Organization from "./page/discover/Organization";
 import Rice from "./page/product/Rice";
 import Paddy from "./page/product/Paddy";
 import Cotton from "./page/product/Cotton";
+import Awards from "./page/Awards";
+import Farmersvoice from "./page/Farmersvoice";
+import Winning from "./page/Winning";
+import CursorDot from "./components/CursorDot";
+import Financial from "./page/pillars/Financial";
+import Agrinput from "./page/pillars/Agrinput";
+import Extension from "./page/pillars/Extension";
+import Values from "./page/pillars/Values";
+import Insurance from "./page/pillars/Insurance";
+import Welfare from "./page/pillars/Welfare";
+import Contact from "./page/Contact";
 
 function App() {
   return (
-    <div className="App font-custom">
+    <div className="App font-custom overflow-x-hidden">
+      <CursorDot />
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -28,6 +40,16 @@ function App() {
           <Route path="/product/rice" element={<Rice />} />
           <Route path="/product/paddy" element={<Paddy />} />
           <Route path="/product/cotton" element={<Cotton />} />
+          <Route path="/awards" element={<Awards />} />
+          <Route path="/farmer" element={<Farmersvoice />} />
+          <Route path="/winning" element={<Winning />} />
+          <Route path="/pillars/winning" element={<Financial />} />
+          <Route path="/pillars/agri" element={<Agrinput />} />
+          <Route path="/pillars/extension" element={<Extension />} />
+          <Route path="/pillars/values" element={<Values />} />
+          <Route path="/pillars/insurance" element={<Insurance />} />
+          <Route path="/pillars/Welfare" element={<Welfare />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </BrowserRouter>

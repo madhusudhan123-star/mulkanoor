@@ -216,33 +216,33 @@ const Endorsed = () => {
     };
 
     return (
-        <div className="relative min-h-screen bg-gradient-to-b from-[#1a1a1a] to-[#2a2a2a] text-white pt-24 overflow-hidden">
+        <div className="relative min-h-screen bg-gradient-to-b from-[#1a1a1a] to-[#2a2a2a] text-white pt-16 md:pt-24 overflow-hidden">
             {/* Interactive Background */}
             <div ref={sceneRef} className="fixed inset-0 pointer-events-none" />
 
             {/* Hero Section */}
             <motion.div
-                className="relative z-10 mb-16 px-4"
+                className="relative z-10 mb-8 md:mb-16 px-4"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
             >
-                <h1 className="text-5xl md:text-7xl font-bold text-center mb-4">
+                <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-center mb-4">
                     Our Visionary Leaders
                 </h1>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto text-center">
+                <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto text-center">
                     The pioneers who shaped our cooperative movement
                 </p>
             </motion.div>
 
             {/* Founders Grid with Alternating Layout */}
-            <div className=" relative z-10 mb-10">
-                <div ref={containerRef} className="">
+            <div className="relative z-10 mb-10 px-4 md:px-8">
+                <div ref={containerRef} className="space-y-8">
                     {founders.map((founder, index) => (
                         <motion.div
                             key={founder.id}
-                            className={`bg-white/5 backdrop-blur-sm flex rounded-2xl overflow-hidden
-                                ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
+                            className={`bg-white/5 backdrop-blur-sm flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} 
+                                rounded-2xl overflow-hidden`}
                             initial={{ opacity: 0, y: 50 }}
                             animate={{
                                 opacity: 1,
@@ -262,7 +262,7 @@ const Endorsed = () => {
                             }}
                         >
                             {/* Image Section */}
-                            <div className="relative w-1/2 h-[400px]">
+                            <div className="relative w-full md:w-1/2 h-[300px] md:h-[400px]">
                                 <img
                                     src={founder.image}
                                     alt={founder.name}
@@ -272,12 +272,12 @@ const Endorsed = () => {
                             </div>
 
                             {/* Content Section */}
-                            <div className="w-1/2 p-8 flex flex-col justify-between">
+                            <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
                                 <div>
-                                    <h3 className="text-3xl font-bold mb-2">{founder.name}</h3>
-                                    <p className="text-xl text-gray-300 mb-1">{founder.position}</p>
-                                    <p className="text-lg text-gray-400 mb-6">{founder.period}</p>
-                                    <p className="text-lg leading-relaxed text-gray-300">
+                                    <h3 className="text-2xl md:text-3xl font-bold mb-2">{founder.name}</h3>
+                                    <p className="text-lg md:text-xl text-gray-300 mb-1">{founder.position}</p>
+                                    <p className="text-base md:text-lg text-gray-400 mb-4 md:mb-6">{founder.period}</p>
+                                    <p className="text-base md:text-lg leading-relaxed text-gray-300">
                                         {founder.bio}
                                     </p>
                                 </div>

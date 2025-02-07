@@ -26,7 +26,7 @@ const Navbar = () => {
         },
         {
             title: 'Farmers Voice',
-            path: '#home'
+            path: '/farmer'
             // Home no longer has submenu
         },
         {
@@ -40,24 +40,24 @@ const Navbar = () => {
         },
         {
             title: 'Our Pillars Of Success',
-            path: '#products',
+            path: '#pillars',
             submenu: [
-                { title: 'Financial Services', path: '#dairy' },
-                { title: 'Agri Inputs', path: '#agricultural' },
-                { title: 'Agri Extension Services', path: '#seeds' },
-                { title: 'Value-Added Services', path: '#seeds' },
-                { title: 'Insurance Services & Pension', path: '#seeds' },
-                { title: 'Welfare Services', path: '#seeds' },
+                { title: 'Financial Services', path: '/pillars/winning' },
+                { title: 'Agri Inputs', path: '/pillars/agri' },
+                { title: 'Agri Extension Services', path: '/pillars/extension' },
+                { title: 'Value-Added Services', path: '/pillars/values' },
+                { title: 'Insurance Services & Pension', path: '/pillars/insurance' },
+                { title: 'Welfare Services', path: '/pillars/Welfare' },
             ]
         },
         {
             title: 'Awards & Accolades',
-            path: '#home'
+            path: '/awards'
             // Home no longer has submenu
         },
         {
             title: 'Our Winning Formula',
-            path: '#home'
+            path: '/winning'
             // Home no longer has submenu
         }
     ];
@@ -74,39 +74,32 @@ const Navbar = () => {
     };
 
     return (
-        <div className="relative">
+        <div className="relative overflow-x-hidden">
+            {/* Main Navbar */}
             <nav className="fixed w-full top-0 left-0 backdrop-blur-sm bg-white/20 border-b border-white/20 shadow-lg z-50">
-                <div className="flex justify-between items-center px-8 py-4">
-                    {/* Left - Menu Button - Updated styling */}
+                <div className="flex justify-between items-center px-3 md:px-8 py-2 md:py-4">
+                    {/* Menu Button */}
                     <button
-                        className="text-xl text-black flex items-center gap-5"
+                        className="text-base md:text-xl text-black flex items-center gap-2"
                         onClick={() => setIsOpen(!isOpen)}
-                        aria-label="Toggle Menu"
                     >
-                        <a className='p-3 hover:text-white bg-[#F2EA02]/70 text-xl transition-all duration-300 transform hover:scale-110  rounded-full backdrop-blur-lg'>
-
-                            {isOpen ? <FaTimes /> : <FaBars />}
-                        </a>
-                        Menu
+                        <span className='p-2 hover:text-white bg-[#F2EA02]/70 text-base transition-all duration-300 
+                            hover:scale-110 rounded-full backdrop-blur-lg flex items-center justify-center'>
+                            {isOpen ? <FaTimes size={18} /> : <FaBars size={18} />}
+                        </span>
                     </button>
 
-                    {/* Center - Logo */}
+                    {/* Center Logo - Smaller on mobile */}
                     <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
                         <a href='/'>
-                            <img src={logo} alt="Logo" className="h-20 w-auto drop-shadow-md hover:scale-105 transition-transform" />
+                            <img src={logo} alt="Logo" className="h-10 md:h-16 w-auto" />
                         </a>
                     </div>
 
-                    {/* Right - Social Icons */}
-                    <div className="flex gap-4">
+                    {/* Social Icons - Hidden on mobile */}
+                    <div className="hidden md:flex gap-4">
                         {socialLinks.map((social, index) => (
-                            <a
-                                key={index}
-                                href={social.url}
-                                className={`text-gray-800 text-xl ${social.color} transition-colors`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
+                            <a key={index} href={social.url} className={`text-gray-800 text-xl ${social.color}`}>
                                 {social.icon}
                             </a>
                         ))}
@@ -114,68 +107,81 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            {/* Updated Dropdown Menu */}
+            {/* Full-screen mobile menu */}
             <div className={`
-                fixed w-full transform transition-transform duration-300 ease-in-out mt-[76px]
-                ${isOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}
-                backdrop-blur-lg bg-white/60 shadow-lg border-b border-white/20 rounded-b-2xl z-40
-                max-h-[calc(100vh-76px)] overflow-y-hidden
+                fixed inset-0 bg-black/80 backdrop-blur-md z-40
+                transition-opacity duration-300 ease-in-out
+                ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}
             `}>
-                <div className="max-w-4xl mx-auto py-6 px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {menuItems.map((item, index) => (
-                            <div key={index} className="relative bg-white/20 rounded-xl backdrop-blur-sm">
-                                {item.submenu ? (
-                                    <div className="h-full">
-                                        <div
-                                            className={`
-                                                flex items-center justify-between px-6 py-4 cursor-pointer
-                                                hover:bg-white/30 rounded-t-xl transition-all duration-300
-                                                ${activeDropdown === index ? 'bg-white/30' : ''}
-                                            `}
-                                            onClick={() => handleDropdownClick(index)}
-                                        >
-                                            <span className="text-lg font-medium text-gray-800">{item.title}</span>
-                                            <FaChevronDown
-                                                className={`transition-transform duration-300 
-                                                ${activeDropdown === index ? 'rotate-180' : ''}`}
-                                            />
-                                        </div>
-                                        <div className={`
-                                            transition-all duration-300 ease-in-out
-                                            ${activeDropdown === index ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'}
-                                            overflow-hidden bg-white/10
-                                        `}>
-                                            <ul className="p-4">
-                                                {item.submenu?.map((subItem, subIndex) => (
-                                                    <li key={subIndex}>
+                {/* Menu Container */}
+                <div className={`
+                    fixed top-[60px] md:top-[76px] left-0 right-0 bottom-0
+                    bg-white/95 overflow-y-auto
+                    transition-transform duration-300 ease-in-out
+                    ${isOpen ? 'translate-y-0' : '-translate-y-full'}
+                `}>
+                    <div className="container mx-auto px-4 py-6">
+                        {/* Menu Items */}
+                        <div className="space-y-2">
+                            {menuItems.map((item, index) => (
+                                <div key={index} className="rounded-lg overflow-hidden">
+                                    {item.submenu ? (
+                                        <div className="bg-white/50 rounded-lg">
+                                            <button
+                                                className="w-full flex items-center justify-between p-4 text-gray-800"
+                                                onClick={() => handleDropdownClick(index)}
+                                            >
+                                                <span className="text-lg font-medium">{item.title}</span>
+                                                <FaChevronDown className={`transition-transform duration-300 
+                                                    ${activeDropdown === index ? 'rotate-180' : ''}`}
+                                                />
+                                            </button>
+
+                                            <div className={`
+                                                overflow-hidden transition-all duration-300 ease-in-out
+                                                ${activeDropdown === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}
+                                            `}>
+                                                <div className="bg-white/30 px-4 pb-4">
+                                                    {item.submenu.map((subItem, subIndex) => (
                                                         <a
+                                                            key={subIndex}
                                                             href={subItem.path}
-                                                            className="block py-2 px-4 text-gray-600 hover:text-gray-800 
-                                                                hover:bg-white/50 rounded-lg transition-all duration-200
-                                                                hover:translate-x-2"
+                                                            className="block py-3 px-4 text-gray-600 hover:text-gray-900
+                                                                hover:bg-white/50 rounded-lg transition-all duration-200"
                                                             onClick={() => setIsOpen(false)}
                                                         >
                                                             {subItem.title}
                                                         </a>
-                                                    </li>
-                                                ))}
-                                            </ul>
+                                                    ))}
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                ) : (
-                                    <a
-                                        href={item.path}
-                                        className="flex items-center px-6 py-4 text-gray-800 
-                                            hover:bg-white/30 rounded-xl transition-all duration-300
-                                            hover:translate-x-2"
-                                        onClick={() => setIsOpen(false)}
-                                    >
-                                        <span className="text-lg font-medium">{item.title}</span>
-                                    </a>
-                                )}
-                            </div>
-                        ))}
+                                    ) : (
+                                        <a
+                                            href={item.path}
+                                            className="block p-4 text-lg font-medium text-gray-800 
+                                                bg-white/50 hover:bg-white/70 transition-all duration-200"
+                                            onClick={() => setIsOpen(false)}
+                                        >
+                                            {item.title}
+                                        </a>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Mobile Social Links */}
+                        <div className="flex justify-center gap-6 mt-8 pb-8">
+                            {socialLinks.map((social, index) => (
+                                <a
+                                    key={index}
+                                    href={social.url}
+                                    className={`text-gray-800 text-2xl ${social.color}`}
+                                >
+                                    {social.icon}
+                                </a>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

@@ -48,33 +48,42 @@ const Rice = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50 pt-24">
-            {/* Hero Section with Background Banner */}
-            <div className="relative mb-16">
-                {/* Background Image */}
-                <div className="absolute inset-0 h-[400px] w-full">
-                    <div className="absolute inset-0 bg-black/40 z-10" /> {/* Overlay */}
-                    <img
-                        // Replace the current image URL with any of the options above
-                        src={bannerImages.main} // Choose any option: option1 through option5
-                        alt="Rice banner"
-                        className="w-full h-full object-cover"
-                    />
-                </div>
-
-                {/* Content */}
+            {/* Interactive Hero Section */}
+            <div className="relative h-[500px] mb-16 overflow-hidden">
                 <motion.div
-                    className="relative z-20 container mx-auto px-4 pt-16 pb-24 text-center"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
+                    className="absolute inset-0 bg-gradient-to-r from-amber-600 to-orange-600"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 0.9 }}
+                    transition={{ duration: 1 }}
                 >
-                    <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-                        Our Premium Rice Collection
-                    </h1>
-                    <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-                        Experience the finest quality rice, cultivated with care and tradition
-                    </p>
+                    <motion.div
+                        className="absolute inset-0"
+                        style={{
+                            backgroundImage: `url('${bannerImages.main}')`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                        }}
+                        initial={{ scale: 1.2 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
+                    />
                 </motion.div>
+
+                <div className="relative z-10 h-full flex items-center justify-center">
+                    <motion.div
+                        className="text-center"
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1 }}
+                    >
+                        <h1 className="text-6xl md:text-7xl font-bold text-white mb-6">
+                            Our Premium Rice Collection
+                        </h1>
+                        <p className="text-xl text-white/90 max-w-2xl mx-auto">
+                            Experience the finest quality rice, cultivated with care and tradition
+                        </p>
+                    </motion.div>
+                </div>
             </div>
 
             {/* Varieties Banner */}
@@ -256,6 +265,29 @@ const Rice = () => {
                     </table>
                 </div>
             </section>
+
+            {/* Add Interactive Background Elements at the end, before closing div */}
+            <div className="fixed inset-0 pointer-events-none">
+                {[...Array(20)].map((_, i) => (
+                    <motion.div
+                        key={i}
+                        className="absolute w-4 h-4 bg-amber-500/20 rounded-full"
+                        style={{
+                            left: `${Math.random() * 100}%`,
+                            top: `${Math.random() * 100}%`,
+                        }}
+                        animate={{
+                            scale: [1, 1.5, 1],
+                            opacity: [0.1, 0.3, 0.1],
+                        }}
+                        transition={{
+                            duration: 3 + Math.random() * 2,
+                            repeat: Infinity,
+                            repeatType: "reverse",
+                        }}
+                    />
+                ))}
+            </div>
         </div>
     );
 };
