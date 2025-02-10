@@ -362,7 +362,10 @@ const Financial = () => {
                         <p className="mb-6">Join our community and access these financial services today</p>
                         <button className="bg-white text-[#4A3F35] px-8 py-3 rounded-full font-semibold 
                                      hover:bg-[#F5F5DC] transition-colors duration-300">
-                            Contact Us
+                            <a href='/contact'>
+
+                                Contact Us
+                            </a>
                         </button>
                     </div>
                 </motion.div>

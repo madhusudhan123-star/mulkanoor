@@ -17,6 +17,12 @@ const Cotton = () => {
             lint: { bales: 4389, value: 131670000 },
             seed: { quantity: 1386, value: 41580000 },
             totalValue: 173260000
+        },
+        {
+            year: '2023-24',
+            lint: { bales: 5181, value: 147303000 },
+            seed: { quantity: 1598, value: 42398150 },
+            totalValue: 189601150
         }
     ];
 

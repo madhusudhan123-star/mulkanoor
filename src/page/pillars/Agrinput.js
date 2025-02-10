@@ -14,55 +14,93 @@ const Agrinput = () => {
         { value: 7130, label: "Members Benefited" },
         { value: 1549.26, label: "Lakhs in Subsidies" },
         { value: 6822, label: "Debt Relief Recipients" },
-        { value: 795, label: "Crores in Loans (2015-16)" }
+        { value: 7.95, label: "Crores in Loans (2015-16)" }
     ];
 
     const services = [
         {
             title: "Government Collaboration",
             description: "Active partnerships with DRDA, SC/BC Corporations, Tribal Welfare, and NABARD",
-            icon: <RiGovernmentFill className="text-4xl" />
+            icon: <RiGovernmentFill className="text-4xl" />,
+            img: "https://images.unsplash.com/photo-1560493676-04071c5f467b",
         },
         {
             title: "Agricultural Implements",
             description: "Loans for machinery, implements, and modern farming equipment",
-            icon: <GiFarmTractor className="text-4xl" />
+            icon: <GiFarmTractor className="text-4xl" />,
+            img: "https://images.unsplash.com/photo-1560493676-04071c5f467b",
         },
         {
             title: "Irrigation Solutions",
             description: "Support for wells, motors, pipelines, drip irrigation systems",
-            icon: <GiWateringCan className="text-4xl" />
+            icon: <GiWateringCan className="text-4xl" />,
+            img: "https://images.unsplash.com/photo-1560493676-04071c5f467b",
         },
         {
             title: "Allied Activities",
             description: "Funding for dairy, sheep rearing, horticulture, and sericulture",
-            icon: <FaSeedling className="text-4xl" />
+            icon: <FaSeedling className="text-4xl" />,
+            img: "https://images.unsplash.com/photo-1560493676-04071c5f467b", // Add corresponding image URL
+
         },
         {
             title: "Welfare Initiatives",
             description: "Support for toilets, solar lanterns, and LPG connections",
-            icon: <BiSupport className="text-4xl" />
+            icon: <BiSupport className="text-4xl" />,
+            img: "https://images.unsplash.com/photo-1560493676-04071c5f467b", // Add corresponding image URL
+
         },
         {
             title: "Financial Support",
             description: "Debt relief and subsidy facilitation for eligible members",
-            icon: <GiReceiveMoney className="text-4xl" />
+            icon: <GiReceiveMoney className="text-4xl" />,
+            img: "https://images.unsplash.com/photo-1560493676-04071c5f467b",
         }
     ];
 
     const images = {
-        banner: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449",
-        irrigation: "https://images.unsplash.com/photo-1594761051744-501c9de43b7e",
-        machinery: "https://images.unsplash.com/photo-1598335624134-5bceb5de202b",
-        support: "https://images.unsplash.com/photo-1595074475099-3c0d268945ce",
+        banner: {
+            url: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449",
+            dimensions: "1920x1080px"
+        },
+        irrigation: {
+            url: "https://images.unsplash.com/photo-1594761051744-501c9de43b7e",
+            dimensions: "800x600px"
+        },
+        machinery: {
+            url: "https://images.unsplash.com/photo-1598335624134-5bceb5de202b",
+            dimensions: "800x600px"
+        },
+        support: {
+            url: "https://images.unsplash.com/photo-1595074475099-3c0d268945ce",
+            dimensions: "800x600px"
+        },
         // Add new images
         gallery: [
-            "https://images.unsplash.com/photo-1560493676-04071c5f467b", // Modern farming
-            "https://images.unsplash.com/photo-1591339398521-7664b1f45b51", // Equipment
-            "https://images.unsplash.com/photo-1583111617899-9cb3bb0161a6", // Seeds
-            "https://images.unsplash.com/photo-1599492816933-c6953bc27d54", // Traditional farming
-            "https://images.unsplash.com/photo-1597916829826-02e5bb4a54e0", // Technology
-            "https://images.unsplash.com/photo-1574943320219-eaf91e12ed85"  // Modern solutions
+            {
+                url: "https://images.unsplash.com/photo-1560493676-04071c5f467b",
+                dimensions: "1200x800px" // Modern farming
+            },
+            {
+                url: "https://images.unsplash.com/photo-1591339398521-7664b1f45b51",
+                dimensions: "600x600px" // Equipment
+            },
+            {
+                url: "https://images.unsplash.com/photo-1583111617899-9cb3bb0161a6",
+                dimensions: "600x600px" // Seeds
+            },
+            {
+                url: "https://images.unsplash.com/photo-1599492816933-c6953bc27d54",
+                dimensions: "1200x800px" // Traditional farming
+            },
+            {
+                url: "https://images.unsplash.com/photo-1597916829826-02e5bb4a54e0",
+                dimensions: "600x600px" // Technology
+            },
+            {
+                url: "https://images.unsplash.com/photo-1574943320219-eaf91e12ed85",
+                dimensions: "600x600px" // Modern solutions
+            }
         ]
     };
 
@@ -80,7 +118,7 @@ const Agrinput = () => {
                         transition={{ delay: index * 0.1 }}
                     >
                         <motion.img
-                            src={image}
+                            src={image.url}
                             alt={`Agricultural Input ${index + 1}`}
                             className="w-full h-full object-cover"
                             whileHover={{ scale: 1.1 }}
@@ -105,7 +143,7 @@ const Agrinput = () => {
                     className="absolute inset-0"
                 >
                     <img
-                        src={images.banner}
+                        src={images.banner.url}
                         alt="Agricultural Inputs"
                         className="w-full h-full object-cover"
                     />
@@ -192,7 +230,7 @@ const Agrinput = () => {
                             transition={{ duration: 0.3 }}
                         >
                             <img
-                                src={images.machinery}
+                                src={images.machinery.url}
                                 alt="Agricultural Machinery"
                                 className="w-full h-[400px] object-cover"
                             />
@@ -215,8 +253,7 @@ const Agrinput = () => {
                             >
                                 <div className="h-48 relative overflow-hidden">
                                     <img
-                                        src={index % 3 === 0 ? images.irrigation :
-                                            index % 3 === 1 ? images.machinery : images.support}
+                                        src={service.img}
                                         alt={service.title}
                                         className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700"
                                     />
@@ -239,7 +276,7 @@ const Agrinput = () => {
                 {/* Add Floating Images */}
                 <div className="relative">
                     <motion.img
-                        src={images.irrigation}
+                        src={images.irrigation.url}
                         className="absolute -left-20 top-1/4 w-40 h-40 rounded-full opacity-20"
                         animate={{
                             y: [0, 20, 0],
@@ -270,7 +307,9 @@ const Agrinput = () => {
                         </p>
                         <button className="bg-[#2E7D32] text-white px-8 py-3 rounded-full font-semibold 
                                    hover:bg-[#1B5E20] transition-colors duration-300">
-                            Get Started
+                            <a href='https://docs.google.com/forms/d/e/1FAIpQLSepAarKrA7FdpS-tKCYMmKn-uLdcCCU7CNKtK9d64_W76nXAQ/viewform?usp=dialog'>
+                                Get Started
+                            </a>
                         </button>
                     </div>
                 </motion.div>

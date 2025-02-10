@@ -8,24 +8,26 @@ const Footer = () => {
             <div className="container mx-auto px-4">
                 {/* Grid Layout */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-                    {/* About Us Links */}
+                    {/* Discover Us Links */}
                     <div>
                         <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Discover</h3>
                         <ul className="space-y-3 text-base md:text-lg lg:text-2xl">
-                            <li><Link to="/discover/about" className="hover:text-secondary transition-colors">About Us</Link></li>
+                            <li><Link to="/discover/story" className="hover:text-secondary transition-colors">Our Story</Link></li>
+                            <li><Link to="/discover/mission" className="hover:text-secondary transition-colors">Mission & Vision</Link></li>
                             <li><Link to="/discover/leadership" className="hover:text-secondary transition-colors">Leadership</Link></li>
-                            <li><Link to="/discover/history" className="hover:text-secondary transition-colors">History</Link></li>
-                            <li><Link to="/discover/awards" className="hover:text-secondary transition-colors">Awards & Recognition</Link></li>
+                            <li><Link to="/discover/milestones" className="hover:text-secondary transition-colors">Milestones</Link></li>
+                            <li><Link to="/discover/endorsed" className="hover:text-secondary transition-colors">Endorsed by Esteemed Voices</Link></li>
+                            <li><Link to="/discover/organization" className="hover:text-secondary transition-colors">Organization Structure</Link></li>
                         </ul>
                     </div>
 
-                    {/* Services Links */}
+                    {/* Product Links */}
                     <div>
-                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Services</h3>
+                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Products</h3>
                         <ul className="space-y-3 text-base md:text-lg lg:text-2xl">
-                            <li><Link to="/services/banking" className="hover:text-secondary transition-colors">Banking</Link></li>
-                            <li><Link to="/services/dairy" className="hover:text-secondary transition-colors">Dairy</Link></li>
-                            <li><Link to="/services/agriculture" className="hover:text-secondary transition-colors">Agriculture</Link></li>
+                            <li><Link to="/product/rice" className="hover:text-secondary transition-colors">Rice</Link></li>
+                            <li><Link to="/product/paddy" className="hover:text-secondary transition-colors">Paddy</Link></li>
+                            <li><Link to="/product/cotton" className="hover:text-secondary transition-colors">Cotton</Link></li>
                         </ul>
                     </div>
 

@@ -36,6 +36,50 @@ const Storys = () => {
         </div>
       </div>
 
+      {/* Image Gallery Section */}
+      <section className="py-16 bg-earth-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="relative h-64 overflow-hidden rounded-xl"
+            >
+              <img
+                src="/images/farmers-field.jpg"
+                alt="Farmers in the field"
+                className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="relative h-64 overflow-hidden rounded-xl md:translate-y-12"
+            >
+              <img
+                src="/images/cooperative-building.jpg"
+                alt="Cooperative Society Building"
+                className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="relative h-64 overflow-hidden rounded-xl"
+            >
+              <img
+                src="/images/harvest-scene.jpg"
+                alt="Harvest Scene"
+                className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* History Section */}
       <motion.section
         initial={{ opacity: 0 }}
@@ -45,6 +89,31 @@ const Storys = () => {
       >
         <div className="absolute inset-0 pattern-wheat opacity-10"></div>
         <h2 className="text-3xl font-bold mb-8 text-center text-earth-500">Our Journey</h2>
+
+        {/* Add historical images */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div className="relative rounded-xl overflow-hidden h-80">
+            <img
+              src="/images/historical-building.jpg"
+              alt="Original Cooperative Building"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+              <p className="text-sm">Our first office building from 1970</p>
+            </div>
+          </div>
+          <div className="relative rounded-xl overflow-hidden h-80">
+            <img
+              src="/images/founder-portrait.jpg"
+              alt="Founder A.K. Vishwanatha Reddy"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+              <p className="text-sm">Late Sri A.K. Vishwanatha Reddy, Our Founder</p>
+            </div>
+          </div>
+        </div>
+
         <div className="space-y-6 text-earth-400">
           <p className="leading-relaxed">
             The Mulkanoor Cooperative Bank was established in 1956 by its visionary founder, Late Sri A.K. Vishwanatha Reddy, under the Hyderabad Cooperative Society Act, 1952. After the enactment of the Cooperative Society Act, 1964, the society was deemed registered under the new legislation. Subsequently, with the introduction of the Mutually Aided Cooperative Society Act, 1995, it transitioned to operate under the MACS Act.
@@ -87,6 +156,58 @@ const Storys = () => {
           >
             Through tailored loans for agricultural implements, such as tractors, harvesters, and irrigation systems, we enable farmers to boost productivity and reduce costs. Our training programs offer farmers valuable insights into modern farming techniques, helping them adapt to changing environments and increasing profitability. With seasonal loans, savings schemes, and long-term financial support, Mulkanoor Cooperative Society is creating a foundation for sustainable growth, ensuring every farmer can thrive.
           </motion.p>
+
+          {/* Impact Images */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-12">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3 }}
+              className="relative rounded-lg overflow-hidden h-48"
+            >
+              <img
+                src="/images/modern-farming.jpg"
+                alt="Modern Farming Techniques"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.4 }}
+              className="relative rounded-lg overflow-hidden h-48"
+            >
+              <img
+                src="/images/training-session.jpg"
+                alt="Farmer Training Session"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5 }}
+              className="relative rounded-lg overflow-hidden h-48"
+            >
+              <img
+                src="/images/equipment.jpg"
+                alt="Modern Agricultural Equipment"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.6 }}
+              className="relative rounded-lg overflow-hidden h-48"
+            >
+              <img
+                src="/images/community-meeting.jpg"
+                alt="Community Meeting"
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 

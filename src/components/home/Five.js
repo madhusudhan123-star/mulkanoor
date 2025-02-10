@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import logo from '../../assets/logo.png'; // Import your logo
+import logo from '../../assets/logo.png';
 
 const Five = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -8,7 +9,6 @@ const Five = () => {
     const scrollContainerRef = useRef(null);
     const [isScrollable, setIsScrollable] = useState(false);
 
-    // Add resize and scroll check
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth < 768);
@@ -34,8 +34,7 @@ const Five = () => {
         const scrollAmount = direction === 'left' ? -300 : 300;
         const targetScroll = container.scrollLeft + scrollAmount;
 
-        // Ensure we scroll to item boundaries
-        const itemWidth = 250; // Approximate width of each item including gap
+        const itemWidth = 250;
         const normalizedScroll = Math.round(targetScroll / itemWidth) * itemWidth;
 
         container.scrollTo({
@@ -43,7 +42,6 @@ const Five = () => {
             behavior: 'smooth'
         });
 
-        // Update active index based on scroll position
         const newIndex = Math.round(normalizedScroll / itemWidth);
         setActiveIndex(Math.max(0, Math.min(newIndex, timelineData.length - 1)));
     };
@@ -52,154 +50,184 @@ const Five = () => {
         {
             year: "1956",
             title: "Foundation",
-            description: "Established as a small cooperative society with 375 members"
-        },
-        {
-            year: "1960",
-            title: "First Milestone",
-            description: "Started providing agricultural loans to farmers"
-        },
-        {
-            year: "1964",
-            title: "Growth Phase",
-            description: "Membership crossed 1000 farmers"
+            description: "Established as a small cooperative society with 375 members",
+            achievements: [
+                "Initial membership of 375 farmers",
+                "Share capital of ₹2,300",
+                "First registered cooperative in the region"
+            ],
+            details: "The society was established with a vision to support local farmers and promote agricultural development.",
+            image: "https://example.com/foundation-image.jpg"
         },
         {
             year: "1970",
             title: "Infrastructure Development",
-            description: "Built first storage facility for grains"
-        },
-        {
-            year: "1975",
-            title: "Expansion",
-            description: "Expanded services to include seed distribution and storage facilities"
-        },
-        {
-            year: "1982",
-            title: "Technology Adoption",
-            description: "Introduced mechanized farming equipment"
+            description: "Built first storage facility and established modern farming practices",
+            achievements: [
+                "First grain storage facility constructed",
+                "Introduction of mechanized farming",
+                "Establishment of farmer training programs"
+            ],
+            details: "This period marked significant advancement in agricultural infrastructure and farmer education.",
+            image: "https://example.com/infrastructure-image.jpg"
         },
         {
             year: "1990",
             title: "Modernization",
-            description: "Introduced modern farming techniques and equipment"
-        },
-        {
-            year: "1995",
-            title: "Financial Growth",
-            description: "Credit disbursement reached 50 crores"
-        },
-        {
-            year: "2000",
-            title: "Digital Era",
-            description: "Implemented computerized systems for better management"
-        },
-        {
-            year: "2005",
-            title: "Quality Standards",
-            description: "Achieved ISO certification for processes"
+            description: "Implemented modern technologies and expanded services",
+            achievements: [
+                "Computerization of operations",
+                "Modern equipment acquisition",
+                "Expanded financial services"
+            ],
+            details: "The society embraced technological advancement to better serve its members.",
+            image: "https://example.com/modernization-image.jpg"
         },
         {
             year: "2010",
-            title: "Sustainability",
-            description: "Launched organic farming initiatives"
-        },
-        {
-            year: "2015",
-            title: "Innovation",
-            description: "Introduced mobile banking services"
+            title: "Digital Transformation",
+            description: "Complete digital integration of services and operations",
+            achievements: [
+                "Online banking services",
+                "Digital record keeping",
+                "Mobile app launch"
+            ],
+            details: "Digital transformation improved efficiency and accessibility of services.",
+            image: "https://example.com/digital-image.jpg"
         },
         {
             year: "2023",
             title: "Present Day",
-            description: "Serving over 7600+ farmers with comprehensive agricultural solutions"
+            description: "Serving over 7600+ farmers with comprehensive solutions",
+            achievements: [
+                "7600+ active members",
+                "Comprehensive agricultural services",
+                "Sustainable farming practices"
+            ],
+            details: "Today, the society stands as a model of cooperative excellence and sustainable agriculture.",
+            image: "https://example.com/present-image.jpg"
         }
     ];
 
     return (
-        <div className="w-full bg-transparent py-8 md:py-12 px-2 md:px-8 relative">
-            <h2 className="text-2xl md:text-5xl font-bold text-center mb-8 md:mb-16">Our Journey Through Time</h2>
+        <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 text-gray-800 py-16">
+            <div className="">
+                <motion.h2
+                    className="text-3xl md:text-5xl font-bold text-center mb-16 text-gray-900"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    Our Journey Through Time
+                </motion.h2>
 
-            <div className="relative">
-                {/* Navigation Buttons - Moved outside scroll container and improved z-index */}
-                {isScrollable && (
-                    <div className="hidden md:block absolute inset-0 pointer-events-none z-20">
-                        <button
-                            onClick={() => scroll('left')}
-                            className="absolute -left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 
-                            backdrop-blur-sm p-4 rounded-full transition-all duration-300 shadow-lg hover:scale-110
-                            pointer-events-auto cursor-pointer z-30"
-                        >
-                            <IoIosArrowBack className="text-3xl" />
-                        </button>
-                        <button
-                            onClick={() => scroll('right')}
-                            className="absolute -right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 
-                            backdrop-blur-sm p-4 rounded-full transition-all duration-300 shadow-lg hover:scale-110
-                            pointer-events-auto cursor-pointer z-30"
-                        >
-                            <IoIosArrowForward className="text-3xl" />
-                        </button>
-                    </div>
-                )}
+                <div className="relative">
+                    {isScrollable && (
+                        <div className="hidden md:block absolute inset-0 pointer-events-none z-20">
+                            <button
+                                onClick={() => scroll('left')}
+                                className="absolute -left-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-100 
+                                shadow-lg p-4 rounded-full transition-all duration-300 hover:scale-110
+                                pointer-events-auto cursor-pointer"
+                            >
+                                <IoIosArrowBack className="text-3xl text-gray-600" />
+                            </button>
+                            <button
+                                onClick={() => scroll('right')}
+                                className="absolute -right-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-100 
+                                shadow-lg p-4 rounded-full transition-all duration-300 hover:scale-110
+                                pointer-events-auto cursor-pointer"
+                            >
+                                <IoIosArrowForward className="text-3xl text-gray-600" />
+                            </button>
+                        </div>
+                    )}
 
-                {/* Timeline Container */}
-                <div className="flex flex-col gap-8">
-                    {/* Timeline Items */}
-                    <div
-                        ref={scrollContainerRef}
-                        className="overflow-x-auto hide-scrollbar scroll-smooth relative z-10"
-                    >
+                    <div ref={scrollContainerRef} className="overflow-x-auto hide-scrollbar scroll-smooth">
                         <div className="relative min-w-max flex items-center gap-6 md:gap-12 px-4 md:px-8 py-4">
-                            {/* Timeline Line with gradient effect */}
-                            <div className="absolute top-[45px] md:top-[55px] left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+                            <div className="absolute top-[45px] md:top-[55px] left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
 
-                            {/* Timeline Items */}
                             {timelineData.map((item, index) => (
-                                <div
+                                <motion.div
                                     key={index}
-                                    className="relative flex flex-col items-center cursor-pointer"
+                                    className={`
+                                        relative flex flex-col items-center cursor-pointer
+                                        ${activeIndex === index ? 'scale-110' : 'scale-100'}
+                                        transition-all duration-300
+                                    `}
                                     onClick={() => setActiveIndex(index)}
+                                    whileHover={{ scale: 1.05 }}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: index * 0.1 }}
                                 >
-                                    {/* Logo Container */}
                                     <div className={`
                                         w-14 h-14 md:w-20 md:h-20 rounded-full 
-                                        flex items-center justify-center transition-all duration-500
+                                        flex items-center justify-center
                                         ${activeIndex === index
-                                            ? 'bg-white/20 scale-125 shadow-lg shadow-white/10'
-                                            : 'bg-white/5 hover:bg-white/10'}
+                                            ? 'bg-white shadow-lg border-2 border-blue-500'
+                                            : 'bg-white shadow-md hover:shadow-lg'}
+                                        transition-all duration-300
                                     `}>
                                         <img
                                             src={logo}
                                             alt="logo"
-                                            className="w-10 h-10 md:w-14 md:h-14 transition-all duration-500"
+                                            className="w-8 h-8 md:w-12 md:h-12"
                                         />
                                     </div>
-
-                                    {/* Year and Title Only */}
-                                    <div className={`
-                                        mt-8 w-36 md:w-52 text-center transition-all duration-500
-                                        ${activeIndex === index
-                                            ? 'opacity-100 transform translate-y-0'
-                                            : 'opacity-40 hover:opacity-60'}
+                                    <h3 className={`
+                                        mt-4 text-sm md:text-base font-medium text-center w-32
+                                        ${activeIndex === index ? 'text-blue-600' : 'text-gray-600'}
                                     `}>
-                                        <h3 className="text-xl md:text-2xl font-bold mb-2">{item.year}</h3>
-                                        <h4 className="text-sm md:text-lg font-semibold">{item.title}</h4>
-                                    </div>
-                                </div>
+                                        {item.year}
+                                    </h3>
+                                </motion.div>
                             ))}
                         </div>
                     </div>
 
-                    {/* Active Content Section - Below Timeline */}
                     {activeIndex !== null && (
-                        <div className="w-full max-w-2xl mx-auto mt-8 transition-all duration-500 animate-fade-in">
-                            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                                <p className="text-base md:text-lg  leading-relaxed">
-                                    {timelineData[activeIndex].description}
-                                </p>
+                        <motion.div
+                            className="mt-16 max-w-6xl mx-auto"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            <div className="bg-white shadow-xl rounded-xl p-8">
+                                <div className="grid md:grid-cols-2 gap-8">
+                                    <div className="space-y-6">
+                                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                                            {timelineData[activeIndex].title}
+                                        </h2>
+                                        <p className="text-lg text-gray-700">
+                                            {timelineData[activeIndex].description}
+                                        </p>
+                                        <div className="space-y-4">
+                                            <h3 className="text-xl font-semibold text-gray-800">Key Achievements</h3>
+                                            <div className="grid grid-cols-1 gap-4">
+                                                {timelineData[activeIndex].achievements.map((achievement, idx) => (
+                                                    <div key={idx} className="flex items-start gap-3 bg-gray-50 p-3 rounded-lg border border-gray-100">
+                                                        <div className="w-2 h-2 bg-blue-500 rounded-full mt-2" />
+                                                        <p className="text-gray-700">{achievement}</p>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                        <p className="text-sm md:text-base text-gray-600 italic">
+                                            {timelineData[activeIndex].details}
+                                        </p>
+                                    </div>
+                                    <div className="relative h-[300px] md:h-[400px] rounded-xl overflow-hidden group shadow-lg">
+                                        <img
+                                            src={timelineData[activeIndex].image}
+                                            alt={timelineData[activeIndex].title}
+                                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </motion.div>
                     )}
                 </div>
             </div>

@@ -106,7 +106,7 @@ const Head = () => {
                             exit={{ opacity: 0, y: -20 }}
                             transition={{ delay: 0.5 }}
                         >
-                            <h2 className="text-4xl font-bold">{video.title}</h2>
+                            {/* <h2 className="text-4xl font-bold">{video.title}</h2> */}
                         </motion.div>
                     </motion.div>
                 ))}

@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./page/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -22,13 +23,29 @@ import Values from "./page/pillars/Values";
 import Insurance from "./page/pillars/Insurance";
 import Welfare from "./page/pillars/Welfare";
 import Contact from "./page/Contact";
+import Loading from "./components/Loading";
+import usePageLoading from "./hooks/usePageLoading";
 
-function App() {
+// Create a ScrollToTop component
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+function AppContent() {
+  const isLoading = usePageLoading();
+
   return (
-    <div className="App font-custom overflow-x-hidden">
-      <CursorDot />
-      <BrowserRouter>
-        <Navbar />
+    <>
+      {isLoading && <Loading />}
+      <ScrollToTop />
+      <Navbar />
+      <div className="min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/discover/story" element={<Storys />} />
@@ -51,7 +68,18 @@ function App() {
           <Route path="/pillars/Welfare" element={<Welfare />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <Footer />
+      </div>
+      <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <div className="App font-custom overflow-x-hidden">
+      <CursorDot />
+      <BrowserRouter>
+        <AppContent />
       </BrowserRouter>
     </div>
   );

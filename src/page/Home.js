@@ -67,7 +67,7 @@ const Home = () => {
                     <div className="container mx-auto px-4 md:px-8 py-8 md:py-16">
                         <Fourth />
                     </div>
-                    <div className="container mx-auto px-4 md:px-8 py-8 md:py-16">
+                    <div className="px-4 md:px-8 py-8 md:py-16">
                         <Five />
                     </div>
                     <div className="w-full md:w-screen overflow-hidden">

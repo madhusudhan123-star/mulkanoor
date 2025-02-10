@@ -5,6 +5,58 @@ import { GiReceiveMoney, GiHealthNormal } from 'react-icons/gi';
 import { BiSolidBank } from 'react-icons/bi';
 import { MdElderlyWoman } from 'react-icons/md';
 
+const imageSpecs = {
+    banner: {
+        width: 1920,
+        height: 1080,
+        aspectRatio: "16:9",
+        description: "Main hero banner - Financial security image"
+    },
+    protection: {
+        width: 800,
+        height: 600,
+        aspectRatio: "4:3",
+        description: "Insurance protection background"
+    },
+    health: {
+        width: 800,
+        height: 600,
+        aspectRatio: "4:3",
+        description: "Health insurance background"
+    },
+    solar: {
+        width: 800,
+        height: 600,
+        aspectRatio: "4:3",
+        description: "Solar plant background"
+    },
+    pension: {
+        width: 800,
+        height: 600,
+        aspectRatio: "4:3",
+        description: "Pension services background"
+    },
+    gallery: {
+        width: 600,
+        height: 450,
+        aspectRatio: "4:3",
+        description: "Gallery images (4 images needed)",
+        items: [
+            "Finance related image",
+            "Insurance documentation image",
+            "Solar installation image",
+            "Welfare activities image"
+        ]
+    }
+};
+
+// Key optimization notes:
+// - All images should be under 200KB
+// - Use WebP format with JPEG fallback
+// - Maintain consistent aspect ratios
+// - Center-focus compositions for flexible cropping
+// - Ensure good contrast for text overlay visibility
+
 const Insurance = () => {
     const services = [
         {
@@ -313,7 +365,9 @@ const Insurance = () => {
                         </p>
                         <button className="bg-blue-500 text-white px-8 py-3 rounded-full font-semibold 
                                        hover:bg-blue-600 transition-colors duration-300">
-                            Contact Us
+                            <a href='/contact'>
+                                Contact Us
+                            </a>
                         </button>
                     </div>
                 </motion.div>

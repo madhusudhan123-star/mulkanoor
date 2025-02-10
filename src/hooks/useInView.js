@@ -1,6 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 
 const useInView = (options = {}) => {
+    const memoizedOptions = useMemo(() => options, [options]);
     const [isInView, setIsInView] = useState(false);
     const ref = useRef(null);
 
@@ -18,7 +19,7 @@ const useInView = (options = {}) => {
                 observer.unobserve(ref.current);
             }
         };
-    }, [ref, options]);
+    }, [ref, memoizedOptions]);
 
     return [ref, isInView];
 };

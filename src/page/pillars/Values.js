@@ -19,6 +19,51 @@ const Values = () => {
         women: "https://images.unsplash.com/photo-1573497161423-acff4dcc5373"
     };
 
+    const imageSpecs = {
+        banner: {
+            width: 1920,
+            height: 1080,
+            aspectRatio: "16:9",
+            description: "Hero banner image - full width landscape"
+        },
+        processing: {
+            width: 800,
+            height: 600,
+            aspectRatio: "4:3",
+            description: "Processing infrastructure card image"
+        },
+        seeds: {
+            width: 800,
+            height: 600,
+            aspectRatio: "4:3",
+            description: "Seed production card image"
+        },
+        storage: {
+            width: 800,
+            height: 600,
+            aspectRatio: "4:3",
+            description: "Storage facility card image"
+        },
+        education: {
+            width: 800,
+            height: 600,
+            aspectRatio: "4:3",
+            description: "Educational institutions card image"
+        },
+        watershed: {
+            width: 800,
+            height: 600,
+            aspectRatio: "4:3",
+            description: "Watershed development card image"
+        },
+        women: {
+            width: 800,
+            height: 600,
+            aspectRatio: "4:3",
+            description: "Women empowerment card image"
+        }
+    };
+
     const stats = [
         { value: 40000, suffix: "MT", label: "Storage Capacity" },
         { value: 22.21, prefix: "₹", suffix: "Cr", label: "Bonus Distributed" },
@@ -196,7 +241,7 @@ const Values = () => {
         <div className="py-16 bg-gradient-to-b from-transparent to-white/5">
             <div className="container mx-auto px-4">
                 {/* Section Header */}
-                <motion.div 
+                <motion.div
                     className="text-center mb-16"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -206,7 +251,7 @@ const Values = () => {
                         Rural Development Initiatives
                     </h2>
                     <p className="text-[#8B7355] max-w-2xl mx-auto">
-                        Established in 2000, A.K. Vishwanatha Reddy Rural Development Society Ltd. 
+                        Established in 2000, A.K. Vishwanatha Reddy Rural Development Society Ltd.
                         continues to drive comprehensive rural development
                     </p>
                 </motion.div>
@@ -226,7 +271,7 @@ const Values = () => {
                                 transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2">
                                 {/* Image Section */}
                                 <div className="h-48 relative overflow-hidden">
-                                    <img 
+                                    <img
                                         src={initiative.image}
                                         alt={initiative.title}
                                         className="w-full h-full object-cover transition-transform 
@@ -243,7 +288,7 @@ const Values = () => {
                                     <h3 className="text-2xl font-bold text-[#4A3F35] mb-4">
                                         {initiative.title}
                                     </h3>
-                                    
+
                                     {/* Conditional Content Based on Initiative Type */}
                                     {initiative.stats && (
                                         <div className="grid grid-cols-2 gap-4 mb-4">
@@ -321,12 +366,52 @@ const Values = () => {
         <div className="min-h-screen bg-gradient-to-br from-[#F5F5DC] via-[#F0EBE0] to-[#E8E3D9]">
             {/* Hero Banner */}
             <div className="relative h-[60vh] overflow-hidden">
-                {/* ... Hero banner code similar to other pages ... */}
+                <img
+                    src={images.banner}
+                    alt="Rural Development"
+                    className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+                    <motion.h1
+                        className="text-4xl md:text-6xl font-bold text-center mb-4"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                    >
+                        Our Values & Initiatives
+                    </motion.h1>
+                    <motion.p
+                        className="text-lg md:text-xl text-center max-w-2xl px-4"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4 }}
+                    >
+                        Driving rural development through sustainable practices and community empowerment
+                    </motion.p>
+                </div>
             </div>
 
             <div className="py-16">
                 {/* Stats Section */}
-                {/* ... Stats grid similar to other pages ... */}
+                <div className="container mx-auto px-4 mb-16">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        {stats.map((stat, index) => (
+                            <motion.div
+                                key={index}
+                                className="bg-white/90 rounded-xl p-6 text-center shadow-lg"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: index * 0.1 }}
+                            >
+                                <div className="text-2xl md:text-3xl font-bold text-[#8B7355] mb-2">
+                                    {stat.prefix}{stat.value}{stat.suffix}
+                                </div>
+                                <div className="text-sm text-[#4A3F35]">{stat.label}</div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
 
                 {/* Services Grid */}
                 <div className="container mx-auto px-4 mb-16">
@@ -465,24 +550,6 @@ const Values = () => {
                         ))}
                     </div>
                 </div>
-
-                {/* CTA Section */}
-                <motion.div
-                    className="container mx-auto px-4 py-16 text-center"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                >
-                    <div className="bg-white/90 rounded-2xl p-8 shadow-xl max-w-3xl mx-auto">
-                        <h2 className="text-3xl font-bold text-[#2E7D32] mb-4">Join Our Mission</h2>
-                        <p className="text-[#1B5E20] mb-6">
-                            Be part of our journey in transforming rural communities through education and development
-                        </p>
-                        <button className="bg-[#2E7D32] text-white px-8 py-3 rounded-full font-semibold 
-                                       hover:bg-[#1B5E20] transition-colors duration-300">
-                            Get Involved
-                        </button>
-                    </div>
-                </motion.div>
             </div>
         </div>
     );

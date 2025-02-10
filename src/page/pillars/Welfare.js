@@ -5,6 +5,59 @@ import { GiHealthNormal, GiMedicalDrip } from 'react-icons/gi';
 import { MdFamilyRestroom, MdOutlineWaterDrop } from 'react-icons/md';
 import CountUp from 'react-countup';
 
+const imageSpecs = {
+    banner: {
+        width: 1920,
+        height: 1080,
+        aspectRatio: "16:9",
+        description: "Main hero banner - Community welfare image"
+    },
+    health: {
+        width: 800,
+        height: 600,
+        aspectRatio: "4:3",
+        description: "Healthcare initiatives image",
+        focus: "Medical camp or healthcare facility"
+    },
+    education: {
+        width: 800,
+        height: 600,
+        aspectRatio: "4:3",
+        description: "Education support image",
+        focus: "Students or educational facility"
+    },
+    community: {
+        width: 800,
+        height: 600,
+        aspectRatio: "4:3",
+        description: "Community development image",
+        focus: "Village infrastructure or community gathering"
+    },
+    water: {
+        width: 800,
+        height: 600,
+        aspectRatio: "4:3",
+        description: "Water facility image",
+        focus: "Water infrastructure or clean water access"
+    },
+    animal: {
+        width: 800,
+        height: 600,
+        aspectRatio: "4:3",
+        description: "Animal welfare image",
+        focus: "Veterinary care or animal husbandry"
+    }
+};
+
+// Image optimization guidelines:
+// 1. File size: Keep under 200KB each
+// 2. Format: WebP with JPEG fallback
+// 3. Resolution: Maintain specified dimensions
+// 4. Composition: Center-focused for flexible cropping
+// 5. Contrast: Ensure readability with text overlays
+// 6. Color: Natural, warm tones preferred
+// 7. Content: Real activity shots when possible
+
 const Welfare = () => {
     const images = {
         banner: "https://images.unsplash.com/photo-1582213782179-e0d53f982ca0",
@@ -194,7 +247,9 @@ const Welfare = () => {
                         </p>
                         <button className="bg-[#2E7D32] text-white px-8 py-3 rounded-full font-semibold 
                                        hover:bg-[#1B5E20] transition-colors duration-300">
-                            Get Involved
+                            <a href='https://docs.google.com/forms/d/e/1FAIpQLSepAarKrA7FdpS-tKCYMmKn-uLdcCCU7CNKtK9d64_W76nXAQ/viewform?usp=dialog'>
+                                Get Involved
+                            </a>
                         </button>
                     </div>
                 </motion.div>

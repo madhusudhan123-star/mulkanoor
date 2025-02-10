@@ -7,11 +7,31 @@ import { BsBookshelf } from 'react-icons/bs';
 
 const Extension = () => {
     const images = {
-        banner: "https://images.unsplash.com/photo-1589923188651-268a9765e432",
-        training: "https://images.unsplash.com/photo-1557804506-669a67965ba0",
-        soil: "https://images.unsplash.com/photo-1464226184884-fa280b87c399",
-        library: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da",
-        tour: "https://images.unsplash.com/photo-1590682687104-e269eb11e413"
+        banner: {
+            url: "https://images.unsplash.com/photo-1589923188651-268a9765e432",
+            dimensions: "1920x1080px",  // Hero banner (16:9 aspect ratio)
+            maxSize: "500KB"
+        },
+        training: {
+            url: "https://images.unsplash.com/photo-1557804506-669a67965ba0",
+            dimensions: "800x600px",    // Feature card image (4:3 aspect ratio)
+            maxSize: "200KB"
+        },
+        soil: {
+            url: "https://images.unsplash.com/photo-1464226184884-fa280b87c399",
+            dimensions: "800x600px",    // Feature card image (4:3 aspect ratio)
+            maxSize: "200KB"
+        },
+        library: {
+            url: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da",
+            dimensions: "800x600px",    // Feature card image (4:3 aspect ratio)
+            maxSize: "200KB"
+        },
+        tour: {
+            url: "https://images.unsplash.com/photo-1590682687104-e269eb11e413",
+            dimensions: "1200x800px",   // Training section image (3:2 aspect ratio)
+            maxSize: "300KB"
+        }
     };
 
     const features = [
@@ -19,25 +39,25 @@ const Extension = () => {
             title: "Information Center",
             description: "State-of-the-art classroom with visual aids and modern technology",
             icon: <GiTeacher className="text-4xl" />,
-            image: images.training
+            image: images.training.url
         },
         {
             title: "Resource Library",
             description: "Extensive collection of agricultural books, magazines, and documentaries",
             icon: <BsBookshelf className="text-4xl" />,
-            image: images.library
+            image: images.library.url
         },
         {
             title: "Professional Guidance",
             description: "Six agriculture graduates providing expert cultivation advice",
             icon: <FaGraduationCap className="text-4xl" />,
-            image: images.training
+            image: images.training.url
         },
         {
             title: "Soil Testing",
             description: "Advanced laboratory for soil quality assessment and recommendations",
             icon: <FaMicroscope className="text-4xl" />,
-            image: images.soil
+            image: images.soil.url
         }
     ];
 
@@ -59,7 +79,7 @@ const Extension = () => {
                     className="absolute inset-0"
                 >
                     <img
-                        src={images.banner}
+                        src={images.banner.url}
                         alt="Extension Services"
                         className="w-full h-full object-cover"
                     />
@@ -164,7 +184,7 @@ const Extension = () => {
                             whileHover={{ scale: 1.02 }}
                         >
                             <img
-                                src={images.tour}
+                                src={images.tour.url}
                                 alt="Training Programs"
                                 className="w-full h-full object-cover"
                             />
@@ -180,7 +200,9 @@ const Extension = () => {
                 >
                     <button className="bg-[#2E7D32] text-white px-8 py-3 rounded-full font-semibold 
                                    hover:bg-[#1B5E20] transition-colors duration-300">
-                        Join Our Next Training Program
+                        <a href='https://docs.google.com/forms/d/e/1FAIpQLSepAarKrA7FdpS-tKCYMmKn-uLdcCCU7CNKtK9d64_W76nXAQ/viewform?usp=dialog'>
+                            Join Our Next Training Program
+                        </a>
                     </button>
                 </motion.div>
             </div>

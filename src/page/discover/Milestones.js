@@ -27,22 +27,62 @@ const Milestones = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    // Add this useEffect to handle scrolling when activeIndex changes
+    useEffect(() => {
+        const container = scrollContainerRef.current;
+        if (container) {
+            const itemWidth = 250;
+            const containerWidth = container.clientWidth;
+            const currentScroll = container.scrollLeft;
+            const activeItemPosition = itemWidth * activeIndex;
+            const buffer = itemWidth; // Extra space to keep next items partially visible
+
+            // Check if active item is too far to the right
+            if (activeItemPosition > currentScroll + containerWidth - buffer) {
+                container.scrollTo({
+                    left: activeItemPosition - containerWidth + buffer,
+                    behavior: 'smooth'
+                });
+            }
+            // Check if active item is too far to the left
+            else if (activeItemPosition < currentScroll + buffer) {
+                container.scrollTo({
+                    left: Math.max(0, activeItemPosition - buffer),
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }, [activeIndex]);
+
+    // Update the scroll function
     const scroll = (direction) => {
         const container = scrollContainerRef.current;
         if (!container) return;
 
-        const scrollAmount = direction === 'left' ? -300 : 300;
-        const targetScroll = container.scrollLeft + scrollAmount;
         const itemWidth = 250;
-        const normalizedScroll = Math.round(targetScroll / itemWidth) * itemWidth;
+        const currentIndex = activeIndex;
+
+        // Change to single step navigation
+        const newIndex = direction === 'left'
+            ? Math.max(0, currentIndex - 1)
+            : Math.min(timelineData.length - 1, currentIndex + 1);
+
+        setActiveIndex(newIndex);
+
+        // Precise scroll calculation
+        const containerWidth = container.clientWidth;
+        const scrollPosition = Math.max(
+            0,
+            Math.min(
+                (itemWidth * newIndex) - (containerWidth / 2) + (itemWidth / 2),
+                container.scrollWidth - containerWidth
+            )
+        );
 
         container.scrollTo({
-            left: normalizedScroll,
+            left: scrollPosition,
             behavior: 'smooth'
         });
-
-        const newIndex = Math.round(normalizedScroll / itemWidth);
-        setActiveIndex(Math.max(0, Math.min(newIndex, timelineData.length - 1)));
     };
 
     const timelineData = [
@@ -799,6 +839,36 @@ const Milestones = () => {
         }
     ];
 
+    // Update the onClick handler in the timeline items
+    const handleItemClick = (index) => {
+        const container = scrollContainerRef.current;
+        if (container) {
+            const itemWidth = 250;
+            const containerWidth = container.clientWidth;
+            const scrollPosition = Math.max(
+                0,
+                Math.min(
+                    (itemWidth * index) - (containerWidth / 2) + (itemWidth / 2),
+                    container.scrollWidth - containerWidth
+                )
+            );
+
+            setActiveIndex(index);
+            container.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
+            });
+        }
+    };
+
+    // Add this CSS class at the top of your component or in your styles file
+    const scrollContainerStyles = {
+        msOverflowStyle: 'none', // IE and Edge
+        scrollbarWidth: 'none', // Firefox
+        '&::-webkit-scrollbar': { // Chrome, Safari and Opera
+            display: 'none'
+        }
+    };
 
     return (
         <div className="min-h-screen pt-20 bg-gradient-to-b from-[#1a1a1a] to-[#2a2a2a] text-white">
@@ -846,19 +916,42 @@ const Milestones = () => {
                     )}
 
                     {/* Timeline Items Container */}
-                    <div ref={scrollContainerRef} className="overflow-x-auto hide-scrollbar scroll-smooth">
-                        <div className="relative min-w-max flex items-center gap-6 md:gap-12 px-4 md:px-8 py-4">
+                    <div
+                        ref={scrollContainerRef}
+                        className="overflow-x-auto relative scroll-smooth"
+                        style={{
+                            ...scrollContainerStyles,
+                            WebkitOverflowScrolling: 'touch',
+                        }}
+                    >
+                        <div className="flex items-center gap-6 md:gap-12 px-4 md:px-8 py-4">
                             <div className="absolute top-[45px] md:top-[55px] left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent" />
 
                             {timelineData.map((item, index) => (
                                 <motion.div
                                     key={index}
                                     className={`
-                                        relative flex flex-col items-center cursor-pointer
-                                        ${activeIndex === index ? 'scale-110' : 'scale-100'}
-                                        transition-all duration-300
+                                        relative flex-shrink-0 flex flex-col items-center cursor-pointer
+                                        ${activeIndex === index ? 'scale-110 z-10' : 'scale-100'}
+                                        ${activeIndex > index ? 'opacity-50' : 'opacity-100'}
+                                        transition-all duration-300 ease-in-out
+                                        min-w-[200px]
                                     `}
-                                    onClick={() => setActiveIndex(index)}
+                                    onClick={() => {
+                                        setActiveIndex(index);
+                                        const container = scrollContainerRef.current;
+                                        if (container) {
+                                            const itemWidth = 250;
+                                            const scrollPosition = Math.max(
+                                                0,
+                                                (itemWidth * index) - (container.clientWidth / 2) + (itemWidth / 2)
+                                            );
+                                            container.scrollTo({
+                                                left: scrollPosition,
+                                                behavior: 'smooth'
+                                            });
+                                        }
+                                    }}
                                     whileHover={{ scale: 1.05 }}
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
@@ -869,14 +962,29 @@ const Milestones = () => {
                                         flex items-center justify-center
                                         ${activeIndex === index
                                             ? 'bg-white/30 shadow-lg shadow-white/20'
-                                            : 'bg-white/10'}
+                                            : activeIndex > index
+                                                ? 'bg-white/20'
+                                                : 'bg-white/10'}
                                         transition-all duration-300
                                     `}>
-                                        <span className="text-xl md:text-2xl font-bold">{item.year.split('-')[0]}</span>
+                                        <span className={`
+                                            text-xl md:text-2xl font-bold
+                                            ${activeIndex === index
+                                                ? 'text-white'
+                                                : activeIndex > index
+                                                    ? 'text-white/70'
+                                                    : 'text-white/60'}
+                                        `}>
+                                            {item.year.split('-')[0]}
+                                        </span>
                                     </div>
                                     <h3 className={`
                                         mt-4 text-sm md:text-base font-medium text-center w-32
-                                        ${activeIndex === index ? 'text-white' : 'text-white/60'}
+                                        ${activeIndex === index
+                                            ? 'text-white'
+                                            : activeIndex > index
+                                                ? 'text-white/70'
+                                                : 'text-white/60'}
                                     `}>
                                         {item.title}
                                     </h3>

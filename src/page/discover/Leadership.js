@@ -86,12 +86,22 @@ const Leadership = () => {
                     <h4 className="font-bold mb-2">Cooperative Leadership:</h4>
                     <p className="mb-4">He served as Vice-President of the District Cooperative Central Bank and Director of the District Cooperative Marketing Society from 1959 to 1966. He was also an executive member of the Andhra Pradesh Cooperative Marketing Federation and guided the Land Mortgage Bank as a Director.</p>
 
+                    <h4 className="font-bold mb-2">Advocacy for Farmers:</h4>
+                    <p className="mb-4">He championed the establishment of a starch factory in Karimnagar to support maize growers and served as President of the Andhra Pradesh Farmers Maize Starch Cooperative Limited.</p>
+
+                    <h4 className="font-bold mb-2">Pioneering Poultry Initiatives:</h4>
+                    <p className="mb-4">Sri Reddy promoted poultry farming in the region, serving as a member of the Central Poultry Development Advisory Council, Government of India, and Vice-President of the Warangal Poultry Farmers Association.</p>
+
+                    <h4 className="font-bold mb-2">Academic and Advisory Roles:</h4>
+                    <p className="mb-4">Recognized for his expertise in agriculture, he was nominated as a member of the Andhra Pradesh Agricultural University Research Advisory Council and served on the State Seed Sub-Committee.</p>
+
                     <h4 className="font-bold mb-2">Community Leadership:</h4>
                     <p className="mb-4">He held several leadership positions, including Sarpanch of Bheemadevarapally Gram Panchayat for 20 years and President of the Panchayat Samithi, Bheemadevarapally Taluq (1981-86).</p>
 
                     <h3 className="text-xl font-bold mt-6 mb-4">Recognition and Awards</h3>
                     <p className="mb-4">
-                        Sri A.K. Vishwanatha Reddy's visionary leadership and managerial excellence earned him widespread recognition. Notably, he was honored with the "Manager of the Year 1981" award by the Hyderabad Management Association, making him the only recipient from the cooperative sector to receive such an honor.
+                        Sri A.K. Vishwanatha Reddy’s visionary leadership and managerial excellence earned him widespread recognition. Notably, he was honored with the “Manager of the Year 1981” award by the Hyderabad Management Association, making him the only recipient from the cooperative sector to receive such an honor.
+                        His tireless dedication and pioneering efforts in the cooperative movement have left an indelible mark, inspiring generations to follow his example of service, innovation, and leadership.
                     </p>
                 </>
             )
