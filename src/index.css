@@ -100,3 +100,17 @@ a, button, [role="button"] {
 a:hover, button:hover, [role="button"]:hover {
     cursor: pointer;
 }
+
+/* Custom cursor styles */
+* {
+    cursor: none !important;
+}
+
+@media (max-width: 768px) {
+    * {
+        cursor: auto !important;
+    }
+    .cursor {
+        display: none !important;
+    }
+}

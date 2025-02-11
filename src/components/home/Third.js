@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { IoArrowUpCircleOutline } from "react-icons/io5";
 import dummy from '../../assets/dummy.jpeg';
 export const Third = () => {
-    const [expandedCard, setExpandedCard] = useState(null);
+    const [expandedCard, setExpandedCard] = useState(0); // Set first card as expanded by default
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
     // Add window resize listener
@@ -16,8 +16,7 @@ export const Third = () => {
 
     const handleCardClick = (index) => {
         if (isMobile) {
-            // Simple toggle for mobile
-            setExpandedCard(expandedCard === index ? null : index);
+            setExpandedCard(index); // Always set the clicked card as expanded
         }
     }
 
@@ -90,12 +89,12 @@ export const Third = () => {
                             >
                                 {!isMobile && (
                                     <div
-                                        className='absolute -right-2 md:-right-5 -top-4 md:-top-6 bg-white p-3 md:p-5 rounded-[2rem] md:rounded-[3.5rem] cursor-pointer'
+                                        className='absolute -right-2 md:-right-5 -top-4 md:-top-6 bg-white p-3 md:p-5 rounded-[2rem] md:rounded-[3.5rem] cursor-pointer animate-bounce'
                                         onClick={(e) => {
                                             e.stopPropagation();
-                                            setExpandedCard(expandedCard === index ? null : index);
+                                            setExpandedCard(index); // Always set the clicked card as expanded
                                         }}>
-                                        <IoArrowUpCircleOutline className={`text-2xl md:text-4xl ${expandedCard === index ? '-rotate-[140deg] duration-100' : 'rotate-45'}`} />
+                                        <IoArrowUpCircleOutline className={`text-2xl md:text-4xl transform transition-transform duration-300 ${expandedCard === index ? '-rotate-[140deg]' : 'rotate-45'}`} />
                                     </div>
                                 )}
 
