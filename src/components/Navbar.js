@@ -1,10 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes, FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaChevronDown } from 'react-icons/fa';
 import logo from '../assets/logo.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
+    const [scrollDirection, setScrollDirection] = useState('up');
+
+    useEffect(() => {
+        let lastScrollY = window.scrollY;
+
+        const handleScroll = () => {
+            if (window.scrollY > lastScrollY) {
+                setScrollDirection('down');
+            } else {
+                setScrollDirection('up');
+            }
+            lastScrollY = window.scrollY;
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const menuItems = [
         {
@@ -76,7 +93,7 @@ const Navbar = () => {
     return (
         <div className="relative overflow-x-hidden">
             {/* Main Navbar */}
-            <nav className="fixed w-full top-0 left-0 backdrop-blur-sm bg-white/20 border-b border-white/20 shadow-lg z-50">
+            <nav className={`fixed w-full top-0 left-0 backdrop-blur-sm bg-white/20 border-b border-white/20 shadow-lg z-50 transition-transform duration-300 ${scrollDirection === 'down' ? '-translate-y-full' : 'translate-y-0'}`}>
                 <div className="flex justify-between items-center px-3 md:px-8 py-2 md:py-4">
                     {/* Menu Button */}
                     <button

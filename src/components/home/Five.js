@@ -48,65 +48,82 @@ const Five = () => {
 
     const timelineData = [
         {
-            year: "1956",
-            title: "Foundation",
-            description: "Established as a small cooperative society with 375 members",
+            year: "1956-57",
+            title: "Formation of the Society",
+            description: "Farmers registered the society with an initial membership of 373 and a share capital of ₹2,300.",
+            image: "https://example.com/image1.jpg",
             achievements: [
-                "Initial membership of 375 farmers",
+                "Initial membership of 373",
                 "Share capital of ₹2,300",
-                "First registered cooperative in the region"
+                "Established to support farmers financially"
             ],
-            details: "The society was established with a vision to support local farmers and promote agricultural development.",
-            image: "https://example.com/foundation-image.jpg"
+            details: "A group of farmers came together to form the cooperative society, laying the foundation for future agricultural support."
         },
         {
-            year: "1970",
-            title: "Infrastructure Development",
-            description: "Built first storage facility and established modern farming practices",
+            year: "1957-58",
+            title: "Introduction of Short-Term Loans",
+            description: "Short-term loans were disbursed for the first time to assist farmers in timely crop cultivation.",
+            image: "https://example.com/image2.jpg",
             achievements: [
-                "First grain storage facility constructed",
-                "Introduction of mechanized farming",
-                "Establishment of farmer training programs"
+                "First-ever short-term loans for farmers",
+                "Helped in timely crop cultivation"
             ],
-            details: "This period marked significant advancement in agricultural infrastructure and farmer education.",
-            image: "https://example.com/infrastructure-image.jpg"
+            details: "This initiative marked the beginning of financial assistance to farmers, ensuring better productivity."
         },
         {
-            year: "1990",
-            title: "Modernization",
-            description: "Implemented modern technologies and expanded services",
+            year: "1958-59",
+            title: "Electrification and Pump Set Sales",
+            description: "With electrification, the cooperative started selling electric pump sets to aid agricultural development.",
+            image: "https://example.com/image3.jpg",
             achievements: [
-                "Computerization of operations",
-                "Modern equipment acquisition",
-                "Expanded financial services"
+                "Electrification of the society's area",
+                "Introduction of electric pump sets for farmers"
             ],
-            details: "The society embraced technological advancement to better serve its members.",
-            image: "https://example.com/modernization-image.jpg"
+            details: "Providing electric pump sets revolutionized irrigation, enhancing crop yields."
         },
         {
-            year: "2010",
-            title: "Digital Transformation",
-            description: "Complete digital integration of services and operations",
+            year: "1959-60",
+            title: "Storage and Expansion",
+            description: "First godown was built for fertilizers and produce, and sugar sales were introduced.",
+            image: "https://example.com/image4.jpg",
             achievements: [
-                "Online banking services",
-                "Digital record keeping",
-                "Mobile app launch"
+                "Construction of first fertilizer godown",
+                "Initiation of sugar sales in the community"
             ],
-            details: "Digital transformation improved efficiency and accessibility of services.",
-            image: "https://example.com/digital-image.jpg"
+            details: "Efficient inventory management and expansion into sugar sales strengthened the cooperative's role in the region."
         },
         {
-            year: "2023",
-            title: "Present Day",
-            description: "Serving over 7600+ farmers with comprehensive solutions",
+            year: "1960-61",
+            title: "Innovative Loan Disbursement",
+            description: "Loans were disbursed in kind, and medium-term loans for pump sets were introduced.",
+            image: "https://example.com/image5.jpg",
             achievements: [
-                "7600+ active members",
-                "Comprehensive agricultural services",
-                "Sustainable farming practices"
+                "Loans disbursed in kind before RBI recommendations",
+                "First medium-term loans for pump sets"
             ],
-            details: "Today, the society stands as a model of cooperative excellence and sustainable agriculture.",
-            image: "https://example.com/present-image.jpg"
-        }
+            details: "Farmers benefited from receiving loans in kind, ensuring direct investment into farming essentials."
+        },
+        {
+            year: "1961-62",
+            title: "Introduction of Hybrid Seeds",
+            description: "Hybrid maize seeds were introduced to improve agricultural productivity.",
+            image: "https://example.com/image6.jpg",
+            achievements: [
+                "First introduction of hybrid maize seeds"
+            ],
+            details: "Farmers adopted hybrid maize, leading to better yield and quality crops."
+        },
+        {
+            year: "1962-63",
+            title: "Pledge Loan Scheme Introduced",
+            description: "Pledge loans were introduced to support farmers financially.",
+            image: "https://example.com/image7.jpg",
+            achievements: [
+                "Introduction of pledge loans"
+            ],
+            details: "This scheme helped farmers secure loans against stored produce."
+        },
+
     ];
 
     return (

@@ -72,51 +72,68 @@ export const Third = () => {
     ];
 
     return (
-        <div className="px-4 md:px-8 bg-transparent">
+        <div className="container mx-auto px-4 md:px-8 bg-transparent">
             <div>
-                <h1 className='text-2xl md:text-5xl text-center font-medium'>Farmers' Voice : What they Say about Us</h1>
+                <h1 className='text-2xl md:text-5xl text-center font-medium mb-12'>
+                    Farmers' Voice : What they Say about Us
+                </h1>
                 <div className='mt-8 md:mt-20'>
-                    <div className='flex flex-col md:flex-row gap-6 md:gap-3'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8'>
                         {cardsData.map((card, index) => (
                             <div
                                 key={index}
                                 onClick={() => handleCardClick(index)}
-                                className={`bg-yellow-200 relative p-4 md:p-5 rounded-xl transition-all duration-300 transform
-                                    ${!isMobile && expandedCard === index ? 'md:scale-125 relative z-10 md:mx-14' : 'scale-100'}
-                                    ${expandedCard === null ? 'mb-0' : expandedCard === index ? 'mb-8' : 'mb-0'}
-                                    ${isMobile ? 'cursor-pointer' : ''}
+                                className={`
+                                    bg-yellow-200/90 backdrop-blur-sm
+                                    relative p-6 rounded-xl 
+                                    transition-all duration-500 ease-in-out
+                                    min-h-[350px] md:min-h-[450px]
+                                    hover:shadow-xl
+                                    ${!isMobile && expandedCard === index
+                                        ? 'md:scale-105 md:z-10 md:shadow-2xl'
+                                        : 'scale-100 z-0'}
+                                    ${expandedCard === index ? 'mb-8' : 'mb-0'}
+                                    w-full
                                 `}
                             >
                                 {!isMobile && (
-                                    <div
-                                        className='absolute -right-2 md:-right-5 -top-4 md:-top-6 bg-white p-3 md:p-5 rounded-[2rem] md:rounded-[3.5rem] cursor-pointer animate-bounce'
+                                    <div className='absolute -right-2 md:-right-3 -top-3 bg-white p-3 rounded-full 
+                                        cursor-pointer shadow-md hover:shadow-lg transition-all duration-300'
                                         onClick={(e) => {
                                             e.stopPropagation();
-                                            setExpandedCard(index); // Always set the clicked card as expanded
+                                            setExpandedCard(index);
                                         }}>
-                                        <IoArrowUpCircleOutline className={`text-2xl md:text-4xl transform transition-transform duration-300 ${expandedCard === index ? '-rotate-[140deg]' : 'rotate-45'}`} />
+                                        <IoArrowUpCircleOutline className={`
+                                            text-2xl md:text-3xl transform transition-transform duration-300 
+                                            ${expandedCard === index ? '-rotate-180' : 'rotate-0'}
+                                        `} />
                                     </div>
                                 )}
 
-                                <h1 className='text-xs md:text-sm text-gray-500'>{card.date}</h1>
-                                <h1 className='text-xl md:text-2xl pt-6 md:pt-10 pb-2'>{card.name}, {card.role}</h1>
+                                <h1 className='text-xs md:text-sm text-gray-600 font-medium'>{card.date}</h1>
+                                <h1 className='text-xl md:text-2xl font-semibold pt-4 md:pt-6 pb-3'>{card.name}</h1>
+                                <h2 className='text-lg text-gray-700'>{card.role}</h2>
 
-                                <div className='transition-all duration-300 overflow-hidden'>
+                                <div className='transition-all duration-500 mt-4'>
                                     {expandedCard === index ? (
-                                        <div className='p-2 md:p-4'>
-                                            <p className='text-gray-700 mb-4 text-sm md:text-base'>"{card.content.testimonial}"</p>
-                                            <div className='text-xs md:text-sm text-gray-600'>
-                                                <p>Location: {card.content.location}</p>
-                                                <p>Farming Experience: {card.content.experience}</p>
-                                                <p>Crops: {card.content.crops}</p>
+                                        <div className='space-y-4'>
+                                            <p className='text-gray-700 italic text-sm md:text-base leading-relaxed'>
+                                                "{card.content.testimonial}"
+                                            </p>
+                                            <div className='text-xs md:text-sm text-gray-600 space-y-1 pt-4'>
+                                                <p><span className="font-medium">Location:</span> {card.content.location}</p>
+                                                <p><span className="font-medium">Experience:</span> {card.content.experience}</p>
+                                                <p><span className="font-medium">Crops:</span> {card.content.crops}</p>
                                             </div>
                                         </div>
                                     ) : (
-                                        <img
-                                            className='w-full rounded-xl transition-all duration-300'
-                                            src={card.image}
-                                            alt={`${card.name} - ${card.role}`}
-                                        />
+                                        <div className="mt-4 overflow-hidden rounded-lg">
+                                            <img
+                                                className='w-full h-48 object-cover transition-all duration-300 hover:scale-105'
+                                                src={card.image}
+                                                alt={`${card.name} - ${card.role}`}
+                                            />
+                                        </div>
                                     )}
                                 </div>
                             </div>
@@ -125,5 +142,5 @@ export const Third = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};

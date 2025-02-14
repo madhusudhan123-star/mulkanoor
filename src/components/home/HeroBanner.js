@@ -23,12 +23,7 @@ const cardData = [
     },
     {
         title: "Rooted in trust and collaboration",
-        content: `Driving holistic progress to uplift farmers, their families, and the community, Mulkanoor Cooperative Society stands as a beacon of trust, innovation, and collaboration. Together, we thrive as one family, rooted in trust, unity, and mutual growth.
-
-Impact Metrics:
-• ${impactMetrics.farmersEmpowered} farmers empowered
-• ${impactMetrics.creditFacilitated} credit facilitated to farmer members
-• ${impactMetrics.landCultivated} acres of land/season cultivated sustainably`
+        content: `Driving holistic progress to uplift farmers, their families, and the community, Mulkanoor Cooperative Society stands as a beacon of trust, innovation, and collaboration.`
     }
 ];
 
@@ -90,13 +85,6 @@ const ScrollTriggeredCountUp = ({ end, ...props }) => {
 
 const StatCard = ({ number, suffix, prefix, label }) => (
     <div className='text-center p-6 rounded-xl '>
-        <div className='text-4xl md:text-6xl font-bold'>
-            <ScrollTriggeredCountUp
-                end={number}
-                prefix={prefix}
-                suffix={suffix}
-            />
-        </div>
         <p className='text-sm md:text-base mt-2'>{label}</p>
     </div>
 );

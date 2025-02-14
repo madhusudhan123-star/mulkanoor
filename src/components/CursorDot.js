@@ -34,7 +34,7 @@ const CursorDot = () => {
         <>
             {/* Main cursor dot */}
             <motion.div
-                className="fixed pointer-events-none z-50 mix-blend-difference"
+                className="fixed pointer-events-none z-[9999] mix-blend-difference"
                 style={{
                     x: cursorXSpring,
                     y: cursorYSpring,
@@ -45,7 +45,7 @@ const CursorDot = () => {
 
             {/* Trailing dot */}
             <motion.div
-                className="fixed pointer-events-none z-40"
+                className="fixed pointer-events-none z-[9998]"
                 style={{
                     x: trailXSpring,
                     y: trailYSpring,
