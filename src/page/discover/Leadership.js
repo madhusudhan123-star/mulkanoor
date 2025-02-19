@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { IoClose } from "react-icons/io5";
+import one from "../../assets/leadership/one.jpg";
+import two from "../../assets/leadership/two.jpg";
 
 const SlidingPanel = ({ isOpen, onClose, leader }) => {
     return (
@@ -69,7 +71,7 @@ const Leadership = () => {
         {
             title: "FOUNDER PRESIDENT",
             name: "Sri A.K. Vishwanatha Reddy",
-            image: "/path-to-image.jpg",
+            image: one,
             description: (
                 <>
                     <h2 className="text-2xl font-bold mb-4">A Visionary Leader and Pioneer of Rural Development</h2>
@@ -109,7 +111,7 @@ const Leadership = () => {
         {
             title: "PRESIDENT-CHAIRMAN",
             name: "Shri AligiReddy Praveen Reddy",
-            image: "/path-to-image.jpg",
+            image: two,
             description: (
                 <>
                     <h2 className="text-2xl font-bold mb-4">An Inspirational Leader Upholding His Father's Legacy</h2>

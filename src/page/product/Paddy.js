@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import { FaStore, FaChartLine, FaSeedling } from 'react-icons/fa6';
 import { GiPlantSeed } from 'react-icons/gi';
 import CountUp from 'react-countup';
+import paddy1 from '../../assets/product/paddy/Paddy1.jpg';
+import paddy2 from '../../assets/product/paddy/Paddy2.jpg';
+import paddy3 from '../../assets/product/paddy/Paddy3.jpg';
 
 const Paddy = () => {
     const varieties = [
@@ -35,10 +38,9 @@ const Paddy = () => {
     ];
 
     const bannerImages = {
-        main: "https://images.unsplash.com/photo-1569880153113-76e33fc52d5f?q=80&w=2070",
-        varieties: "https://images.unsplash.com/photo-1595377592107-154bbb1c3332?q=80&w=2070",
-        process: "https://images.unsplash.com/photo-1599719619096-7025adeac993?q=80&w=2070",
-        metrics: "https://images.unsplash.com/photo-1620945264906-7205773922ca?q=80&w=2070"
+        main: paddy1,
+        process: paddy3,
+        metrics: paddy2
     };
 
     return (

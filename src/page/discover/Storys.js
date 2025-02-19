@@ -1,5 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import banner from '../../assets/ourstory/banner.jpg';
+import field from '../../assets/ourstory/field.jpg';
+import Building from '../../assets/ourstory/Building.jpg';
+import Scene from '../../assets/ourstory/Scene.jpg';
+import Original from '../../assets/ourstory/Original.jpg';
+import Founder from '../../assets/ourstory/Founder.jpg';
+import Modern from '../../assets/ourstory/Modern.jpg';
+import farmer from '../../assets/ourstory/farmer.jpg';
+import modern from '../../assets/ourstory/modern (2).jpg'; 
+import meeting from '../../assets/ourstory/meeting.jpg';
 
 const Storys = () => {
   const principles = [
@@ -17,15 +27,7 @@ const Storys = () => {
     <div className="min-h-screen bg-harvest">
       {/* Hero Section with Video */}
       <div className="relative h-screen">
-        <video
-          className="w-full h-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          <source src="/path-to-your-video.mp4" type="video/mp4" />
-        </video>
+        <img className="w-full h-full object-cover" src={banner} />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center px-4">
           <h1 className="text-white text-5xl font-bold text-center max-w-4xl mb-6">
             Empowering Farmers for Over 70 Years
@@ -47,7 +49,7 @@ const Storys = () => {
               className="relative h-64 overflow-hidden rounded-xl"
             >
               <img
-                src="/images/farmers-field.jpg"
+                src={field}
                 alt="Farmers in the field"
                 className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
               />
@@ -59,7 +61,7 @@ const Storys = () => {
               className="relative h-64 overflow-hidden rounded-xl md:translate-y-12"
             >
               <img
-                src="/images/cooperative-building.jpg"
+                src={Building}
                 alt="Cooperative Society Building"
                 className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
               />
@@ -71,7 +73,7 @@ const Storys = () => {
               className="relative h-64 overflow-hidden rounded-xl"
             >
               <img
-                src="/images/harvest-scene.jpg"
+                src={Scene}
                 alt="Harvest Scene"
                 className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
               />
@@ -94,7 +96,7 @@ const Storys = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div className="relative rounded-xl overflow-hidden h-80">
             <img
-              src="/images/historical-building.jpg"
+              src={Original}
               alt="Original Cooperative Building"
               className="w-full h-full object-cover"
             />
@@ -104,7 +106,7 @@ const Storys = () => {
           </div>
           <div className="relative rounded-xl overflow-hidden h-80">
             <img
-              src="/images/founder-portrait.jpg"
+              src={Founder}
               alt="Founder A.K. Vishwanatha Reddy"
               className="w-full h-full object-cover"
             />
@@ -166,7 +168,7 @@ const Storys = () => {
               className="relative rounded-lg overflow-hidden h-48"
             >
               <img
-                src="/images/modern-farming.jpg"
+                src={Modern}
                 alt="Modern Farming Techniques"
                 className="w-full h-full object-cover"
               />
@@ -178,7 +180,7 @@ const Storys = () => {
               className="relative rounded-lg overflow-hidden h-48"
             >
               <img
-                src="/images/training-session.jpg"
+                src={farmer}
                 alt="Farmer Training Session"
                 className="w-full h-full object-cover"
               />
@@ -190,7 +192,7 @@ const Storys = () => {
               className="relative rounded-lg overflow-hidden h-48"
             >
               <img
-                src="/images/equipment.jpg"
+                src={modern}
                 alt="Modern Agricultural Equipment"
                 className="w-full h-full object-cover"
               />
@@ -202,7 +204,7 @@ const Storys = () => {
               className="relative rounded-lg overflow-hidden h-48"
             >
               <img
-                src="/images/community-meeting.jpg"
+                src={meeting}
                 alt="Community Meeting"
                 className="w-full h-full object-cover"
               />
