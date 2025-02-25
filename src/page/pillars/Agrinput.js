@@ -4,6 +4,7 @@ import { FaHandHoldingWater, FaTractor, FaSeedling, FaHandshake } from 'react-ic
 import { GiFarmTractor, GiWateringCan, GiReceiveMoney } from 'react-icons/gi';
 import { RiGovernmentFill } from 'react-icons/ri';
 import { BiSupport } from 'react-icons/bi';
+import banner from '../../assets/agriinput/banner.jpg'
 
 const Agrinput = () => {
     const { scrollY } = useScroll();
@@ -22,83 +23,83 @@ const Agrinput = () => {
             title: "Government Collaboration",
             description: "Active partnerships with DRDA, SC/BC Corporations, Tribal Welfare, and NABARD",
             icon: <RiGovernmentFill className="text-4xl" />,
-            img: "https://images.unsplash.com/photo-1560493676-04071c5f467b",
+            img: "",
         },
         {
             title: "Agricultural Implements",
             description: "Loans for machinery, implements, and modern farming equipment",
             icon: <GiFarmTractor className="text-4xl" />,
-            img: "https://images.unsplash.com/photo-1560493676-04071c5f467b",
+            img: "",
         },
         {
             title: "Irrigation Solutions",
             description: "Support for wells, motors, pipelines, drip irrigation systems",
             icon: <GiWateringCan className="text-4xl" />,
-            img: "https://images.unsplash.com/photo-1560493676-04071c5f467b",
+            img: "",
         },
         {
             title: "Allied Activities",
             description: "Funding for dairy, sheep rearing, horticulture, and sericulture",
             icon: <FaSeedling className="text-4xl" />,
-            img: "https://images.unsplash.com/photo-1560493676-04071c5f467b", // Add corresponding image URL
+            img: "", // Add corresponding image URL
 
         },
         {
             title: "Welfare Initiatives",
             description: "Support for toilets, solar lanterns, and LPG connections",
             icon: <BiSupport className="text-4xl" />,
-            img: "https://images.unsplash.com/photo-1560493676-04071c5f467b", // Add corresponding image URL
+            img: "", // Add corresponding image URL
 
         },
         {
             title: "Financial Support",
             description: "Debt relief and subsidy facilitation for eligible members",
             icon: <GiReceiveMoney className="text-4xl" />,
-            img: "https://images.unsplash.com/photo-1560493676-04071c5f467b",
+            img: "",
         }
     ];
 
     const images = {
         banner: {
-            url: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449",
+            url: banner,
             dimensions: "1920x1080px"
         },
         irrigation: {
-            url: "https://images.unsplash.com/photo-1594761051744-501c9de43b7e",
+            url: "",
             dimensions: "800x600px"
         },
         machinery: {
-            url: "https://images.unsplash.com/photo-1598335624134-5bceb5de202b",
+            url: "",
             dimensions: "800x600px"
         },
         support: {
-            url: "https://images.unsplash.com/photo-1595074475099-3c0d268945ce",
+            url: "",
             dimensions: "800x600px"
         },
         // Add new images
         gallery: [
             {
-                url: "https://images.unsplash.com/photo-1560493676-04071c5f467b",
+                url: "",
                 dimensions: "1200x800px" // Modern farming
             },
             {
-                url: "https://images.unsplash.com/photo-1591339398521-7664b1f45b51",
+                url: "",
                 dimensions: "600x600px" // Equipment
             },
             {
-                url: "https://images.unsplash.com/photo-1583111617899-9cb3bb0161a6",
+                url: "",
                 dimensions: "600x600px" // Seeds
             },
             {
-                url: "https://images.unsplash.com/photo-1599492816933-c6953bc27d54",
+                url: "",
                 dimensions: "1200x800px" // Traditional farming
             },
             {
-                url: "https://images.unsplash.com/photo-1597916829826-02e5bb4a54e0",
+                url: "",
                 dimensions: "600x600px" // Technology
             },
             {
-                url: "https://images.unsplash.com/photo-1574943320219-eaf91e12ed85",
+                url: "",
                 dimensions: "600x600px" // Modern solutions
             }
         ]

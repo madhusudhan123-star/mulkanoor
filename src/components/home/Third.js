@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import { IoArrowUpCircleOutline } from "react-icons/io5";
 import dummy from '../../assets/dummy.jpeg';
+import voice1 from '../../assets/home/voice1.jpg'
+import voice2 from '../../assets/home/voice2.jpg'
+import voice3 from '../../assets/home/voice3.jpg'
+import voice4 from '../../assets/home/voice4.jpg'
+
 export const Third = () => {
     const [expandedCard, setExpandedCard] = useState(0); // Set first card as expanded by default
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -25,7 +30,7 @@ export const Third = () => {
             date: "1/10/2025",
             name: "Ramachandram",
             role: "Cotton Farmer",
-            image: dummy, // Your first image
+            image: voice1, // Your first image
             content: {
                 testimonial: "The service provided by Mulkanoor has been exceptional. Their support has transformed my farming practices.",
                 location: "Mulkanoor Village",
@@ -37,7 +42,7 @@ export const Third = () => {
             date: "5/09/2025",
             name: "Pochaiah, Farmer",
             role: "Rice Farmer",
-            image: dummy, // Your second image
+            image: voice2, // Your second image
             content: {
                 testimonial: "The training programs have been a game-changer for me. I’ve learned modern techniques that have made my farm more profitable",
                 location: "Karimnagar District",
@@ -49,7 +54,7 @@ export const Third = () => {
             date: "3/08/2025",
             name: "Rajaiah, Farmer",
             role: "Mixed Crop Farmer",
-            image: dummy, // Your third image
+            image: voice3, // Your third image
             content: {
                 testimonial: "With the financial support from Mulkanoor Cooperative Society, I was able to invest in a new tractor. This has drastically reduced my labor costs and improved the efficiency of my farming operations. Today, my land productivity has increased, and I’m able to meet the growing demands of the market.",
                 location: "Warangal District",
@@ -61,7 +66,7 @@ export const Third = () => {
             date: "7/07/2025",
             name: "Korra Chandu, Farmer",
             role: "Organic Farmer",
-            image: dummy, // Your fourth image
+            image: voice4, // Your fourth image
             content: {
                 testimonial: "Thanks to Mulkanoor’s seasonal crop loans and expert guidance, I was able to purchase high-quality seeds and fertilizers on time. My farm’s productivity has skyrocketed, and I’ve seen a steady increase in profits over the last few seasons. I’m now able to plan for the future with confidence",
                 location: "Siddipet District",
@@ -129,7 +134,7 @@ export const Third = () => {
                                     ) : (
                                         <div className="mt-4 overflow-hidden rounded-lg">
                                             <img
-                                                className='w-full h-48 object-cover transition-all duration-300 hover:scale-105'
+                                                className='w-full h-full  transition-all duration-300 hover:scale-105'
                                                 src={card.image}
                                                 alt={`${card.name} - ${card.role}`}
                                             />

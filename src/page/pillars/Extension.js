@@ -4,32 +4,42 @@ import { FaGraduationCap, FaFlask, FaBook, FaUsers, FaRoute, FaMicroscope } from
 import { GiFarmTractor, GiTeacher } from 'react-icons/gi';
 import { MdGroups } from 'react-icons/md';
 import { BsBookshelf } from 'react-icons/bs';
-
+import banner from '../../assets/extension/banner.jpg';
+import card1 from '../../assets/extension/card1.jpg';
+import card2 from '../../assets/extension/card2.jpg';
+import card3 from '../../assets/extension/card3.jpg';
+import card4 from '../../assets/extension/card4.jpg';
+import sideimg from '../../assets/extension/onesideimg.jpg';
 const Extension = () => {
     const images = {
         banner: {
-            url: "https://images.unsplash.com/photo-1589923188651-268a9765e432",
+            url: banner,
             dimensions: "1920x1080px",  // Hero banner (16:9 aspect ratio)
             maxSize: "500KB"
         },
         training: {
-            url: "https://images.unsplash.com/photo-1557804506-669a67965ba0",
+            url: card1,
             dimensions: "800x600px",    // Feature card image (4:3 aspect ratio)
             maxSize: "200KB"
         },
         soil: {
-            url: "https://images.unsplash.com/photo-1464226184884-fa280b87c399",
+            url: card2,
             dimensions: "800x600px",    // Feature card image (4:3 aspect ratio)
             maxSize: "200KB"
         },
         library: {
-            url: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da",
+            url: card3,
             dimensions: "800x600px",    // Feature card image (4:3 aspect ratio)
             maxSize: "200KB"
         },
         tour: {
-            url: "https://images.unsplash.com/photo-1590682687104-e269eb11e413",
+            url: card4,
             dimensions: "1200x800px",   // Training section image (3:2 aspect ratio)
+            maxSize: "300KB"
+        },
+        side: {
+            url: sideimg,
+            dimensions: "1200x800px",   // Side image (3:2 aspect ratio)
             maxSize: "300KB"
         }
     };
@@ -45,19 +55,19 @@ const Extension = () => {
             title: "Resource Library",
             description: "Extensive collection of agricultural books, magazines, and documentaries",
             icon: <BsBookshelf className="text-4xl" />,
-            image: images.library.url
+            image: images.soil.url
         },
         {
             title: "Professional Guidance",
             description: "Six agriculture graduates providing expert cultivation advice",
             icon: <FaGraduationCap className="text-4xl" />,
-            image: images.training.url
+            image: images.library.url
         },
         {
             title: "Soil Testing",
             description: "Advanced laboratory for soil quality assessment and recommendations",
             icon: <FaMicroscope className="text-4xl" />,
-            image: images.soil.url
+            image: images.tour.url
         }
     ];
 
@@ -136,11 +146,11 @@ const Extension = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
                         >
-                            <div className="h-48 relative overflow-hidden">
+                            <div className=" relative overflow-hidden">
                                 <img
                                     src={feature.image}
                                     alt={feature.title}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full"
                                 />
                                 <div className="absolute inset-0 bg-black/30" />
                                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
@@ -184,7 +194,7 @@ const Extension = () => {
                             whileHover={{ scale: 1.02 }}
                         >
                             <img
-                                src={images.tour.url}
+                                src={images.side.url}
                                 alt="Training Programs"
                                 className="w-full h-full object-cover"
                             />

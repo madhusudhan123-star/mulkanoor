@@ -7,16 +7,20 @@ import { BiStore } from 'react-icons/bi';
 import { IoMdWater } from 'react-icons/io';
 import { BiBuildingHouse, BiBookReader } from 'react-icons/bi';
 import { RiWomenLine, RiGovernmentLine } from 'react-icons/ri';
+import banner from '../../assets/values/banner.jpg';
+import card1 from '../../assets/values/card1.jpg';
+import card2 from '../../assets/values/card2.jpg';
+import card3 from '../../assets/values/card3.jpg';
 
 const Values = () => {
     const images = {
-        banner: "https://images.unsplash.com/photo-1589578527966-fdac0f44566c",
-        processing: "https://images.unsplash.com/photo-1595924733095-c5c81b4cc1c7",
-        seeds: "https://images.unsplash.com/photo-1574943320219-eaf91e12ed85",
-        storage: "https://images.unsplash.com/photo-1604335078431-6c4fcfa45702",
+        banner: banner,
+        processing: card1,
+        seeds: card2,
+        storage: card3,
         education: "https://images.unsplash.com/photo-1516321497487-e288fb19713f",
         watershed: "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
-        women: "https://images.unsplash.com/photo-1573497161423-acff4dcc5373"
+        women: "https://images.unsplash.com/photo-1573497161423-acff4dcc5373",
     };
 
     const imageSpecs = {

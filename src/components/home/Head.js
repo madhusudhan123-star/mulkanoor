@@ -3,6 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import one from '../../assets/home/one.mp4';
 import two from '../../assets/home/two.mp4';
 import three from '../../assets/home/three.mp4';
+import poster1 from '../../assets/home/poster1.jpg';
+import poster2 from '../../assets/home/poster2.jpg';
+import poster3 from '../../assets/home/poster3.jpg';
 import CountUp from 'react-countup';
 import useInView from '../../hooks/useInView';
 
@@ -24,17 +27,17 @@ const Head = () => {
     const videos = [
         {
             src: one,
-            poster: '/images/poster1.jpg', // Add poster images for faster initial load
+            poster: poster1, // Add poster images for faster initial load
             title: 'Empowering Farmers'
         },
         {
             src: two,
-            poster: '/images/poster2.jpg',
+            poster: poster2,
             title: 'Modern Agriculture'
         },
         {
             src: three,
-            poster: '/images/poster3.jpg',
+            poster: poster3,
             title: 'Sustainable Future'
         }
     ];

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import banner from '../assets/homebanner.webp';
+import banner from '../assets/homebanner.jpg';
 import HeroBanner from '../components/home/HeroBanner';
 import Second from '../components/home/Second';
 import { Third } from '../components/home/Third';

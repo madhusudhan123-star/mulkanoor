@@ -1,5 +1,5 @@
 import React from 'react'
-import banner from '../../assets/homebannersecond.webp'
+import banner from '../../assets/homebannersecond.jpg'
 
 const Second = () => {
     return (

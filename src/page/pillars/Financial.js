@@ -4,6 +4,7 @@ import { FaChartLine, FaMoneyBillWave, FaClock, FaPiggyBank, FaHandHoldingUsd } 
 import { RiMoneyDollarCircleLine } from 'react-icons/ri';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { IoIosArrowDown } from 'react-icons/io';
+import onesideimg from '../../assets/financial/onesideimg.jpg';
 
 const Financial = () => {
     const { scrollY } = useScroll();
@@ -21,7 +22,7 @@ const Financial = () => {
 
     const images = {
         banner: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85", // Financial banner
-        loan: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c", // Loan services
+        loan: onesideimg, // Loan services
         farming: "https://images.unsplash.com/photo-1622030411594-c282a63aa1b0", // Agricultural loan
         recovery: "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc", // Financial growth
         // Add new images

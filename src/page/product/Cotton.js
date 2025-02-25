@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaChartLine } from 'react-icons/fa6';
 import { GiCottonFlower } from 'react-icons/gi';
 import CountUp from 'react-countup';
+import cottom from '../../assets/cotton/cotton.jpg'
 
 const Cotton = () => {
     const salesData = [
@@ -54,7 +55,7 @@ const Cotton = () => {
                     <motion.div
                         className="absolute inset-0"
                         style={{
-                            backgroundImage: `url('https://images.unsplash.com/photo-1599666433232-2b222eb02b8c?q=80&w=2069')`,
+                            backgroundImage: `url(${cottom})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                         }}

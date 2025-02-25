@@ -4,6 +4,17 @@ import { FaShieldAlt, FaSun, FaGraduationCap, FaHandHoldingHeart } from 'react-i
 import { GiReceiveMoney, GiHealthNormal } from 'react-icons/gi';
 import { BiSolidBank } from 'react-icons/bi';
 import { MdElderlyWoman } from 'react-icons/md';
+import headbanner from '../../assets/insurance/headbanner.jpg';
+import bottombanner from '../../assets/insurance/bottombanner.jpg';
+import card1 from '../../assets/insurance/card1.jpg';
+import card2 from '../../assets/insurance/card2.jpg';
+import card3 from '../../assets/insurance/card3.jpg';
+import card4 from '../../assets/insurance/card4.jpg';
+import card5 from '../../assets/insurance/card5.jpg';
+import card6 from '../../assets/insurance/card6.jpg';
+import card7 from '../../assets/insurance/card7.jpg';
+import card8 from '../../assets/insurance/card8.jpg';
+
 
 const imageSpecs = {
     banner: {
@@ -142,16 +153,16 @@ const Insurance = () => {
     ];
 
     const images = {
-        banner: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40", // Financial security
-        protection: "https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf", // Protection
-        health: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d", // Health insurance
-        solar: "https://images.unsplash.com/photo-1509391366360-2e959784a276", // Solar plant
-        pension: "https://images.unsplash.com/photo-1532178324009-7b1123e1eac3", // Pension
+        banner: headbanner, // Financial security
+        protection: card1, // Protection
+        health: card2, // Health insurance
+        solar: card3, // Solar plant
+        pension: card4, // Pension
         gallery: [
-            "https://images.unsplash.com/photo-1450101499163-c8848c66ca85", // Finance
-            "https://images.unsplash.com/photo-1622473590773-f588134b6ce7", // Insurance
-            "https://images.unsplash.com/photo-1518186285589-2f7649de83e0", // Solar
-            "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f"  // Welfare
+            card5, // Finance
+            card6, // Insurance
+            card7, // Solar
+            card8  // Welfare
         ]
     };
 
@@ -352,7 +363,7 @@ const Insurance = () => {
                 >
                     <div className="absolute inset-0">
                         <img
-                            src={images.protection}
+                            src={bottombanner}
                             alt="Insurance Protection"
                             className="w-full h-full object-cover"
                         />

@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaTrophy, FaMedal, FaAward, FaThList, FaThLarge, FaCube } from 'react-icons/fa';
+import banner from '../assets/awards/banner.jpg'
+import card1 from '../assets/awards/card1.png'
+import card2 from '../assets/awards/card2.png'
+import card3 from '../assets/awards/card3.png'
+import card4 from '../assets/awards/card4.png'
+
 
 const Awards = () => {
     // Change default view to 'grid'
@@ -38,12 +44,12 @@ const Awards = () => {
     // 7. Content: Real activity shots when possible
 
     const images = {
-        hero: "https://images.unsplash.com/photo-1523289217630-0dd16184af8e", // Awards ceremony
+        hero: banner, // Awards ceremony
         awards: [
-            "https://images.unsplash.com/photo-1551410224-699683e15636", // Manager award
-            "https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70", // Agriculture
-            "https://images.unsplash.com/photo-1589535540794-4846f24037f5", // Cooperative
-            "https://images.unsplash.com/photo-1519834785169-98be25ec3f84", // Best cooperative
+            card1, // Manager award
+            card2, // Agriculture
+            card3,
+            card4,
             "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca", // Special felicitation
             "https://images.unsplash.com/photo-1579621970795-87facc2f976d", // NCDC award
             "https://images.unsplash.com/photo-1624953587687-daf255b6b80a", // Outstanding performer
@@ -347,7 +353,7 @@ const Awards = () => {
                                 <div className="absolute left-4 md:left-1/2 h-full w-0.5 bg-gradient-to-b from-[#C8AD7F] to-[#8B7355]" />
 
                                 {/* Awards Cards */}
-                                
+
                                 {awards.map((award, index) => (
                                     <motion.div
                                         key={index}

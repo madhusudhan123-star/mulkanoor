@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import logo from '../../assets/logo.png';
+import banner from '../../assets/milestones/banner.jpg';
 
 const Milestones = () => {
+    console.log("hi1")
+    console.log("hi2", banner)
     const [activeIndex, setActiveIndex] = useState(0);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
     const scrollContainerRef = useRef(null);
@@ -875,9 +877,7 @@ const Milestones = () => {
             {/* Hero Section */}
             <motion.div
                 className="h-[40vh] relative flex items-center justify-center bg-fixed bg-cover bg-center"
-                style={{
-                    backgroundImage: `url(https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1000&auto=format&fit=crop)`
-                }}
+                style={{ backgroundImage: `url(${banner})` }}  // Fix: Wrap banner in url()
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}

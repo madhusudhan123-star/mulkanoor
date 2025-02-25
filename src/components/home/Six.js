@@ -1,5 +1,5 @@
 import React from 'react'
-import map from '../../assets/home_map.png'
+import map from '../../assets//home/home_map.jpg'
 
 const Six = () => {
     return (

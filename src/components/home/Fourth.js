@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import { IoIosArrowDown } from "react-icons/io";
 // Import all your images
-import historyImage from '../../assets/dummy1.jpeg' // Replace with actual history image
-import missionImage from '../../assets/dummy2.jpeg' // Replace with actual mission image
-import visionImage from '../../assets/dummy3.jpeg'  // Replace with actual vision image
-import valuesImage from '../../assets/dummy5.jpeg'  // Replace with actual values image
+import historyImage from '../../assets/home/faq1.jpg' // Replace with actual history image
+import missionImage from '../../assets/home/faq2.jpg' // Replace with actual mission image
+import visionImage from '../../assets/home/faq3.jpg'  // Replace with actual vision image
+import valuesImage from '../../assets/home/faq4.png'  // Replace with actual values image
+import valuesImage1 from '../../assets/home/faq5.png'  // Replace with actual values image
+import valuesImage2 from '../../assets/home/faq6.png'  // Replace with actual values image
+
 
 const Fourth = () => {
     const [openIndex, setOpenIndex] = useState(null);
@@ -33,12 +36,12 @@ const Fourth = () => {
         {
             title: "Organized Eyecamp",
             content: "Organized Eyecamp for members and facilitated 150 Cataract operations for society members free of cost.",
-            image: valuesImage
+            image: valuesImage1
         },
         {
             title: "Pension to Senior Member",
             content: "Pension to Senior Members: Society members above 65 years can withdraw dividend distributed on the shares and interest earned on thrift deposit on monthly basis.",
-            image: valuesImage
+            image: valuesImage2
         }
     ];
 

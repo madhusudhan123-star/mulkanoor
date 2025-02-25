@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaSeedling, FaTractor, FaLeaf, FaTree, FaSun, FaWater } from 'react-icons/fa';
 import { GiFarmTractor, GiWheat, GiPlantWatering } from 'react-icons/gi';
+import vision from '../../assets/vision/vision.jpg';
 
 const Mission = () => {
   const fadeIn = {
@@ -40,9 +41,9 @@ const Mission = () => {
         {/* Vision Section - Mobile responsive layout */}
         <motion.section className="mb-12 md:mb-20 relative" {...fadeIn}>
           <div className='w-full h-full rounded-xl absolute bg-white/20 z-10'></div>
-          <img 
-            className='absolute rounded-xl w-full h-full z-0 object-cover' 
-            src="https://media.istockphoto.com/id/1805849861/photo/harvesting-in-agriculture-crop-field.webp?b=1&s=612x612&w=0&k=20&c=hlM73BNUq9hnlf354Lk2mqZc8OU5i9c9iIuQx1CJAKk=" 
+          <img
+            className='absolute rounded-xl w-full h-full z-0 object-cover'
+            src={vision}
             alt="Vision background"
           />
           <div className="rounded-2xl md:rounded-3xl shadow-grain overflow-hidden border border-earth-200 backdrop-blur-sm relative z-20">
@@ -63,8 +64,8 @@ const Mission = () => {
                 <p>By integrating advanced technologies, fostering collaborative partnerships with like-minded organizations, and embracing innovative solutions, we envision a society where agriculture is not only a means of livelihood but a pathway to enduring economic and social progress.</p>
                 <p>As a model cooperative, we are committed to promoting environmental sustainability, advancing gender equity, and nurturing the next generation of leaders in the rural economy. Our ultimate goal is to create a legacy of cooperative excellence that uplifts communities, strengthens families, and contributes to the broader goal of national development.</p>
               </motion.div>
-              <img 
-                className='rounded-xl md:rounded-tl-[10rem] md:rounded-br-[10rem] w-full md:w-1/2 h-[200px] md:h-auto object-cover relative z-20' 
+              <img
+                className='rounded-xl md:rounded-tl-[10rem] md:rounded-br-[10rem] w-full md:w-1/2 h-[200px] md:h-auto object-cover relative z-20'
                 src='https://fieldernutrition.com/wp-content/uploads/2024/01/Seed-Treatments.jpg'
                 alt="Vision illustration"
               />

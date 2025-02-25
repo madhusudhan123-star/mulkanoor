@@ -4,6 +4,11 @@ import { FaHeartbeat, FaGraduationCap, FaHandHoldingHeart, FaPiggyBank, FaHospit
 import { GiHealthNormal, GiMedicalDrip } from 'react-icons/gi';
 import { MdFamilyRestroom, MdOutlineWaterDrop } from 'react-icons/md';
 import CountUp from 'react-countup';
+import banner from '../../assets/welfare/banner.jpg';
+import card1 from '../../assets/welfare/card1.jpg';
+import card2 from '../../assets/welfare/card2.jpg';
+import card3 from '../../assets/welfare/card3.jpg';
+import card4 from '../../assets/welfare/card4.jpg';
 
 const imageSpecs = {
     banner: {
@@ -60,12 +65,12 @@ const imageSpecs = {
 
 const Welfare = () => {
     const images = {
-        banner: "https://images.unsplash.com/photo-1582213782179-e0d53f982ca0",
-        health: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1fda",
-        education: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f",
-        community: "https://images.unsplash.com/photo-1593113598332-cd288dc84fb9",
-        water: "https://images.unsplash.com/photo-1581244277943-fe4a9c777189",
-        animal: "https://images.unsplash.com/photo-1604167504016-e674a3098a9f"
+        banner: banner,
+        health: card1,
+        education: card2,
+        community: card3,
+        water: card4,
+        animal: card1
     };
 
     const initiatives = [
