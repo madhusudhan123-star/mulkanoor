@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaSeedling, FaTractor, FaLeaf, FaTree, FaSun, FaWater } from 'react-icons/fa';
 import { GiFarmTractor, GiWheat, GiPlantWatering } from 'react-icons/gi';
 import vision from '../../assets/vision/vision.jpg';
+import card from '../../assets/vision/card.jpg';
 
 const Mission = () => {
   const fadeIn = {
@@ -66,7 +67,7 @@ const Mission = () => {
               </motion.div>
               <img
                 className='rounded-xl md:rounded-tl-[10rem] md:rounded-br-[10rem] w-full md:w-1/2 h-[200px] md:h-auto object-cover relative z-20'
-                src='https://fieldernutrition.com/wp-content/uploads/2024/01/Seed-Treatments.jpg'
+                src={card}
                 alt="Vision illustration"
               />
             </div>

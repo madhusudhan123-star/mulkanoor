@@ -5,6 +5,8 @@ import { RiMoneyDollarCircleLine } from 'react-icons/ri';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { IoIosArrowDown } from 'react-icons/io';
 import onesideimg from '../../assets/financial/onesideimg.jpg';
+import cardone from '../../assets/financial/card1.jpg';
+import cardtwo from '../../assets/financial/card2.jpg';
 
 const Financial = () => {
     const { scrollY } = useScroll();
@@ -27,8 +29,8 @@ const Financial = () => {
         recovery: "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc", // Financial growth
         // Add new images
         gallery: [
-            "https://images.unsplash.com/photo-1601597111158-2fceff292cdc", // Farmers meeting
-            "https://images.unsplash.com/photo-1589923188651-268a9765e432", // Loan disbursement
+            cardone, // Farmers meeting
+            cardtwo,
             "https://images.unsplash.com/photo-1601582589907-f92af5ed9db8", // Agricultural finance
             "https://images.unsplash.com/photo-1632991506831-e39e690fee37", // Rural banking
         ]

@@ -6,6 +6,16 @@ import { GiReceiveMoney, GiTeamUpgrade } from 'react-icons/gi';
 import { MdBusinessCenter, MdIntegrationInstructions } from 'react-icons/md';
 import { HiLightBulb } from 'react-icons/hi';
 import { RiTeamFill, RiHandHeartLine } from 'react-icons/ri';
+import cardone from '../assets/winning/card1.jpg';
+import cardtwo from '../assets/winning/card2.jpg';
+import cardthree from '../assets/winning/card3.jpg';
+import cardfour from '../assets/winning/card4.jpg';
+import cardfive from '../assets/winning/card5.jpg';
+import cardsix from '../assets/winning/card6.jpg';
+import cardseven from '../assets/winning/card7.jpg';
+import cardeight from '../assets/winning/card8.jpg';
+import cardnine from '../assets/winning/card9.jpg';
+import cardten from '../assets/winning/card10.jpg';
 
 const Winning = () => {
     const formulas = [
@@ -13,55 +23,55 @@ const Winning = () => {
             title: "Independent Governance",
             description: "Free from external interference, ensuring unbiased decision-making.",
             icon: <BsFillShieldLockFill className="text-4xl" />,
-            image: "https://images.unsplash.com/photo-1521791055366-0d553872125f"
+            image: cardseven
         },
         {
             title: "Professional Leadership",
             description: "Managed with dedication, honesty, and professional expertise.",
             icon: <GiTeamUpgrade className="text-4xl" />,
-            image: "https://images.unsplash.com/photo-1552664730-d307ca884978"
+            image: cardnine
         },
         {
             title: "Rigorous Financial Discipline",
             description: "Timely lending and efficient recovery mechanisms.",
             icon: <GiReceiveMoney className="text-4xl" />,
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40"
+            image: cardfour
         },
         {
             title: "Affordable Access",
             description: "Provision of agricultural inputs at fair and competitive rates.",
             icon: <FaHandshake className="text-4xl" />,
-            image: "https://images.unsplash.com/photo-1533757771007-4c1a7aba5d39"
+            image: cardfive
         },
         {
             title: "Integrated Solutions",
             description: "Seamless linking of credit services with marketing support.",
             icon: <MdIntegrationInstructions className="text-4xl" />,
-            image: "https://images.unsplash.com/photo-1552664730-d307ca884978"
+            image: cardeight
         },
         {
             title: "Knowledge Empowerment",
             description: "Consistent delivery of comprehensive agricultural practices.",
             icon: <BsLightbulb className="text-4xl" />,
-            image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655"
+            image: cardthree
         },
         {
             title: "Agri-Business Support",
             description: "Lending targeted towards entrepreneurial agricultural ventures.",
             icon: <MdBusinessCenter className="text-4xl" />,
-            image: "https://images.unsplash.com/photo-1594761061819-c8f91b4a8359"
+            image: cardtwo
         },
         {
             title: "Seed Advancement",
             description: "Supply of high-quality, improved seed varieties.",
             icon: <FaSeedling className="text-4xl" />,
-            image: "https://images.unsplash.com/photo-1574943320219-eaf91e12ed85"
+            image: cardsix
         },
         {
             title: "Welfare Focus",
             description: "Implementation of impactful welfare measures, including insurance services.",
             icon: <RiHandHeartLine className="text-4xl" />,
-            image: "https://images.unsplash.com/photo-1582213782179-e0d53f982ca0"
+            image: cardone
         },
         {
             title: "Social Responsibility",
@@ -242,8 +252,8 @@ const Winning = () => {
                                     key={index}
                                     className="flex-shrink-0 w-[400px]"
                                     initial={{ opacity: 0, scale: 0.8 }}
-                                    whileInView={{ 
-                                        opacity: 1, 
+                                    whileInView={{
+                                        opacity: 1,
                                         scale: 1,
                                         transition: { duration: 0.5, delay: index * 0.1 }
                                     }}
@@ -258,7 +268,7 @@ const Winning = () => {
                                         <p className="text-[#8B7355] leading-relaxed">
                                             {formula.description}
                                         </p>
-                                        <motion.div 
+                                        <motion.div
                                             className="relative rounded-2xl overflow-hidden group mt-4"
                                             whileHover={{ scale: 1.05 }}
                                         >
@@ -275,7 +285,7 @@ const Winning = () => {
                             ))}
                         </motion.div>
                     </motion.div>
-                    
+
                     {/* Scroll Indicators */}
                     <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2">
                         {horizontalFormulas.map((_, index) => (
@@ -284,8 +294,8 @@ const Winning = () => {
                                 className="w-2 h-2 rounded-full bg-gray-400"
                                 animate={{
                                     scale: Math.abs(x.get()) > (width / horizontalFormulas.length) * index ? 1.5 : 1,
-                                    backgroundColor: Math.abs(x.get()) > (width / horizontalFormulas.length) * index 
-                                        ? "#4A3F35" 
+                                    backgroundColor: Math.abs(x.get()) > (width / horizontalFormulas.length) * index
+                                        ? "#4A3F35"
                                         : "#9CA3AF"
                                 }}
                             />
