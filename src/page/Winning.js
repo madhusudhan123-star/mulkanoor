@@ -16,6 +16,11 @@ import cardseven from '../assets/winning/card7.jpg';
 import cardeight from '../assets/winning/card8.jpg';
 import cardnine from '../assets/winning/card9.jpg';
 import cardten from '../assets/winning/card10.jpg';
+import cardeleven from '../assets/winning/card11.jpg';
+import cardtwelve from '../assets/winning/card12.jpg';
+import cardthirteen from '../assets/winning/card13.jpg';
+import cardfourteen from '../assets/winning/card14.jpg';
+import cardfifteen from '../assets/winning/card15.jpg';
 
 const Winning = () => {
     const formulas = [
@@ -77,31 +82,31 @@ const Winning = () => {
             title: "Social Responsibility",
             description: "Active patronage to community-building and social activities.",
             icon: <FaUsers className="text-4xl" />,
-            image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a"
+            image: cardten
         },
         {
             title: "Member-Driven Growth",
             description: "Strong internal resources built through member share contributions and thrift deposits.",
             icon: <FaChartLine className="text-4xl" />,
-            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f"
+            image: cardeleven
         },
         {
             title: "Marketing Expertise",
             description: "Exceptional marketing management ensuring optimal value realization.",
             icon: <HiLightBulb className="text-4xl" />,
-            image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312"
+            image: cardtwelve
         },
         {
             title: "Collective Trust",
             description: "Established goodwill and accountability within the member base.",
             icon: <FaHandshake className="text-4xl" />,
-            image: "https://images.unsplash.com/photo-1521791055366-0d553872125f"
+            image: cardthirteen
         },
         {
             title: "Ownership Culture",
             description: "Active participation of members, fostering a strong sense of ownership and collaboration.",
             icon: <RiTeamFill className="text-4xl" />,
-            image: "https://images.unsplash.com/photo-1552664730-d307ca884978"
+            image: cardfourteen
         }
     ];
 

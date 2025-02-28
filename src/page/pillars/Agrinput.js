@@ -5,6 +5,19 @@ import { GiFarmTractor, GiWateringCan, GiReceiveMoney } from 'react-icons/gi';
 import { RiGovernmentFill } from 'react-icons/ri';
 import { BiSupport } from 'react-icons/bi';
 import banner from '../../assets/agriinput/banner.jpg'
+import ag1 from '../../assets/agriinput/ag1.jpg'
+import ag2 from '../../assets/agriinput/ag2.jpg'
+import ag3 from '../../assets/agriinput/ag3.jpg'
+import ag4 from '../../assets/agriinput/ag4.jpg'
+import ag5 from '../../assets/agriinput/ag5.jpg'
+import ag6 from '../../assets/agriinput/ag6.jpg'
+import sidebanner from '../../assets/agriinput/sidebanner.jpg'
+import card1 from '../../assets/agriinput/card1.jpg'
+import card2 from '../../assets/agriinput/card2.jpg'
+import card3 from '../../assets/agriinput/card3.jpg'
+import card4 from '../../assets/agriinput/card4.jpg'
+import card5 from '../../assets/agriinput/card5.jpg'
+import card6 from '../../assets/agriinput/card6.jpg'
 
 const Agrinput = () => {
     const { scrollY } = useScroll();
@@ -23,39 +36,39 @@ const Agrinput = () => {
             title: "Government Collaboration",
             description: "Active partnerships with DRDA, SC/BC Corporations, Tribal Welfare, and NABARD",
             icon: <RiGovernmentFill className="text-4xl" />,
-            img: "",
+            img: card6,
         },
         {
             title: "Agricultural Implements",
             description: "Loans for machinery, implements, and modern farming equipment",
             icon: <GiFarmTractor className="text-4xl" />,
-            img: "",
+            img: card4,
         },
         {
             title: "Irrigation Solutions",
             description: "Support for wells, motors, pipelines, drip irrigation systems",
             icon: <GiWateringCan className="text-4xl" />,
-            img: "",
+            img: card3,
         },
         {
             title: "Allied Activities",
             description: "Funding for dairy, sheep rearing, horticulture, and sericulture",
             icon: <FaSeedling className="text-4xl" />,
-            img: "", // Add corresponding image URL
+            img: card2, // Add corresponding image URL
 
         },
         {
             title: "Welfare Initiatives",
             description: "Support for toilets, solar lanterns, and LPG connections",
             icon: <BiSupport className="text-4xl" />,
-            img: "", // Add corresponding image URL
+            img: card5, // Add corresponding image URL
 
         },
         {
             title: "Financial Support",
             description: "Debt relief and subsidy facilitation for eligible members",
             icon: <GiReceiveMoney className="text-4xl" />,
-            img: "",
+            img: card1,
         }
     ];
 
@@ -69,7 +82,7 @@ const Agrinput = () => {
             dimensions: "800x600px"
         },
         machinery: {
-            url: "",
+            url: sidebanner,
             dimensions: "800x600px"
         },
         support: {
@@ -79,27 +92,27 @@ const Agrinput = () => {
         // Add new images
         gallery: [
             {
-                url: "",
+                url: ag1,
                 dimensions: "1200x800px" // Modern farming
             },
             {
-                url: "",
+                url: ag2,
                 dimensions: "600x600px" // Equipment
             },
             {
-                url: "",
+                url: ag3,
                 dimensions: "600x600px" // Seeds
             },
             {
-                url: "",
+                url: ag4,
                 dimensions: "1200x800px" // Traditional farming
             },
             {
-                url: "",
+                url: ag5,
                 dimensions: "600x600px" // Technology
             },
             {
-                url: "",
+                url: ag6,
                 dimensions: "600x600px" // Modern solutions
             }
         ]

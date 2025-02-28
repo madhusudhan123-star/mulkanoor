@@ -7,6 +7,7 @@ import { IoIosArrowDown } from 'react-icons/io';
 import onesideimg from '../../assets/financial/onesideimg.jpg';
 import cardone from '../../assets/financial/card1.jpg';
 import cardtwo from '../../assets/financial/card2.jpg';
+import banner from '../../assets/financial/banner.jpg'
 
 const Financial = () => {
     const { scrollY } = useScroll();
@@ -25,7 +26,7 @@ const Financial = () => {
     const images = {
         banner: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85", // Financial banner
         loan: onesideimg, // Loan services
-        farming: "https://images.unsplash.com/photo-1622030411594-c282a63aa1b0", // Agricultural loan
+        farming: banner, // Agricultural loan
         recovery: "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc", // Financial growth
         // Add new images
         gallery: [
