@@ -8,6 +8,8 @@ import onesideimg from '../../assets/financial/onesideimg.jpg';
 import cardone from '../../assets/financial/card1.jpg';
 import cardtwo from '../../assets/financial/card2.jpg';
 import banner from '../../assets/financial/banner.jpg'
+import card3 from '../../assets/financial/card3.jpg';
+import card4 from '../../assets/financial/card4.jpg';
 
 const Financial = () => {
     const { scrollY } = useScroll();
@@ -32,8 +34,8 @@ const Financial = () => {
         gallery: [
             cardone, // Farmers meeting
             cardtwo,
-            "https://images.unsplash.com/photo-1601582589907-f92af5ed9db8", // Agricultural finance
-            "https://images.unsplash.com/photo-1632991506831-e39e690fee37", // Rural banking
+            card3, // Agricultural finance
+            card4, // Rural banking
         ]
     };
 

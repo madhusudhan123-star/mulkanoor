@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { FaStore, FaChartLine, FaBowlRice } from 'react-icons/fa6'; // Changed to FA6 which has rice icon
 import { GiBowlOfRice } from 'react-icons/gi'; // Changed to use GiBowlOfRice
 import CountUp from 'react-countup';
+import banner1 from '../../assets/rice/banner1.jpg';
+import banner2 from '../../assets/rice/banner2.jpg';
 
 const Rice = () => {
     const varieties = [
@@ -42,8 +44,8 @@ const Rice = () => {
     const bannerImages = {
         main: "https://images.unsplash.com/photo-1592997572594-34be01bc36c7?q=80&w=2070&auto=format&fit=crop",
         varieties: "https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=2070",
-        retail: "https://images.unsplash.com/photo-1589723933707-92e88d10f2be?q=80&w=2070",
-        metrics: "https://images.unsplash.com/photo-1602537694567-fc3cf0f9eca7?q=80&w=2070"
+        retail: banner1,
+        metrics: banner2
     };
 
     return (

@@ -11,6 +11,10 @@ import banner from '../../assets/values/banner.jpg';
 import card1 from '../../assets/values/card1.jpg';
 import card2 from '../../assets/values/card2.jpg';
 import card3 from '../../assets/values/card3.jpg';
+// import card4 from '../../assets/values/card4.png';
+import card5 from '../../assets/values/card5.jpg';
+import card6 from '../../assets/values/card6.jpg';
+
 
 const Values = () => {
     const images = {
@@ -18,9 +22,9 @@ const Values = () => {
         processing: card1,
         seeds: card2,
         storage: card3,
-        education: "https://images.unsplash.com/photo-1516321497487-e288fb19713f",
-        watershed: "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
-        women: "https://images.unsplash.com/photo-1573497161423-acff4dcc5373",
+        education: card3,
+        watershed: card5,
+        women: card6,
     };
 
     const imageSpecs = {
