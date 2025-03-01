@@ -6,6 +6,7 @@ import card1 from '../assets/awards/card1.png'
 import card2 from '../assets/awards/card2.png'
 import card3 from '../assets/awards/card3.png'
 import card4 from '../assets/awards/card4.png'
+import card5 from '../assets/awards/card5.jpg'
 
 
 const Awards = () => {
@@ -55,7 +56,7 @@ const Awards = () => {
             "https://images.unsplash.com/photo-1624953587687-daf255b6b80a", // Outstanding performer
             "https://images.unsplash.com/photo-1542744173-8e7e53415bb0", // Business award
             "https://images.unsplash.com/photo-1606836591695-4d58a73eba1e", // Jyothirgamayi
-            "https://images.unsplash.com/photo-1595781572981-d63151b232ed"  // Farmers society
+            card5  // Farmers society
         ]
     };
 

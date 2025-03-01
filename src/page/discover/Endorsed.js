@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Matter from 'matter-js';
 import card1 from '../../assets/Endorsed/card1.jpg';
 import card2 from '../../assets/Endorsed/card2.jpg';
@@ -14,9 +14,57 @@ import card10 from '../../assets/Endorsed/card10.jpg';
 import card11 from '../../assets/Endorsed/card11.jpg';
 import card12 from '../../assets/Endorsed/card12.jpg';
 
+const Modal = ({ founder, isOpen, onClose }) => {
+    if (!isOpen) return null;
+
+    return (
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80"
+            onClick={onClose}
+        >
+            <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                className="bg-[#2a2a2a] rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+                onClick={e => e.stopPropagation()}
+            >
+                <div className="flex flex-col md:flex-row">
+                    <div className="md:w-2/5 p-6">
+                        <img
+                            src={founder.image}
+                            alt={founder.name}
+                            className="w-full h-[400px] object-contain rounded-lg"
+                        />
+                    </div>
+                    <div className="md:w-3/5 p-6">
+                        <h2 className="text-3xl font-bold mb-2">{founder.name}</h2>
+                        <p className="text-xl text-gray-300 mb-1">{founder.position}</p>
+                        {founder.period && (
+                            <p className="text-lg text-gray-400 mb-4">{founder.period}</p>
+                        )}
+                        <p className="text-lg leading-relaxed text-gray-300">{founder.bio}</p>
+                    </div>
+                </div>
+                <button
+                    className="absolute top-4 right-4 text-white p-2"
+                    onClick={onClose}
+                >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </motion.div>
+        </motion.div>
+    );
+};
+
 const Endorsed = () => {
     const sceneRef = useRef(null);
-    const containerRef = useRef(null);
+    const [selectedFounder, setSelectedFounder] = useState(null);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
     const founders = [
@@ -202,44 +250,19 @@ const Endorsed = () => {
         };
     }, []);
 
-    // Calculate card movement based on mouse position
-    const calculateCardMovement = (index, mousePosition) => {
-        if (!containerRef.current) return { x: 0, y: 0 };
-        const card = containerRef.current.children[index];
-        if (!card) return { x: 0, y: 0 };
-
-        const rect = card.getBoundingClientRect();
-        const cardCenterX = rect.left + rect.width / 2;
-        const cardCenterY = rect.top + rect.height / 2;
-
-        const deltaX = mousePosition.x - cardCenterX;
-        const deltaY = mousePosition.y - cardCenterY;
-        const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-        const maxDistance = 400;
-
-        if (distance < maxDistance) {
-            const factor = (maxDistance - distance) / maxDistance;
-            return {
-                x: deltaX * factor * 0.1,
-                y: deltaY * factor * 0.1
-            };
-        }
-        return { x: 0, y: 0 };
-    };
-
     return (
-        <div className="relative min-h-screen bg-gradient-to-b from-[#1a1a1a] to-[#2a2a2a] text-white pt-16 md:pt-24 overflow-hidden">
+        <div className="relative min-h-screen bg-gradient-to-b from-[#1a1a1a] to-[#2a2a2a] text-white pt-16 pb-8 overflow-hidden">
             {/* Interactive Background */}
             <div ref={sceneRef} className="fixed inset-0 pointer-events-none" />
 
             {/* Hero Section */}
             <motion.div
-                className="relative z-10 mb-8 md:mb-16 px-4"
+                className="relative z-10 mb-12 px-4"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
             >
-                <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-center mb-4">
+                <h1 className="text-4xl md:text-6xl font-bold text-center mb-4">
                     Our Visionary Leaders
                 </h1>
                 <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto text-center">
@@ -247,57 +270,43 @@ const Endorsed = () => {
                 </p>
             </motion.div>
 
-            {/* Founders Grid with Alternating Layout */}
-            <div className="relative z-10 mb-10 px-4 md:px-8">
-                <div ref={containerRef} className="space-y-8">
+            {/* Founders Grid */}
+            <div className="relative z-10 px-4 md:px-8 max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {founders.map((founder, index) => (
                         <motion.div
                             key={founder.id}
-                            className={`bg-white/5 backdrop-blur-sm flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} 
-                                rounded-2xl overflow-hidden`}
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{
-                                opacity: 1,
-                                y: 0,
-                                x: calculateCardMovement(index, mousePosition).x,
-                                y: calculateCardMovement(index, mousePosition).y
-                            }}
-                            transition={{
-                                duration: 0.8,
-                                delay: index * 0.2,
-                                type: "spring",
-                                stiffness: 100
-                            }}
-                            whileHover={{
-                                scale: 1.02,
-                                backgroundColor: "rgba(255, 255, 255, 0.1)"
-                            }}
+                            className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: index * 0.1 }}
+                            onClick={() => setSelectedFounder(founder)}
                         >
-                            {/* Image Section */}
-                            <div className="relative w-full md:w-1/2 h-full">
+                            <div className="relative h-[400px]">
                                 <img
                                     src={founder.image}
                                     alt={founder.name}
-                                    className="w-full h-full"
+                                    className="w-full h-full "
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                            </div>
-
-                            {/* Content Section */}
-                            <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
-                                <div>
-                                    <h3 className="text-2xl md:text-3xl font-bold mb-2">{founder.name}</h3>
-                                    <p className="text-lg md:text-xl text-gray-300 mb-1">{founder.position}</p>
-                                    <p className="text-base md:text-lg text-gray-400 mb-4 md:mb-6">{founder.period}</p>
-                                    <p className="text-base md:text-lg leading-relaxed text-gray-300">
-                                        {founder.bio}
-                                    </p>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                                <div className="absolute bottom-0 p-4">
+                                    <h3 className="text-xl font-bold mb-1">{founder.name}</h3>
+                                    <p className="text-sm text-gray-300">{founder.position}</p>
                                 </div>
                             </div>
                         </motion.div>
                     ))}
                 </div>
             </div>
+
+            {/* Modal */}
+            <AnimatePresence>
+                <Modal
+                    founder={selectedFounder}
+                    isOpen={!!selectedFounder}
+                    onClose={() => setSelectedFounder(null)}
+                />
+            </AnimatePresence>
         </div>
     );
 };

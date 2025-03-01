@@ -50,6 +50,13 @@ const Footer = () => {
                                     Hanamkonda District, Telangana - 506 345
                                 </span>
                             </p>
+                            <Link
+                                to="/contact"
+                                className="inline-block mt-4 px-6 py-2 bg-[#005A32] text-white rounded-full
+                                    hover:bg-[#004525] transition-colors duration-300 text-base md:text-lg"
+                            >
+                                Contact Us
+                            </Link>
                         </div>
                     </div>
 
@@ -71,12 +78,12 @@ const Footer = () => {
                 </div>
 
                 {/* Logo Section */}
-                <div className="mt-12 md:mt-16">
+                {/* <div className="mt-12 md:mt-16">
                     <h1 className='dancing-script text-5xl sm:text-6xl md:text-8xl lg:text-[12rem] font-bold text-center 
                         bg-gradient-to-r from-[#8CC63F] to-[#005A32] bg-clip-text text-transparent'>
                         Mulkanoor
                     </h1>
-                </div>
+                </div> */}
 
                 {/* Copyright Section */}
                 <div className="border-t border-white/20 mt-8 pt-6">

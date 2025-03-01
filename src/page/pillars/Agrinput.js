@@ -57,13 +57,13 @@ const Agrinput = () => {
             img: card2, // Add corresponding image URL
 
         },
-        {
-            title: "Welfare Initiatives",
-            description: "Support for toilets, solar lanterns, and LPG connections",
-            icon: <BiSupport className="text-4xl" />,
-            img: card5, // Add corresponding image URL
+        // {
+        //     title: "Welfare Initiatives",
+        //     description: "Support for toilets, solar lanterns, and LPG connections",
+        //     icon: <BiSupport className="text-4xl" />,
+        //     img: card5, // Add corresponding image URL
 
-        },
+        // },
         {
             title: "Financial Support",
             description: "Debt relief and subsidy facilitation for eligible members",

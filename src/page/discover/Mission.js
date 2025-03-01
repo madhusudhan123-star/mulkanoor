@@ -55,7 +55,7 @@ const Mission = () => {
             {/* Vision Content - Responsive flex layout */}
             <div className="p-4 sm:p-6 md:p-8 relative flex flex-col md:flex-row gap-6 md:gap-8 overflow-hidden z-10">
               <motion.div
-                className="space-y-4 md:space-y-6 font-bold text-base sm:text-lg relative z-20 leading-relaxed text-[#4A3F35] md:w-1/2"
+                className="space-y-4 md:space-y-6 font-bold text-base sm:text-lg relative z-20 leading-relaxed text-black md:w-1/2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
@@ -150,7 +150,7 @@ const Mission = () => {
             {/* Mission Content - Responsive text sizing */}
             <div className="p-4 sm:p-6 md:p-8 relative z-10">
               <motion.div className="space-y-4 md:space-y-8">
-                <div className="space-y-4 md:space-y-6 font-bold text-base sm:text-lg md:text-xl leading-relaxed text-[#4A3F35] relative z-20">
+                <div className="space-y-4 md:space-y-6 font-bold text-base sm:text-lg md:text-xl leading-relaxed text-black relative z-20">
                   <p>The mission of Mulkanoor Cooperative Society is to empower farmers and rural communities by delivering transparent, inclusive, and sustainable financial and cooperative services. We strive to uplift the livelihoods of our members by fostering innovation in agriculture, promoting self-reliance, and encouraging community-driven growth.</p>
                   <p>Through education, training, and access to modern techniques, we aim to equip farmers with the tools and knowledge they need to improve productivity, mitigate challenges posed by drought-prone conditions, and adopt sustainable agricultural practices.</p>
                   <p>We are dedicated to creating a supportive ecosystem where farmers, small-scale entrepreneurs, and rural households can thrive by addressing their financial needs, providing high-quality seeds and resources, and ensuring fair and ethical economic practices. Our mission is rooted in building trust, fostering unity, and driving holistic development in every aspect of rural life.</p>
@@ -165,3 +165,5 @@ const Mission = () => {
 };
 
 export default Mission;
+
+
