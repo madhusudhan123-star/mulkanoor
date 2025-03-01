@@ -28,7 +28,7 @@ export const Third = () => {
     const cardsData = [
         {
             date: "1/10/2024",
-            name: "Ramachandram",
+            name: "Latha",
             role: "Cotton Farmer",
             image: voice1, // Your first image
             content: {
@@ -40,7 +40,7 @@ export const Third = () => {
         },
         {
             date: "5/09/2024",
-            name: "Pochaiah, Farmer",
+            name: "Padma",
             role: "Rice Farmer",
             image: voice2, // Your second image
             content: {
@@ -52,7 +52,7 @@ export const Third = () => {
         },
         {
             date: "3/08/2024",
-            name: "Rajaiah, Farmer",
+            name: "Shyamsunder Rao",
             role: "Mixed Crop Farmer",
             image: voice3, // Your third image
             content: {
@@ -64,7 +64,7 @@ export const Third = () => {
         },
         {
             date: "7/07/2024",
-            name: "Korra Chandu, Farmer",
+            name: "Vanga Sampath",
             role: "Organic Farmer",
             image: voice4, // Your fourth image
             content: {
