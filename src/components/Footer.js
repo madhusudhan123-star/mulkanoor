@@ -64,13 +64,13 @@ const Footer = () => {
                     <div className="sm:col-span-2 md:col-span-1">
                         <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Connect With Us</h3>
                         <div className="flex gap-6 text-xl md:text-2xl">
-                            <a href="#" className="hover:text-secondary transition-transform hover:scale-110">
+                            <a href="https://www.facebook.com/profile.php?id=61566000885423" className="hover:text-secondary transition-transform hover:scale-110">
                                 <FaFacebook />
                             </a>
-                            <a href="#" className="hover:text-secondary transition-transform hover:scale-110">
+                            <a href="https://x.com/mulkanoorCoop" className="hover:text-secondary transition-transform hover:scale-110">
                                 <FaTwitter />
                             </a>
-                            <a href="#" className="hover:text-secondary transition-transform hover:scale-110">
+                            <a href="https://www.instagram.com/mulkanoor_coop/?hl=en" className="hover:text-secondary transition-transform hover:scale-110">
                                 <FaInstagram />
                             </a>
                         </div>
@@ -89,10 +89,10 @@ const Footer = () => {
                 <div className="border-t border-white/20 mt-8 pt-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm md:text-base">
                         <p>&copy; {new Date().getFullYear()} Mulkanoor Cooperative Society. All rights reserved.</p>
-                        <div className="flex gap-4">
+                        {/* <div className="flex gap-4">
                             <Link to="/privacy-policy" className="hover:text-secondary transition-colors">Privacy Policy</Link>
                             <Link to="/terms" className="hover:text-secondary transition-colors">Terms of Use</Link>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

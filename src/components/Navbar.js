@@ -80,10 +80,12 @@ const Navbar = () => {
     ];
 
     const socialLinks = [
-        { icon: <FaFacebook />, url: '#', color: 'hover:text-blue-400' },
-        { icon: <FaTwitter />, url: '#', color: 'hover:text-sky-400' },
-        { icon: <FaInstagram />, url: '#', color: 'hover:text-pink-400' },
-        { icon: <FaLinkedin />, url: '#', color: 'hover:text-blue-500' },
+        {
+            icon: <FaFacebook />, url: 'https://www.facebook.com/profile.php?id=61566000885423', color: 'hover:text-blue-400'
+        },
+        { icon: <FaTwitter />, url: 'https://x.com/mulkanoorCoop', color: 'hover:text-sky-400' },
+        { icon: <FaInstagram />, url: 'https://www.instagram.com/mulkanoor_coop/?hl=en', color: 'hover:text-pink-400' },
+        { icon: <FaLinkedin />, url: 'https://www.linkedin.com/company/mulkanoor-cooperative-society/posts/?feedView=all', color: 'hover:text-blue-500' },
     ];
 
     const handleDropdownClick = (index) => {

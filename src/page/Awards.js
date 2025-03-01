@@ -51,11 +51,12 @@ const Awards = () => {
             card2, // Agriculture
             card3,
             card4,
-            "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca", // Special felicitation
-            "https://images.unsplash.com/photo-1579621970795-87facc2f976d", // NCDC award
-            "https://images.unsplash.com/photo-1624953587687-daf255b6b80a", // Outstanding performer
-            "https://images.unsplash.com/photo-1542744173-8e7e53415bb0", // Business award
-            "https://images.unsplash.com/photo-1606836591695-4d58a73eba1e", // Jyothirgamayi
+            // "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca", // Special felicitation
+            // "https://images.unsplash.com/photo-1579621970795-87facc2f976d", // NCDC award
+            // "https://images.unsplash.com/photo-1624953587687-daf255b6b80a", // Outstanding performer
+            // "https://images.unsplash.com/photo-1542744173-8e7e53415bb0", // Business award
+            // "https://images.unsplash.com/photo-1606836591695-4d58a73eba1e", // Jyothirgamayi
+            // card5,
             card5  // Farmers society
         ]
     };
@@ -150,6 +151,15 @@ const Awards = () => {
             description: "Honored at the Outlook Express Agriculture Conclave and Swaraj Awards.",
             icon: <FaTrophy />,
             image: images.awards[9]
+        },
+        {
+            year: "2020",
+            title: "Sakshi Excellence Awards",
+            recipient: "MR.Aligireddy Praveen Reddy",
+            organization: "Pesident Mulkanoor ",
+            // description: "Honored at the Outlook Express Agriculture Conclave and Swaraj Awards.",
+            icon: <FaTrophy />,
+            image: card5
         }
     ];
 
