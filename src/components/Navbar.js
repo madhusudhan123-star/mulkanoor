@@ -1,12 +1,45 @@
-import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes, FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaChevronDown } from 'react-icons/fa';
+import React, { useState, useEffect, useRef } from 'react';
+import { FaBars, FaTimes, FaFacebook, FaTwitter, FaInstagram, FaChevronDown, FaSearch } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
+import searchData from '../data/searchData';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
     const [scrollDirection, setScrollDirection] = useState('up');
+    const [showSearch, setShowSearch] = useState(false);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [suggestions, setSuggestions] = useState([]);
+    const [showSuggestions, setShowSuggestions] = useState(false);
+    const [selectedSuggestion, setSelectedSuggestion] = useState(-1);
+    const navigate = useNavigate();
+    const searchInputRef = useRef(null);
+    const mobileSearchInputRef = useRef(null);
+    const suggestionsRef = useRef(null);
+    const mobileSuggestionsRef = useRef(null);
 
+    // Close suggestions when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            const isClickInSearchInput =
+                (searchInputRef.current && searchInputRef.current.contains(event.target)) ||
+                (mobileSearchInputRef.current && mobileSearchInputRef.current.contains(event.target));
+
+            const isClickInSuggestions =
+                (suggestionsRef.current && suggestionsRef.current.contains(event.target)) ||
+                (mobileSuggestionsRef.current && mobileSuggestionsRef.current.contains(event.target));
+
+            if (!isClickInSearchInput && !isClickInSuggestions) {
+                setShowSuggestions(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    // Handle scroll direction detection for navbar hide/show
     useEffect(() => {
         let lastScrollY = window.scrollY;
 
@@ -23,6 +56,36 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Hide search bar when menu is opened
+    useEffect(() => {
+        if (isOpen) {
+            setShowSearch(false);
+            setShowSuggestions(false);
+        }
+    }, [isOpen]);
+
+    // Generate suggestions when search term changes - independent of navbar state
+    useEffect(() => {
+        if (searchTerm.trim() === '') {
+            setSuggestions([]);
+            setShowSuggestions(false);
+            return;
+        }
+
+        const term = searchTerm.toLowerCase().trim();
+        const filteredSuggestions = searchData
+            .filter(item =>
+                item.title.toLowerCase().includes(term) ||
+                item.content.toLowerCase().includes(term)
+            )
+            .slice(0, 6); // Limit to 6 suggestions
+
+        setSuggestions(filteredSuggestions);
+        setShowSuggestions(filteredSuggestions.length > 0);
+        setSelectedSuggestion(-1);
+    }, [searchTerm]);
+
+    // Menu items (unchanged)
     const menuItems = [
         {
             title: 'Home',
@@ -79,17 +142,97 @@ const Navbar = () => {
         }
     ];
 
+    // Separate function to toggle search bar without side effects
+    const toggleSearchBar = () => {
+        // Don't toggle search if mobile menu is open
+        if (isOpen) return;
+
+        setShowSearch(!showSearch);
+        // Clear search term and suggestions when toggling via icon
+        if (!showSearch) {
+            setSearchTerm('');
+            setShowSuggestions(false);
+            setSelectedSuggestion(-1);
+        }
+    };
+
+    // Social links - updated to use the clean toggle function
     const socialLinks = [
         {
             icon: <FaFacebook />, url: 'https://www.facebook.com/profile.php?id=61566000885423', color: 'hover:text-blue-400'
         },
         { icon: <FaTwitter />, url: 'https://x.com/mulkanoorCoop', color: 'hover:text-sky-400' },
         { icon: <FaInstagram />, url: 'https://www.instagram.com/mulkanoor_coop/?hl=en', color: 'hover:text-pink-400' },
-        { icon: <FaLinkedin />, url: 'https://www.linkedin.com/company/mulkanoor-cooperative-society/posts/?feedView=all', color: 'hover:text-blue-500' },
+        {
+            icon: <FaSearch />,
+            action: toggleSearchBar, // Use the clean toggle function instead of inline
+            color: 'hover:text-green-500',
+            isButton: true
+        },
     ];
 
     const handleDropdownClick = (index) => {
         setActiveDropdown(activeDropdown === index ? null : index);
+    };
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        if (searchTerm.trim()) {
+            navigate(`/search?q=${encodeURIComponent(searchTerm.trim())}`);
+            setShowSearch(false);
+            setSearchTerm('');
+            setShowSuggestions(false);
+            setIsOpen(false); // Close mobile menu if open
+        }
+    };
+
+    const handleSuggestionClick = (path) => {
+        navigate(path);
+        resetSearchState();
+    };
+
+    // Reset all search related states
+    const resetSearchState = () => {
+        setSearchTerm('');
+        setShowSuggestions(false);
+        setShowSearch(false);
+        setIsOpen(false); // Close mobile menu if open
+    };
+
+    const handleKeyDown = (e) => {
+        // Handle keyboard navigation for suggestions
+        if (showSuggestions) {
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                setSelectedSuggestion(prev =>
+                    prev < suggestions.length - 1 ? prev + 1 : prev
+                );
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                setSelectedSuggestion(prev => (prev > 0 ? prev - 1 : prev));
+            } else if (e.key === 'Enter' && selectedSuggestion >= 0) {
+                e.preventDefault();
+                handleSuggestionClick(suggestions[selectedSuggestion].path);
+            } else if (e.key === 'Escape') {
+                setShowSuggestions(false);
+            }
+        }
+    };
+
+    // Event handlers for search input focus
+    const handleSearchFocus = () => {
+        if (searchTerm.trim()) {
+            setShowSuggestions(true);
+        }
+    };
+
+    // Modified search change handler - only show suggestions when typing
+    const handleSearchChange = (e) => {
+        setSearchTerm(e.target.value);
+        // Only auto-show search bar when typing, not manipulating suggestions
+        if (!showSearch && e.target.value.trim()) {
+            setShowSearch(true);
+        }
     };
 
     return (
@@ -118,11 +261,69 @@ const Navbar = () => {
                     {/* Social Icons - Hidden on mobile */}
                     <div className="hidden md:flex gap-4">
                         {socialLinks.map((social, index) => (
-                            <a key={index} href={social.url} className={`text-gray-800 text-xl ${social.color}`}>
-                                {social.icon}
-                            </a>
+                            social.isButton ? (
+                                <button
+                                    key={index}
+                                    onClick={social.action}
+                                    className={`text-gray-800 text-xl ${social.color} ${isOpen ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                    disabled={isOpen}
+                                >
+                                    {social.icon}
+                                </button>
+                            ) : (
+                                <a key={index} href={social.url} className={`text-gray-800 text-xl ${social.color}`}>
+                                    {social.icon}
+                                </a>
+                            )
                         ))}
                     </div>
+                </div>
+
+                {/* Search bar - made always accessible */}
+                <div className={`
+                    w-full bg-white/90 transition-all duration-300 overflow-visible relative
+                    ${showSearch ? 'max-h-20 py-3 visible' : 'max-h-0 py-0 hidden'}
+                `}>
+                    <form onSubmit={handleSearch} className="container mx-auto px-4 flex">
+                        <div className="relative w-full">
+                            <input
+                                ref={searchInputRef}
+                                type="text"
+                                placeholder="Search..."
+                                value={searchTerm}
+                                onChange={handleSearchChange}
+                                onKeyDown={handleKeyDown}
+                                onFocus={handleSearchFocus}
+                                className="w-full px-4 py-2 rounded-l-lg border-2 border-r-0 border-gray-300 focus:outline-none focus:border-yellow-400"
+                            />
+                            {/* Suggestions dropdown - displayed over other content */}
+                            {showSuggestions && (
+                                <div
+                                    ref={suggestionsRef}
+                                    className="absolute top-full left-0 right-0 bg-white rounded-lg shadow-lg z-[100] mt-1 border border-gray-200 max-h-80 overflow-y-auto"
+                                >
+                                    {suggestions.map((item, index) => (
+                                        <div
+                                            key={index}
+                                            className={`px-4 py-2 cursor-pointer hover:bg-yellow-50 border-b border-gray-100 last:border-0 ${selectedSuggestion === index ? 'bg-yellow-100' : ''
+                                                }`}
+                                            onClick={() => handleSuggestionClick(item.path)}
+                                            onMouseEnter={() => setSelectedSuggestion(index)}
+                                        >
+                                            <div className="font-medium text-gray-900">{item.title}</div>
+                                            <div className="text-sm text-gray-600 truncate">{item.content}</div>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                        <button
+                            type="submit"
+                            className="bg-yellow-400 text-black px-4 py-2 rounded-r-lg hover:bg-yellow-500 transition-colors"
+                        >
+                            <FaSearch />
+                        </button>
+                    </form>
                 </div>
             </nav>
 
@@ -140,6 +341,48 @@ const Navbar = () => {
                     ${isOpen ? 'translate-y-0' : '-translate-y-full'}
                 `}>
                     <div className="container mx-auto px-4 py-6">
+                        {/* Mobile Search */}
+                        <form onSubmit={handleSearch} className="mb-6">
+                            <div className="flex relative">
+                                <div className="relative w-full">
+                                    <input
+                                        ref={mobileSearchInputRef}
+                                        type="text"
+                                        placeholder="Search..."
+                                        value={searchTerm}
+                                        onChange={handleSearchChange}
+                                        onKeyDown={handleKeyDown}
+                                        onFocus={handleSearchFocus}
+                                        className="w-full px-4 py-3 rounded-l-lg border-2 border-r-0 border-gray-300 focus:outline-none focus:border-yellow-400"
+                                    />
+                                    {showSuggestions && (
+                                        <div
+                                            ref={mobileSuggestionsRef}
+                                            className="absolute top-full left-0 right-0 bg-white rounded-lg shadow-lg z-[100] mt-1 border border-gray-200 max-h-60 overflow-y-auto"
+                                        >
+                                            {suggestions.map((item, index) => (
+                                                <div
+                                                    key={index}
+                                                    className={`px-4 py-2 cursor-pointer hover:bg-yellow-50 border-b border-gray-100 last:border-0 ${selectedSuggestion === index ? 'bg-yellow-100' : ''
+                                                        }`}
+                                                    onClick={() => handleSuggestionClick(item.path)}
+                                                >
+                                                    <div className="font-medium text-gray-900">{item.title}</div>
+                                                    <div className="text-sm text-gray-600 truncate">{item.content}</div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                                <button
+                                    type="submit"
+                                    className="bg-yellow-400 text-black px-4 rounded-r-lg hover:bg-yellow-500 transition-colors"
+                                >
+                                    <FaSearch />
+                                </button>
+                            </div>
+                        </form>
+
                         {/* Menu Items */}
                         <div className="space-y-2">
                             {menuItems.map((item, index) => (
@@ -191,7 +434,7 @@ const Navbar = () => {
 
                         {/* Mobile Social Links */}
                         <div className="flex justify-center gap-6 mt-8 pb-8">
-                            {socialLinks.map((social, index) => (
+                            {socialLinks.filter(link => !link.isButton).map((social, index) => (
                                 <a
                                     key={index}
                                     href={social.url}
@@ -203,6 +446,18 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            {/* Global search trigger - fixed button always visible on mobile - updated to use clean toggle */}
+            <div className="md:hidden fixed right-4 bottom-4 z-50">
+                <button
+                    onClick={toggleSearchBar}
+                    className={`bg-yellow-400 text-black p-3 rounded-full shadow-lg transition-all ${isOpen ? 'opacity-50 cursor-not-allowed' : 'hover:bg-yellow-500'
+                        }`}
+                    disabled={isOpen}
+                >
+                    <FaSearch size={18} />
+                </button>
             </div>
         </div>
     );

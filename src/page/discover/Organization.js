@@ -1,9 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { OrgChart } from 'd3-org-chart';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const Organization = () => {
-    const containerRef = useRef();
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
     // Update mobile state on window resize
@@ -16,121 +14,68 @@ const Organization = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const data = [
+    // Organization structure data
+    const orgData = [
         {
             id: "1",
-            parentId: "",
             name: "General Body",
-            position: "Members of the society meets at least once in a year",
+            description: "Members of the society meets at least once in a year",
+            children: ["2"]
         },
         {
             id: "2",
-            parentId: "1",
             name: "Managing committee",
-            position: "Members of the society elect 15 managing committee members",
+            description: "Members of the society elect 15 managing committee members",
+            children: ["3"]
         },
         {
             id: "3",
-            parentId: "2",
             name: "President",
+            description: "",
+            children: ["4", "5"]
         },
         {
             id: "4",
-            parentId: "3",
             name: "Village Committees",
+            description: "",
+            children: ["6"]
         },
         {
             id: "5",
-            parentId: "3",
             name: "General Manager",
+            description: "",
+            children: ["7"]
         },
         {
             id: "6",
-            parentId: "4",
             name: "Members",
+            description: "",
+            children: []
         },
         {
             id: "7",
-            parentId: "5",
             name: "Employees",
-        },
+            description: "",
+            children: []
+        }
     ];
 
-    useEffect(() => {
-        if (containerRef.current) {
-            containerRef.current.innerHTML = '';
-        }
-
-        const chart = new OrgChart();
-
-        chart
-            .container(containerRef.current)
-            .data(data)
-            .nodeWidth(() => isMobile ? 220 : 280)
-            .nodeHeight(() => isMobile ? 120 : 160)
-            .compactMarginBetween(() => isMobile ? 20 : 40)
-            .buttonContent(({ node }) => {
-                return `<div style="border-radius:50%;color:#716E7B;background-color:rgba(200, 173, 127, 0.2);width:${isMobile ? '20px' : '24px'};height:${isMobile ? '20px' : '24px'};display:flex;align-items:center;justify-content:center;font-size:${isMobile ? '10px' : '12px'}">
-                    ${node.children ? node.children.length : 0}
-                </div>`;
-            })
-            .nodeContent((d) => {
-                return `
-                    <div style="
-                        padding: ${isMobile ? '12px' : '16px'};
-                        border-radius: 12px;
-                        background: linear-gradient(135deg, rgba(240, 235, 224, 0.15) 0%, rgba(200, 173, 127, 0.25) 100%);
-                        backdrop-filter: blur(10px);
-                        border: 2px solid rgba(200, 173, 127, 0.3);
-                        width: ${d.width}px;
-                        height: ${d.height}px;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        transition: transform 0.3s ease;
-                    "
-                    onmouseover="this.style.transform='scale(1.02)'"
-                    onmouseout="this.style.transform='scale(1)'"
-                    >
-                        <div style="
-                            color: #4A3F35;
-                            font-size: ${isMobile ? '14px' : '18px'};
-                            font-weight: bold;
-                            margin-bottom: ${isMobile ? '8px' : '12px'};
-                            text-align: center;
-                        ">
-                            ${d.data.name}
-                        </div>
-                        ${d.data.position ? `
-                            <div style="
-                                color: #8B7355;
-                                font-size: ${isMobile ? '12px' : '14px'};
-                                text-align: center;
-                                padding: 0 ${isMobile ? '8px' : '12px'};
-                            ">
-                                ${d.data.position}
-                            </div>
-                        ` : ''}
-                    </div>
-                `;
-            });
-
-        chart.render();
-
-        const handleResize = () => {
-            chart.render();
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-            if (containerRef.current) {
-                containerRef.current.innerHTML = '';
-            }
-        };
-    }, [data, isMobile]);
+    // Static organization chart card component
+    const OrgCard = ({ name, description }) => (
+        <div className="bg-gradient-to-br from-white/60 to-[#F0EBE0]/60 
+                      backdrop-blur-sm rounded-lg p-4 shadow-lg text-center
+                      border-2 border-[#C8AD7F]/30 h-full w-full
+                      transform transition-transform duration-300 hover:scale-[1.02]">
+            <h3 className="text-lg md:text-xl font-bold text-[#4A3F35] mb-1">
+                {name}
+            </h3>
+            {description && (
+                <p className="text-xs md:text-sm text-[#8B7355]">
+                    {description}
+                </p>
+            )}
+        </div>
+    );
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-[#F5F5DC] via-[#F0EBE0] to-[#E8E3D9] pt-16 md:pt-24">
@@ -151,32 +96,110 @@ const Organization = () => {
             </motion.div>
 
             <motion.div
-                className="container mx-auto px-2 md:px-4"
+                className="container mx-auto px-2 md:px-4 mb-12"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
             >
-                <div
-                    ref={containerRef}
-                    className="w-full bg-gradient-to-br from-white/60 to-[#F0EBE0]/60 
-                             backdrop-blur-sm rounded-lg md:rounded-xl p-4 md:p-8 
-                             h-[500px] md:min-h-[600px] shadow-xl
-                             transition-all duration-700 ease-in-out overflow-x-auto"
-                    style={{
-                        border: '2px solid rgba(200, 173, 127, 0.3)',
-                        boxShadow: '0 4px 24px rgba(200, 173, 127, 0.2)'
-                    }}
-                />
+                {/* Static Organization Chart */}
+                <div className="bg-gradient-to-br from-white/60 to-[#F0EBE0]/60 
+                             backdrop-blur-sm rounded-lg md:rounded-xl p-6 md:p-8 
+                             shadow-xl border-2 border-[#C8AD7F]/30 overflow-x-auto">
+
+                    {/* Level 1 */}
+                    <div className="flex justify-center mb-8 md:mb-10">
+                        <div className="w-full max-w-xs">
+                            <OrgCard
+                                name={orgData[0].name}
+                                description={orgData[0].description}
+                            />
+                        </div>
+                    </div>
+
+                    {/* Connector Line */}
+                    <div className="w-px h-8 bg-[#C8AD7F] mx-auto -mt-8 mb-0"></div>
+
+                    {/* Level 2 */}
+                    <div className="flex justify-center mb-8 md:mb-10">
+                        <div className="w-full max-w-xs">
+                            <OrgCard
+                                name={orgData[1].name}
+                                description={orgData[1].description}
+                            />
+                        </div>
+                    </div>
+
+                    {/* Connector Line */}
+                    <div className="w-px h-8 bg-[#C8AD7F] mx-auto -mt-8 mb-0"></div>
+
+                    {/* Level 3 */}
+                    <div className="flex justify-center mb-8 md:mb-10">
+                        <div className="w-full max-w-xs">
+                            <OrgCard
+                                name={orgData[2].name}
+                                description={orgData[2].description}
+                            />
+                        </div>
+                    </div>
+
+                    {/* Connector Lines for split */}
+                    <div className="relative h-8 -mt-8 mb-0">
+                        <div className="absolute left-1/2 w-1/2 border-l-2 border-t-2 border-[#C8AD7F] h-full"></div>
+                        <div className="absolute right-1/2 w-1/2 border-r-2 border-t-2 border-[#C8AD7F] h-full"></div>
+                    </div>
+
+                    {/* Level 4 - Split into two columns */}
+                    <div className="grid grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-10">
+                        <div>
+                            <OrgCard
+                                name={orgData[3].name}
+                                description={orgData[3].description}
+                            />
+                        </div>
+                        <div>
+                            <OrgCard
+                                name={orgData[4].name}
+                                description={orgData[4].description}
+                            />
+                        </div>
+                    </div>
+
+                    {/* Connector Lines for last level */}
+                    <div className="relative h-8 -mt-8 mb-0">
+                        <div className="absolute left-1/4 h-full border-l-2 border-[#C8AD7F]"></div>
+                        <div className="absolute right-1/4 h-full border-l-2 border-[#C8AD7F]"></div>
+                    </div>
+
+                    {/* Level 5 */}
+                    <div className="grid grid-cols-2 gap-4 md:gap-8">
+                        <div>
+                            <OrgCard
+                                name={orgData[5].name}
+                                description={orgData[5].description}
+                            />
+                        </div>
+                        <div>
+                            <OrgCard
+                                name={orgData[6].name}
+                                description={orgData[6].description}
+                            />
+                        </div>
+                    </div>
+                </div>
             </motion.div>
 
-            <div className="container mx-auto px-4 py-8 md:py-16">
+            <div className="container mx-auto px-4 py-8 md:py-12">
                 <div className="bg-gradient-to-br from-[#C8AD7F]/20 to-white/20 backdrop-blur-sm 
                               rounded-lg md:rounded-xl p-4 md:p-8 shadow-xl"
                     style={{ border: '2px solid rgba(200, 173, 127, 0.3)' }}>
                     <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-[#4A3F35]">Our Structure</h2>
                     <p className="text-sm md:text-base text-[#8B7355] leading-relaxed">
                         Our organizational structure ensures efficient operations and clear
-                        communication channels that benefit our cooperative members.
+                        communication channels that benefit our cooperative members. The General Body
+                        comprises all society members who meet annually to elect the Managing Committee.
+                        The President oversees both Village Committees and the General Manager, who in
+                        turn supervise Members and Employees respectively. This structure promotes
+                        democratic decision-making while maintaining operational effectiveness.
                     </p>
                 </div>
             </div>

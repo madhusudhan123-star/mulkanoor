@@ -16,26 +16,30 @@ const cardData = [
     {
         title: "Empowering",
         content: "Celebrating 69+ remarkable years of empowering farmers and nurturing the Mulkanoor Cooperative family with dedication, trust, and prosperity.",
-        image: card1
+        image: card1,
+        url: '/discover/story'
     },
     {
         title: "Farmers",
         content: "For 69+ years, Mulkanoor Cooperative Society has been transforming farmers' lives through unwavering support, innovative practices, and a commitment to sustainable growth and prosperity.",
-        image: card2
+        image: card2,
+        url: '/farmer'
     },
     {
-        title: "Broader community",
-        content: "Vision & Mission Page.",
-        image: card3
+        title: "Enriching",
+        content: "Fostering holistic growth to enhance the overall well-being of farmers, their families, and the broader community.",
+        image: card3,
+        url: '/discover/mission'
     },
     {
-        title: "Rooted in trust and collaboration",
+        title: "Communities",
         content: `Driving holistic progress to uplift farmers, their families, and the community, Mulkanoor Cooperative Society stands as a beacon of trust, innovation, and collaboration.`,
-        image: card4
+        image: card4,
+        url: '/cta'
     }
 ];
 
-const Card = ({ title, content, image, className = '', isHovered, onHover }) => (
+const Card = ({ title, content, image, url, className = '', isHovered, onHover }) => (
     <div
         className={`
             min-w-[200px] h-[70vh] flex-1 bg-black/40 backdrop-blur-sm p-4 md:p-6 rounded-lg 
@@ -56,29 +60,32 @@ const Card = ({ title, content, image, className = '', isHovered, onHover }) => 
         onMouseLeave={() => onHover(false)}
         onTouchEnd={() => onHover(false)} // Add touch support
     >
-        <div className="absolute inset-0 bg-black/40 hover:bg-black/60 transition-colors duration-700 rounded-lg"></div>
-        <div className="relative z-10">
-            <h1 className='text-xl md:text-2xl lg:text-4xl mb-3 md:mb-4 lg:mb-10 transition-transform duration-500'>{title}</h1>
-            <div className={`
+        <a href={url}>
+
+            <div className="absolute inset-0 bg-black/40 hover:bg-black/60 transition-colors duration-700 rounded-lg"></div>
+            <div className="relative z-10">
+                <h1 className='text-xl md:text-2xl lg:text-4xl mb-3 md:mb-4 lg:mb-10 transition-transform duration-500'>{title}</h1>
+                <div className={`
                 transition-all duration-700 ease-in-out
                 transform
                 ${isHovered
-                    ? 'opacity-100 max-h-[1000px] translate-y-0' // Increased max-height for mobile
-                    : 'md:opacity-0 md:max-h-0 md:translate-y-10 md:overflow-hidden opacity-100 max-h-full'
-                }
+                        ? 'opacity-100 max-h-[1000px] translate-y-0' // Increased max-height for mobile
+                        : 'md:opacity-0 md:max-h-0 md:translate-y-10 md:overflow-hidden opacity-100 max-h-full'
+                    }
             `}>
-                <p className={`
+                    <p className={`
                     text-start 
                     transition-all duration-500
                     ${title === 'rooted in trust and collaboration'
-                        ? 'text-xs md:text-sm'
-                        : 'text-sm md:text-lg lg:text-2xl'}
+                            ? 'text-xs md:text-sm'
+                            : 'text-sm md:text-lg lg:text-2xl'}
                     leading-relaxed /* Better readability */
                 `}>
-                    {content}
-                </p>
+                        {content}
+                    </p>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
 );
 
@@ -112,7 +119,7 @@ const HeroBanner = () => {
         <div className="relative z-10 px-2 md:px-4 py-4 md:py-0 min-h-screen flex justify-start items-start overflow-x-hidden">
             <div className="container mx-auto flex items-center flex-col text-center">
                 <h1 className='text-2xl md:text-3xl lg:text-5xl font-bold mb-6 md:mb-8 lg:mb-16 px-4'>
-                    Empowering Farmers Enriching Communities
+                    Together We Cultivate, Together We Rise
                 </h1>
 
                 <div className='flex flex-col md:flex-row items-stretch justify-between gap-4 md:gap-2 w-full'>

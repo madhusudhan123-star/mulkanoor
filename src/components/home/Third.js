@@ -20,9 +20,7 @@ export const Third = () => {
     }, []);
 
     const handleCardClick = (index) => {
-        if (isMobile) {
-            setExpandedCard(index); // Always set the clicked card as expanded
-        }
+        setExpandedCard(expandedCard === index ? -1 : index); // Toggle card - collapse if already expanded
     }
 
     const cardsData = [
@@ -79,41 +77,43 @@ export const Third = () => {
     return (
         <div className="container mx-auto px-4 md:px-8 bg-transparent">
             <div>
-                <h1 className='text-2xl md:text-5xl text-center font-medium mb-12'>
+                <h1 className='text-2xl md:text-5xl text-center font-medium mb-8'>
                     Farmers' Voice : What they Say about Us
                 </h1>
-                <div className='mt-8 md:mt-20'>
-                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8'>
+                <div className='mt-6 md:mt-12'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6'>
                         {cardsData.map((card, index) => (
                             <div
                                 key={index}
-                                onClick={() => handleCardClick(index)}
                                 className={`
                                     bg-yellow-200/90 backdrop-blur-sm
                                     relative p-6 rounded-xl 
                                     transition-all duration-500 ease-in-out
-                                    min-h-[350px] md:min-h-[450px]
-                                    hover:shadow-xl
+                                    min-h-[320px] md:min-h-[420px]
+                                    hover:shadow-xl cursor-pointer
                                     ${!isMobile && expandedCard === index
                                         ? 'md:scale-105 md:z-10 md:shadow-2xl'
                                         : 'scale-100 z-0'}
-                                    ${expandedCard === index ? 'mb-8' : 'mb-0'}
+                                    ${expandedCard === index ? 'mb-4' : 'mb-0'}
                                     w-full
                                 `}
+                                onClick={() => handleCardClick(index)}
                             >
-                                {!isMobile && (
-                                    <div className='absolute -right-2 md:-right-3 -top-3 bg-white p-3 rounded-full 
-                                        cursor-pointer shadow-md hover:shadow-lg transition-all duration-300'
-                                        onClick={(e) => {
-                                            e.stopPropagation();
-                                            setExpandedCard(index);
-                                        }}>
-                                        <IoArrowUpCircleOutline className={`
-                                            text-2xl md:text-3xl transform transition-transform duration-300 
-                                            ${expandedCard === index ? '-rotate-180' : 'rotate-0'}
-                                        `} />
-                                    </div>
-                                )}
+                                {/* Toggle Button - More prominent and intuitive */}
+                                <div
+                                    className='absolute -right-1 md:-right-2 -top-2 bg-white p-2 md:p-3 rounded-full 
+                                    shadow-md hover:shadow-lg hover:bg-yellow-50 transition-all duration-300
+                                    border-2 border-yellow-300'
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        handleCardClick(index);
+                                    }}
+                                >
+                                    <IoArrowUpCircleOutline className={`
+                                        text-2xl md:text-3xl transform transition-transform duration-300 text-yellow-600
+                                        ${expandedCard === index ? '-rotate-180' : 'rotate-0'}
+                                    `} />
+                                </div>
 
                                 <h1 className='text-xs md:text-sm text-gray-600 font-medium'>{card.date}</h1>
                                 <h1 className='text-xl md:text-2xl font-semibold pt-4 md:pt-6 pb-3'>{card.name}</h1>
@@ -132,9 +132,14 @@ export const Third = () => {
                                             </div>
                                         </div>
                                     ) : (
-                                        <div className="mt-4 overflow-hidden rounded-lg">
+                                        <div className="mt-4 overflow-hidden rounded-lg relative">
+                                            <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                                                <span className="bg-yellow-400/90 text-black px-4 py-2 rounded-lg font-medium">
+                                                    Click to view testimonial
+                                                </span>
+                                            </div>
                                             <img
-                                                className='w-full h-full  transition-all duration-300 hover:scale-105'
+                                                className='w-full h-full transition-all duration-300 hover:scale-105'
                                                 src={card.image}
                                                 alt={`${card.name} - ${card.role}`}
                                             />

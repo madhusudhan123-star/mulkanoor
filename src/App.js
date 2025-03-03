@@ -25,6 +25,8 @@ import Welfare from "./page/pillars/Welfare";
 import Contact from "./page/Contact";
 import Loading from "./components/Loading";
 import usePageLoading from "./hooks/usePageLoading";
+import SearchResults from "./page/SearchResults";
+import Cta from './page/Cta'
 
 // Create a ScrollToTop component
 function ScrollToTop() {
@@ -66,7 +68,9 @@ function AppContent() {
           <Route path="/pillars/values" element={<Values />} />
           <Route path="/pillars/insurance" element={<Insurance />} />
           <Route path="/pillars/Welfare" element={<Welfare />} />
+          <Route path="/search" element={<SearchResults />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/cta" element={<Cta />} />
         </Routes>
       </div>
       <Footer />
