@@ -11,7 +11,6 @@ const Six = () => {
             username: "@mulkanoorCoop",
             url: "https://www.facebook.com/profile.php?id=61566000885423",
             color: "bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white",
-            followers: "2.5K+"
         },
         {
             name: "Twitter",
@@ -19,7 +18,6 @@ const Six = () => {
             username: "@mulkanoorCoop",
             url: "https://x.com/mulkanoorCoop",
             color: "bg-sky-100 text-sky-600 hover:bg-sky-600 hover:text-white",
-            followers: "1.8K+"
         },
         {
             name: "Instagram",
@@ -27,7 +25,6 @@ const Six = () => {
             username: "@mulkanoor_coop",
             url: "https://www.instagram.com/mulkanoor_coop/?hl=en",
             color: "bg-pink-100 text-pink-600 hover:bg-pink-600 hover:text-white",
-            followers: "3.2K+"
         },
     ];
 
@@ -72,18 +69,18 @@ const Six = () => {
                                     shadow-sm hover:shadow-xl
                                 `}
                             >
-                                <div className="text-center mb-4">
+                                <div className="flex items-center flex-col mb-4">
                                     <div className="mb-3">{platform.icon}</div>
                                     <h3 className="text-xl font-bold mb-1">{platform.name}</h3>
                                     <p className="text-sm opacity-75">{platform.username}</p>
                                 </div>
 
-                                <div className="w-full pt-4 border-t border-current/20">
+                                {/* <div className="w-full pt-4 border-t border-current/20">
                                     <div className="flex justify-between items-center">
                                         <span className="font-bold">{platform.followers}</span>
                                         <FaArrowRight className="transition-transform group-hover:translate-x-1" />
                                     </div>
-                                </div>
+                                </div> */}
                             </a>
                         ))}
                     </div>
