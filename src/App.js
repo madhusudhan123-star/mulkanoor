@@ -45,7 +45,7 @@ function AppContent() {
   return (
     <>
       {isLoading && <Loading />}
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       <Navbar />
       <div className="min-h-screen">
         <Routes>
@@ -81,7 +81,7 @@ function AppContent() {
 function App() {
   return (
     <div className="App font-custom overflow-x-hidden">
-      <CursorDot />
+      {/* <CursorDot /> */}
       <BrowserRouter>
         <AppContent />
       </BrowserRouter>

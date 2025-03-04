@@ -87,29 +87,22 @@ html {
                 0 2px 4px -1px rgba(47, 122, 58, 0.06);
 }
 
-/* Update cursor styles */
-body {
-    cursor: default; /* Show default cursor instead of hiding it */
+/* Update cursor styles - explicitly restore normal cursor behavior */
+body, html, * {
+    cursor: auto; /* Restore default cursor behavior */
 }
 
-a, button, [role="button"] {
+a, button, [role="button"], input[type="submit"], select, option {
     cursor: pointer; /* Show pointer cursor for interactive elements */
 }
 
-/* Add hover states for the cursor */
-a:hover, button:hover, [role="button"]:hover {
-    cursor: pointer;
+input, textarea {
+    cursor: text; /* Show text cursor for text inputs */
 }
 
-/* Custom cursor styles */
-* {
-    cursor: none !important;
-}
+/* Remove the cursor hiding code completely */
 
 @media (max-width: 768px) {
-    * {
-        cursor: auto !important;
-    }
     .cursor {
         display: none !important;
     }
