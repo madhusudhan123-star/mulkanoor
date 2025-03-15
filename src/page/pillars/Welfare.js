@@ -12,49 +12,6 @@ import card2 from '../../assets/welfare/card2.jpg';
 import card3 from '../../assets/welfare/card3.jpg';
 import card4 from '../../assets/welfare/card4.jpg';
 
-const imageSpecs = {
-    banner: {
-        width: 1920,
-        height: 1080,
-        aspectRatio: "16:9",
-        description: "Main hero banner - Community welfare image"
-    },
-    health: {
-        width: 800,
-        height: 600,
-        aspectRatio: "4:3",
-        description: "Healthcare initiatives image",
-        focus: "Medical camp or healthcare facility"
-    },
-    education: {
-        width: 800,
-        height: 600,
-        aspectRatio: "4:3",
-        description: "Education support image",
-        focus: "Students or educational facility"
-    },
-    community: {
-        width: 800,
-        height: 600,
-        aspectRatio: "4:3",
-        description: "Community development image",
-        focus: "Village infrastructure or community gathering"
-    },
-    water: {
-        width: 800,
-        height: 600,
-        aspectRatio: "4:3",
-        description: "Water facility image",
-        focus: "Water infrastructure or clean water access"
-    },
-    animal: {
-        width: 800,
-        height: 600,
-        aspectRatio: "4:3",
-        description: "Animal welfare image",
-        focus: "Veterinary care or animal husbandry"
-    }
-};
 
 // Image optimization guidelines:
 // 1. File size: Keep under 200KB each
@@ -182,7 +139,7 @@ const Welfare = () => {
     );
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-[#E8F5E9] via-[#C8E6C9] to-[#A5D6A7]">
+        <div className="min-h-screen bg-gradient-to-br mt-10 from-[#E8F5E9] via-[#C8E6C9] to-[#A5D6A7]">
             {/* Hero Section */}
             <div className="relative h-[60vh] overflow-hidden">
                 <motion.div
@@ -352,41 +309,6 @@ const Welfare = () => {
                         </>
                     }
                 />
-
-                {/* Impact Statistics */}
-                <motion.div
-                    className="bg-white/90 rounded-xl p-8 mb-16"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                >
-                    <h2 className="text-3xl font-bold text-center text-[#2E7D32] mb-8">Our Impact</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                        <ImpactCard title="Health Support" value={5000} label="Patients Served" />
-                        <ImpactCard title="Education" value={8422} label="Students Supported" />
-                        <ImpactCard title="Welfare" value={1827} label="Families Assisted" />
-                        <ImpactCard title="Eye Care" value={1117} label="Free Surgeries" />
-                    </div>
-                </motion.div>
-
-                {/* CTA Section */}
-                <motion.div
-                    className="text-center"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                >
-                    <div className="bg-white/90 rounded-2xl p-8 max-w-3xl mx-auto shadow-xl">
-                        <h2 className="text-3xl font-bold text-[#2E7D32] mb-4">Join Our Community</h2>
-                        <p className="text-[#1B5E20] mb-6">
-                            Be part of our mission to create a stronger, healthier, and more prosperous community
-                        </p>
-                        <button className="bg-[#2E7D32] text-white px-8 py-3 rounded-full font-semibold 
-                                       hover:bg-[#1B5E20] transition-colors duration-300">
-                            <a href='https://docs.google.com/forms/d/e/1FAIpQLSepAarKrA7FdpS-tKCYMmKn-uLdcCCU7CNKtK9d64_W76nXAQ/viewform?usp=dialog'>
-                                Get Involved
-                            </a>
-                        </button>
-                    </div>
-                </motion.div>
             </div>
         </div>
     );

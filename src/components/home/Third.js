@@ -32,50 +32,42 @@ export const Third = () => {
 
     const testimonialsData = [
         {
-            date: "1/10/2024",
             name: "Latha",
-            role: "Cotton Farmer",
             image: voice1,
             content: {
                 testimonial: "Latha, despite facing immense hardships, continues to move forward with unwavering determination. Losing her father, mother, and husband did not break her spirit. With the support of Mulkanoor Cooperative Society, she has been able to cultivate her 4 acres of land alongside her sisters and secure a bright future for her son through education. She remains ever grateful to Mulkanoor Cooperative for being a guiding light in her journey.",
                 location: "Mulkanoor Village",
-                experience: "15 years",
             },
             backgroundColor: "bg-yellow-100"
         },
         {
-            date: "5/09/2024",
+
             name: "Padma",
-            role: "Rice Farmer",
+
             image: voice2,
             content: {
                 testimonial: "Dale Padma, alongside her father, cultivates paddy on their 4 acres of land with dedication. With the support of Mulkanoor Cooperative Society, she availed an animal loan, which has greatly boosted her income. She is deeply thankful to Mulkanoor Cooperative for supporting her every step of the way.",
                 location: "Karimnagar District",
-                experience: "20 years",
             },
             backgroundColor: "bg-green-100"
         },
         {
-            date: "3/08/2024",
+
             name: "Shyamsunder Rao",
-            role: "Mixed Crop Farmer",
+
             image: voice3,
             content: {
                 testimonial: "With the financial support from Mulkanoor Cooperative Society, I was able to invest in a new tractor. This has drastically reduced my labor costs and improved the efficiency of my farming operations. Today, my land productivity has increased, and I’m able to meet the growing demands of the market.",
                 location: "Warangal District",
-                experience: "10 years",
             },
             backgroundColor: "bg-blue-50"
         },
         {
-            date: "7/07/2024",
             name: "Vanga Sampath",
-            role: "Organic Farmer",
             image: voice4,
             content: {
                 testimonial: "With the financial support from Mulkanoor Cooperative Society, I was able to invest in a new tractor. This has drastically reduced my labor costs and improved the efficiency of my farming operations. Today, my land productivity has increased, and I’m able to meet the growing demands of the market.",
                 location: "Siddipet District",
-                experience: "12 years",
             },
             backgroundColor: "bg-amber-50"
         }
@@ -128,9 +120,6 @@ export const Third = () => {
 
     return (
         <div className="container mx-auto px-4 md:px-8 py-8 md:py-16 bg-transparent">
-            <h1 className='text-2xl md:text-5xl text-center font-medium mb-8 md:mb-12'>
-                Farmers' Voice : What they Say about Us
-            </h1>
 
             {/* Testimonial Slider Section */}
             <div className="relative max-w-6xl mx-auto overflow-hidden" ref={testimonialRef}>
@@ -195,7 +184,6 @@ export const Third = () => {
                                                 </p>
                                                 <div className="text-sm text-gray-600 mt-2">
                                                     <p><span className="font-medium">Location:</span> {testimonialsData[currentIndex].content.location}</p>
-                                                    <p><span className="font-medium">Experience:</span> {testimonialsData[currentIndex].content.experience}</p>
                                                 </div>
                                             </div>
 

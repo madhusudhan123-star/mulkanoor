@@ -74,7 +74,7 @@ const Paddy = () => {
                         transition={{ duration: 1 }}
                     >
                         <h1 className="text-6xl md:text-7xl font-bold text-white mb-6">
-                            Premium Paddy Seeds
+                            Agri Produce Procurement
                         </h1>
                         <p className="text-xl text-white/90 max-w-2xl mx-auto">
                             Quality seeds for prosperous harvests

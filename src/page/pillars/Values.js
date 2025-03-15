@@ -245,130 +245,7 @@ const Values = () => {
         </div>
     );
 
-    const RuralDevelopment = () => (
-        <div className="py-16 bg-gradient-to-b from-transparent to-white/5">
-            <div className="container mx-auto px-4">
-                {/* Section Header */}
-                <motion.div
-                    className="text-center mb-16"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                >
-                    <h2 className="text-4xl font-bold bg-gradient-to-r from-[#4A3F35] to-[#8B7355] 
-                        bg-clip-text text-transparent mb-4">
-                        Rural Development Initiatives
-                    </h2>
-                    <p className="text-[#8B7355] max-w-2xl mx-auto">
-                        Established in 2000, A.K. Vishwanatha Reddy Rural Development Society Ltd.
-                        continues to drive comprehensive rural development
-                    </p>
-                </motion.div>
 
-                {/* Initiatives Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                    {ruralInitiatives.map((initiative, index) => (
-                        <motion.div
-                            key={index}
-                            className="relative group"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.2 }}
-                        >
-                            {/* Card with Hover Effect */}
-                            <div className="bg-white/90 rounded-xl overflow-hidden shadow-lg 
-                                transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2">
-                                {/* Image Section */}
-                                <div className="h-48 relative overflow-hidden">
-                                    <img
-                                        src={initiative.image}
-                                        alt={initiative.title}
-                                        className="w-full h-full object-cover transition-transform 
-                                            duration-700 group-hover:scale-110"
-                                    />
-                                    <div className="absolute inset-0 bg-black/50 flex items-center 
-                                        justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                        <div className="text-white text-5xl">{initiative.icon}</div>
-                                    </div>
-                                </div>
-
-                                {/* Content Section */}
-                                <div className="p-6">
-                                    <h3 className="text-2xl font-bold text-[#4A3F35] mb-4">
-                                        {initiative.title}
-                                    </h3>
-
-                                    {/* Conditional Content Based on Initiative Type */}
-                                    {initiative.stats && (
-                                        <div className="grid grid-cols-2 gap-4 mb-4">
-                                            {Object.entries(initiative.stats).map(([key, value], idx) => (
-                                                <motion.div
-                                                    key={idx}
-                                                    className="text-center p-3 bg-[#8B7355]/5 rounded-lg"
-                                                    initial={{ scale: 0 }}
-                                                    whileInView={{ scale: 1 }}
-                                                    transition={{ delay: idx * 0.1 }}
-                                                >
-                                                    <div className="text-2xl font-bold text-[#8B7355]">
-                                                        {value}{key === 'percentage' ? '%' : ''}
-                                                    </div>
-                                                    <div className="text-sm text-[#4A3F35] capitalize">
-                                                        {key.replace(/([A-Z])/g, ' $1').trim()}
-                                                    </div>
-                                                </motion.div>
-                                            ))}
-                                        </div>
-                                    )}
-
-                                    {initiative.programs && (
-                                        <div className="space-y-4">
-                                            {initiative.programs.map((program, idx) => (
-                                                <motion.div
-                                                    key={idx}
-                                                    className="bg-[#8B7355]/5 p-4 rounded-lg"
-                                                    initial={{ opacity: 0, x: -20 }}
-                                                    whileInView={{ opacity: 1, x: 0 }}
-                                                    transition={{ delay: idx * 0.2 }}
-                                                >
-                                                    <div className="flex justify-between items-center mb-2">
-                                                        <span className="font-semibold text-[#4A3F35]">
-                                                            {program.name}
-                                                        </span>
-                                                        <span className="text-sm text-[#8B7355]">
-                                                            {program.duration}
-                                                        </span>
-                                                    </div>
-                                                    <div className="text-[#8B7355]">
-                                                        {program.participants} participants
-                                                    </div>
-                                                </motion.div>
-                                            ))}
-                                        </div>
-                                    )}
-
-                                    {initiative.features && (
-                                        <ul className="space-y-2">
-                                            {initiative.features.map((feature, idx) => (
-                                                <motion.li
-                                                    key={idx}
-                                                    className="flex items-center gap-2 text-[#4A3F35]"
-                                                    initial={{ opacity: 0, x: -20 }}
-                                                    whileInView={{ opacity: 1, x: 0 }}
-                                                    transition={{ delay: idx * 0.1 }}
-                                                >
-                                                    <span className="h-2 w-2 bg-[#8B7355] rounded-full" />
-                                                    {feature}
-                                                </motion.li>
-                                            ))}
-                                        </ul>
-                                    )}
-                                </div>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-            </div>
-        </div>
-    );
 
     const ProcessingInfrastructure = () => {
         const facilities = [
@@ -512,7 +389,7 @@ const Values = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-[#F5F5DC] via-[#F0EBE0] to-[#E8E3D9]">
+        <div className="min-h-screen bg-gradient-to-br mt-10 from-[#F5F5DC] via-[#F0EBE0] to-[#E8E3D9]">
             {/* Hero Banner */}
             <div className="relative h-[60vh] overflow-hidden">
                 <img
@@ -528,7 +405,7 @@ const Values = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
                     >
-                        Our Values & Initiatives
+                        Our Values
                     </motion.h1>
                     <motion.p
                         className="text-lg md:text-xl text-center max-w-2xl px-4"
@@ -610,98 +487,6 @@ const Values = () => {
                 
                 {/* Processing Infrastructure Section - NEW */}
                 <ProcessingInfrastructure />
-
-                {/* Bonus Rates Section */}
-                {/* <div className="container mx-auto px-4 mb-16">
-                    <motion.div
-                        className="bg-white/90 rounded-xl p-8"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                    >
-                        <h2 className="text-3xl font-bold text-[#4A3F35] mb-8 text-center">
-                            FY 2015-16 Bonus Rates
-                        </h2>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                            {bonusRates.map((rate, index) => (
-                                <motion.div
-                                    key={index}
-                                    className="text-center p-4 bg-[#8B7355]/10 rounded-lg"
-                                    initial={{ opacity: 0, scale: 0.8 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: index * 0.1 }}
-                                >
-                                    <div className="text-2xl font-bold text-[#8B7355] mb-2">
-                                        {rate.rate}
-                                    </div>
-                                    <div className="text-[#4A3F35] font-medium mb-1">
-                                        {rate.item}
-                                    </div>
-                                    <div className="text-sm text-[#8B7355]">
-                                        {rate.unit}
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </motion.div>
-                </div> */}
-
-                {/* Rural Development Section */}
-                <RuralDevelopment />
-
-                {/* Initiatives Grid */}
-                {/* <div className="container mx-auto px-4 py-16">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {initiatives.map((initiative, index) => (
-                            <motion.div
-                                key={index}
-                                className="bg-white/90 rounded-xl overflow-hidden shadow-lg"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.2 }}
-                            >
-                                <div className="h-48 relative">
-                                    <img
-                                        src={initiative.image}
-                                        alt={initiative.title}
-                                        className="w-full h-full object-cover"
-                                    />
-                                    <div className="absolute inset-0 bg-black/30" />
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="text-white text-center p-4">
-                                            <div className="text-4xl mb-2">{initiative.icon}</div>
-                                            <h3 className="text-xl font-bold">{initiative.title}</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="p-6">
-                                    <p className="text-[#1B5E20] mb-4">{initiative.description}</p>
-                                    {initiative.stats && (
-                                        <div className="grid grid-cols-2 gap-4">
-                                            {initiative.stats.map((stat, idx) => (
-                                                <div key={idx} className="text-center">
-                                                    <div className="text-2xl font-bold text-[#2E7D32]">
-                                                        {stat.prefix}{stat.number}{stat.suffix}
-                                                    </div>
-                                                    <div className="text-sm text-[#1B5E20]">{stat.label}</div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
-                                    {initiative.programs && (
-                                        <div className="mt-4 space-y-2">
-                                            {initiative.programs.map((program, idx) => (
-                                                <div key={idx} className="flex items-center gap-2 text-[#1B5E20]">
-                                                    <span className="text-xl">{program.icon}</span>
-                                                    <span>{program.name}</span>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div> */}
             </div>
         </div>
     );

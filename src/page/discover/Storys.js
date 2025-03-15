@@ -26,7 +26,7 @@ const Storys = () => {
   return (
     <div className="min-h-screen bg-harvest">
       {/* Hero Section with Video */}
-      <div className="relative h-screen">
+      {/* <div className="relative h-screen">
         <img className="w-full h-full object-cover" src={banner} />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center px-4">
           <h1 className="text-white text-5xl font-bold text-center max-w-4xl mb-6">
@@ -36,10 +36,10 @@ const Storys = () => {
             At Mulkanoor Cooperative Society, we believe in the power of community and the potential of every farmer. For over 70 years, we've been empowering farmers with access to affordable financial services and expert guidance, helping them grow their farms and improve their livelihoods.
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* Image Gallery Section */}
-      <section className="py-16 bg-earth-50">
+      {/* <section className="py-16 bg-earth-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <motion.div
@@ -80,14 +80,14 @@ const Storys = () => {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* History Section */}
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="max-w-6xl mx-auto py-16 px-4 relative"
+        className="max-w-6xl mx-auto py-16 px-4 mt-20 relative"
       >
         <div className="absolute inset-0 pattern-wheat opacity-10"></div>
         <h2 className="text-3xl font-bold mb-8 text-center text-earth-500">Our Journey</h2>
@@ -147,71 +147,7 @@ const Storys = () => {
       </motion.section>
 
       {/* Our Impact Section */}
-      <section className="bg-farmland py-16 relative">
-        <div className="absolute inset-0 pattern-leaves opacity-10"></div>
-        <div className="max-w-6xl mx-auto px-4 relative">
-          <motion.p
-            className="text-xl text-center text-gray-700 mb-12 max-w-4xl mx-auto"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-          >
-            Through tailored loans for agricultural implements, such as tractors, harvesters, and irrigation systems, we enable farmers to boost productivity and reduce costs. Our training programs offer farmers valuable insights into modern farming techniques, helping them adapt to changing environments and increasing profitability. With seasonal loans, savings schemes, and long-term financial support, Mulkanoor Cooperative Society is creating a foundation for sustainable growth, ensuring every farmer can thrive.
-          </motion.p>
 
-          {/* Impact Images */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-12">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3 }}
-              className="relative rounded-lg overflow-hidden h-48"
-            >
-              <img
-                src={Modern}
-                alt="Modern Farming Techniques"
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4 }}
-              className="relative rounded-lg overflow-hidden h-48"
-            >
-              <img
-                src={farmer}
-                alt="Farmer Training Session"
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.5 }}
-              className="relative rounded-lg overflow-hidden h-48"
-            >
-              <img
-                src={modern}
-                alt="Modern Agricultural Equipment"
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.6 }}
-              className="relative rounded-lg overflow-hidden h-48"
-            >
-              <img
-                src={meeting}
-                alt="Community Meeting"
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* Principles Section */}
       <section className="bg-harvest-50 py-16 relative">

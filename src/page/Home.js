@@ -118,6 +118,9 @@ const Home = () => {
                     </motion.section>
 
                     <motion.section className="px-4 md:px-8">
+                                    <h1 className='text-2xl md:text-5xl text-center font-medium mb-8 md:mb-12'>
+                Farmers' Voice : What they Say about Us
+            </h1>
                         <Third />
                     </motion.section>
 

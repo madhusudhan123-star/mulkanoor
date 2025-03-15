@@ -114,14 +114,6 @@ const Winning = () => {
     const mainFormulas = formulas.slice(0, formulas.length - 5);
     const horizontalFormulas = formulas.slice(-5);
 
-    // Add floating decoration images
-    // const decorImages = [
-    //     '/path-to-leaf1.png',
-    //     '/path-to-wheat.png',
-    //     '/path-to-plant.png',
-    //     '/path-to-seed.png'
-    // ];
-
     const FloatingImage = ({ src, className }) => {
         const { scrollY } = useScroll();
         const y = useTransform(scrollY, [0, 1000], [0, 100]);

@@ -6,15 +6,31 @@ import two from "../../assets/leadership/two.jpg";
 const SlidingPanel = ({ isOpen, onClose, leader }) => {
     return (
         <div className={`fixed inset-0 bg-black/50 z-50 transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-            <div className={`fixed inset-y-0 left-0 w-full md:w-2/3 lg:w-1/2 bg-[#F5F5DC] overflow-y-auto transition-transform duration-300 transform ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-                <div className="p-6">
-                    <button onClick={onClose} className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full">
+            <div className={`fixed inset-0 bg-[#F5F5DC] overflow-y-auto transition-transform duration-300 transform ${isOpen ? 'scale-100' : 'scale-95 opacity-0'}`}>
+                <div className="container mx-auto px-4 py-8 max-w-6xl relative">
+                    <button onClick={onClose} className="absolute top-4 right-4 p-2 hover:bg-gray-200 rounded-full z-10 bg-white/80">
                         <IoClose size={24} />
                     </button>
-                    <h2 className="text-3xl font-bold mb-2">{leader?.name}</h2>
-                    <p className="text-xl text-gray-600 mb-6">{leader?.title}</p>
-                    <div className="prose prose-lg max-w-none">
-                        {leader?.description}
+                    
+                    <div className="flex flex-col md:flex-row gap-8">
+                        <div className="md:w-1/3">
+                            <div className="sticky top-8">
+                                <img 
+                                    src={leader?.image} 
+                                    alt={leader?.name} 
+                                    className="w-full h-auto rounded-lg shadow-lg"
+                                />
+                                <div className="mt-6">
+                                    <h2 className="text-3xl font-bold">{leader?.name}</h2>
+                                    <p className="text-xl text-gray-600 mt-2">{leader?.title}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="md:w-2/3">
+                            <div className="prose prose-lg max-w-none">
+                                {leader?.description}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -32,9 +48,8 @@ const LeaderCard = ({ leader, onClick }) => {
     return (
         <div
             className="bg-[#C8AD7F] shadow-lg rounded-lg overflow-hidden cursor-pointer transform transition hover:scale-105"
-            onClick={() => onClick(leader)}
         >
-            <div className="aspect-[4/3] relative">
+            <div className="aspect-[4/3] relative" onClick={() => onClick(leader)}>
                 <img src={leader.image} alt={leader.name} className="w-full h-full object-cover" />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6">
                     <h3 className="text-white text-2xl font-bold">{leader.name}</h3>
@@ -45,7 +60,13 @@ const LeaderCard = ({ leader, onClick }) => {
                 <p className="text-gray-600 line-clamp-3">
                     {getExcerpt(leader.description)}
                 </p>
-                <button className="mt-4 text-blue-600 hover:text-blue-800">
+                <button 
+                    className="mt-4 text-blue-600 hover:text-blue-800 font-medium"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        onClick(leader);
+                    }}
+                >
                     Read More →
                 </button>
             </div>

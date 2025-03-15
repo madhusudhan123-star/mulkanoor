@@ -51,6 +51,7 @@ const Card = ({ title, content, image, url, className = '', isHovered, onHover }
             hover:bg-black/60
             bg-cover bg-center bg-no-repeat
             relative
+            cursor-pointer
         `}
         style={{
             backgroundImage: `url(${image})`
@@ -63,8 +64,8 @@ const Card = ({ title, content, image, url, className = '', isHovered, onHover }
         <a href={url}>
 
             <div className="absolute inset-0 bg-black/40 hover:bg-black/60 transition-colors duration-700 rounded-lg"></div>
-            <div className="relative z-10">
-                <h1 className='text-xl md:text-2xl lg:text-4xl mb-3 md:mb-4 lg:mb-10 transition-transform duration-500'>{title}</h1>
+            <div className="relative cursor-pointer z-10">
+                <h1 className='text-xl cursor-pointer md:text-2xl lg:text-4xl mb-3 md:mb-4 lg:mb-10 transition-transform duration-500'>{title}</h1>
                 <div className={`
                 transition-all duration-700 ease-in-out
                 transform
@@ -74,7 +75,7 @@ const Card = ({ title, content, image, url, className = '', isHovered, onHover }
                     }
             `}>
                     <p className={`
-                    text-start 
+                    text-start cursor-pointer
                     transition-all duration-500
                     ${title === 'rooted in trust and collaboration'
                             ? 'text-xs md:text-sm'
@@ -119,7 +120,7 @@ const HeroBanner = () => {
         <div className="relative z-10 px-2 md:px-4 py-4 md:py-0 min-h-screen flex justify-start items-start overflow-x-hidden">
             <div className="container mx-auto flex items-center flex-col text-center">
                 <h1 className='text-2xl text-black md:text-3xl lg:text-5xl font-bold mb-6 md:mb-8 lg:mb-16 px-4'>
-                    Together We Cultivate, Together We Rise
+                    Together We Cultivate Prosperity
                 </h1>
 
                 <div className='flex flex-col md:flex-row items-stretch justify-between gap-4 md:gap-2 w-full'>

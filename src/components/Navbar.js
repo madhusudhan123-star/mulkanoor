@@ -105,30 +105,30 @@ const Navbar = () => {
             ]
         },
         {
-            title: 'Farmers Voice',
-            path: '/farmer'
-            // Home no longer has submenu
-        },
-        {
             title: 'Product',
             path: '#services',
             submenu: [
+                { title: 'Paddy Seed', path: '/product/paddy' },
                 { title: 'Rice', path: '/product/rice' },
-                { title: 'Paddy', path: '/product/paddy' },
                 { title: 'Cotton', path: '/product/cotton' },
             ]
         },
         {
-            title: 'Our Pillars ',
+            title: 'Our Services',
             path: '#pillars',
             submenu: [
                 { title: 'Financial Services', path: '/pillars/winning' },
                 { title: 'Agri Inputs', path: '/pillars/agri' },
                 { title: 'Agri Extension Services', path: '/pillars/extension' },
-                { title: 'Value-Added Services', path: '/pillars/values' },
-                { title: 'Insurance Services & Pension', path: '/pillars/insurance' },
+                { title: 'Value', path: '/pillars/values' },
+                { title: 'Insurance Services', path: '/pillars/insurance' },
                 { title: 'Welfare Activities', path: '/pillars/Welfare' },
             ]
+        },
+        {
+            title: 'Farmers Voice',
+            path: '/farmer'
+            // Home no longer has submenu
         },
         {
             title: 'Awards & Accolades',
@@ -244,7 +244,7 @@ const Navbar = () => {
 
                     {/* Center - Title */}
                     <div className="hidden md:block text-center">
-                        <h1 className="text-2xl font-bold text-white">Mulkanoor Cooperative</h1>
+                        <h1 className="text-2xl font-bold text-white">Mulkanoor Cooperative Rural & Credit Marketing Society</h1>
                     </div>
 
                     {/* Right - Menu and Search */}

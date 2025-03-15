@@ -2,6 +2,32 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import banner from '../../assets/milestones/banner.jpg';
+// import year1956 from '../../assets/milestones/1956.jpg';
+// import year1957 from '../../assets/milestones/1956-57.jpg';
+// import year1958 from '../../assets/milestones/1958-59.jpg';
+// import year1959 from '../../assets/milestones/1959-60.jpg';
+// import year1960 from '../../assets/milestones/1960-61.jpg';
+// import year1961 from '../../assets/milestones/1961-62.jpg';
+// import year1962 from '../../assets/milestones/1961-62_two.jpg';
+// import year1963 from '../../assets/milestones/1963-64.jpg';
+// import year1956 from '../../assets/milestones/1956.jpg';
+// import year1956 from '../../assets/milestones/1956.jpg';
+// import year1956 from '../../assets/milestones/1956.jpg';
+// import year1956 from '../../assets/milestones/1956.jpg';
+// import year1956 from '../../assets/milestones/1956.jpg';
+// import year1956 from '../../assets/milestones/1956.jpg';
+// import year1956 from '../../assets/milestones/1956.jpg';
+// import year1956 from '../../assets/milestones/1956.jpg';
+// import year1956 from '../../assets/milestones/1956.jpg';
+// import year1956 from '../../assets/milestones/1956.jpg';
+// import year1956 from '../../assets/milestones/1956.jpg';
+// import year1956 from '../../assets/milestones/1956.jpg';
+// import year1956 from '../../assets/milestones/1956.jpg';
+// import year1956 from '../../assets/milestones/1956.jpg';
+// import year1956 from '../../assets/milestones/1956.jpg';
+// import year1956 from '../../assets/milestones/1956.jpg';
+
+
 
 const Milestones = () => {
     console.log("hi1")
