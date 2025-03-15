@@ -31,7 +31,7 @@ const Six = () => {
     return (
         <div className="relative">
             {/* Map Section */}
-            <div className="container mx-auto px-4 md:px-8 py-10 md:py-16">
+            {/* <div className="container mx-auto px-4 md:px-8 py-10 md:py-16">
                 <h2 className="text-2xl md:text-5xl font-medium text-center mb-8 md:mb-12">Our Coverage Area</h2>
                 <div className="w-full">
                     <div className="rounded-xl overflow-hidden shadow-lg">
@@ -42,10 +42,10 @@ const Six = () => {
                         />
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* Social Media Section */}
-            <div className="bg-yellow-50/60 py-16 md:py-24">
+            <div className="bg-yellow-50/60">
                 <div className="container mx-auto px-4 md:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-2xl md:text-5xl font-medium mb-4">Connect With Us</h2>

@@ -1,115 +1,132 @@
 import React, { useState } from 'react'
-import { IoIosArrowDown } from "react-icons/io";
+import { motion } from 'framer-motion';
 // Import all your images
-import historyImage from '../../assets/home/faq1.jpg' // Replace with actual history image
-import missionImage from '../../assets/home/faq2.jpg' // Replace with actual mission image
-import visionImage from '../../assets/home/faq3.jpg'  // Replace with actual vision image
-import valuesImage from '../../assets/home/faq4.png'  // Replace with actual values image
-import valuesImage1 from '../../assets/home/faq5.png'  // Replace with actual values image
-import valuesImage2 from '../../assets/home/faq6.png'  // Replace with actual values image
+import historyImage from '../../assets/home/faq1.jpg'
+import missionImage from '../../assets/home/faq2.jpg'
+import visionImage from '../../assets/home/faq3.jpg'
+import valuesImage from '../../assets/home/faq4.png'
+import valuesImage1 from '../../assets/home/faq5.png'
+import valuesImage2 from '../../assets/home/faq6.png'
+import valuesImage3 from '../../assets/home/faq7.png'
 
 const Fourth = () => {
-    const [openIndex, setOpenIndex] = useState(null);
+    const [hoveredCard, setHoveredCard] = useState(null);
 
-    const dropdownData = [
+    const cardData = [
         {
-            title: "Solar Power Plant",
-            content: "Cooperative Society has installed a 500 KWp solar power plant for running the cotton ginning and pressing unit and parboiled rice mill with the financial assistance from NCDC",
-            image: historyImage
+            title: "Electrification of Villages & farms",
+            content: "In the years following independence, the society played a crucial role in bringing electricity to villages and farms, lighting up rural communities and empowering farmers with better infrastructure for agriculture and daily life.",
+            image: historyImage,
+            // color: "from-green-500 to-green-700"
         },
         {
-            title: "State Electricity Board",
-            content: "In the early years the society villages and farms have got electrified by Depositing voluntary debentures to the State Electricity Board.",
-            image: missionImage
+            title: " AKVR Junior & Degree College for students (We have an image of RO plant with us. Please use that)",
+            content: "A Junior College was established in 2001-02, followed by a Degree College in 2003-04, both founded with the financial support of the society to promote higher education in the region.",
+            image: missionImage,
+            // color: "from-yellow-500 to-amber-600"
         },
         {
-            title: "Micro Irrigation project",
-            content: "Promoted Micro Irrigation project by sanctioning sprinklers and drip irrigation loans to 500 members.",
-            image: visionImage
+            title: "Health Checkup camps for Members",
+            content: "The cooperative, in partnership with SLEH, provides free cataract surgeries, affordable eye care, and specialized health camps. It also promotes well-being through physiotherapy and yoga camps, ensuring better healthcare for members.",
+            image: visionImage,
+            // color: "from-blue-500 to-blue-700"
         },
         {
-            title: "Animal Health Camps",
-            content: "Conducted Animal Health Camps in 14 villages in association with Animal Husbandry Department",
-            image: valuesImage
+            title: "Animal Health Checkup Camps",
+            content: "The society organizes Animal Health Camps in collaboration with the Animal Husbandry Department to provide essential veterinary care, vaccinations, and treatment for livestock, ensuring better health and productivity for farmers' animals.",
+            image: valuesImage,
+            // color: "from-purple-500 to-purple-700"
         },
         {
-            title: "Organized Eyecamp",
-            content: "Organized Eyecamp for members and facilitated 150 Cataract operations for society members free of cost.",
-            image: valuesImage1
+            title: "Constructed dam under NABARD Watershed program at Vangara Village",
+            content: "The society has implemented three watershed programs with financial assistance of ₹2.62 crores from the National Bank for Agricultural and Rural Development (NABARD), covering an area of 283.70 hectares to support sustainable water management and agriculture.",
+            image: valuesImage1,
+            // color: "from-red-500 to-red-700"
         },
         {
-            title: "Pension to Senior Member",
-            content: "Pension to Senior Members: Society members above 65 years can withdraw dividend distributed on the shares and interest earned on thrift deposit on monthly basis.",
-            image: valuesImage2
+            title: "RO plant setup for Drinking Water (We have an image of RO plant with us. Please use that)",
+            content: "The society collaborated with NGOs to ensure access to clean drinking water by installing RO plants in villages, improving the health and well-being of the community.",
+            image: valuesImage2,
+            // color: "from-indigo-500 to-indigo-700"
+        },
+        {
+            title: "Tailoring & Computer Training for Women.",
+            content: "AKVR Rural Development Society organized a free training program on tailoring and computer applications for women in the region, empowering them with skills for self-employment and financial independence.",
+            image: valuesImage3,
+            // color: "from-indigo-500 to-indigo-700"
         }
     ];
 
-    const handleToggle = (index) => {
-        setOpenIndex(openIndex === index ? null : index);
+    // Card reveal animation variants
+    const cardVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: (i) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: i * 0.1,
+                duration: 0.5,
+                ease: "easeOut"
+            }
+        })
     };
 
-    // Get current image based on open dropdown
-    const currentImage = openIndex !== null ? dropdownData[openIndex].image : dropdownData[0].image;
-
     return (
-        <div className="container mx-auto px-4 md:px-8 py-10 md:py-16">
+        <div className="container mx-auto px-4 md:px-8">
             {/* Main Heading */}
-            <h1 className="text-2xl md:text-5xl text-center font-medium mb-12 md:mb-16">
+            <h1 className="text-2xl md:text-5xl text-center font-medium mb-10 md:mb-16">
                 Initiatives for Community
             </h1>
 
-            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
-                {/* Left side - Image with transition */}
-                <div className="w-full md:w-1/2">
-                    <div className="relative h-[300px] md:h-[600px] rounded-2xl shadow-xl overflow-hidden">
-                        <img
-                            src={currentImage}
-                            alt="Mulkanoor Cooperative"
-                            className="w-full h-full object-cover transition-transform duration-700 ease-out"
-                        />
-                        {/* Optional overlay for smooth transition */}
-                        <div className="absolute inset-0 bg-black/10 transition-opacity duration-300" />
-                    </div>
-                </div>
-
-                {/* Right side - Dropdowns */}
-                <div className="w-full md:w-1/2 space-y-4">
-                    {dropdownData.map((item, index) => (
-                        <div
-                            key={index}
-                            className={`
-                                border border-white/20 rounded-xl overflow-hidden backdrop-blur-sm
-                                ${openIndex === index ? 'border-yellow-400/50' : ''}
-                            `}
-                        >
-                            <button
-                                onClick={() => handleToggle(index)}
-                                className={`
-                                    w-full p-4 md:p-6 flex items-center justify-between
-                                    hover:bg-white/10 transition-colors
-                                    ${openIndex === index ? 'bg-white/10' : ''}
-                                `}
-                            >
-                                <span className="text-xl md:text-2xl font-medium">{item.title}</span>
-                                <IoIosArrowDown
-                                    className={`text-2xl transition-transform duration-300 
-                                        ${openIndex === index ? 'rotate-180' : ''}`
-                                    }
-                                />
-                            </button>
-                            {/* Dropdown content */}
-                            <div className={`
-                                overflow-hidden transition-all duration-300 bg-white/5
-                                ${openIndex === index ? 'max-h-48 p-4 md:p-6' : 'max-h-0'}
-                            `}>
-                                <p className=" text-base md:text-lg">
-                                    {item.content}
-                                </p>
-                            </div>
+            {/* Card Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                {cardData.map((card, index) => (
+                    <motion.div
+                        key={index}
+                        custom={index}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-50px" }}
+                        variants={cardVariants}
+                        className="relative rounded-xl overflow-hidden shadow-lg transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl"
+                        onMouseEnter={() => setHoveredCard(index)}
+                        onMouseLeave={() => setHoveredCard(null)}
+                    >
+                        {/* Card Image */}
+                        <div className="relative h-56 overflow-hidden">
+                            <div className={`absolute inset-0 bg-gradient-to-b ${card.color} opacity-50 z-10`}></div>
+                            <img 
+                                src={card.image} 
+                                alt={card.title}
+                                className="w-full h-full object-cover transition-transform duration-700 ease-out"
+                                style={{
+                                    transform: hoveredCard === index ? "scale(1.1)" : "scale(1)"
+                                }}
+                            />
                         </div>
-                    ))}
-                </div>
+                        
+                        {/* Card Content */}
+                        <div className="p-5 bg-white">
+                            <h3 className="text-xl font-bold mb-3">{card.title}</h3>
+                            <div className="h-0.5 w-16 bg-yellow-400 mb-4"></div>
+                            <p className="text-gray-700">{card.content}</p>
+                        </div>
+                        
+                        {/* Bottom gradient bar */}
+                        <div className={`h-1 w-full bg-gradient-to-r ${card.color}`}></div>
+                    </motion.div>
+                ))}
             </div>
+            
+            {/* Optional View All Button */}
+            {/* <div className="flex justify-center mt-10">
+                <a 
+                    href="/initiatives" 
+                    className="inline-block px-6 py-3 bg-yellow-400 text-black font-medium rounded-lg hover:bg-yellow-500 transition-colors shadow-md hover:shadow-lg"
+                >
+                    View All Initiatives
+                </a>
+            </div> */}
         </div>
     )
 }

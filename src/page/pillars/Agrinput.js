@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { FaHandHoldingWater, FaTractor, FaSeedling, FaHandshake } from 'react-icons/fa';
-import { GiFarmTractor, GiWateringCan, GiReceiveMoney } from 'react-icons/gi';
+import { FaHandHoldingWater, FaTractor, FaSeedling, FaHandshake, FaLeaf, FaSprayCan, FaSeedling as FaSeed, FaTools } from 'react-icons/fa';
+import { GiFarmTractor, GiWateringCan, GiReceiveMoney, GiFertilizerBag, GiSprout } from 'react-icons/gi';
 import { RiGovernmentFill } from 'react-icons/ri';
 import { BiSupport } from 'react-icons/bi';
 import banner from '../../assets/agriinput/banner.jpg'
@@ -30,6 +30,61 @@ const Agrinput = () => {
         { value: 6822, label: "Debt Relief Recipients" },
         { value: 7.95, label: "Crores in Loans (2015-16)" }
     ];
+
+    // New content sections data
+    const contentSections = [
+        {
+            id: "fertilizers",
+            title: "Fertilizers",
+            icon: <GiFertilizerBag className="text-5xl" />,
+            content: "Mulkanoor Cooperative Society supports farmers by providing a wide range of high-quality fertilizers essential for soil health and crop productivity. By ensuring access to the right fertilizers at affordable prices, the society helps farmers achieve better yields, sustain soil fertility, and enhance overall agricultural efficiency.",
+            image: ag1,
+            color: "from-green-700 to-green-600"
+        },
+        {
+            id: "pesticides",
+            title: "Pesticides",
+            icon: <FaSprayCan className="text-5xl" />,
+            content: "Mulkanoor Cooperative Society provides farmers with a variety of high-quality pesticides to protect their crops from pests and diseases. By offering effective and affordable pest control solutions, the society helps farmers safeguard their yields, improve crop quality, and enhance overall farm productivity.",
+            image: ag2,
+            color: "from-green-600 to-emerald-500"
+        },
+        {
+            id: "seeds",
+            title: "Seeds",
+            icon: <GiSprout className="text-5xl" />,
+            content: "Mulkanoor Cooperative Society supplies farmers with high-quality paddy seeds to ensure better yields and sustainable farming. From high-yielding varieties to climate-resistant, the society provides a diverse range suited for different crops and soil types. By ensuring access to truthful and superior seeds, Mulkanoor helps farmers enhance productivity, improve crop resilience, and achieve greater profitability.",
+            image: ag3,
+            color: "from-emerald-500 to-teal-600"
+        }
+    ];
+
+    // Agricultural implements section data
+    const agriImplementsData = {
+        title: "Agri Implements",
+        icon: <FaTools className="text-5xl" />,
+        content: "The society provides medium-term loans to support various agricultural and allied activities. These loans cover:",
+        categories: [
+            {
+                title: "Agricultural Implements & Irrigation",
+                items: "Digging of wells, electric motors, pipelines, drip irrigation, and sprinklers."
+            },
+            {
+                title: "Farm Machinery",
+                items: "Maize shellers, rotovators, tractor trailers, and other essential equipment."
+            },
+            {
+                title: "Allied Agricultural Activities",
+                items: "Dairy farming, sheep rearing, horticulture crops, and sericulture."
+            },
+            {
+                title: "Welfare Initiatives",
+                items: "Construction of toilets, solar lanterns, and LPG gas connections."
+            }
+        ],
+        conclusion: "These loans help farmers improve productivity, adopt modern techniques, and enhance their overall well-being.",
+        image: ag4
+    };
 
     const services = [
         {
@@ -207,54 +262,146 @@ const Agrinput = () => {
                     </div>
                 </div>
 
-                {/* Add Image Masonry after Stats Section */}
-                <ImageMasonry />
+                {/* New Content Sections */}
+                <div className="container mx-auto px-4 mb-20">
+                    <motion.h2 
+                        className="text-4xl font-bold text-center text-[#1B5E20] mb-16"
+                        initial={{ opacity: 0, y: -20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        Our Agricultural Input Services
+                    </motion.h2>
+                    
+                    <div className="space-y-24">
+                        {contentSections.map((section, index) => (
+                            <motion.div 
+                                key={section.id}
+                                className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ duration: 0.8 }}
+                            >
+                                <div className={`order-2 ${index % 2 === 0 ? 'md:order-2' : 'md:order-1'}`}>
+                                    <motion.div
+                                        className="bg-white/90 backdrop-blur-sm rounded-xl p-8 shadow-lg"
+                                        initial={{ x: index % 2 === 0 ? 50 : -50, opacity: 0 }}
+                                        whileInView={{ x: 0, opacity: 1 }}
+                                        transition={{ duration: 0.8, delay: 0.2 }}
+                                    >
+                                        <div className="flex items-center gap-4 mb-4">
+                                            <div className={`bg-gradient-to-br ${section.color} p-4 rounded-full text-white`}>
+                                                {section.icon}
+                                            </div>
+                                            <h3 className="text-3xl font-bold text-[#1B5E20]">{section.title}</h3>
+                                        </div>
+                                        <p className="text-[#2E7D32] leading-relaxed text-lg">
+                                            {section.content}
+                                        </p>
+                                    </motion.div>
+                                </div>
+                                <motion.div 
+                                    className={`order-1 ${index % 2 === 0 ? 'md:order-1' : 'md:order-2'}`}
+                                    initial={{ x: index % 2 === 0 ? -50 : 50, opacity: 0 }}
+                                    whileInView={{ x: 0, opacity: 1 }}
+                                    transition={{ duration: 0.8 }}
+                                >
+                                    <div className="rounded-xl overflow-hidden shadow-xl">
+                                        <img 
+                                            src={section.image} 
+                                            alt={section.title} 
+                                            className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700"
+                                        />
+                                    </div>
+                                </motion.div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
 
-                {/* Featured Section */}
-                <div className="container mx-auto px-4 mb-16">
-                    <motion.div
+                {/* Agri Implements Section */}
+                <div className="container mx-auto px-4 mb-20 py-16 bg-white/50 backdrop-blur-sm rounded-3xl">
+                    <motion.div 
+                        className="grid grid-cols-1 lg:grid-cols-5 gap-8"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        className="grid grid-cols-1 md:grid-cols-2 gap-8"
+                        transition={{ duration: 0.8 }}
                     >
-                        <div className="space-y-6">
-                            <h2 className="text-3xl font-bold text-[#2E7D32]">
-                                Comprehensive Support System
-                            </h2>
-                            <p className="text-[#1B5E20] leading-relaxed">
-                                Our cooperative actively collaborates with government agencies to secure subsidies
-                                and support for our members. Since 1996, we've facilitated over ₹1549.26 lakhs
-                                in subsidies for 7,130 members.
-                            </p>
-                            <ul className="space-y-4">
-                                <motion.li
-                                    className="flex items-center gap-3 text-[#2E7D32]"
-                                    initial={{ opacity: 0, x: -20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                >
-                                    <span className="h-2 w-2 bg-[#2E7D32] rounded-full" />
-                                    Government scheme integration
-                                </motion.li>
-                                {/* Add more list items as needed */}
-                            </ul>
+                        <div className="lg:col-span-2">
+                            <div className="sticky top-24">
+                                <div className="bg-gradient-to-br from-teal-600 to-green-700 p-5 inline-block rounded-full text-white mb-6">
+                                    {agriImplementsData.icon}
+                                </div>
+                                <h3 className="text-3xl font-bold text-[#1B5E20] mb-4">{agriImplementsData.title}</h3>
+                                <p className="text-[#2E7D32] leading-relaxed text-lg mb-6">
+                                    {agriImplementsData.content}
+                                </p>
+                                <div className="rounded-xl overflow-hidden shadow-xl mt-8 hidden lg:block">
+                                    <img 
+                                        src={agriImplementsData.image} 
+                                        alt={agriImplementsData.title} 
+                                        className="w-full h-[300px] object-cover hover:scale-105 transition-transform duration-700"
+                                    />
+                                </div>
+                            </div>
                         </div>
-                        <motion.div
-                            className="relative rounded-xl overflow-hidden"
-                            whileHover={{ scale: 1.02 }}
-                            transition={{ duration: 0.3 }}
-                        >
-                            <img
-                                src={images.machinery.url}
-                                alt="Agricultural Machinery"
-                                className="w-full h-[400px] object-cover"
-                            />
-                            <div className="absolute inset-0 bg-black/20 hover:bg-black/10 transition-colors" />
-                        </motion.div>
+                        <div className="lg:col-span-3">
+                            <div className="space-y-8">
+                                {agriImplementsData.categories.map((category, index) => (
+                                    <motion.div 
+                                        key={index}
+                                        className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg"
+                                        initial={{ y: 30, opacity: 0 }}
+                                        whileInView={{ y: 0, opacity: 1 }}
+                                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                                    >
+                                        <h4 className="text-xl font-bold text-[#2E7D32] mb-3">{category.title}</h4>
+                                        <p className="text-[#1B5E20]">{category.items}</p>
+                                    </motion.div>
+                                ))}
+                                <motion.div
+                                    className="bg-gradient-to-br from-green-600 to-green-700 rounded-xl p-6 text-white shadow-lg"
+                                    initial={{ y: 30, opacity: 0 }}
+                                    whileInView={{ y: 0, opacity: 1 }}
+                                    transition={{ duration: 0.5, delay: 0.5 }}
+                                >
+                                    <p className="text-lg font-medium">{agriImplementsData.conclusion}</p>
+                                </motion.div>
+                                <div className="rounded-xl overflow-hidden shadow-xl mt-8 lg:hidden">
+                                    <img 
+                                        src={agriImplementsData.image} 
+                                        alt={agriImplementsData.title} 
+                                        className="w-full h-[300px] object-cover"
+                                    />
+                                </div>
+                            </div>
+                        </div>
                     </motion.div>
                 </div>
 
+                {/* Image Masonry Section */}
+                <div className="container mx-auto px-4 mb-20">
+                    <motion.h2 
+                        className="text-3xl font-bold text-center text-[#1B5E20] mb-8"
+                        initial={{ opacity: 0, y: -20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        Agricultural Support Gallery
+                    </motion.h2>
+                    <ImageMasonry />
+                </div>
+
                 {/* Services Grid with Images */}
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 mb-20">
+                    <motion.h2 
+                        className="text-3xl font-bold text-center text-[#1B5E20] mb-12"
+                        initial={{ opacity: 0, y: -20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        Our Support Services
+                    </motion.h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {services.map((service, index) => (
                             <motion.div

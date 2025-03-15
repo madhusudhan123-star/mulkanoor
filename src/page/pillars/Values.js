@@ -370,6 +370,147 @@ const Values = () => {
         </div>
     );
 
+    const ProcessingInfrastructure = () => {
+        const facilities = [
+            {
+                title: "Paraboiled Rice Mill",
+                subtitle: "4 Tons/Hr Capacity",
+                description: "At Mulkanoor's Parboiled Rice Mill, the journey of paddy seed to polished paraboiled rice follows a meticulous process. First, the paddy is thoroughly cleaned to remove dust and impurities. It is then steamed and dried, giving the grains a brownish hue. Next, the dried paddy enters the polishing stage, where the outer layers are carefully removed to enhance its texture and appearance. The polished rice is then sorted into separate chambers based on quality and size. Finally, the perfectly processed parboiled rice flows through pipes, ready for packaging and distribution.",
+                icon: <GiFactory className="text-4xl" />,
+                image: images.processing,
+                steps: [
+                    "Cleaning to remove dust and impurities",
+                    "Steaming and drying process",
+                    "Polishing to remove outer layers",
+                    "Sorting based on quality and size",
+                    "Packaging and distribution"
+                ]
+            },
+            {
+                title: "Modern Raw Rice Mill",
+                subtitle: "4 Tons/Hr Capacity",
+                description: "In Mulkanoor's Modern Raw Rice Mill, paddy undergoes a thorough cleaning to remove dust and impurities. It is then de-husked to separate the outer husk, revealing the raw rice. The rice is polished to enhance its texture and appearance before being sorted into different grades. Finally, the processed raw rice flows through pipes, ready for packaging and distribution.",
+                icon: <FaIndustry className="text-4xl" />,
+                image: images.seeds,
+                steps: [
+                    "Thorough cleaning process",
+                    "De-husking to separate outer husk",
+                    "Polishing to enhance texture",
+                    "Sorting into different grades",
+                    "Packaging and distribution"
+                ]
+            },
+            {
+                title: "Seed Processing Units",
+                subtitle: "18 Tons/Hr with 7 Units",
+                description: "In Mulkanoor's seed production process, once seeds are procured, they undergo rigorous lab testing to ensure quality. Once approved, they are processed, packed, and distributed to various states. Each processing unit has a capacity of 4 tons per hour, ensuring efficient large-scale production",
+                icon: <FaSeedling className="text-4xl" />,
+                image: images.storage,
+                steps: [
+                    "Procuring seeds from farmers",
+                    "Rigorous lab testing for quality",
+                    "Processing approved seeds",
+                    "Packaging in appropriate containers",
+                    "Distribution to various states"
+                ]
+            },
+            {
+                title: "Cotton Ginning Machines",
+                subtitle: "35 Machines with Bales Pressing Unit",
+                description: "In Mulkanoor's Cotton Ginning Units, raw cotton arrives in large trucks and is fed into machines for initial processing. The cotton moves through conveyor belts to 32 specialized units where the seeds are carefully separated. These cotton seeds are then stored separately and exported for cotton seed oil production. The cleaned cotton fibers proceed to ginning machines, where they are processed into bales. These bales are categorized based on quality—premium and medium—before being stored in large quantities, ready for further use or export.",
+                icon: <GiCottonFlower className="text-4xl" />,
+                image: images.women,
+                steps: [
+                    "Initial processing of raw cotton",
+                    "Seed separation via specialized units",
+                    "Storage of cotton seeds for oil production",
+                    "Ginning and bale processing",
+                    "Quality categorization and storage"
+                ]
+            }
+        ];
+
+        return (
+            <div className="container mx-auto px-4 py-16">
+                <motion.div
+                    className="text-center mb-16"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                >
+                    <h2 className="text-4xl font-bold bg-gradient-to-r from-[#4A3F35] to-[#8B7355] 
+                        bg-clip-text text-transparent mb-4">
+                        Processing Infrastructure
+                    </h2>
+                    <p className="text-[#8B7355] max-w-2xl mx-auto">
+                        State-of-the-art processing facilities ensuring quality production and optimal resource utilization
+                    </p>
+                </motion.div>
+
+                <div className="space-y-16">
+                    {facilities.map((facility, index) => (
+                        <motion.div
+                            key={index}
+                            className="bg-white/90 rounded-xl overflow-hidden shadow-lg"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2 }}
+                        >
+                            <div className={`grid grid-cols-1 md:grid-cols-2 ${index % 2 !== 0 ? 'md:grid-flow-dense' : ''}`}>
+                                <div className={`p-8 ${index % 2 !== 0 ? 'md:col-start-2' : ''}`}>
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <div className="p-3 rounded-full bg-[#8B7355]/10 text-[#8B7355]">
+                                            {facility.icon}
+                                        </div>
+                                        <div>
+                                            <h3 className="text-2xl font-bold text-[#4A3F35]">{facility.title}</h3>
+                                            <p className="text-[#8B7355] font-medium">{facility.subtitle}</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <p className="text-[#4A3F35] mb-6 leading-relaxed">
+                                        {facility.description}
+                                    </p>
+                                    
+                                    <div className="space-y-3 mt-8">
+                                        <h4 className="font-semibold text-[#4A3F35]">Process Steps:</h4>
+                                        {facility.steps.map((step, idx) => (
+                                            <motion.div
+                                                key={idx}
+                                                className="flex items-center gap-3"
+                                                initial={{ opacity: 0, x: -20 }}
+                                                whileInView={{ opacity: 1, x: 0 }}
+                                                transition={{ delay: idx * 0.1 }}
+                                            >
+                                                <div className="h-6 w-6 rounded-full bg-[#8B7355]/10 text-[#8B7355] flex items-center justify-center text-sm font-bold">
+                                                    {idx + 1}
+                                                </div>
+                                                <p className="text-[#4A3F35]">{step}</p>
+                                            </motion.div>
+                                        ))}
+                                    </div>
+                                </div>
+                                
+                                <div className={`h-full min-h-[300px] relative ${index % 2 !== 0 ? 'md:col-start-1' : ''}`}>
+                                    <img 
+                                        src={facility.image} 
+                                        alt={facility.title}
+                                        className="w-full h-full object-cover" 
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                                        <div className="text-white">
+                                            <h3 className="text-xl font-bold">{facility.title}</h3>
+                                            <p className="text-white/80">{facility.subtitle}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
+        );
+    };
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-[#F5F5DC] via-[#F0EBE0] to-[#E8E3D9]">
             {/* Hero Banner */}
@@ -466,9 +607,12 @@ const Values = () => {
                         ))}
                     </div>
                 </div>
+                
+                {/* Processing Infrastructure Section - NEW */}
+                <ProcessingInfrastructure />
 
                 {/* Bonus Rates Section */}
-                <div className="container mx-auto px-4 mb-16">
+                {/* <div className="container mx-auto px-4 mb-16">
                     <motion.div
                         className="bg-white/90 rounded-xl p-8"
                         initial={{ opacity: 0 }}
@@ -499,7 +643,7 @@ const Values = () => {
                             ))}
                         </div>
                     </motion.div>
-                </div>
+                </div> */}
 
                 {/* Rural Development Section */}
                 <RuralDevelopment />

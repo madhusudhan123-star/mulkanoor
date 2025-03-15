@@ -119,7 +119,7 @@ const Navbar = () => {
             ]
         },
         {
-            title: 'Our Pillars Of Success',
+            title: 'Our Pillars ',
             path: '#pillars',
             submenu: [
                 { title: 'Financial Services', path: '/pillars/winning' },
@@ -127,7 +127,7 @@ const Navbar = () => {
                 { title: 'Agri Extension Services', path: '/pillars/extension' },
                 { title: 'Value-Added Services', path: '/pillars/values' },
                 { title: 'Insurance Services & Pension', path: '/pillars/insurance' },
-                { title: 'Welfare Services', path: '/pillars/Welfare' },
+                { title: 'Welfare Activities', path: '/pillars/Welfare' },
             ]
         },
         {
@@ -158,11 +158,6 @@ const Navbar = () => {
 
     // Social links - updated to use the clean toggle function
     const socialLinks = [
-        {
-            icon: <FaFacebook />, url: 'https://www.facebook.com/profile.php?id=61566000885423', color: 'hover:text-blue-400'
-        },
-        { icon: <FaTwitter />, url: 'https://x.com/mulkanoorCoop', color: 'hover:text-sky-400' },
-        { icon: <FaInstagram />, url: 'https://www.instagram.com/mulkanoor_coop/?hl=en', color: 'hover:text-pink-400' },
         {
             icon: <FaSearch />,
             action: toggleSearchBar, // Use the clean toggle function instead of inline
@@ -238,44 +233,49 @@ const Navbar = () => {
     return (
         <div className="relative overflow-x-hidden">
             {/* Main Navbar */}
-            <nav className={`fixed w-full top-0 left-0 backdrop-blur-sm bg-white/20 border-b border-white/20 shadow-lg z-50 transition-transform duration-300 ${scrollDirection === 'down' ? '-translate-y-full' : 'translate-y-0'}`}>
+            <nav className={`fixed w-full top-0 left-0 backdrop-blur-sm bg-green-600 border-b border-white/20 shadow-lg z-50 transition-transform duration-300 ${scrollDirection === 'down' ? '-translate-y-full' : 'translate-y-0'}`}>
                 <div className="flex justify-between items-center px-3 md:px-8 py-2 md:py-4">
-                    {/* Menu Button */}
-                    <button
-                        className="text-base md:text-xl text-black flex items-center gap-2"
-                        onClick={() => setIsOpen(!isOpen)}
-                    >
-                        <span className='p-2 hover:text-white bg-[#F2EA02]/70 text-base transition-all duration-300 
-                            hover:scale-110 rounded-full backdrop-blur-lg flex items-center justify-center'>
-                            {isOpen ? <FaTimes size={18} /> : <FaBars size={18} />}
-                        </span>
-                    </button>
-
-                    {/* Center Logo - Smaller on mobile */}
-                    <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    {/* Left - Logo */}
+                    <div className="flex items-center">
                         <a href='/'>
                             <img src={logo} alt="Logo" className="h-10 md:h-16 w-auto" />
                         </a>
                     </div>
 
-                    {/* Social Icons - Hidden on mobile */}
-                    <div className="hidden md:flex gap-4">
-                        {socialLinks.map((social, index) => (
-                            social.isButton ? (
-                                <button
-                                    key={index}
-                                    onClick={social.action}
-                                    className={`text-gray-800 text-xl ${social.color} ${isOpen ? 'opacity-50 cursor-not-allowed' : ''}`}
-                                    disabled={isOpen}
-                                >
-                                    {social.icon}
-                                </button>
-                            ) : (
-                                <a key={index} href={social.url} className={`text-gray-800 text-xl ${social.color}`}>
-                                    {social.icon}
-                                </a>
-                            )
-                        ))}
+                    {/* Center - Title */}
+                    <div className="hidden md:block text-center">
+                        <h1 className="text-2xl font-bold text-white">Mulkanoor Cooperative</h1>
+                    </div>
+
+                    {/* Right - Menu and Search */}
+                    <div className="flex items-center gap-4">
+                        {/* Social Icons - Hidden on mobile */}
+                        <div className="hidden md:flex gap-4">
+                            {socialLinks.map((social, index) => (
+                                social.isButton ? (
+                                    <button
+                                        key={index}
+                                        onClick={social.action}
+                                        className={`text-white text-xl ${social.color} ${isOpen ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                        disabled={isOpen}
+                                    >
+                                        {social.icon}
+                                    </button>
+                                ) : (
+                                    <a key={index} href={social.url} className={`text-white text-xl ${social.color}`}>
+                                        {social.icon}
+                                    </a>
+                                )
+                            ))}
+                        </div>
+                        
+                        {/* Menu Button */}
+                        <button className="text-base md:text-xl text-white flex items-center gap-2" onClick={() => setIsOpen(!isOpen)}>
+                            <span className='p-2 hover:bg-green-700 bg-green-700/70 text-base transition-all duration-300 
+                                hover:scale-110 rounded-full backdrop-blur-lg flex items-center justify-center'>
+                                {isOpen ? <FaTimes size={18} /> : <FaBars size={18} />}
+                            </span>
+                        </button>
                     </div>
                 </div>
 
@@ -327,24 +327,35 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            {/* Full-screen mobile menu */}
+            {/* Full-screen mobile menu - updated to slide from right and cover half screen */}
             <div className={`
-                fixed inset-0 bg-black/80 backdrop-blur-md z-40
+                fixed inset-0 bg-black/50 backdrop-blur-sm z-[60]
                 transition-opacity duration-300 ease-in-out
                 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}
             `}>
-                {/* Menu Container */}
+                {/* Menu Container - modified to slide from right and cover half screen */}
                 <div className={`
-                    fixed top-[60px] md:top-[76px] left-0 right-0 bottom-0
-                    bg-white/95 overflow-y-auto
+                    fixed top-0 right-0 bottom-0 w-full max-w-xs
+                    bg-white shadow-lg overflow-y-auto z-[70]
                     transition-transform duration-300 ease-in-out
-                    ${isOpen ? 'translate-y-0' : '-translate-y-full'}
+                    ${isOpen ? 'translate-x-0' : 'translate-x-full'}
                 `}>
-                    <div className="container mx-auto px-4 py-6">
-                        {/* Mobile Search */}
-                        <form onSubmit={handleSearch} className="mb-6">
-                            <div className="flex relative">
-                                <div className="relative w-full">
+                    <div className="flex flex-col h-full">
+                        {/* Menu Header with close button */}
+                        <div className="p-4 border-b border-gray-200 flex justify-between items-center">
+                            <h2 className="font-bold text-green-800">Menu</h2>
+                            <button 
+                                onClick={() => setIsOpen(false)}
+                                className="p-2 text-green-800 hover:text-green-600"
+                            >
+                                <FaTimes size={18} />
+                            </button>
+                        </div>
+                        
+                        <div className="p-4 flex-1 overflow-y-auto">
+                            {/* Mobile Search */}
+                            <form onSubmit={handleSearch} className="mb-4">
+                                <div className="flex relative">
                                     <input
                                         ref={mobileSearchInputRef}
                                         type="text"
@@ -353,96 +364,80 @@ const Navbar = () => {
                                         onChange={handleSearchChange}
                                         onKeyDown={handleKeyDown}
                                         onFocus={handleSearchFocus}
-                                        className="w-full px-4 py-3 rounded-l-lg border-2 border-r-0 border-gray-300 focus:outline-none focus:border-yellow-400"
+                                        className="w-full px-3 py-2 rounded-l-md border border-r-0 border-gray-300 focus:outline-none focus:border-green-500"
                                     />
-                                    {showSuggestions && (
-                                        <div
-                                            ref={mobileSuggestionsRef}
-                                            className="absolute top-full left-0 right-0 bg-white rounded-lg shadow-lg z-[100] mt-1 border border-gray-200 max-h-60 overflow-y-auto"
-                                        >
-                                            {suggestions.map((item, index) => (
-                                                <div
-                                                    key={index}
-                                                    className={`px-4 py-2 cursor-pointer hover:bg-yellow-50 border-b border-gray-100 last:border-0 ${selectedSuggestion === index ? 'bg-yellow-100' : ''
-                                                        }`}
-                                                    onClick={() => handleSuggestionClick(item.path)}
-                                                >
-                                                    <div className="font-medium text-gray-900">{item.title}</div>
-                                                    <div className="text-sm text-gray-600 truncate">{item.content}</div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
+                                    <button
+                                        type="submit"
+                                        className="bg-green-600 text-white px-3 rounded-r-md hover:bg-green-700 transition-colors"
+                                    >
+                                        <FaSearch />
+                                    </button>
                                 </div>
-                                <button
-                                    type="submit"
-                                    className="bg-yellow-400 text-black px-4 rounded-r-lg hover:bg-yellow-500 transition-colors"
-                                >
-                                    <FaSearch />
-                                </button>
-                            </div>
-                        </form>
-
-                        {/* Menu Items */}
-                        <div className="space-y-2">
-                            {menuItems.map((item, index) => (
-                                <div key={index} className="rounded-lg overflow-hidden">
-                                    {item.submenu ? (
-                                        <div className="bg-white/50 rounded-lg">
-                                            <button
-                                                className="w-full flex items-center justify-between p-4 text-gray-800"
-                                                onClick={() => handleDropdownClick(index)}
+                                {showSuggestions && (
+                                    <div
+                                        ref={mobileSuggestionsRef}
+                                        className="absolute left-0 right-0 bg-white rounded-md shadow-md z-[100] mt-1 border border-gray-200 max-h-60 overflow-y-auto"
+                                    >
+                                        {suggestions.map((item, index) => (
+                                            <div
+                                                key={index}
+                                                className={`px-3 py-2 cursor-pointer hover:bg-green-50 border-b border-gray-100 last:border-0 ${selectedSuggestion === index ? 'bg-green-100' : ''}`}
+                                                onClick={() => handleSuggestionClick(item.path)}
                                             >
-                                                <span className="text-lg font-medium">{item.title}</span>
-                                                <FaChevronDown className={`transition-transform duration-300 
-                                                    ${activeDropdown === index ? 'rotate-180' : ''}`}
-                                                />
-                                            </button>
-
-                                            <div className={`
-                                                overflow-hidden transition-all duration-300 ease-in-out
-                                                ${activeDropdown === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}
-                                            `}>
-                                                <div className="bg-white/30 px-4 pb-4">
-                                                    {item.submenu.map((subItem, subIndex) => (
-                                                        <a
-                                                            key={subIndex}
-                                                            href={subItem.path}
-                                                            className="block py-3 px-4 text-gray-600 hover:text-gray-900
-                                                                hover:bg-white/50 rounded-lg transition-all duration-200"
-                                                            onClick={() => setIsOpen(false)}
-                                                        >
-                                                            {subItem.title}
-                                                        </a>
-                                                    ))}
-                                                </div>
+                                                <div className="font-medium text-gray-900">{item.title}</div>
+                                                <div className="text-sm text-gray-600 truncate">{item.content}</div>
                                             </div>
-                                        </div>
-                                    ) : (
-                                        <a
-                                            href={item.path}
-                                            className="block p-4 text-lg font-medium text-gray-800 
-                                                bg-white/50 hover:bg-white/70 transition-all duration-200"
-                                            onClick={() => setIsOpen(false)}
-                                        >
-                                            {item.title}
-                                        </a>
-                                    )}
-                                </div>
-                            ))}
+                                        ))}
+                                    </div>
+                                )}
+                            </form>
+
+                            {/* Simplified Menu Items */}
+                            <nav className="space-y-1">
+                                {menuItems.map((item, index) => (
+                                    <div key={index} className="border-b border-gray-100">
+                                        {item.submenu ? (
+                                            <>
+                                                <button
+                                                    className="w-full flex items-center justify-between py-2 px-1 text-green-800"
+                                                    onClick={() => handleDropdownClick(index)}
+                                                >
+                                                    <span>{item.title}</span>
+                                                    <FaChevronDown className={`transform transition-transform ${activeDropdown === index ? 'rotate-180' : ''}`} />
+                                                </button>
+
+                                                <div className={`overflow-hidden transition-all duration-200 ${activeDropdown === index ? 'max-h-60' : 'max-h-0'}`}>
+                                                    <div className="ml-3 border-l border-gray-100 pl-2">
+                                                        {item.submenu.map((subItem, subIndex) => (
+                                                            <a
+                                                                key={subIndex}
+                                                                href={subItem.path}
+                                                                className="block py-1.5 text-sm text-green-700 hover:text-green-900"
+                                                                onClick={() => setIsOpen(false)}
+                                                            >
+                                                                {subItem.title}
+                                                            </a>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            </>
+                                        ) : (
+                                            <a
+                                                href={item.path}
+                                                className="block py-2 px-1 text-green-800 hover:text-green-600"
+                                                onClick={() => setIsOpen(false)}
+                                            >
+                                                {item.title}
+                                            </a>
+                                        )}
+                                    </div>
+                                ))}
+                            </nav>
                         </div>
 
-                        {/* Mobile Social Links */}
-                        <div className="flex justify-center gap-6 mt-8 pb-8">
-                            {socialLinks.filter(link => !link.isButton).map((social, index) => (
-                                <a
-                                    key={index}
-                                    href={social.url}
-                                    className={`text-gray-800 text-2xl ${social.color}`}
-                                >
-                                    {social.icon}
-                                </a>
-                            ))}
+                        {/* Footer - Optional */}
+                        <div className="p-4 border-t border-gray-200 text-center text-xs text-gray-500">
+                            © {new Date().getFullYear()} Mulkanoor Cooperative
                         </div>
                     </div>
                 </div>

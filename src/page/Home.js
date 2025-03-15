@@ -98,14 +98,14 @@ const Home = () => {
             {/* Content sections */}
             <div className="relative">
                 {/* Video Hero Section */}
-                <section className="h-screen w-full overflow-hidden snap-start">
-                    <Head />
+                <section className="h-screen mt-28 w-full overflow-hidden snap-start">
+                    <HeroBanner />
+                    {/* <Head /> */}
                 </section>
 
                 {/* Other sections with consistent spacing and animations */}
-                <motion.section className="min-h-screen w-full overflow-hidden py-20">
-                    <HeroBanner />
-                </motion.section>
+                {/* <motion.section className="min-h-screen w-full overflow-hidden py-20">
+                </motion.section> */}
 
                 <motion.div
                     className="bg-white/95 backdrop-blur-sm text-black w-full overflow-hidden"
@@ -113,11 +113,11 @@ const Home = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <motion.section className="px-4 md:px-8 py-20">
+                    <motion.section className="px-4 md:px-8">
                         <Second />
                     </motion.section>
 
-                    <motion.section className="px-4 md:px-8 py-20">
+                    <motion.section className="px-4 md:px-8">
                         <Third />
                     </motion.section>
 
@@ -125,9 +125,9 @@ const Home = () => {
                         <Fourth />
                     </motion.section>
 
-                    <motion.section className="px-4 md:px-8 py-20">
+                    {/* <motion.section className="px-4 md:px-8 py-20">
                         <Five />
-                    </motion.section>
+                    </motion.section> */}
 
                     <motion.section className="w-full py-20">
                         <Six />

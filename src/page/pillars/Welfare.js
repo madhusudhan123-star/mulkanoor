@@ -2,7 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaHeartbeat, FaGraduationCap, FaHandHoldingHeart, FaPiggyBank, FaHospital, FaLightbulb, FaHandHoldingWater, FaDog } from 'react-icons/fa';
 import { GiHealthNormal, GiMedicalDrip } from 'react-icons/gi';
-import { MdFamilyRestroom, MdOutlineWaterDrop } from 'react-icons/md';
+import { MdFamilyRestroom, MdOutlineWaterDrop, MdElectricalServices, MdHealthAndSafety } from 'react-icons/md';
+import { RiMentalHealthLine } from 'react-icons/ri';
+import { BiSolidDonateHeart } from 'react-icons/bi';
 import CountUp from 'react-countup';
 import banner from '../../assets/welfare/banner.jpg';
 import card1 from '../../assets/welfare/card1.jpg';
@@ -76,26 +78,26 @@ const Welfare = () => {
     const initiatives = [
         {
             title: "Community Development",
-            description: "Electrification and water facility improvements",
+            description: "Infrastructure and welfare improvements for villages",
             stats: { amount: 265.78, beneficiaries: 1827, years: "Since 1996" },
             icon: <FaLightbulb />,
             details: [
-                "Village electrification through voluntary debentures",
-                "RO plants installation for clean drinking water",
-                "Borewell digging during droughts",
-                "Family planning camps and counseling"
+                "Village electrification post-independence for farms and communities",
+                "Bore well digging during continuous droughts for reliable water",
+                "RO plants installation with NGOs for clean drinking water",
+                "Family planning counseling for eligible couples"
             ]
         },
         {
             title: "Member Welfare Scheme",
             description: "Financial support during critical times",
-            stats: { amount: 51.45, beneficiaries: 2133, type: "Families Supported" },
+            stats: { amount: 265.78, beneficiaries: 1827, years: "Since 1996" },
             icon: <FaHandHoldingHeart />,
             details: [
-                "₹2,000-4,000 deposit contributions",
-                "12.5x payout on expiry",
-                "₹3,000 funeral assistance",
-                "50 kg rice support"
+                "Welfare Deposit Scheme with ₹2,000-4,000 contributions",
+                "12.5x payout to families upon member's death",
+                "₹265.78 lakhs disbursed to 1,827 families since 1996",
+                "Comprehensive financial security system for members"
             ]
         },
         {
@@ -104,10 +106,10 @@ const Welfare = () => {
             stats: { amount: 94.14, beneficiaries: 8422, type: "Students" },
             icon: <FaGraduationCap />,
             details: [
-                "Merit-based scholarships",
-                "Intermediate scholarships",
-                "Professional degree support",
-                "₹11,000 for medical students"
+                "Scholarships for 7th and 10th grade students (₹2.90 lakhs)",
+                "Janasree Bheema Yojana scheme for intermediate students",
+                "₹11,000 for medical students and ₹8,500 for other professional courses",
+                "₹94.14 lakhs spent supporting 8,422 students (2005-2016)"
             ]
         },
         {
@@ -116,10 +118,22 @@ const Welfare = () => {
             stats: { operations: 1117, patients: 5000, centers: 1 },
             icon: <FaHeartbeat />,
             details: [
-                "Free cataract operations",
-                "Vision center establishment",
-                "Spinal cord and knee camps",
-                "Physiotherapy and yoga sessions"
+                "Free cataract surgeries through Sharat Laser Eye Hospital",
+                "Vision Center establishment at society shopping complex (2014)",
+                "Spinal cord and knee joint pain camps with specialist support",
+                "Regular physiotherapy and yoga sessions for members and staff"
+            ]
+        },
+        {
+            title: "Animal Health Camps",
+            description: "Veterinary care for livestock",
+            stats: { camps: 25, animals: 3000, partners: 1 },
+            icon: <FaDog />,
+            details: [
+                "Collaboration with Animal Husbandry Department",
+                "Essential veterinary care and vaccinations",
+                "Treatment for various livestock conditions",
+                "Improved animal health and productivity for farmers"
             ]
         }
     ];
@@ -136,6 +150,34 @@ const Welfare = () => {
                 <CountUp end={value} duration={2.5} separator="," />+
             </div>
             <p className="text-[#4A3F35] mt-2">{label}</p>
+        </motion.div>
+    );
+
+    const DetailSection = ({ title, icon, content, image, reverse }) => (
+        <motion.div 
+            className="mb-16 bg-white/80 rounded-xl overflow-hidden shadow-xl"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+        >
+            <div className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+                <div className="md:w-1/3 h-64 md:h-auto relative">
+                    <img
+                        src={image}
+                        alt={title}
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent md:hidden" />
+                </div>
+                <div className="md:w-2/3 p-8">
+                    <div className="flex items-center gap-3 mb-4">
+                        <span className="text-4xl text-[#2E7D32]">{icon}</span>
+                        <h2 className="text-3xl font-bold text-[#1B5E20]">{title}</h2>
+                    </div>
+                    <div className="prose prose-lg text-[#333]">
+                        {content}
+                    </div>
+                </div>
+            </div>
         </motion.div>
     );
 
@@ -180,7 +222,7 @@ const Welfare = () => {
             {/* Main Content */}
             <div className="container mx-auto px-4 py-16">
                 {/* Initiative Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                     {initiatives.map((initiative, index) => (
                         <motion.div
                             key={index}
@@ -191,7 +233,7 @@ const Welfare = () => {
                         >
                             <div className="h-48 relative overflow-hidden">
                                 <img
-                                    src={images[Object.keys(images)[index + 1]]}
+                                    src={images[Object.keys(images)[index % 5 + 1]]}
                                     alt={initiative.title}
                                     className="w-full h-full object-cover"
                                 />
@@ -209,12 +251,12 @@ const Welfare = () => {
                                     {initiative.details.map((detail, idx) => (
                                         <motion.li
                                             key={idx}
-                                            className="flex items-center gap-3 text-[#1B5E20]"
+                                            className="flex items-start gap-3 text-[#1B5E20]"
                                             initial={{ opacity: 0, x: -20 }}
                                             whileInView={{ opacity: 1, x: 0 }}
                                             transition={{ delay: idx * 0.1 }}
                                         >
-                                            <span className="h-2 w-2 bg-[#2E7D32] rounded-full" />
+                                            <span className="h-2 w-2 bg-[#2E7D32] rounded-full mt-2 flex-shrink-0" />
                                             {detail}
                                         </motion.li>
                                     ))}
@@ -224,6 +266,93 @@ const Welfare = () => {
                     ))}
                 </div>
 
+                {/* Detailed Sections */}
+                <DetailSection 
+                    title="Community Development" 
+                    icon={<MdOutlineWaterDrop className="text-4xl" />}
+                    image={images.water}
+                    reverse={false}
+                    content={
+                        <>
+                            <p>During times of continuous drought, the society took the initiative to provide drinking water to villages by digging bore wells, ensuring a reliable water source for the community in times of need.</p>
+                            
+                            <p>In the years following independence, the society played a crucial role in bringing electricity to villages and farms, lighting up rural communities and empowering farmers with better infrastructure for agriculture and daily life.</p>
+                            
+                            <p>The society took the initiative to counsel eligible couples on family planning at a time when awareness was low, helping them make informed decisions for a better future.</p>
+                            
+                            <p>The society collaborated with NGOs to ensure access to clean drinking water by installing RO plants in villages, improving the health and well-being of the community.</p>
+                        </>
+                    }
+                />
+
+                <DetailSection 
+                    title="Member Welfare Scheme" 
+                    icon={<BiSolidDonateHeart className="text-4xl" />}
+                    image={images.community}
+                    reverse={true}
+                    content={
+                        <>
+                            <p>The society operates a Welfare Deposit Scheme for its members, with contributions ranging from ₹2,000 to ₹4,000, depending on the extent of cultivable land owned.</p>
+                            
+                            <p>In the unfortunate event of a member's passing, the society provides financial support to the bereaved family by paying 12.5 times the deposited amount.</p>
+                            
+                            <p>Since 1996, the cooperative has disbursed ₹265.78 lakhs to support 1,827 deceased members' families, demonstrating its commitment to the welfare of its members and their families during difficult times.</p>
+                        </>
+                    }
+                />
+
+                <DetailSection 
+                    title="Education Support" 
+                    icon={<FaGraduationCap className="text-4xl" />}
+                    image={images.education}
+                    reverse={false}
+                    content={
+                        <>
+                            <p>The society has supported education by providing scholarships to meritorious students in 7th and 10th grade, benefiting 260 children with a total expenditure of ₹2.90 lakhs from 1996 to 2010.</p>
+                            
+                            <p>Additionally, under the Janasree Bheema Yojana scheme of Life Insurance Corporation (LIC), scholarships have been granted to members' children studying in intermediate, covering up to two children per member.</p>
+                            
+                            <p>From 2005 to 2016, the society has spent ₹94.14 lakhs to support 8,422 students.</p>
+                            
+                            <p>Furthermore, for higher education, the society provides ₹11,000 for students admitted to professional medical courses and ₹8,500 for those pursuing engineering, agriculture, veterinary, and pharmacy courses.</p>
+                        </>
+                    }
+                />
+
+                <DetailSection 
+                    title="Health Camps for Members" 
+                    icon={<MdHealthAndSafety className="text-4xl" />}
+                    image={images.health}
+                    reverse={true}
+                    content={
+                        <>
+                            <p>The cooperative, in collaboration with Sharat Laser Eye Hospital (SLEH), Hanamkonda, regularly conducts eye camps for its members. Through these camps, many members receive essential eye care, and those in need of cataract surgery are recommended for operations. So far, 1,117 members and their spouses have undergone cataract surgery free of cost, with the cooperative covering 60% (Rs. 60.31 lakhs) of the total Rs. 100.53 lakh expenditure, while the hospital bore the remaining 40% (Rs. 40.22 lakhs).</p>
+                            
+                            <p>To further support eye care, the cooperative, in association with SLEH, established a Vision Center at the Mulkanoor Society shopping complex in 2014. Over 5,000 patients have visited the center, which provides affordable consultations for a nominal fee of Rs. 30.</p>
+                            
+                            <p>In 2015, the cooperative, with the support of Dr. Suresh Chikatla, DNB Specialist and a member's son, organized a free spinal cord and knee joint pain camp. Around 424 members attended the camp, receiving expert checkups, medical advice, and prescriptions for their conditions.</p>
+                            
+                            <p>Additionally, the cooperative regularly conducts physiotherapy and yoga camps for its members and staff, promoting overall well-being and a healthier lifestyle.</p>
+                        </>
+                    }
+                />
+
+                <DetailSection 
+                    title="Animal Health Camps" 
+                    icon={<FaDog className="text-4xl" />}
+                    image={images.animal}
+                    reverse={false}
+                    content={
+                        <>
+                            <p>The society organizes Animal Health Camps in collaboration with the Animal Husbandry Department to provide essential veterinary care, vaccinations, and treatment for livestock, ensuring better health and productivity for farmers' animals.</p>
+                            
+                            <p>These camps help farmers maintain the health of their livestock, which is crucial for their livelihoods and the overall agricultural productivity of the community.</p>
+                            
+                            <p>Through regular health checkups, preventive care, and treatment services, the society helps farmers reduce livestock mortality and increase productivity, contributing to the economic well-being of the farming community.</p>
+                        </>
+                    }
+                />
+
                 {/* Impact Statistics */}
                 <motion.div
                     className="bg-white/90 rounded-xl p-8 mb-16"
@@ -232,10 +361,10 @@ const Welfare = () => {
                 >
                     <h2 className="text-3xl font-bold text-center text-[#2E7D32] mb-8">Our Impact</h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                        <ImpactCard title="Health Camps" value={5000} label="Patients Served" />
+                        <ImpactCard title="Health Support" value={5000} label="Patients Served" />
                         <ImpactCard title="Education" value={8422} label="Students Supported" />
-                        <ImpactCard title="Welfare" value={2133} label="Families Assisted" />
-                        <ImpactCard title="Eye Care" value={1117} label="Surgeries Performed" />
+                        <ImpactCard title="Welfare" value={1827} label="Families Assisted" />
+                        <ImpactCard title="Eye Care" value={1117} label="Free Surgeries" />
                     </div>
                 </motion.div>
 

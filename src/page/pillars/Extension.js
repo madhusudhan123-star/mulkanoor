@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGraduationCap, FaFlask, FaBook, FaUsers, FaRoute, FaMicroscope } from 'react-icons/fa';
+import { FaGraduationCap, FaFlask, FaBook, FaUsers, FaRoute, FaMicroscope, FaLeaf, FaHandsHelping, FaBoxOpen } from 'react-icons/fa';
 import { GiFarmTractor, GiTeacher } from 'react-icons/gi';
-import { MdGroups } from 'react-icons/md';
+import { MdGroups, MdOutlineAgricultural } from 'react-icons/md';
 import { BsBookshelf } from 'react-icons/bs';
 import banner from '../../assets/extension/banner.jpg';
 import card1 from '../../assets/extension/card1.jpg';
@@ -10,6 +10,7 @@ import card2 from '../../assets/extension/card2.jpg';
 import card3 from '../../assets/extension/card3.jpg';
 import card4 from '../../assets/extension/card4.jpg';
 import sideimg from '../../assets/extension/onesideimg.jpg';
+
 const Extension = () => {
     const images = {
         banner: {
@@ -136,58 +137,144 @@ const Extension = () => {
                     ))}
                 </div>
 
-                {/* Features Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                {/* Farmers Information & Training Centre Section */}
+                <motion.div
+                    className="bg-white/90 rounded-xl overflow-hidden mb-16"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                >
+                    <div className="grid grid-cols-1 md:grid-cols-2">
+                        <div className="p-8">
+                            <div className="flex items-center gap-3 mb-4">
+                                <GiTeacher className="text-4xl text-[#2E7D32]" />
+                                <h2 className="text-3xl font-bold text-[#2E7D32]">Farmers Information & Training Centre</h2>
+                            </div>
+                            <p className="text-[#1B5E20] mb-6">
+                                With the support of IFFCO (Indian Farmers Fertilizer Cooperative), Mulkanoor Cooperative Society has established a Farmer Information and Training Center at its headquarters. Equipped with state-of-the-art classroom technology, the center provides farmers with valuable learning resources. Visual aids depicting pest attacks are displayed on the walls, while a vast collection of agricultural books, magazines, and documentary films offer in-depth knowledge. This initiative ensures that farmers stay informed and trained in the latest agricultural practices.
+                            </p>
+                        </div>
+                        <div className="relative h-[300px] md:h-auto">
+                            <img
+                                src={images.training.url}
+                                alt="Farmers Information & Training Centre"
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                    </div>
+                </motion.div>
+
+                {/* Agri Awareness Programmes Section */}
+                <motion.div
+                    className="bg-white/90 rounded-xl overflow-hidden mb-16"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                >
+                    <div className="grid grid-cols-1 md:grid-cols-2">
+                        <div className="relative h-[300px] md:h-auto order-2 md:order-1">
+                            <img
+                                src={images.soil.url}
+                                alt="Agri Awareness Programmes"
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div className="p-8 order-1 md:order-2">
+                            <div className="flex items-center gap-3 mb-4">
+                                <FaGraduationCap className="text-4xl text-[#2E7D32]" />
+                                <h2 className="text-3xl font-bold text-[#2E7D32]">Agri Awareness Programmes for Farmers</h2>
+                            </div>
+                            <p className="text-[#1B5E20] mb-6">
+                                The Cooperative has employed six agricultural graduates to oversee various production services and manage the seed production program. These experts provide continuous guidance to members, helping them improve both the quality and quantity of their crops. Additionally, the society collaborates with agricultural scientists from various disciplines to train farmers, ensuring they stay updated with the latest advancements. By maintaining close ties with leading institutions and organizations, the Cooperative ensures that farmers have access to the latest production techniques, maximizing their farm yields and overall profitability.
+                            </p>
+                        </div>
+                    </div>
+                </motion.div>
+
+                {/* Field Trainings & Study Tours Section */}
+                <motion.div
+                    className="bg-white/90 rounded-xl overflow-hidden mb-16"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                >
+                    <div className="grid grid-cols-1 md:grid-cols-2">
+                        <div className="p-8">
+                            <div className="flex items-center gap-3 mb-4">
+                                <FaRoute className="text-4xl text-[#2E7D32]" />
+                                <h2 className="text-3xl font-bold text-[#2E7D32]">Field Trainings & Study Tours</h2>
+                            </div>
+                            <p className="text-[#1B5E20] mb-6">
+                                Mulkanoor Cooperative Society actively organizes study tours and training programs for farmers, helping them stay updated on the latest advancements in agriculture. Farmers are sent to agricultural universities, expos, AgriTech conferences, and seminars to learn about innovative farming technologies. A special training program for women farmers was also conducted at the Regional Agricultural Research Center in Warangal. So far, 3,171 farmers have participated in these study tours, gaining valuable insights into best practices in agriculture, horticulture, and allied activities.
+                            </p>
+                        </div>
+                        <div className="relative h-[300px] md:h-auto">
+                            <img
+                                src={images.library.url}
+                                alt="Field Trainings & Study Tours"
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                    </div>
+                </motion.div>
+
+                {/* Branding & Marketing Section */}
+                <motion.div
+                    className="bg-white/90 rounded-xl overflow-hidden mb-16"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                >
+                    <div className="grid grid-cols-1 md:grid-cols-2">
+                        <div className="relative h-[300px] md:h-auto order-2 md:order-1">
+                            <img
+                                src={images.tour.url}
+                                alt="Branding & Marketing"
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div className="p-8 order-1 md:order-2">
+                            <div className="flex items-center gap-3 mb-4">
+                                <FaBoxOpen className="text-4xl text-[#2E7D32]" />
+                                <h2 className="text-3xl font-bold text-[#2E7D32]">Branding & Marketing</h2>
+                            </div>
+                            <p className="text-[#1B5E20] mb-6">
+                                The harvested produce is carefully processed and packaged under different rice brands, ensuring quality and value for farmers.
+                            </p>
+                        </div>
+                    </div>
+                </motion.div>
+
+                {/* Features Grid - Alternative Display */}
+                <h2 className="text-3xl font-bold text-[#2E7D32] mb-8">Our Facilities</h2>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
                     {features.map((feature, index) => (
                         <motion.div
                             key={index}
-                            className="bg-white/90 rounded-xl overflow-hidden"
+                            className="bg-white/90 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
                         >
-                            <div className=" relative overflow-hidden">
-                                <img
-                                    src={feature.image}
-                                    alt={feature.title}
-                                    className="w-full h-full"
-                                />
-                                <div className="absolute inset-0 bg-black/30" />
-                                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-                                    <div className="flex items-center gap-3 text-white">
-                                        {feature.icon}
-                                        <h3 className="text-xl font-bold">{feature.title}</h3>
-                                    </div>
+                            <div className="p-6 text-center">
+                                <div className="flex justify-center mb-4 text-[#2E7D32]">
+                                    {feature.icon}
                                 </div>
-                            </div>
-                            <div className="p-6">
-                                <p className="text-[#1B5E20]">{feature.description}</p>
+                                <h3 className="text-xl font-bold text-[#2E7D32] mb-2">{feature.title}</h3>
+                                <p className="text-[#1B5E20] text-sm">{feature.description}</p>
                             </div>
                         </motion.div>
                     ))}
                 </div>
 
-                {/* Training Programs Section */}
-                <motion.div
-                    className="bg-white/90 rounded-xl p-8 mb-16"
+                {/* Side Image Section */}
+                <motion.div 
+                    className="bg-white/90 rounded-xl overflow-hidden mb-16"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                 >
-                    <h2 className="text-3xl font-bold text-[#2E7D32] mb-8">Training Programs</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="space-y-4">
-                            <motion.div
-                                className="flex items-start gap-4"
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                            >
-                                <FaRoute className="text-2xl text-[#2E7D32] mt-1" />
-                                <div>
-                                    <h3 className="text-xl font-semibold text-[#2E7D32]">Study Tours</h3>
-                                    <p className="text-[#1B5E20]">Visits to agricultural universities, melas, and conferences</p>
-                                </div>
-                            </motion.div>
-                            {/* Add more training items */}
+                        <div className="p-8">
+                            <h2 className="text-3xl font-bold text-[#2E7D32] mb-4">Committed to Agricultural Excellence</h2>
+                            <p className="text-[#1B5E20] mb-6">
+                                The Mulkanoor Cooperative Society is dedicated to promoting sustainable agricultural practices and providing comprehensive support to farmers. Through education, technology transfer, and continuous guidance, we aim to enhance rural livelihoods and ensure food security for future generations.
+                            </p>
                         </div>
                         <motion.div
                             className="relative rounded-xl overflow-hidden"
@@ -195,7 +282,7 @@ const Extension = () => {
                         >
                             <img
                                 src={images.side.url}
-                                alt="Training Programs"
+                                alt="Agricultural Excellence"
                                 className="w-full h-full object-cover"
                             />
                         </motion.div>
