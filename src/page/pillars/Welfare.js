@@ -179,7 +179,7 @@ const Welfare = () => {
             {/* Main Content */}
             <div className="container mx-auto px-4 py-16">
                 {/* Initiative Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                     {initiatives.map((initiative, index) => (
                         <motion.div
                             key={index}
@@ -221,7 +221,7 @@ const Welfare = () => {
                             </div>
                         </motion.div>
                     ))}
-                </div>
+                </div> */}
 
                 {/* Detailed Sections */}
                 <DetailSection 

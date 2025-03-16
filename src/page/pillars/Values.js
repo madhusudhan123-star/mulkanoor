@@ -19,12 +19,12 @@ import card6 from '../../assets/values/card6.jpg';
 const Values = () => {
     const images = {
         banner: banner,
-        processing: card1,
+        processing: card6,
         seeds: card2,
         storage: card3,
         education: card3,
         watershed: card5,
-        women: card6,
+        women: card1,
     };
 
     const imageSpecs = {
@@ -419,72 +419,6 @@ const Values = () => {
             </div>
 
             <div className="py-16">
-                {/* Stats Section */}
-                <div className="container mx-auto px-4 mb-16">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                        {stats.map((stat, index) => (
-                            <motion.div
-                                key={index}
-                                className="bg-white/90 rounded-xl p-6 text-center shadow-lg"
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: index * 0.1 }}
-                            >
-                                <div className="text-2xl md:text-3xl font-bold text-[#8B7355] mb-2">
-                                    {stat.prefix}{stat.value}{stat.suffix}
-                                </div>
-                                <div className="text-sm text-[#4A3F35]">{stat.label}</div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Services Grid */}
-                <div className="container mx-auto px-4 mb-16">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {services.map((service, index) => (
-                            <motion.div
-                                key={index}
-                                className="bg-white/90 rounded-xl overflow-hidden shadow-lg"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.2 }}
-                            >
-                                <div className="h-48 relative">
-                                    <img
-                                        src={service.image}
-                                        alt={service.title}
-                                        className="w-full h-full object-cover"
-                                    />
-                                    <div className="absolute inset-0 bg-black/50" />
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="text-white text-center p-4">
-                                            <div className="text-4xl mb-2">{service.icon}</div>
-                                            <h3 className="text-xl font-bold">{service.title}</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="p-6">
-                                    <ul className="space-y-2">
-                                        {service.items.map((item, idx) => (
-                                            <motion.li
-                                                key={idx}
-                                                className="flex items-center gap-2 text-[#4A3F35]"
-                                                initial={{ opacity: 0, x: -20 }}
-                                                whileInView={{ opacity: 1, x: 0 }}
-                                                transition={{ delay: idx * 0.1 }}
-                                            >
-                                                <span className="h-2 w-2 bg-[#8B7355] rounded-full" />
-                                                {item}
-                                            </motion.li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-                
                 {/* Processing Infrastructure Section - NEW */}
                 <ProcessingInfrastructure />
             </div>
@@ -493,3 +427,69 @@ const Values = () => {
 };
 
 export default Values;
+                // {/* Stats Section */}
+                // <div className="container mx-auto px-4 mb-16">
+                //     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                //         {stats.map((stat, index) => (
+                //             <motion.div
+                //                 key={index}
+                //                 className="bg-white/90 rounded-xl p-6 text-center shadow-lg"
+                //                 initial={{ opacity: 0, scale: 0.9 }}
+                //                 whileInView={{ opacity: 1, scale: 1 }}
+                //                 transition={{ delay: index * 0.1 }}
+                //             >
+                //                 <div className="text-2xl md:text-3xl font-bold text-[#8B7355] mb-2">
+                //                     {stat.prefix}{stat.value}{stat.suffix}
+                //                 </div>
+                //                 <div className="text-sm text-[#4A3F35]">{stat.label}</div>
+                //             </motion.div>
+                //         ))}
+                //     </div>
+                // </div>
+
+                // {/* Services Grid */}
+                // <div className="container mx-auto px-4 mb-16">
+                //     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                //         {services.map((service, index) => (
+                //             <motion.div
+                //                 key={index}
+                //                 className="bg-white/90 rounded-xl overflow-hidden shadow-lg"
+                //                 initial={{ opacity: 0, y: 20 }}
+                //                 whileInView={{ opacity: 1, y: 0 }}
+                //                 transition={{ delay: index * 0.2 }}
+                //             >
+                //                 <div className="h-48 relative">
+                //                     <img
+                //                         src={service.image}
+                //                         alt={service.title}
+                //                         className="w-full h-full object-cover"
+                //                     />
+                //                     <div className="absolute inset-0 bg-black/50" />
+                //                     <div className="absolute inset-0 flex items-center justify-center">
+                //                         <div className="text-white text-center p-4">
+                //                             <div className="text-4xl mb-2">{service.icon}</div>
+                //                             <h3 className="text-xl font-bold">{service.title}</h3>
+                //                         </div>
+                //                     </div>
+                //                 </div>
+                //                 <div className="p-6">
+                //                     <ul className="space-y-2">
+                //                         {service.items.map((item, idx) => (
+                //                             <motion.li
+                //                                 key={idx}
+                //                                 className="flex items-center gap-2 text-[#4A3F35]"
+                //                                 initial={{ opacity: 0, x: -20 }}
+                //                                 whileInView={{ opacity: 1, x: 0 }}
+                //                                 transition={{ delay: idx * 0.1 }}
+                //                             >
+                //                                 <span className="h-2 w-2 bg-[#8B7355] rounded-full" />
+                //                                 {item}
+                //                             </motion.li>
+                //                         ))}
+                //                     </ul>
+                //                 </div>
+                //             </motion.div>
+                //         ))}
+                //     </div>
+                // </div>
+                

@@ -217,7 +217,7 @@ const Winning = () => {
                                     <img
                                         src={formula.image}
                                         alt={formula.title}
-                                        className="w-full aspect-[4/3] object-cover transform transition-transform 
+                                        className="w-full aspect-[5/3] max-h-[300px]  transform transition-transform 
                                             duration-700 group-hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 
@@ -231,71 +231,43 @@ const Winning = () => {
                     ))}
                 </div>
 
-                {/* Modified Horizontal scroll section */}
+                {/* Simple Card Grid Section - replacing horizontal scroll */}
                 <div className="mt-32 relative">
-                    <motion.div
-                        ref={scrollRef}
-                        className="flex space-x-8 overflow-hidden cursor-grab active:cursor-grabbing px-4"
-                        whileTap={{ cursor: "grabbing" }}
-                    >
-                        <motion.div
-                            drag="x"
-                            dragConstraints={{ right: 0, left: -width }}
-                            style={{ x: spring }}
-                            className="flex space-x-8"
-                        >
-                            {horizontalFormulas.map((formula, index) => (
-                                <motion.div
-                                    key={index}
-                                    className="flex-shrink-0 w-[400px]"
-                                    initial={{ opacity: 0, scale: 0.8 }}
-                                    whileInView={{
-                                        opacity: 1,
-                                        scale: 1,
-                                        transition: { duration: 0.5, delay: index * 0.1 }
-                                    }}
-                                    whileHover={{ y: -10 }}
-                                    viewport={{ once: true, margin: "0px 100px" }}
-                                >
-                                    <div className="bg-white/40 backdrop-blur-sm rounded-2xl p-8 space-y-4 h-full">
-                                        <div className="flex items-center gap-4 text-[#4A3F35]">
-                                            {formula.icon}
-                                            <h2 className="text-2xl font-bold">{formula.title}</h2>
-                                        </div>
-                                        <p className="text-[#8B7355] leading-relaxed">
-                                            {formula.description}
-                                        </p>
-                                        <motion.div
-                                            className="relative rounded-2xl overflow-hidden group mt-4"
-                                            whileHover={{ scale: 1.05 }}
-                                        >
-                                            <img
-                                                src={formula.image}
-                                                alt={formula.title}
-                                                className="w-full h-48 object-cover"
-                                            />
-                                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 
-                                                transition-colors duration-300" />
-                                        </motion.div>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </motion.div>
-                    </motion.div>
-
-                    {/* Scroll Indicators */}
-                    <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                        {horizontalFormulas.map((_, index) => (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+                        {horizontalFormulas.map((formula, index) => (
                             <motion.div
                                 key={index}
-                                className="w-2 h-2 rounded-full bg-gray-400"
-                                animate={{
-                                    scale: Math.abs(x.get()) > (width / horizontalFormulas.length) * index ? 1.5 : 1,
-                                    backgroundColor: Math.abs(x.get()) > (width / horizontalFormulas.length) * index
-                                        ? "#4A3F35"
-                                        : "#9CA3AF"
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{
+                                    opacity: 1,
+                                    scale: 1,
+                                    transition: { duration: 0.5, delay: index * 0.1 }
                                 }}
-                            />
+                                whileHover={{ y: -10 }}
+                                viewport={{ once: true }}
+                            >
+                                <div className="bg-white/40 backdrop-blur-sm rounded-2xl p-6 space-y-4 h-full">
+                                    <div className="flex items-center gap-4 text-[#4A3F35]">
+                                        {formula.icon}
+                                        <h2 className="text-xl font-bold">{formula.title}</h2>
+                                    </div>
+                                    <p className="text-[#8B7355] leading-relaxed">
+                                        {formula.description}
+                                    </p>
+                                    <motion.div
+                                        className="relative rounded-2xl overflow-hidden group mt-4"
+                                        whileHover={{ scale: 1.05 }}
+                                    >
+                                        <img
+                                            src={formula.image}
+                                            alt={formula.title}
+                                            className="w-full h-36 object-cover"
+                                        />
+                                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 
+                                            transition-colors duration-300" />
+                                    </motion.div>
+                                </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
