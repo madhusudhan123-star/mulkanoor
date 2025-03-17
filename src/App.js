@@ -27,6 +27,7 @@ import Loading from "./components/Loading";
 import usePageLoading from "./hooks/usePageLoading";
 import SearchResults from "./page/SearchResults";
 import Cta from './page/Cta'
+import Media from "./page/Media";
 
 // Create a ScrollToTop component
 function ScrollToTop() {
@@ -71,6 +72,7 @@ function AppContent() {
           <Route path="/search" element={<SearchResults />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cta" element={<Cta />} />
+          <Route path="/media" element={<Media />} />
         </Routes>
       </div>
       <Footer />

@@ -63,24 +63,7 @@ const Home = () => {
                 style={{ scaleX }}
             />
 
-            {/* Updated Navigation dots - removed section names */}
-            <div className="fixed right-4 top-1/2 transform -translate-y-1/2 z-40 hidden md:flex flex-col gap-4">
-                {['Head', 'HeroBanner', 'Second', 'Third', 'Fourth', 'Five', 'Six'].map((section, index) => (
-                    <button
-                        key={index}
-                        onClick={() => scrollToSection(index)}
-                        className={`
-                            w-3 h-3 rounded-full 
-                            transition-all duration-500 ease-in-out
-                            ${activeSection === index
-                                ? 'bg-yellow-400 scale-150'
-                                : 'bg-gray-400 hover:bg-yellow-200 hover:scale-125'
-                            }
-                        `}
-                        aria-label={`Scroll to section ${index + 1}`}
-                    />
-                ))}
-            </div>
+            {/* Navigation dots removed */}
 
             {/* Background Image with parallax */}
             <div className="fixed top-0 left-0 w-full h-screen bg-cover bg-center bg-no-repeat"

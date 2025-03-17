@@ -211,7 +211,7 @@ const Cta = () => {
                     </div>
 
                     {/* Final CTA */}
-                    <motion.div
+                    {/* <motion.div
                         className="text-center"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
@@ -224,7 +224,7 @@ const Cta = () => {
                         >
                             Discover Our Full Story <FaChevronRight />
                         </Link>
-                    </motion.div>
+                    </motion.div> */}
                 </div>
             </div>
         </div>

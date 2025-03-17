@@ -96,16 +96,6 @@ const Storys = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div className="relative rounded-xl overflow-hidden h-80">
             <img
-              src={Original}
-              alt="Original Cooperative Building"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
-              <p className="text-sm">Our first office building from 1970</p>
-            </div>
-          </div>
-          <div className="relative rounded-xl overflow-hidden h-80">
-            <img
               src={Founder}
               alt="Founder A.K. Vishwanatha Reddy"
               className="w-full h-full object-cover"
@@ -126,23 +116,6 @@ const Storys = () => {
           <p className="leading-relaxed">
             Initially, the cooperative operated from the founder's residence for 14 years before establishing its own office premises in 1970. Today, the society boasts 7,629 members, a share capital of ₹13.96 crores, and thrift deposits amounting to ₹24.61 crores. The society achieved a turnover of ₹270.18 crores in 2015-16 and maintains an "A" Class audit classification.
           </p>
-          <div className="bg-white/80 p-6 rounded-lg mt-8 shadow-grain backdrop-blur-sm">
-            <h3 className="text-xl font-semibold mb-4 text-crop-400">Key Statistics</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="text-center p-4">
-                <div className="text-2xl font-bold text-green-600">₹24.61 Cr</div>
-                <div className="text-gray-600">Thrift Deposits</div>
-              </div>
-              <div className="text-center p-4">
-                <div className="text-2xl font-bold text-green-600">₹13.96 Cr</div>
-                <div className="text-gray-600">Share Capital</div>
-              </div>
-              <div className="text-center p-4">
-                <div className="text-2xl font-bold text-green-600">₹270.18 Cr</div>
-                <div className="text-gray-600">Turnover (2015-16)</div>
-              </div>
-            </div>
-          </div>
         </div>
       </motion.section>
 

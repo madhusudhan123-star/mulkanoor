@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaBars, FaTimes, FaFacebook, FaTwitter, FaInstagram, FaChevronDown, FaSearch } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo1.jpg';
 import searchData from '../data/searchData';
 
 const Navbar = () => {
@@ -139,6 +139,10 @@ const Navbar = () => {
             title: 'Our Winning Formula',
             path: '/winning'
             // Home no longer has submenu
+        },
+        {
+            title: 'Media',
+            path: '/media'
         }
     ];
 
@@ -238,7 +242,7 @@ const Navbar = () => {
                     {/* Left - Logo */}
                     <div className="flex items-center">
                         <a href='/'>
-                            <img src={logo} alt="Logo" className="h-10 md:h-16 w-auto" />
+                            <img src={logo} alt="Logo" className="h-10 md:h-16 rounded-full w-auto" />
                         </a>
                     </div>
 

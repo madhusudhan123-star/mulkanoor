@@ -196,19 +196,6 @@ const Mission = () => {
             </div>
           </div>
         </section>
-        
-        {/* Call to Action - Simple */}
-        <section className="bg-[#3b6e46] text-white rounded-xl p-8 md:p-12 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Join the Cooperative Movement
-          </h2>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto mb-8">
-            Be part of a community that's reimagining agricultural success through cooperation and innovation
-          </p>
-          <button className="px-8 py-3 bg-[#d6b670] hover:bg-[#c4a65d] text-[#3b3d34] font-semibold rounded-lg transition-colors duration-300">
-            Learn More About Membership
-          </button>
-        </section>
       </div>
     </div>
   );
