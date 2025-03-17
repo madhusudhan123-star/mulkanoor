@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { IoClose } from "react-icons/io5";
 import one from "../../assets/leadership/one.jpg";
 import two from "../../assets/leadership/two.jpg";
+import { Helmet } from 'react-helmet'
 
 const SlidingPanel = ({ isOpen, onClose, leader }) => {
     return (
@@ -166,6 +167,73 @@ const Leadership = () => {
 
     return (
         <div className='bg-[#F5F5DC]'>
+            <Helmet>
+                <title>Leadership Legacy - Mulkanoor Cooperative Society</title>
+                <meta 
+                    name="description" 
+                    content="Meet the visionary leaders of Mulkanoor Cooperative Society - from founder Sri A.K. Vishwanatha Reddy to current Chairman Sri AligiReddy Praveen Reddy, who transformed rural development in Telangana."
+                />
+                <meta
+                    name="keywords"
+                    content="A.K. Vishwanatha Reddy, AligiReddy Praveen Reddy, Mulkanoor leadership, cooperative society founders, rural development pioneers"
+                />
+                <meta 
+                    property="og:title" 
+                    content="Leadership Legacy - Mulkanoor Cooperative Society" 
+                />
+                <meta 
+                    property="og:description" 
+                    content="Discover the inspiring journey of our leaders who transformed Mulkanoor into Asia's second-largest cooperative rural bank." 
+                />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "Mulkanoor Cooperative Society",
+                        "foundingDate": "1956-07-27",
+                        "founder": {
+                            "@type": "Person",
+                            "name": "Sri A.K. Vishwanatha Reddy",
+                            "jobTitle": "Founder President",
+                            "birthDate": "1926",
+                            "description": "Pioneer of rural development and cooperative movement"
+                        },
+                        "leadership": [
+                            {
+                                "@type": "Person",
+                                "name": "Shri AligiReddy Praveen Reddy",
+                                "jobTitle": "President-Chairman",
+                                "birthDate": "1958-06-28",
+                                "description": "Current leader transforming rural development",
+                                "hasCredential": [
+                                    {
+                                        "@type": "EducationalOccupationalCredential",
+                                        "credentialCategory": "degree",
+                                        "name": "Bachelor of Agricultural Science"
+                                    },
+                                    {
+                                        "@type": "EducationalOccupationalCredential",
+                                        "credentialCategory": "degree",
+                                        "name": "PGDM"
+                                    }
+                                ]
+                            }
+                        ],
+                        "award": [
+                            {
+                                "@type": "Award",
+                                "name": "Manager of the Year 1981",
+                                "description": "Awarded to Sri A.K. Vishwanatha Reddy by Hyderabad Management Association"
+                            },
+                            {
+                                "@type": "Award",
+                                "name": "NCDC National Award",
+                                "description": "Cooperative Excellence Award received by Shri AligiReddy Praveen Reddy"
+                            }
+                        ]
+                    })}
+                </script>
+            </Helmet>
             <div className="container mx-auto px-4 py-16">
                 <div className="max-w-3xl mx-auto text-center mb-16">
                     <h1 className="text-4xl font-bold mb-6">Our Leadership</h1>

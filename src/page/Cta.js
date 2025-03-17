@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaChevronRight, FaUsers, FaRupeeSign, FaSeedling } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
+
 
 // Replace the dummy image with an actual image showing farmers or cooperative progress
 import heroImage from '../assets/dummy.jpeg'; // TODO: Replace with actual hero image path
@@ -98,6 +100,10 @@ const Cta = () => {
 
     return (
         <div className="min-h-screen pt-16 md:pt-24">
+            <Helmet>
+                <title>Mulkanoor - Our Impact</title>
+                <meta name="description" content="Discover Mulkanoor Cooperative's impact through sustainable farming, financial empowerment, and community development. See our progress in numbers."/>
+            </Helmet>
             {/* Hero Section */}
             <motion.div
                 className="relative h-[50vh] md:h-[60vh] overflow-hidden"

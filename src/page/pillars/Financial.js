@@ -9,7 +9,7 @@ import {
   FaTree,
   FaHandHoldingHeart
 } from 'react-icons/fa';
-
+import { Helmet } from 'react-helmet'
 // Add the image imports
 import onesideimg from '../../assets/financial/onesideimg.jpg';
 import cardone from '../../assets/financial/card1.jpg';
@@ -21,6 +21,59 @@ import card4 from '../../assets/financial/card4.jpg';
 const Financial = () => {
   return (
     <div className="bg-gray-50 mt-20">
+      <Helmet>
+        <title>Agricultural Financial Services - Mulkanoor Cooperative Society</title>
+        <meta 
+          name="description" 
+          content="Access affordable agricultural loans including crop loans up to ₹2,40,000, zero-interest schemes, and specialized financing for farm machinery, irrigation, and welfare activities."
+        />
+        <meta
+          name="keywords"
+          content="agricultural loans, crop loans, farm financing, zero interest loans, agricultural credit, rural banking, farmer loans"
+        />
+        <meta 
+          property="og:title" 
+          content="Agricultural Financial Services - Mulkanoor Cooperative Society" 
+        />
+        <meta 
+          property="og:description" 
+          content="Comprehensive financial solutions for farmers including seasonal crop loans, medium-term loans, and welfare schemes." 
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FinancialService",
+            "name": "Mulkanoor Agricultural Financial Services",
+            "description": "Comprehensive agricultural financing solutions for farmers",
+            "provider": {
+              "@type": "Organization",
+              "name": "Mulkanoor Cooperative Society"
+            },
+            "areaServed": "Telangana",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Agricultural Loans",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Seasonal Crop Loans",
+                  "description": "Up to ₹24,000 per acre with zero interest scheme"
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Medium Term Loans",
+                  "description": "For irrigation, farm machinery, and allied activities"
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Long Term Loans",
+                  "description": "For tractors, harvesters, and orchard establishment"
+                }
+              ]
+            }
+          })}
+        </script>
+      </Helmet>
       {/* Hero Section */}
       <div className="relative">
         <div className="absolute inset-0">
@@ -167,7 +220,8 @@ const Financial = () => {
               <h2 className="text-2xl font-bold text-gray-900">General Term Loans</h2>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              {[{
+              {[
+                {
                   icon: "🏥",
                   title: "Medical",
                   items: ["Emergency care", "Hospitalization", "Treatment"]

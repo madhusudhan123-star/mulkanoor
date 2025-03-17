@@ -14,6 +14,7 @@ import card5 from '../../assets/insurance/card5.jpg';
 import card6 from '../../assets/insurance/card6.jpg';
 import card7 from '../../assets/insurance/card7.jpg';
 import card8 from '../../assets/insurance/card8.jpg';
+import { Helmet } from 'react-helmet'
 
 
 // Key optimization notes:
@@ -214,6 +215,74 @@ const Insurance = () => {
 
     const Banner = () => (
         <div className="relative h-[60vh] overflow-hidden">
+                        <Helmet>
+                <title>Insurance Services - Mulkanoor Cooperative Society</title>
+                <meta 
+                    name="description" 
+                    content="Comprehensive insurance coverage including group insurance, accident protection, micro-insurance, and pension schemes. Serving over 1500+ beneficiaries with claims worth 272+ Lakhs."
+                />
+                <meta
+                    name="keywords"
+                    content="group insurance, accident coverage, micro insurance, pension scheme, LIC policies, agricultural insurance, IFFCO-Tokio"
+                />
+                <meta 
+                    property="og:title" 
+                    content="Insurance Services - Mulkanoor Cooperative Society" 
+                />
+                <meta 
+                    property="og:description" 
+                    content="Protecting farmers with comprehensive insurance solutions. Group insurance, accident coverage, and pension schemes for financial security." 
+                />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "InsuranceAgency",
+                        "name": "Mulkanoor Insurance Services",
+                        "description": "Comprehensive insurance services for agricultural community",
+                        "provider": {
+                            "@type": "Organization",
+                            "name": "Mulkanoor Cooperative Society"
+                        },
+                        "areaServed": "Telangana",
+                        "hasOfferCatalog": {
+                            "@type": "OfferCatalog",
+                            "name": "Insurance Products",
+                            "itemListElement": [
+                                {
+                                    "@type": "Offer",
+                                    "name": "Group Insurance",
+                                    "description": "Coverage linked to crop loans up to ₹1,00,000"
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "name": "Accident Coverage",
+                                    "description": "Janatha Group Accident Insurance"
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "name": "Micro Insurance",
+                                    "description": "Jeevan Mathur Policy for members"
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "name": "Senior Pension",
+                                    "description": "Monthly pension benefits for elderly members"
+                                }
+                            ]
+                        },
+                        "potentialAction": {
+                            "@type": "ViewAction",
+                            "target": {
+                                "@type": "EntryPoint",
+                                "urlTemplate": "https://mulkanoor.coop/insurance",
+                                "actionPlatform": [
+                                    "http://schema.org/DesktopWebPlatform"
+                                ]
+                            }
+                        }
+                    })}
+                </script>
+            </Helmet>
             <motion.div
                 initial={{ scale: 1.2 }}
                 animate={{ scale: 1 }}

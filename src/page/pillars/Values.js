@@ -14,6 +14,7 @@ import card3 from '../../assets/values/card3.jpg';
 // import card4 from '../../assets/values/card4.png';
 import card5 from '../../assets/values/card5.jpg';
 import card6 from '../../assets/values/card6.jpg';
+import { Helmet } from 'react-helmet'
 
 
 const Values = () => {
@@ -309,6 +310,81 @@ const Values = () => {
 
         return (
             <div className="container mx-auto px-4 py-16">
+                <Helmet>
+                <title>Our Core Values - Mulkanoor Cooperative Society</title>
+                <meta 
+                    name="description" 
+                    content="Discover our commitment to rural development through state-of-the-art processing facilities, educational initiatives, and women empowerment programs. Supporting over 489 students with 56% female enrollment."
+                />
+                <meta
+                    name="keywords"
+                    content="rural development, processing infrastructure, agricultural education, women empowerment, sustainable farming, cooperative values"
+                />
+                <meta 
+                    property="og:title" 
+                    content="Our Core Values - Mulkanoor Cooperative Society" 
+                />
+                <meta 
+                    property="og:description" 
+                    content="Empowering rural communities through modern infrastructure, education, and sustainable development initiatives." 
+                />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "Mulkanoor Cooperative Society",
+                        "description": "Rural development and agricultural cooperative society",
+                        "foundingDate": "1956",
+                        "location": {
+                            "@type": "Place",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressLocality": "Mulkanoor",
+                                "addressRegion": "Telangana",
+                                "addressCountry": "IN"
+                            }
+                        },
+                        "knowsAbout": [
+                            {
+                                "@type": "Thing",
+                                "name": "Processing Infrastructure",
+                                "description": "Modern rice mills, cotton ginning, and seed processing units"
+                            },
+                            {
+                                "@type": "Thing",
+                                "name": "Educational Initiatives",
+                                "description": "Junior and Degree colleges with focus on rural education"
+                            },
+                            {
+                                "@type": "Thing",
+                                "name": "Women Empowerment",
+                                "description": "Training programs in tailoring and computer applications"
+                            }
+                        ],
+                        "hasOfferCatalog": {
+                            "@type": "OfferCatalog",
+                            "name": "Infrastructure Services",
+                            "itemListElement": [
+                                {
+                                    "@type": "Offer",
+                                    "name": "Paraboiled Rice Mill",
+                                    "description": "4 Tons/Hr capacity modern rice processing"
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "name": "Cotton Ginning",
+                                    "description": "35 machines with bales pressing unit"
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "name": "Seed Processing",
+                                    "description": "18 Tons/Hr with 7 processing units"
+                                }
+                            ]
+                        }
+                    })}
+                </script>
+            </Helmet>
                 <motion.div
                     className="text-center mb-16"
                     initial={{ opacity: 0, y: 20 }}

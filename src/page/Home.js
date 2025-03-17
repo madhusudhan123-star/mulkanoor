@@ -8,6 +8,7 @@ import Five from '../components/home/Five';
 import Six from '../components/home/Six';
 import Head from '../components/home/Head';
 import { motion, useScroll, useSpring } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
     const [activeSection, setActiveSection] = useState(0);
@@ -57,6 +58,80 @@ const Home = () => {
 
     return (
         <div className="relative text-white overflow-x-hidden cursor-none">
+            <Helmet>
+                <title>Mulkanoor Cooperative Society - Empowering Farmers Since 1956</title>
+                <meta 
+                    name="description" 
+                    content="For 69+ years, Mulkanoor Cooperative Society has transformed rural agriculture through sustainable development, financial inclusion, and innovative farming solutions. Serving 7,629+ members across 14 villages."
+                />
+                <meta
+                    name="keywords"
+                    content="agricultural cooperative, farmer empowerment, rural development, sustainable agriculture, cooperative banking, organic farming"
+                />
+                <meta 
+                    property="og:title" 
+                    content="Mulkanoor Cooperative Society - Leading Agricultural Cooperative" 
+                />
+                <meta 
+                    property="og:description" 
+                    content="Pioneering sustainable agriculture and rural development through cooperative excellence since 1956." 
+                />
+                <meta 
+                    property="og:image" 
+                    content={banner} 
+                />
+                <link 
+                    rel="canonical" 
+                    href="https://mulkanoor.coop" 
+                />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "Mulkanoor Cooperative Society",
+                        "description": "Pioneer agricultural cooperative society serving farmers since 1956",
+                        "url": "https://mulkanoor.coop",
+                        "logo": "https://mulkanoor.coop/logo.png",
+                        "foundingDate": "1956",
+                        "areaServed": {
+                            "@type": "Place",
+                            "name": "Mulkanoor Region",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressRegion": "Telangana",
+                                "addressCountry": "IN"
+                            }
+                        },
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": "4.8",
+                            "reviewCount": "7629",
+                            "bestRating": "5"
+                        },
+                        "sameAs": [
+                            "https://facebook.com/mulkanoor",
+                            "https://twitter.com/mulkanoor"
+                        ],
+                        "offers": [
+                            {
+                                "@type": "Offer",
+                                "name": "Agricultural Loans",
+                                "description": "Crop loans and agricultural financing"
+                            },
+                            {
+                                "@type": "Offer",
+                                "name": "Farming Services",
+                                "description": "Modern farming equipment and technical guidance"
+                            },
+                            {
+                                "@type": "Offer",
+                                "name": "Marketing Support",
+                                "description": "Direct market linkages for farm produce"
+                            }
+                        ]
+                    })}
+                </script>
+            </Helmet>
             {/* Progress bar */}
             <motion.div
                 className="fixed top-0 left-0 right-0 h-1 bg-yellow-400 origin-left z-50"

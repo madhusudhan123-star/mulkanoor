@@ -21,6 +21,7 @@ import cardtwelve from '../assets/winning/card12.jpg';
 import cardthirteen from '../assets/winning/card13.jpg';
 import cardfourteen from '../assets/winning/card14.jpg';
 import cardfifteen from '../assets/winning/card15.jpg';
+import { Helmet } from 'react-helmet'
 
 const Winning = () => {
     const formulas = [
@@ -34,7 +35,7 @@ const Winning = () => {
             title: "Professional Leadership",
             description: "Managed with dedication, honesty, and professional expertise.",
             icon: <GiTeamUpgrade className="text-4xl" />,
-            image: cardnine
+            image: cardthree
         },
         {
             title: "Rigorous Financial Discipline",
@@ -58,7 +59,7 @@ const Winning = () => {
             title: "Knowledge Empowerment",
             description: "Consistent delivery of comprehensive agricultural practices.",
             icon: <BsLightbulb className="text-4xl" />,
-            image: cardthree
+            image: cardnine
         },
         {
             title: "Agri-Business Support",
@@ -150,6 +151,17 @@ const Winning = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-[#F5F5DC] via-[#F0EBE0] to-[#E8E3D9] relative overflow-hidden">
+            <Helmet>
+                <title>Our Winning Formula - Mulkanoor Cooperative Society</title>
+                <meta 
+                    name="description" 
+                    content="Discover the 14 key principles behind Mulkanoor's success - from independent governance and professional leadership to integrated solutions and community welfare initiatives."
+                />
+                <meta
+                    name="keywords"
+                    content="cooperative society principles, agricultural success, farmer empowerment, rural development, sustainable farming"
+                />
+            </Helmet>
             {/* Replace Decorative Elements with CSS patterns */}
             <div className="fixed inset-0 pointer-events-none">
                 <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-white/20 to-transparent" />
@@ -217,7 +229,7 @@ const Winning = () => {
                                     <img
                                         src={formula.image}
                                         alt={formula.title}
-                                        className="w-full aspect-[5/3] max-h-[300px]  transform transition-transform 
+                                        className="w-full aspect-[5/3]  transform transition-transform 
                                             duration-700 group-hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 

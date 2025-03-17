@@ -13,6 +13,7 @@ import card9 from '../../assets/Endorsed/card9.jpg';
 import card10 from '../../assets/Endorsed/card10.jpg';
 import card11 from '../../assets/Endorsed/card11.jpg';
 import card12 from '../../assets/Endorsed/card12.jpg';
+import { Helmet } from 'react-helmet'
 
 const Modal = ({ founder, isOpen, onClose }) => {
     if (!isOpen) return null;
@@ -252,6 +253,57 @@ const Endorsed = () => {
 
     return (
         <div className="relative min-h-screen bg-gradient-to-b from-[#1a1a1a] to-[#2a2a2a] text-white pt-16 pb-8 overflow-hidden">
+            <Helmet>
+                <title>Leaders & Endorsements - Mulkanoor Cooperative Society</title>
+                <meta 
+                    name="description" 
+                    content="Discover the visionary leaders who shaped Mulkanoor Cooperative Society, including governors, ministers, and agricultural experts. Featuring endorsements from Dr. V. Kurien, ESL Narsimhan, and other distinguished personalities."
+                />
+                <meta
+                    name="keywords"
+                    content="Mulkanoor leaders, cooperative movement pioneers, agricultural development, rural leadership, cooperative society endorsements"
+                />
+                <meta 
+                    property="og:title" 
+                    content="Leaders & Endorsements - Mulkanoor Cooperative Society" 
+                />
+                <meta 
+                    property="og:description" 
+                    content="Meet the visionary leaders and distinguished personalities who endorsed and shaped our cooperative movement's success story." 
+                />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "Mulkanoor Cooperative Society",
+                        "description": "Pioneering cooperative society in rural development",
+                        "founder": founders.map(founder => ({
+                            "@type": "Person",
+                            "name": founder.name,
+                            "jobTitle": founder.position,
+                            "description": founder.bio,
+                            "image": founder.image
+                        })),
+                        "review": founders.map(founder => ({
+                            "@type": "Review",
+                            "author": {
+                                "@type": "Person",
+                                "name": founder.name,
+                                "jobTitle": founder.position
+                            },
+                            "reviewBody": founder.bio,
+                            "datePublished": founder.period || "1956"
+                        })),
+                        "award": [
+                            {
+                                "@type": "Award",
+                                "name": "Model Cooperative Society",
+                                "description": "Recognition for exemplary cooperative management and rural development"
+                            }
+                        ]
+                    })}
+                </script>
+            </Helmet>
             {/* Interactive Background */}
             <div ref={sceneRef} className="fixed inset-0 pointer-events-none" />
 

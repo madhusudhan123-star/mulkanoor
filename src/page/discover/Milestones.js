@@ -67,6 +67,7 @@ import year2018 from '../../assets/milestones/2018-19_two.JPG';
 import year2019 from '../../assets/milestones/2019-20.JPG';
 import year2020 from '../../assets/milestones/2019-20_two.JPG';
 import year2021 from '../../assets/milestones/2019-20_three.JPG';
+import { Helmet } from 'react-helmet'
 
 
 
@@ -955,6 +956,66 @@ const Milestones = () => {
 
     return (
         <div className="min-h-screen pt-20 bg-gradient-to-b from-[#1a1a1a] to-[#2a2a2a] text-white">
+            <Helmet>
+                <title>Journey & Milestones - Mulkanoor Cooperative Society</title>
+                <meta 
+                    name="description" 
+                    content="Explore Mulkanoor's 67-year journey from 1956 to 2023. From initial 373 members to modern agricultural facilities, discover our transformation into Asia's leading cooperative society."
+                />
+                <meta
+                    name="keywords"
+                    content="Mulkanoor history, cooperative milestones, agricultural development, rural transformation, cooperative achievements, farming innovation"
+                />
+                <meta 
+                    property="og:title" 
+                    content="Journey & Milestones - Mulkanoor Cooperative Society" 
+                />
+                <meta 
+                    property="og:description" 
+                    content="Seven decades of empowering farmers and building communities through cooperative excellence. Discover our transformative journey since 1956." 
+                />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "Mulkanoor Cooperative Society",
+                        "foundingDate": "1956",
+                        "description": "Pioneer cooperative society transforming rural agriculture",
+                        "milestone": timelineData.map(milestone => ({
+                            "@type": "Event",
+                            "name": milestone.title,
+                            "description": milestone.description,
+                            "startDate": milestone.year.split('-')[0],
+                            "location": {
+                                "@type": "Place",
+                                "name": "Mulkanoor, Telangana",
+                                "address": {
+                                    "@type": "PostalAddress",
+                                    "addressLocality": "Mulkanoor",
+                                    "addressRegion": "Telangana",
+                                    "addressCountry": "IN"
+                                }
+                            },
+                            "image": milestone.image,
+                            "result": milestone.achievements
+                        })),
+                        "award": [
+                            {
+                                "@type": "Award",
+                                "name": "NCDC National Award",
+                                "description": "Recognition for Cooperative Excellence",
+                                "date": "2014"
+                            },
+                            {
+                                "@type": "Award",
+                                "name": "Sahakarita Vibhushan",
+                                "description": "Prestigious award for cooperative development",
+                                "date": "2005"
+                            }
+                        ]
+                    })}
+                </script>
+            </Helmet>
             {/* Hero Section */}
             <motion.div
                 className="h-[40vh] relative flex items-center justify-center bg-fixed bg-cover bg-center"

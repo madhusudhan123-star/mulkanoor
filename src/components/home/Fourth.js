@@ -6,7 +6,7 @@ import missionImage from '../../assets/home/faq2.jpg'
 import visionImage from '../../assets/home/faq3.jpg'
 import valuesImage from '../../assets/home/faq4.png'
 import valuesImage1 from '../../assets/home/faq5.png'
-import valuesImage2 from '../../assets/home/faq6.png'
+import valuesImage2 from '../../assets/home/faq6.jpg'
 import valuesImage3 from '../../assets/home/faq7.png'
 
 const Fourth = () => {

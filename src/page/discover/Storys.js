@@ -10,6 +10,7 @@ import Modern from '../../assets/ourstory/Modern.jpg';
 import farmer from '../../assets/ourstory/farmer.jpg';
 import modern from '../../assets/ourstory/modern (2).jpg'; 
 import meeting from '../../assets/ourstory/meeting.jpg';
+import { Helmet } from 'react-helmet'
 
 const Storys = () => {
   const principles = [
@@ -25,6 +26,77 @@ const Storys = () => {
 
   return (
     <div className="min-h-screen bg-harvest">
+      <Helmet>
+        <title>Our Story - Mulkanoor Cooperative Society | Since 1956</title>
+        <meta 
+          name="description" 
+          content="Discover the inspiring journey of Mulkanoor Cooperative Society, from its founding in 1956 by Sri A.K. Vishwanatha Reddy to becoming a ₹270.18 crore organization serving 7,629 members across 14 villages."
+        />
+        <meta
+          name="keywords"
+          content="Mulkanoor history, A.K. Vishwanatha Reddy, cooperative journey, rural development, agricultural cooperative, farmer empowerment"
+        />
+        <meta 
+          property="og:title" 
+          content="Our Story - Mulkanoor Cooperative Society | Since 1956" 
+        />
+        <meta 
+          property="og:description" 
+          content="From humble beginnings to agricultural excellence: The inspiring 67-year journey of empowering farmers through cooperative movement." 
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Mulkanoor Cooperative Society",
+            "foundingDate": "1956",
+            "founder": {
+              "@type": "Person",
+              "name": "Sri A.K. Vishwanatha Reddy",
+              "jobTitle": "Founder",
+              "image": Founder
+            },
+            "description": "Pioneer cooperative society transforming rural agriculture since 1956",
+            "areaServed": {
+              "@type": "Place",
+              "name": "Mulkanoor Region",
+              "description": "14 revenue villages and 18 Gram Panchayats",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "18.2843",
+                "longitude": "79.2061"
+              }
+            },
+            "memberOf": {
+              "@type": "Organization",
+              "name": "MACS Act Cooperatives",
+              "description": "Mutually Aided Cooperative Society Act registered organization"
+            },
+            "numberOfEmployees": "7629",
+            "foundingLocation": {
+              "@type": "Place",
+              "name": "Mulkanoor, Telangana",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Telangana",
+                "addressCountry": "IN"
+              }
+            },
+            "award": [
+              {
+                "@type": "Award",
+                "name": "A Class Audit Classification",
+                "description": "Highest audit rating for cooperative societies"
+              }
+            ],
+            "principles": principles.map(principle => ({
+              "@type": "Thing",
+              "name": principle.title,
+              "description": principle.description
+            }))
+          })}
+        </script>
+      </Helmet>
       {/* Hero Section with Video */}
       {/* <div className="relative h-screen">
         <img className="w-full h-full object-cover" src={banner} />

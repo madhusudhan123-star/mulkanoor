@@ -11,6 +11,7 @@ import card1 from '../../assets/welfare/card1.jpg';
 import card2 from '../../assets/welfare/card2.jpg';
 import card3 from '../../assets/welfare/card3.jpg';
 import card4 from '../../assets/welfare/card4.jpg';
+import { Helmet } from 'react-helmet'
 
 
 // Image optimization guidelines:
@@ -140,6 +141,73 @@ const Welfare = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br mt-10 from-[#E8F5E9] via-[#C8E6C9] to-[#A5D6A7]">
+            <Helmet>
+                <title>Community Welfare Initiatives - Mulkanoor Cooperative Society</title>
+                <meta 
+                    name="description" 
+                    content="Comprehensive welfare programs including healthcare, education support, and community development. Supporting 8,422+ students, providing ₹265.78 lakhs in member welfare, and conducting 1,117+ free eye surgeries."
+                />
+                <meta
+                    name="keywords"
+                    content="community welfare, healthcare camps, education scholarships, member welfare scheme, animal health camps, rural development"
+                />
+                <meta 
+                    property="og:title" 
+                    content="Community Welfare Initiatives - Mulkanoor Cooperative Society" 
+                />
+                <meta 
+                    property="og:description" 
+                    content="Building stronger communities through healthcare, education, and welfare support. Empowering rural development with comprehensive community care programs." 
+                />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "NGO",
+                        "name": "Mulkanoor Community Welfare Programs",
+                        "description": "Comprehensive community welfare initiatives for rural development",
+                        "provider": {
+                            "@type": "Organization",
+                            "name": "Mulkanoor Cooperative Society"
+                        },
+                        "areaServed": "Telangana",
+                        "program": [
+                            {
+                                "@type": "Service",
+                                "name": "Member Welfare Scheme",
+                                "description": "Financial support for members' families with ₹265.78 lakhs disbursed"
+                            },
+                            {
+                                "@type": "Service",
+                                "name": "Education Support",
+                                "description": "Scholarships and financial aid for 8,422 students"
+                            },
+                            {
+                                "@type": "Service",
+                                "name": "Healthcare Initiatives",
+                                "description": "Free eye surgeries and health camps for community members"
+                            },
+                            {
+                                "@type": "Service",
+                                "name": "Community Development",
+                                "description": "Infrastructure development including water and electricity"
+                            },
+                            {
+                                "@type": "Service",
+                                "name": "Animal Health Camps",
+                                "description": "Veterinary services for livestock health and productivity"
+                            }
+                        ],
+                        "foundingDate": "1956",
+                        "award": [
+                            {
+                                "@type": "Award",
+                                "name": "Community Service Excellence",
+                                "description": "Recognition for comprehensive welfare programs"
+                            }
+                        ]
+                    })}
+                </script>
+            </Helmet>
             {/* Hero Section */}
             <div className="relative h-[60vh] overflow-hidden">
                 <motion.div

@@ -4,6 +4,7 @@ import { FaChartLine } from 'react-icons/fa6';
 import { GiCottonFlower } from 'react-icons/gi';
 import CountUp from 'react-countup';
 import cottom from '../../assets/cotton/cotton.jpg'
+import { Helmet } from 'react-helmet'
 
 const Cotton = () => {
     const salesData = [
@@ -44,6 +45,25 @@ const Cotton = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 pt-24">
+            <Helmet>
+                <title>Cotton Division - Mulkanoor Cooperative Society</title>
+                <meta 
+                    name="description" 
+                    content="Premium cotton products from Mulkanoor's Cotton Division. Explore our high-quality cotton lint and seeds, backed by advanced processing technology and sustainable farming practices."
+                />
+                <meta
+                    name="keywords"
+                    content="cotton lint, cotton seeds, sustainable cotton farming, agricultural products, Mulkanoor cotton division"
+                />
+                <meta 
+                    property="og:title" 
+                    content="Cotton Division - Mulkanoor Cooperative Society" 
+                />
+                <meta 
+                    property="og:description" 
+                    content="Quality cotton products for sustainable agriculture. View our performance metrics and product offerings." 
+                />
+            </Helmet>
             {/* Interactive Hero Section */}
             <div className="relative h-[500px] mb-16 overflow-hidden">
                 <motion.div

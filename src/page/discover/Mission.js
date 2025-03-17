@@ -3,11 +3,66 @@ import { FaSeedling, FaTractor, FaLeaf, FaBalanceScale, FaHandHoldingHeart } fro
 import { GiGrain, GiPlantRoots, GiTreeBranch } from 'react-icons/gi';
 import { BsPeopleFill } from 'react-icons/bs';
 import vision from '../../assets/vision/vision.jpg';
-import card from '../../assets/vision/card.jpg';
+import { Helmet } from 'react-helmet'
 
 const Mission = () => {
+    const coreValues = [
+    { 
+      icon: <BsPeopleFill />, 
+      title: "Farmer-Centric Approach", 
+      description: "Prioritizing the needs and well-being of our farming community in every decision we make"
+    },
+    // ...other values
+  ];
   return (
     <div className="min-h-screen bg-[#f8f5f0] font-custom">
+      <Helmet>
+        <title>Vision & Mission - Mulkanoor Cooperative Society</title>
+        <meta 
+          name="description" 
+          content="Discover our commitment to uplift farmers through sustainable agriculture, democratic governance, and cooperative excellence. Learn about our vision, mission, and core values."
+        />
+        <meta
+          name="keywords"
+          content="cooperative vision, agricultural mission, farmer empowerment, sustainable farming, rural development, cooperative values"
+        />
+        <meta 
+          property="og:title" 
+          content="Vision & Mission - Mulkanoor Cooperative Society" 
+        />
+        <meta 
+          property="og:description" 
+          content="Building a sustainable future through cooperative excellence. Empowering farmers with dignity and economic prosperity." 
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Mulkanoor Cooperative Society",
+            "description": "A farmer-centric cooperative society promoting sustainable agriculture",
+            "slogan": "Building a sustainable future through cooperative excellence",
+            "mission": "Voluntary, Democratic, Accountable, Self Reliant Cooperative to ensure farmer control over Agricultural Production & Marketing",
+            "vision": "To uplift the farmers from Poverty to a better socio-economic status and have a dignified life",
+            "ethicsPolicy": {
+              "@type": "CreativeWork",
+              "name": "Core Values",
+              "text": coreValues.map(value => ({
+                "name": value.title,
+                "description": value.description
+              }))
+            },
+            "foundingDate": "1956",
+            "image": vision,
+            "award": [
+              {
+                "@type": "Award",
+                "name": "Best Cooperative Society",
+                "description": "Recognition for excellence in cooperative management"
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
       {/* Header spacing */}
       <div className="h-[12vh] md:h-[18vh] w-full"></div>
       
@@ -54,9 +109,9 @@ const Mission = () => {
               </div>
               
               {/* Right content - Image */}
-              <div className="md:w-1/2 h-64 md:h-auto">
+              {/* <div className="md:w-1/2 h-64 md:h-auto">
                 <img src={card} alt="Vision illustration" className="w-full h-full object-cover" />
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

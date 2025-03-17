@@ -28,6 +28,7 @@ import usePageLoading from "./hooks/usePageLoading";
 import SearchResults from "./page/SearchResults";
 import Cta from './page/Cta'
 import Media from "./page/Media";
+import { HelmetProvider } from "react-helmet-async";
 
 // Create a ScrollToTop component
 function ScrollToTop() {
@@ -84,9 +85,11 @@ function App() {
   return (
     <div className="App font-custom overflow-x-hidden">
       {/* <CursorDot /> */}
-      <BrowserRouter>
-        <AppContent />
-      </BrowserRouter>
+      <HelmetProvider>
+        <BrowserRouter>
+          <AppContent />
+        </BrowserRouter>
+      </HelmetProvider>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import CountUp from 'react-countup';
 import paddy1 from '../../assets/product/paddy/Paddy1.jpg';
 import paddy2 from '../../assets/product/paddy/Paddy2.jpg';
 import paddy3 from '../../assets/product/paddy/Paddy3.jpg';
+import { Helmet } from 'react-helmet'
 
 const Paddy = () => {
     const varieties = [
@@ -45,6 +46,25 @@ const Paddy = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50 pt-24">
+            <Helmet>
+                <title>Paddy Seeds Division - Mulkanoor Cooperative Society</title>
+                <meta 
+                    name="description" 
+                    content="Premium paddy seeds from Mulkanoor's specialized division. Offering high-yield varieties like BPT 5204, RNR 15048, MTU 1010, and more. Expert-supervised seed production for optimal harvests."
+                />
+                <meta
+                    name="keywords"
+                    content="paddy seeds, rice varieties, BPT 5204, RNR 15048, MTU 1010, agricultural seeds, Mulkanoor seeds"
+                />
+                <meta 
+                    property="og:title" 
+                    content="Paddy Seeds Division - Mulkanoor Cooperative Society" 
+                />
+                <meta 
+                    property="og:description" 
+                    content="Quality paddy seeds for prosperous harvests. Explore our varieties and seed production process." 
+                />
+            </Helmet>
             {/* Interactive Hero Section */}
             <div className="relative h-[500px] mb-16 overflow-hidden">
                 <motion.div

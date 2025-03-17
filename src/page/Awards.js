@@ -7,6 +7,9 @@ import card2 from '../assets/awards/card2.png'
 import card3 from '../assets/awards/card3.png'
 import card4 from '../assets/awards/card4.png'
 import card5 from '../assets/awards/card5.jpg'
+import { Helmet } from 'react-helmet-async';
+
+
 
 
 const Awards = () => {
@@ -312,6 +315,10 @@ const Awards = () => {
     // Reorder views to put grid first in the ternary
     return (
         <div className="min-h-screen bg-gradient-to-br from-[#F5F5DC] via-[#F0EBE0] to-[#E8E3D9]">
+            <Helmet>
+                <title>Awards & Recognition - Mulkanoor Cooperative</title>
+                <meta name="description" content="Explore Mulkanoor Cooperative's awards and achievements spanning over 40 years. From Manager of the Year to Best Primary Farmers Cooperative Society, discover our journey of excellence." />
+            </Helmet>
             {/* Hero Section with Background Image */}
             <div className="relative h-[60vh] overflow-hidden">
                 <motion.div
@@ -375,7 +382,7 @@ const Awards = () => {
                                         transition={{ delay: index * 0.1 }}
                                     >
                                         <div className="flex-1" />
-                                        <div className="w-8 h-8 absolute left-0 md:left-1/2 transform md:-translate-x-1/2 
+                                        <div className="w-8 h-8 absolute left-0 md:left-1/2 transform md:-translate-</div>x-1/2 
                                         bg-[#C8AD7F] rounded-full z-10 flex items-center justify-center text-white">
                                             {award.icon}
                                         </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet'
 
 const Organization = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -79,6 +80,70 @@ const Organization = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-[#F5F5DC] via-[#F0EBE0] to-[#E8E3D9] pt-16 md:pt-24">
+            <Helmet>
+                <title>Organizational Structure - Mulkanoor Cooperative Society</title>
+                <meta 
+                    name="description" 
+                    content="Explore our democratic organizational structure from General Body to Village Committees. Learn how 15 elected committee members and professional management ensure efficient cooperative governance."
+                />
+                <meta
+                    name="keywords"
+                    content="cooperative structure, general body, managing committee, village committees, democratic governance, rural organization"
+                />
+                <meta 
+                    property="og:title" 
+                    content="Organizational Structure - Mulkanoor Cooperative Society" 
+                />
+                <meta 
+                    property="og:description" 
+                    content="Discover how our democratic organizational structure empowers farmers through effective cooperative governance and management." 
+                />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "Mulkanoor Cooperative Society",
+                        "description": "Democratic cooperative society with structured governance",
+                        "member": {
+                            "@type": "OrganizationRole",
+                            "roleName": "General Body",
+                            "description": "Members meet annually for democratic decision-making",
+                            "subOrganization": {
+                                "@type": "Organization",
+                                "name": "Managing Committee",
+                                "numberOfEmployees": "15",
+                                "description": "Elected committee members",
+                                "member": [
+                                    {
+                                        "@type": "OrganizationRole",
+                                        "roleName": "President",
+                                        "subOrganization": [
+                                            {
+                                                "@type": "Organization",
+                                                "name": "Village Committees",
+                                                "description": "Local governance units"
+                                            },
+                                            {
+                                                "@type": "Organization",
+                                                "name": "General Manager",
+                                                "description": "Professional management"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        "foundingDate": "1956",
+                        "award": [
+                            {
+                                "@type": "Award",
+                                "name": "Best Cooperative Management",
+                                "description": "Recognition for democratic governance excellence"
+                            }
+                        ]
+                    })}
+                </script>
+            </Helmet>
             <motion.div
                 className="text-center mb-8 md:mb-16 px-4"
                 initial={{ opacity: 0, y: 20 }}

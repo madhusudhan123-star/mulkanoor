@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet'
 import card1 from '../assets/media/card1.jpg'
 import card2 from '../assets/media/card2.jpg'
 import card3 from '../assets/media/card3.jpg'
@@ -93,6 +94,13 @@ const Media = () => {
 
   return (
     <div className="p-5 max-w-7xl md:mt-20 mt-0 mx-auto">
+      <Helmet>
+        <title>Media Gallery - Mulkanoor Cooperative Society</title>
+        <meta 
+          name="description" 
+          content="Explore our media gallery showcasing Mulkanoor Cooperative Society's journey, achievements, and community impact through a collection of photographs and memorable moments."
+        />
+      </Helmet>
       <h1 className="text-center my-5 text-gray-800 text-3xl font-bold">Media Gallery</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {images.map((image, index) => (

@@ -18,6 +18,7 @@ import card3 from '../../assets/agriinput/card3.jpg'
 import card4 from '../../assets/agriinput/card4.jpg'
 import card5 from '../../assets/agriinput/card5.jpg'
 import card6 from '../../assets/agriinput/card6.jpg'
+import { Helmet } from 'react-helmet'
 
 const Agrinput = () => {
     const { scrollY } = useScroll();
@@ -168,6 +169,47 @@ const Agrinput = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-[#E8F5E9] via-[#C8E6C9] to-[#A5D6A7]">
+            <Helmet>
+                <title>Agricultural Input Services - Mulkanoor Cooperative Society</title>
+                <meta 
+                    name="description" 
+                    content="Access quality agricultural inputs including fertilizers, pesticides, seeds, and farm implements. Supporting 7130+ farmers with subsidies and modern farming solutions."
+                />
+                <meta
+                    name="keywords"
+                    content="agricultural inputs, fertilizers, pesticides, farm implements, agricultural loans, irrigation solutions, farming equipment"
+                />
+                <meta 
+                    property="og:title" 
+                    content="Agricultural Input Services - Mulkanoor Cooperative Society" 
+                />
+                <meta 
+                    property="og:description" 
+                    content="Comprehensive agricultural input services including fertilizers, pesticides, seeds, and modern farming equipment. Supporting farmers with loans and subsidies." 
+                />
+                {/* Add structured data for organization/service */}
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "name": "Agricultural Input Services",
+                        "provider": {
+                            "@type": "Organization",
+                            "name": "Mulkanoor Cooperative Society"
+                        },
+                        "description": "Comprehensive agricultural input services including fertilizers, pesticides, seeds, and farm implements",
+                        "areaServed": "Telangana",
+                        "serviceType": ["Farm Supplies", "Agricultural Support"],
+                        "offers": {
+                            "@type": "Offer",
+                            "availableAtOrFrom": {
+                                "@type": "LocalBusiness",
+                                "name": "Mulkanoor Cooperative Society"
+                            }
+                        }
+                    })}
+                </script>
+            </Helmet>
             {/* Hero Banner */}
             <div className="relative h-[60vh] overflow-hidden">
                 <motion.div

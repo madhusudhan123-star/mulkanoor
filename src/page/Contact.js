@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { BiSend } from 'react-icons/bi';
 import { MdLocationOn } from 'react-icons/md';
+import { Helmet } from 'react-helmet-async';
+
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -54,6 +56,10 @@ const Contact = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-[#F5F5DC] via-[#F0EBE0] to-[#E8E3D9] pt-24 pb-16">
+            <Helmet>
+                <title>Contact Us - Mulkanoor Cooperative</title>
+                <meta name="description" content="Get in touch with Mulkanoor Cooperative through our contact channels. Reach us by phone, email, or visit our location in Mulkanoor village, Telangana. Available Monday to Saturday, 9 AM to 6 PM."/>
+            </Helmet>
             {/* Decorative Background Pattern */}
             <div className="fixed inset-0 pointer-events-none">
                 <div className="absolute inset-0 pattern-diagonal opacity-5" />

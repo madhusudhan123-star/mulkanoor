@@ -5,6 +5,7 @@ import { GiBowlOfRice } from 'react-icons/gi';
 import CountUp from 'react-countup';
 import banner1 from '../../assets/rice/banner1.jpg';
 import banner2 from '../../assets/rice/banner2.jpg';
+import { Helmet } from 'react-helmet'
 
 // Data
 const riceData = {
@@ -248,9 +249,53 @@ const BackgroundEffects = () => (
 const Rice = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50 pt-24">
+           <Helmet>
+        <title>Premium Rice Products - Mulkanoor Cooperative Society</title>
+        <meta 
+          name="description" 
+          content="Experience our premium rice varieties including Sona Masoori, Jai Sri Ram, and Telangana Sona. Quality rice products from farm to table, available across 6+ retail outlets."
+        />
+        <meta
+          name="keywords"
+          content="premium rice, Sona Masoori, Jai Sri Ram rice, Telangana Sona, BPT 5204, RNR 15048, Mulkanoor rice products"
+        />
+        <meta 
+          property="og:title" 
+          content="Premium Rice Products - Mulkanoor Cooperative Society" 
+        />
+        <meta 
+          property="og:description" 
+          content="Discover our collection of premium rice varieties, processed with care and tradition. Available at major retail outlets across Telangana." 
+        />
+        <meta
+          property="og:type"
+          content="product"
+        />
+        {/* Add structured data for products */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Mulkanoor Premium Rice",
+            "description": "High-quality rice varieties including Sona Masoori, Jai Sri Ram, and Telangana Sona",
+            "brand": {
+              "@type": "Brand",
+              "name": "Mulkanoor Cooperative Society"
+            },
+            "offers": {
+              "@type": "AggregateOffer",
+              "availability": "https://schema.org/InStock",
+              "priceCurrency": "INR",
+              "seller": {
+                "@type": "Organization",
+                "name": "Mulkanoor Cooperative Society"
+              }
+            }
+          })}
+        </script>
+      </Helmet>
       {/* Hero Section */}
       <HeroSection image={riceData.bannerImages.main} />
-
       {/* Varieties Section */}
       <SectionBanner 
         image={riceData.bannerImages.varieties} 

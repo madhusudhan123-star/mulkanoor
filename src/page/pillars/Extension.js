@@ -10,6 +10,7 @@ import card2 from '../../assets/extension/card2.jpg';
 import card3 from '../../assets/extension/card3.jpg';
 import card4 from '../../assets/extension/card4.jpg';
 import sideimg from '../../assets/extension/onesideimg.jpg';
+import { Helmet } from 'react-helmet'
 
 const Extension = () => {
     const images = {
@@ -81,6 +82,61 @@ const Extension = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-[#E8F5E9] via-[#C8E6C9] to-[#A5D6A7]">
+            <Helmet>
+                <title>Agricultural Extension Services - Mulkanoor Cooperative Society</title>
+                <meta 
+                    name="description" 
+                    content="Access expert agricultural training, soil testing, and modern farming techniques. Join 3000+ trained farmers benefiting from our state-of-the-art information center and professional guidance."
+                />
+                <meta
+                    name="keywords"
+                    content="agricultural training, farmer education, soil testing, farming techniques, agricultural extension, IFFCO training center"
+                />
+                <meta 
+                    property="og:title" 
+                    content="Agricultural Extension Services - Mulkanoor Cooperative Society" 
+                />
+                <meta 
+                    property="og:description" 
+                    content="Comprehensive agricultural training and support services including soil testing, modern farming techniques, and professional guidance from agricultural experts." 
+                />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "EducationalOrganization",
+                        "name": "Mulkanoor Agricultural Extension Services",
+                        "description": "Agricultural training and support center providing farmer education and modern farming techniques",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Mulkanoor",
+                            "addressRegion": "Telangana",
+                            "addressCountry": "IN"
+                        },
+                        "offers": {
+                            "@type": "Offer",
+                            "name": "Agricultural Training Programs",
+                            "description": "Professional training in modern farming techniques and agricultural practices"
+                        },
+                        "amenityFeature": [
+                            {
+                                "@type": "LocationFeatureSpecification",
+                                "name": "Information Center",
+                                "value": "State-of-the-art classroom with visual aids"
+                            },
+                            {
+                                "@type": "LocationFeatureSpecification",
+                                "name": "Resource Library",
+                                "value": "Agricultural books and documentaries"
+                            },
+                            {
+                                "@type": "LocationFeatureSpecification",
+                                "name": "Soil Testing Lab",
+                                "value": "Advanced laboratory facilities"
+                            }
+                        ]
+                    })}
+                </script>
+            </Helmet>
             {/* Hero Banner */}
             <div className="relative h-[60vh] overflow-hidden">
                 <motion.div

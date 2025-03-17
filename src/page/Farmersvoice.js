@@ -1,10 +1,18 @@
 import React from 'react'
 // import Fourth from '../components/home/Fourth'
 import { Third } from '../components/home/Third'
+import { Helmet } from 'react-helmet'
 
 const Farmersvoice = () => {
     return (
         <div>
+             <Helmet>
+                <title>Farmers' Voice - Mulkanoor Cooperative Society</title>
+                <meta 
+                    name="description" 
+                    content="Hear directly from our 7600+ farmer members about their experiences with Mulkanoor Cooperative Society. Real stories of agricultural transformation and community empowerment."
+                />
+            </Helmet>
             <div className="container mx-auto px-4 md:px-8 mt-20 py-14 md:py-20">
                 <div className="mb-10 text-center">
                     <h1 className="text-3xl md:text-4xl font-bold text-earth-600 mb-4">Farmers' Voice</h1>
