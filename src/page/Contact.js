@@ -43,10 +43,9 @@ const Contact = () => {
     ];
 
     const socialLinks = [
-        { icon: <FaFacebook />, color: "hover:bg-blue-600" },
-        { icon: <FaTwitter />, color: "hover:bg-blue-400" },
-        { icon: <FaInstagram />, color: "hover:bg-pink-600" },
-        { icon: <FaLinkedin />, color: "hover:bg-blue-700" }
+        { icon: <FaFacebook />, color: "hover:bg-blue-600", link:"https://www.facebook.com/profile.php?id=61566000885423" },
+        { icon: <FaTwitter />, color: "hover:bg-blue-400", link:"https://x.com/mulkanoorCoop" },
+        { icon: <FaInstagram />, color: "hover:bg-pink-600", link:"https://www.instagram.com/mulkanoor_coop/?hl=en" }
     ];
 
     const handleSubmit = (e) => {
@@ -185,7 +184,7 @@ const Contact = () => {
                     {socialLinks.map((social, index) => (
                         <motion.a
                             key={index}
-                            href="#"
+                            href={social.link}
                             className={`w-12 h-12 rounded-full bg-[#8B7355]/10 flex items-center justify-center 
                                       text-[#8B7355] ${social.color} transition-all duration-300`}
                             whileHover={{ scale: 1.1 }}

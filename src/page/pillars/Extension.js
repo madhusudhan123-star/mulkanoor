@@ -35,12 +35,12 @@ const Extension = () => {
             maxSize: "200KB"
         },
         tour: {
-            url: card4,
+            url: sideimg,
             dimensions: "1200x800px",   // Training section image (3:2 aspect ratio)
             maxSize: "300KB"
         },
         side: {
-            url: sideimg,
+            url: card4,
             dimensions: "1200x800px",   // Side image (3:2 aspect ratio)
             maxSize: "300KB"
         }

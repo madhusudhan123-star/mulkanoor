@@ -206,51 +206,6 @@ const Mission = () => {
             ))}
           </div>
         </section>
-        
-        {/* Journey Section - Simplified */}
-        <section className="mb-16 md:mb-24">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#3b3d34] mb-4">Our Journey</h2>
-            <div className="w-24 h-1 bg-[#d6b670] mx-auto mb-4"></div>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-md p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {[
-                {
-                  title: "Foundation of Values",
-                  content: "Establishing core principles that form the bedrock of our cooperative society",
-                  icon: <GiPlantRoots className="text-2xl" />
-                },
-                {
-                  title: "Community Development",
-                  content: "Expanding our reach to empower more farmers in the region",
-                  icon: <FaSeedling className="text-2xl" />
-                },
-                {
-                  title: "Innovation & Sustainability",
-                  content: "Implementing modern practices while honoring traditional farming wisdom",
-                  icon: <FaTractor className="text-2xl" />
-                },
-                {
-                  title: "Agricultural Leadership",
-                  content: "Becoming a model cooperative that inspires similar movements across India",
-                  icon: <FaLeaf className="text-2xl" />
-                }
-              ].map((item, index) => (
-                <div key={index} className="flex">
-                  <div className="bg-[#3b6e46] text-white rounded-full w-12 h-12 flex items-center justify-center shrink-0 mr-4">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-[#3b3d34]">{item.title}</h3>
-                    <p className="text-gray-600">{item.content}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   );

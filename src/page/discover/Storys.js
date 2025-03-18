@@ -165,7 +165,7 @@ const Storys = () => {
         <h2 className="text-3xl font-bold mb-8 text-center text-earth-500">Our Journey</h2>
 
         {/* Add historical images */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div className="flex justify-center">
           <div className="relative rounded-xl overflow-hidden h-80">
             <img
               src={Founder}

@@ -81,7 +81,7 @@ const Endorsed = () => {
             id: 2,
             name: "P.N.Haksar",
             position: "Deputy Chairman, planning Commission",
-            image: card2,
+            image: card11,
             bio: `"Ye Mulkanoor Nahi Hai... Ye Mulk ka Noor Hai "
                     "This is not Mulkanoor, it is light of Nation"`,
         },
@@ -152,7 +152,7 @@ const Endorsed = () => {
             id: 11,
             name: "Dr. M.V. Rao",
             position: "(IAS), NIRD, Director General, (IAS), Hyderabad",
-            image: card11,
+            image: card2,
             bio: "Highly inspired by the efforts and success of the society. It is a role model for others. If at all villages have such committed cooperative societies, India will change for better. It is one stop answer to all needs and aspirations of farmers. The villages are lucky to have such visionary founder and followed by the President, Shri A. Praveen Reddy, Hats off!",
         },
         {

@@ -481,7 +481,7 @@ const Values = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
                     >
-                        Our Values
+                        Value Added Services
                     </motion.h1>
                     <motion.p
                         className="text-lg md:text-xl text-center max-w-2xl px-4"

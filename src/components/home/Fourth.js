@@ -8,6 +8,7 @@ import valuesImage from '../../assets/home/faq4.png'
 import valuesImage1 from '../../assets/home/faq5.png'
 import valuesImage2 from '../../assets/home/faq6.jpg'
 import valuesImage3 from '../../assets/home/faq7.png'
+import valuesImae4 from '../../assets/home/faq8.jpg'
 
 const Fourth = () => {
     const [hoveredCard, setHoveredCard] = useState(null);
@@ -28,7 +29,7 @@ const Fourth = () => {
         {
             title: "Health Checkup camps for Members",
             content: "The cooperative, in partnership with SLEH, provides free cataract surgeries, affordable eye care, and specialized health camps. It also promotes well-being through physiotherapy and yoga camps, ensuring better healthcare for members.",
-            image: visionImage,
+            image: valuesImage1,
             // color: "from-blue-500 to-blue-700"
         },
         {
@@ -40,7 +41,7 @@ const Fourth = () => {
         {
             title: "Constructed dam under NABARD Watershed program at Vangara Village",
             content: "The society has implemented three watershed programs with financial assistance of ₹2.62 crores from the National Bank for Agricultural and Rural Development (NABARD), covering an area of 283.70 hectares to support sustainable water management and agriculture.",
-            image: valuesImage1,
+            image: valuesImae4,
             // color: "from-red-500 to-red-700"
         },
         {

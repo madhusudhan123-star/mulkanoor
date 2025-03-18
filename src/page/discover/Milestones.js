@@ -170,8 +170,8 @@ const Milestones = () => {
         },
         {
             year: "1957-58",
-            title: "Introduction of Short-Term Loans",
-            description: "Short-term loans were disbursed for the first time to assist farmers in timely crop cultivation.",
+            title: "Registered at Founder President’s Residence",
+            description: "The society was registered at the Founder President’s residence, marking the start of its journey in farmer empowerment.",
             image: year1957,
             achievements: [
                 "First-ever short-term loans for farmers",

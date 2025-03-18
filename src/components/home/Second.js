@@ -19,10 +19,10 @@ const Second = () => {
                 </p>
                 
                 <div className='grid grid-cols-2 md:grid-cols-4 gap-4 w-full mt-6 md:mt-8'>
-                    <a href=''>
+                    <a href='/pillars/extension'>
                         <img  src={nav1} alt="Navigation Image 1" className='w-full rounded-lg hover:shadow-lg transition-all' />
                     </a>
-                    <a href=''>
+                    <a href='/pillars/agri'>
                     <img src={nav2} alt="Navigation Image 2" className='w-full rounded-lg  hover:shadow-lg transition-all' />
                     </a>
                     <a href='/pillars/insurance'>
@@ -31,7 +31,7 @@ const Second = () => {
                     <a href='/pillars/winning'>
                     <img src={nav4} alt="Navigation Image 4" className='w-full rounded-lg  hover:shadow-lg transition-all' />
                     </a>
-                    <a href=''>
+                    <a href='/pillars/values'>
                     <img src={nav5} alt="Navigation Image 5" className='w-full rounded-lg  hover:shadow-lg transition-all' />
                     </a>
                     <a href='/product/paddy'>

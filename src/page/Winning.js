@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, useScroll, useTransform, useMotionValue, useSpring } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { FaTrophy, FaHandshake, FaUsers, FaSeedling, FaChartLine } from 'react-icons/fa';
 import { BsFillShieldLockFill, BsLightbulb } from 'react-icons/bs';
 import { GiReceiveMoney, GiTeamUpgrade } from 'react-icons/gi';
@@ -111,10 +111,6 @@ const Winning = () => {
         }
     ];
 
-    // Split formulas into two parts
-    const mainFormulas = formulas.slice(0, formulas.length - 5);
-    const horizontalFormulas = formulas.slice(-5);
-
     const FloatingImage = ({ src, className }) => {
         const { scrollY } = useScroll();
         const y = useTransform(scrollY, [0, 1000], [0, 100]);
@@ -135,19 +131,6 @@ const Winning = () => {
             />
         );
     };
-
-    // Add these new scroll control functions
-    const [width, setWidth] = React.useState(0);
-    const scrollRef = React.useRef();
-    const x = useMotionValue(0);
-    const springConfig = { damping: 15, mass: 0.27, stiffness: 55 };
-    const spring = useSpring(x, springConfig);
-
-    React.useEffect(() => {
-        if (scrollRef.current) {
-            setWidth(scrollRef.current.scrollWidth - scrollRef.current.offsetWidth);
-        }
-    }, []);
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-[#F5F5DC] via-[#F0EBE0] to-[#E8E3D9] relative overflow-hidden">
@@ -197,9 +180,9 @@ const Winning = () => {
 
             {/* Content Sections with Enhanced Styling */}
             <div className="container mx-auto px-4 py-16 relative">
-                {/* Vertical scroll section */}
+                {/* Single section for all formulas using the alternating layout */}
                 <div className="space-y-32">
-                    {mainFormulas.map((formula, index) => (
+                    {formulas.map((formula, index) => (
                         <motion.div
                             key={index}
                             className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} 
@@ -229,7 +212,7 @@ const Winning = () => {
                                     <img
                                         src={formula.image}
                                         alt={formula.title}
-                                        className="w-full aspect-[5/3]  transform transition-transform 
+                                        className="w-full aspect-[5/3] transform transition-transform 
                                             duration-700 group-hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 
@@ -243,46 +226,8 @@ const Winning = () => {
                     ))}
                 </div>
 
-                {/* Simple Card Grid Section - replacing horizontal scroll */}
-                <div className="mt-32 relative">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
-                        {horizontalFormulas.map((formula, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                whileInView={{
-                                    opacity: 1,
-                                    scale: 1,
-                                    transition: { duration: 0.5, delay: index * 0.1 }
-                                }}
-                                whileHover={{ y: -10 }}
-                                viewport={{ once: true }}
-                            >
-                                <div className="bg-white/40 backdrop-blur-sm rounded-2xl p-6 space-y-4 h-full">
-                                    <div className="flex items-center gap-4 text-[#4A3F35]">
-                                        {formula.icon}
-                                        <h2 className="text-xl font-bold">{formula.title}</h2>
-                                    </div>
-                                    <p className="text-[#8B7355] leading-relaxed">
-                                        {formula.description}
-                                    </p>
-                                    <motion.div
-                                        className="relative rounded-2xl overflow-hidden group mt-4"
-                                        whileHover={{ scale: 1.05 }}
-                                    >
-                                        <img
-                                            src={formula.image}
-                                            alt={formula.title}
-                                            className="w-full h-36 object-cover"
-                                        />
-                                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 
-                                            transition-colors duration-300" />
-                                    </motion.div>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
+                {/* Remove the grid card layout section and replace with a simple spacer */}
+                <div className="mt-32"></div>
             </div>
         </div>
     );
