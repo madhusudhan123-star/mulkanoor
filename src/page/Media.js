@@ -101,7 +101,7 @@ const Media = () => {
           content="Explore our media gallery showcasing Mulkanoor Cooperative Society's journey, achievements, and community impact through a collection of photographs and memorable moments."
         />
       </Helmet>
-      <h1 className="text-center my-5 text-gray-800 text-3xl font-bold">Media Gallery</h1>
+      <h1 className="text-center my-5 text-gray-800 text-3xl font-bold">Media Center</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {images.map((image, index) => (
           <div 

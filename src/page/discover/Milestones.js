@@ -297,51 +297,6 @@ const Milestones = () => {
             details: "A major financial restructuring to enhance loan accessibility."
         },
         {
-            year: "1956-57",
-            title: "Formation of Cooperative Society",
-            description: "Farmers registered the society with an initial membership of 373 and a share capital of ₹2,300.",
-            image: year1956,
-            achievements: [
-                "Society officially registered",
-                "373 initial members joined",
-                "Initial capital of ₹2,300"
-            ],
-            details: "This marked the beginning of the cooperative movement to support farmers."
-        },
-        {
-            year: "1957-58",
-            title: "Introduction of Short-term Loans",
-            description: "First short-term loans disbursed to help farmers cultivate crops effectively.",
-            image: year1957,
-            achievements: [
-                "Loans enabled timely cultivation",
-                "Improved financial support for farmers"
-            ],
-            details: "A major step in ensuring timely assistance to farmers."
-        },
-        {
-            year: "1958-59",
-            title: "Electrification and Pump Set Sales",
-            description: "Started selling electric pump sets to aid agricultural development.",
-            image: year1958,
-            achievements: [
-                "Electrification of the area",
-                "Pump sets introduced to improve irrigation"
-            ],
-            details: "Electricity transformed farming practices, enabling higher efficiency."
-        },
-        {
-            year: "1959-60",
-            title: "First Godown and Sugar Sales",
-            description: "Constructed first godown for fertilizers and produce; expanded into sugar sales.",
-            image: year1959,
-            achievements: [
-                "Improved inventory management",
-                "Expanded product offerings"
-            ],
-            details: "Storage facilities enhanced agricultural supply chain."
-        },
-        {
             year: "1970-71",
             title: "Area Development Schemes",
             description: "Schemes for irrigation, dairy, poultry, and tractors were submitted to ARDC.",

@@ -21,7 +21,7 @@ const Fourth = () => {
             // color: "from-green-500 to-green-700"
         },
         {
-            title: " AKVR Junior & Degree College for students (We have an image of RO plant with us. Please use that)",
+            title: " AKVR Junior & Degree College for students",
             content: "A Junior College was established in 2001-02, followed by a Degree College in 2003-04, both founded with the financial support of the society to promote higher education in the region.",
             image: missionImage,
             // color: "from-yellow-500 to-amber-600"
@@ -99,7 +99,7 @@ const Fourth = () => {
                             <img 
                                 src={card.image} 
                                 alt={card.title}
-                                className="w-full h-full object-cover transition-transform duration-700 ease-out"
+                                className="w-full h-full transition-transform duration-700 ease-out"
                                 style={{
                                     transform: hoveredCard === index ? "scale(1.1)" : "scale(1)"
                                 }}

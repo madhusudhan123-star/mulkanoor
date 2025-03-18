@@ -141,7 +141,7 @@ const Navbar = () => {
             // Home no longer has submenu
         },
         {
-            title: 'Media',
+            title: 'Media Center',
             path: '/media'
         }
     ];

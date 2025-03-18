@@ -447,7 +447,7 @@ const Values = () => {
                                     <img 
                                         src={facility.image} 
                                         alt={facility.title}
-                                        className="w-full h-full object-cover" 
+                                        className="w-full h-full" 
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
                                         <div className="text-white">
@@ -481,7 +481,7 @@ const Values = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
                     >
-                        Value Added Services
+                        Value-Added Services
                     </motion.h1>
                     <motion.p
                         className="text-lg md:text-xl text-center max-w-2xl px-4"
