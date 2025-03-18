@@ -4,7 +4,7 @@ import { GiGrain, GiPlantRoots, GiTreeBranch } from 'react-icons/gi';
 import { BsPeopleFill } from 'react-icons/bs';
 import vision from '../../assets/vision/vision.jpg';
 import { Helmet } from 'react-helmet'
-
+import card from '../../assets/vision/card.jpg'
 const Mission = () => {
     const coreValues = [
     { 
@@ -109,9 +109,9 @@ const Mission = () => {
               </div>
               
               {/* Right content - Image */}
-              {/* <div className="md:w-1/2 h-64 md:h-auto">
+              <div className="md:w-1/2 h-64 md:h-auto">
                 <img src={card} alt="Vision illustration" className="w-full h-full object-cover" />
-              </div> */}
+              </div>
             </div>
           </div>
         </section>

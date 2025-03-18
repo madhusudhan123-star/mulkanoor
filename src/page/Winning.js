@@ -7,7 +7,7 @@ import { MdBusinessCenter, MdIntegrationInstructions } from 'react-icons/md';
 import { HiLightBulb } from 'react-icons/hi';
 import { RiTeamFill, RiHandHeartLine } from 'react-icons/ri';
 import cardone from '../assets/winning/card1.jpg';
-import cardtwo from '../assets/winning/card2.jpg';
+import cardtwo from '../assets/winning/card2.png';
 import cardthree from '../assets/winning/card3.jpg';
 import cardfour from '../assets/winning/card4.jpg';
 import cardfive from '../assets/winning/card5.jpg';

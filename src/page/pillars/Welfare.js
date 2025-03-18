@@ -11,6 +11,7 @@ import card1 from '../../assets/welfare/card1.jpg';
 import card2 from '../../assets/welfare/card2.jpg';
 import card3 from '../../assets/welfare/card3.jpg';
 import card4 from '../../assets/welfare/card4.jpg';
+import card5 from '../../assets/welfare/card5.jpg';
 import { Helmet } from 'react-helmet'
 
 
@@ -30,7 +31,7 @@ const Welfare = () => {
         education: card2,
         community: card3,
         water: card4,
-        animal: card1
+        animal: card5
     };
 
     const initiatives = [
