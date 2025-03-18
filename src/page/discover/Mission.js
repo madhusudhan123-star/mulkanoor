@@ -64,7 +64,7 @@ const Mission = () => {
         </script>
       </Helmet>
       {/* Header spacing */}
-      <div className="h-[12vh] md:h-[18vh] w-full"></div>
+      <div className="h-[1vh] md:h-[18vh] w-full"></div>
       
       {/* Hero Banner */}
       <section className="relative h-[300px] md:h-[400px] mb-16">
