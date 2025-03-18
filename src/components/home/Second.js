@@ -28,16 +28,16 @@ const Second = () => {
                     <a href='/pillars/insurance'>
                     <img src={nav3} alt="Navigation Image 3" className='w-full rounded-lg  hover:shadow-lg transition-all' />
                     </a>
-                    <a href=''>
+                    <a href='/pillars/winning'>
                     <img src={nav4} alt="Navigation Image 4" className='w-full rounded-lg  hover:shadow-lg transition-all' />
                     </a>
                     <a href=''>
                     <img src={nav5} alt="Navigation Image 5" className='w-full rounded-lg  hover:shadow-lg transition-all' />
                     </a>
-                    <a href=''>
+                    <a href='/product/paddy'>
                     <img src={nav6} alt="Navigation Image 6" className='w-full rounded-lg  hover:shadow-lg transition-all' />
                     </a>
-                    <a href=''>
+                    <a href='/pillars/winning'>
                     <img src={nav7} alt="Navigation Image 7" className='w-full rounded-lg  hover:shadow-lg transition-all' />
                     </a>
                     <a href='/pillars/Welfare'>

@@ -119,12 +119,12 @@ export const Third = () => {
     };
 
     return (
-        <div className="container mx-auto px-4 md:px-8 py-8 md:py-16 bg-transparent">
+        <div className="container mx-auto px-2 sm:px-4 md:px-8 py-6 md:py-16 bg-transparent">
 
             {/* Testimonial Slider Section */}
             <div className="relative max-w-6xl mx-auto overflow-hidden" ref={testimonialRef}>
                 {/* Main Content Area */}
-                <div className="min-h-[500px] md:min-h-[400px] relative">
+                <div className="min-h-[500px] sm:min-h-[520px] md:min-h-[400px] relative">
                     <AnimatePresence initial={false} custom={direction}>
                         <motion.div
                             key={currentIndex}
@@ -146,49 +146,52 @@ export const Third = () => {
                                     />
                                 </div>
                                 
-                                {/* Mobile Image - Small display on top for mobile */}
-                                <div className="md:hidden w-full h-40 relative">
+                                {/* Mobile Image - Improved height and aspect ratio */}
+                                <div className="md:hidden w-full h-48 sm:h-56 relative">
                                     <img 
                                         src={testimonialsData[currentIndex].image}
                                         alt={testimonialsData[currentIndex].name}
-                                        className="w-full h-full object-cover object-center"
+                                        className="w-full h-full object-cover object-position-top"
+                                        style={{ objectPosition: "center 25%" }}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40"></div>
                                 </div>
                                 
-                                {/* Content Section */}
-                                <div className="flex-1 p-6 md:p-8 flex flex-col justify-between">
+                                {/* Content Section - Adjusted to account for taller image */}
+                                <div className="flex-1 p-3 sm:p-5 md:p-8 flex flex-col h-[calc(100%-48px)] sm:h-[calc(100%-56px)] md:h-full">
                                     {/* Top section with date */}
-                                    <div className="text-sm text-gray-500 mb-4">
+                                    <div className="text-xs sm:text-sm text-gray-500 mb-1 sm:mb-2">
                                         {testimonialsData[currentIndex].date}
                                     </div>
                                     
-                                    {/* Quote with large quotation marks */}
-                                    <div className="relative">
-                                        <div className="text-6xl text-yellow-300 opacity-20 absolute -top-6 -left-2">"</div>
-                                        <p className="text-base md:text-lg leading-relaxed mb-6 relative z-10 text-gray-800">
-                                            {testimonialsData[currentIndex].content.testimonial}
-                                        </p>
-                                        <div className="text-6xl text-yellow-300 opacity-20 absolute bottom-0 right-0">"</div>
+                                    {/* Quote with large quotation marks - Using flex-grow to take available space */}
+                                    <div className="relative flex-grow overflow-hidden flex flex-col">
+                                        <div className="text-3xl sm:text-5xl md:text-6xl text-yellow-300 opacity-20 absolute -top-3 sm:-top-5 -left-1 sm:-left-2">"</div>
+                                        <div className="overflow-y-auto flex-grow pr-2 pb-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent max-h-[250px] sm:max-h-[300px] md:max-h-none">
+                                            <p className="text-sm sm:text-base md:text-lg leading-relaxed relative z-10 text-gray-800">
+                                                {testimonialsData[currentIndex].content.testimonial}
+                                            </p>
+                                        </div>
+                                        <div className="text-3xl sm:text-5xl md:text-6xl text-yellow-300 opacity-20 absolute bottom-0 right-0">"</div>
                                     </div>
                                     
                                     {/* Farmer Info */}
-                                    <div className="mt-4 md:mt-auto">
-                                        <div className="flex items-end justify-between">
-                                            <div>
-                                                <h3 className="text-xl md:text-2xl font-semibold">
+                                    <div className="mt-2 sm:mt-3 md:mt-4 pt-2 border-t border-gray-200">
+                                        <div className="flex items-center justify-between">
+                                            <div className="mr-2 overflow-hidden">
+                                                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold truncate">
                                                     {testimonialsData[currentIndex].name}
                                                 </h3>
-                                                <p className="text-gray-700 font-medium">
+                                                <p className="text-gray-700 font-medium text-xs sm:text-sm truncate">
                                                     {testimonialsData[currentIndex].role}
                                                 </p>
-                                                <div className="text-sm text-gray-600 mt-2">
-                                                    <p><span className="font-medium">Location:</span> {testimonialsData[currentIndex].content.location}</p>
+                                                <div className="text-xs sm:text-sm text-gray-600 truncate">
+                                                    <span className="font-medium">Location:</span> {testimonialsData[currentIndex].content.location}
                                                 </div>
                                             </div>
 
-                                            {/* Navigation Dots on mobile */}
-                                            <div className="md:hidden flex space-x-1.5">
+                                            {/* Navigation Dots on mobile - More compact */}
+                                            <div className="md:hidden flex space-x-1.5 flex-shrink-0">
                                                 {testimonialsData.map((_, index) => (
                                                     <button
                                                         key={index}
@@ -208,12 +211,12 @@ export const Third = () => {
                     </AnimatePresence>
                 </div>
 
-                {/* Navigation Controls */}
-                <div className="mt-6 flex justify-between items-center">
+                {/* Navigation Controls - More compact on mobile */}
+                <div className="mt-3 sm:mt-5 flex justify-between items-center">
                     {/* Prev/Next Buttons */}
                     <button 
                         onClick={prevTestimonial}
-                        className="text-3xl md:text-4xl text-yellow-600 hover:text-yellow-700 transition-colors p-2"
+                        className="text-xl sm:text-2xl md:text-4xl text-yellow-600 hover:text-yellow-700 transition-colors p-1.5 sm:p-2 touch-manipulation"
                         aria-label="Previous testimonial"
                     >
                         <IoArrowBackCircle />
@@ -237,7 +240,7 @@ export const Third = () => {
                     
                     <button 
                         onClick={nextTestimonial}
-                        className="text-3xl md:text-4xl text-yellow-600 hover:text-yellow-700 transition-colors p-2"
+                        className="text-xl sm:text-2xl md:text-4xl text-yellow-600 hover:text-yellow-700 transition-colors p-1.5 sm:p-2 touch-manipulation"
                         aria-label="Next testimonial"
                     >
                         <IoArrowForwardCircle />
