@@ -7,14 +7,20 @@ import paddy1 from '../../assets/product/paddy/Paddy1.jpg';
 import paddy2 from '../../assets/product/paddy/Paddy2.jpg';
 import paddy3 from '../../assets/product/paddy/Paddy3.jpg';
 import { Helmet } from 'react-helmet'
+import card1 from '../../assets/product/paddy/card1.jpg';
+import card2 from '../../assets/product/paddy/card2.jpg';
+import card3 from '../../assets/product/paddy/card3.jpg';
+import card4 from '../../assets/product/paddy/card4.jpg';
+import card5 from '../../assets/product/paddy/card5.jpg';
+import card6 from '../../assets/product/paddy/card6.jpg';
 
 const Paddy = () => {
     const varieties = [
-        { name: 'BPT 5204', image: 'https://example.com/bpt-5204.jpg' },
-        { name: 'RNR 15048', image: 'https://example.com/rnr-15048.jpg' },
-        { name: 'MTU 1010', image: 'https://example.com/mtu-1010.jpg' },
-        { name: 'MTU 1001', image: 'https://example.com/mtu-1001.jpg' },
-        { name: 'IR 64', image: 'https://example.com/ir-64.jpg' }
+        { name: 'BPT 5204', image: card4 },
+        { name: 'RNR 15048', image: card2 },
+        { name: 'MTU 1010', image: card1 },
+        { name: 'MTU 1001', image: card5 },
+        { name: 'IR 64', image: card6 }
     ];
 
     const salesData = [
@@ -145,8 +151,8 @@ const Paddy = () => {
                             transition={{ delay: index * 0.2 }}
                             whileHover={{ scale: 1.03 }}
                         >
-                            <div className="h-48 bg-emerald-100 flex items-center justify-center">
-                                <GiPlantSeed className="text-6xl text-emerald-600" />
+                            <div className=" bg-emerald-100 flex items-center justify-center">
+                                <img src={variety.image} alt={variety.name}  />
                             </div>
                             <div className="p-6">
                                 <h3 className="text-xl font-semibold text-emerald-900 mb-2">

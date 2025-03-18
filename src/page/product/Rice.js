@@ -5,14 +5,17 @@ import { GiBowlOfRice } from 'react-icons/gi';
 import CountUp from 'react-countup';
 import banner1 from '../../assets/rice/banner1.jpg';
 import banner2 from '../../assets/rice/banner2.jpg';
+import card1 from '../../assets/rice/card1.jpg';
+import card2 from '../../assets/rice/card2.jpg';
+import card3 from '../../assets/rice/card3.jpg';
 import { Helmet } from 'react-helmet'
 
 // Data
 const riceData = {
   varieties: [
-    { name: 'Sona Masoori (BPT 5204)', content: "The preferred choice for over 15 years! Light, tasty, and perfect for everyday meals.", image: 'https://example.com/sona-masoori.jpg' },
-    { name: 'Jai Sri Ram', content: "ICAR-approved & patented! A healthier alternative with a low glycemic index, making it ideal for people with diabetes.", image: 'https://example.com/jai-sri-ram.jpg' },
-    { name: 'Telangana Sona (RNR 15048)', content: "The go-to rice for celebrations! Widely used in Telugu households for festivals and special occasions.", image: 'https://example.com/telangana-sona.jpg' }
+    { name: 'Sona Masoori (BPT 5204)', content: "The preferred choice for over 15 years! Light, tasty, and perfect for everyday meals.", image: card1 },
+    { name: 'Jai Sri Ram', content: "ICAR-approved & patented! A healthier alternative with a low glycemic index, making it ideal for people with diabetes.", image: card2 },
+    { name: 'Telangana Sona (RNR 15048)', content: "The go-to rice for celebrations! Widely used in Telugu households for festivals and special occasions.", image: card3 }
   ],
   outlets: [
     'Mulkanoor', 'Hanamkonda', 'Husnabad', 'Huzurabad', 'Karimnagar', 'Hyderabad'
@@ -131,8 +134,8 @@ const VarietiesSection = ({ varieties }) => (
           transition={{ delay: index * 0.2 }}
           whileHover={{ scale: 1.03 }}
         >
-          <div className="h-48 bg-amber-100 flex items-center justify-center">
-            <GiBowlOfRice className="text-6xl text-amber-600" />
+          <div className=" bg-amber-100 flex items-center justify-center">
+            <img src={variety.image} className='' alt={variety.name} />
           </div>
           <div className="p-6">
             <h3 className="text-xl font-semibold text-amber-900 mb-2">
