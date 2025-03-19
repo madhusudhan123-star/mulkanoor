@@ -252,7 +252,7 @@ const Endorsed = () => {
     }, []);
 
     return (
-        <div className="relative min-h-screen bg-gradient-to-b from-[#1a1a1a] to-[#2a2a2a] text-white pt-16 pb-8 overflow-hidden">
+        <div className="relative min-h-screen bg-gradient-to-b from-[#1a1a1a] to-[#2a2a2a] text-white pt-32 pb-8 overflow-hidden">
             <Helmet>
                 <title>Leaders & Endorsements - Mulkanoor Cooperative Society</title>
                 <meta 

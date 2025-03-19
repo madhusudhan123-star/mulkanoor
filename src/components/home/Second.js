@@ -8,6 +8,8 @@ import nav5 from '../../assets/home/nav5.jpg'
 import nav6 from '../../assets/home/nav6.jpg'
 import nav7 from '../../assets/home/nav7.jpg'
 import nav8 from '../../assets/home/nav8.jpg'
+import nav9 from '../../assets/home/nav9.jpg'
+import nav10 from '../../assets/home/nav10.jpg'
 
 const Second = () => {
     return (
@@ -42,6 +44,12 @@ const Second = () => {
                     </a>
                     <a href='/pillars/Welfare'>
                     <img src={nav8} alt="Navigation Image 8" className='w-full rounded-lg  hover:shadow-lg transition-all' />
+                    </a>
+                    <a href='/pillars/extension'>
+                    <img src={nav9} alt="Navigation Image 8" className='w-full rounded-lg  hover:shadow-lg transition-all' />
+                    </a>
+                    <a href='/pillars/values'>
+                    <img src={nav10} alt="Navigation Image 8" className='w-full rounded-lg  hover:shadow-lg transition-all' />
                     </a>
                 </div>
             </div>

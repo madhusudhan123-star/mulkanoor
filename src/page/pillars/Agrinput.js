@@ -317,7 +317,7 @@ const Agrinput = () => {
                                         <img 
                                             src={section.image} 
                                             alt={section.title} 
-                                            className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700"
+                                            className="w-full h-[400px]  hover:scale-105 transition-transform duration-700"
                                         />
                                     </div>
                                 </motion.div>
@@ -347,7 +347,7 @@ const Agrinput = () => {
                                     <img 
                                         src={agriImplementsData.image} 
                                         alt={agriImplementsData.title} 
-                                        className="w-full h-[300px] object-cover hover:scale-105 transition-transform duration-700"
+                                        className="w-full h-[300px] hover:scale-105 transition-transform duration-700"
                                     />
                                 </div>
                             </div>
@@ -378,7 +378,7 @@ const Agrinput = () => {
                                     <img 
                                         src={agriImplementsData.image} 
                                         alt={agriImplementsData.title} 
-                                        className="w-full h-[300px] object-cover"
+                                        className="w-full h-[300px]"
                                     />
                                 </div>
                             </div>

@@ -218,7 +218,7 @@ const Storys = () => {
                 }}
                 className="relative group"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-transparent rounded-xl transform group-hover:scale-105 transition-transform duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-transparent rounded-xl"></div>
                 <div className="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-earth-200/30 relative z-10 h-full flex flex-col">
                   <div className="bg-earth-100/50 w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:bg-earth-200/50 transition-colors duration-300">
                     <span className="text-2xl text-earth-600">{index + 1}</span>

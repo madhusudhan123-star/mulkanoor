@@ -10,6 +10,7 @@ import valuesImage2 from '../../assets/home/faq6.jpg'
 import valuesImage3 from '../../assets/home/faq7.png'
 import valuesImae4 from '../../assets/home/faq8.jpg'
 
+
 const Fourth = () => {
     const [hoveredCard, setHoveredCard] = useState(null);
 
@@ -45,7 +46,7 @@ const Fourth = () => {
             // color: "from-red-500 to-red-700"
         },
         {
-            title: "RO plant setup for Drinking Water (We have an image of RO plant with us. Please use that)",
+            title: "RO plant setup for Drinking Water.",
             content: "The society collaborated with NGOs to ensure access to clean drinking water by installing RO plants in villages, improving the health and well-being of the community.",
             image: valuesImage2,
             // color: "from-indigo-500 to-indigo-700"

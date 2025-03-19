@@ -81,7 +81,7 @@ const Extension = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-[#E8F5E9] via-[#C8E6C9] to-[#A5D6A7]">
+        <div className="min-h-screen bg-gradient-to-br pt-24 from-[#E8F5E9] via-[#C8E6C9] to-[#A5D6A7]">
             <Helmet>
                 <title>Agricultural Extension Services - Mulkanoor Cooperative Society</title>
                 <meta 

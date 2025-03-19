@@ -64,10 +64,10 @@ const Mission = () => {
         </script>
       </Helmet>
       {/* Header spacing */}
-      <div className="h-[1vh] md:h-[18vh] w-full"></div>
+      <div className="h-[1vh] md:h-[5vh] w-full"></div>
       
       {/* Hero Banner */}
-      <section className="relative h-[300px] md:h-[400px] mb-16">
+      <section className="relative h-[300px] mb-16">
         <div className="absolute inset-0">
           <img src={vision} alt="Agricultural landscape" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-[#3b6e46]/50"></div>
