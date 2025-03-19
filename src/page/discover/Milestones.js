@@ -1056,7 +1056,7 @@ const Milestones = () => {
                                 >
                                     <div className={`
                                         w-14 h-14 md:w-20 md:h-20 rounded-full 
-                                        flex items-center justify-center
+                                        flex items-center cursor-pointer justify-center
                                         ${activeIndex === index
                                             ? 'bg-white/30 shadow-lg shadow-white/20'
                                             : activeIndex > index
@@ -1076,7 +1076,7 @@ const Milestones = () => {
                                         </span>
                                     </div>
                                     <h3 className={`
-                                        mt-4 text-sm md:text-base font-medium text-center w-32
+                                        mt-4 text-sm cursor-default md:text-base font-medium text-center w-32
                                         ${activeIndex === index
                                             ? 'text-white'
                                             : activeIndex > index
@@ -1101,24 +1101,24 @@ const Milestones = () => {
                             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
                                 <div className="grid md:grid-cols-2 gap-8">
                                     <div className="space-y-6">
-                                        <h2 className="text-3xl md:text-4xl font-bold">
+                                        <h2 className="text-3xl cursor-default md:text-4xl font-bold">
                                             {timelineData[activeIndex].title}
                                         </h2>
-                                        <p className="text-lg text-gray-300">
+                                        <p className="text-lg cursor-default text-gray-300">
                                             {timelineData[activeIndex].description}
                                         </p>
                                         <div className="space-y-4">
-                                            <h3 className="text-xl font-semibold">Key Achievements</h3>
+                                            <h3 className="text-xl cursor-default font-semibold">Key Achievements</h3>
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                                 {timelineData[activeIndex].achievements.map((achievement, idx) => (
                                                     <div key={idx} className="flex items-start gap-3 bg-white/5 p-3 rounded-lg">
                                                         <div className="w-2 h-2 bg-green-500 rounded-full mt-2" />
-                                                        <p className="text-sm md:text-base">{achievement}</p>
+                                                        <p className="text-sm cursor-default md:text-base">{achievement}</p>
                                                     </div>
                                                 ))}
                                             </div>
                                         </div>
-                                        <p className="text-sm md:text-base text-gray-400 italic">
+                                        <p className="text-sm cursor-default md:text-base text-gray-400 italic">
                                             {timelineData[activeIndex].details}
                                         </p>
                                     </div>

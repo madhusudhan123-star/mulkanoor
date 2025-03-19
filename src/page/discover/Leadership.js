@@ -236,8 +236,8 @@ const Leadership = () => {
             </Helmet>
             <div className="container mx-auto px-4 py-16">
                 <div className="max-w-3xl mx-auto text-center mb-16">
-                    <h1 className="text-4xl font-bold mb-6">Our Leadership</h1>
-                    <p className="text-gray-600">
+                    <h1 className="text-4xl cursor-default font-bold mb-6">Our Leadership</h1>
+                    <p className="text-gray-600 cursor-default">
                         Visionary leaders who have shaped the future of rural development and cooperation
                     </p>
                 </div>

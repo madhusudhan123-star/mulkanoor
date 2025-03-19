@@ -339,10 +339,10 @@ const Awards = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+                            <h1 className="text-4xl cursor-default md:text-6xl font-bold mb-4 text-white">
                                 Awards & Recognition
                             </h1>
-                            <p className="text-xl text-white/90">
+                            <p className="text-xl cursor-default text-white/90">
                                 Celebrating our journey of excellence and dedication
                             </p>
                         </motion.div>
@@ -391,10 +391,10 @@ const Awards = () => {
                                             border border-[#C8AD7F]/20 hover:shadow-2xl transition-all duration-300
                                             transform hover:scale-105">
                                                 <div className="text-sm text-[#8B7355] font-semibold mb-2">{award.year}</div>
-                                                <h3 className="text-xl font-bold text-[#4A3F35] mb-2">{award.title}</h3>
-                                                <p className="text-[#8B7355] font-medium mb-2">Awarded to: {award.recipient}</p>
-                                                <p className="text-[#8B7355] text-sm mb-2">By: {award.organization}</p>
-                                                <p className="text-[#4A3F35]">{award.description}</p>
+                                                <h3 className="text-xl cursor-default font-bold text-[#4A3F35] mb-2">{award.title}</h3>
+                                                <p className="text-[#8B7355] cursor-default font-medium mb-2">Awarded to: {award.recipient}</p>
+                                                <p className="text-[#8B7355] cursor-default text-sm mb-2">By: {award.organization}</p>
+                                                <p className="text-[#4A3F35] cursor-default">{award.description}</p>
                                             </div>
                                         </div>
                                     </motion.div>

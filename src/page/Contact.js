@@ -103,7 +103,7 @@ const Contact = () => {
                             >
                                 {info.icon}
                             </motion.div>
-                            <h3 className="text-xl font-semibold text-[#4A3F35] mb-2">{info.title}</h3>
+                            <h3 className="text-xl cursor-default font-semibold text-[#4A3F35] mb-2">{info.title}</h3>
                             {info.details.map((detail, idx) => (
                                 <p key={idx} className="text-[#8B7355]">{detail}</p>
                             ))}
@@ -138,7 +138,7 @@ const Contact = () => {
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                     >
-                        <h2 className="text-2xl font-bold text-[#4A3F35] mb-6">Send us a Message</h2>
+                        <h2 className="text-2xl cursor-default font-bold text-[#4A3F35] mb-6">Send us a Message</h2>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {['name', 'email', 'phone', 'subject'].map((field, index) => (

@@ -130,9 +130,9 @@ const Welfare = () => {
                 <div className="md:w-2/3 p-8">
                     <div className="flex items-center gap-3 mb-4">
                         <span className="text-4xl text-[#2E7D32]">{icon}</span>
-                        <h2 className="text-3xl font-bold text-[#1B5E20]">{title}</h2>
+                        <h2 className="text-3xl cursor-default font-bold text-[#1B5E20]">{title}</h2>
                     </div>
-                    <div className="prose prose-lg text-[#333]">
+                    <div className="prose cursor-default prose-lg text-[#333]">
                         {content}
                     </div>
                 </div>
@@ -226,14 +226,14 @@ const Welfare = () => {
                     <div className="absolute inset-0 flex items-center justify-center text-center">
                         <div className="max-w-4xl px-4">
                             <motion.h1
-                                className="text-4xl md:text-6xl font-bold text-white mb-6"
+                                className="text-4xl cursor-default md:text-6xl font-bold text-white mb-6"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                             >
                                 Community Welfare Initiatives
                             </motion.h1>
                             <motion.p
-                                className="text-xl text-white/90"
+                                className="text-xl cursor-default text-white/90"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.2 }}

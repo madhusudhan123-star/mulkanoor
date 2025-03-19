@@ -29,10 +29,10 @@ const SearchResults = () => {
     return (
         <div className="min-h-screen pt-28 pb-16 px-4 md:px-8 lg:px-16 bg-gray-50">
             <div className="max-w-6xl mx-auto">
-                <h1 className="text-3xl md:text-4xl font-bold mb-2 text-gray-800">
+                <h1 className="text-3xl cursor-default md:text-4xl font-bold mb-2 text-gray-800">
                     Search Results
                 </h1>
-                <p className="text-lg text-gray-600 mb-8">
+                <p className="text-lg cursor-default text-gray-600 mb-8">
                     {query ? `Showing results for "${query}"` : 'Please enter a search term'}
                 </p>
 
@@ -47,18 +47,18 @@ const SearchResults = () => {
                                 {results.map((result, index) => (
                                     <div key={index} className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
                                         <Link to={result.path} className="block">
-                                            <h2 className="text-xl font-semibold text-yellow-600 hover:text-yellow-700 transition-colors mb-2">
+                                            <h2 className="text-xl cursor-default font-semibold text-yellow-600 hover:text-yellow-700 transition-colors mb-2">
                                                 {result.title}
                                             </h2>
-                                            <p className="text-gray-600">{result.content}</p>
+                                            <p className="text-gray-600 cursor-default">{result.content}</p>
                                         </Link>
                                     </div>
                                 ))}
                             </div>
                         ) : (
                             <div className="text-center py-12">
-                                <h2 className="text-2xl font-semibold text-gray-700 mb-4">No results found</h2>
-                                <p className="text-gray-500">
+                                <h2 className="text-2xl cursor-default font-semibold text-gray-700 mb-4">No results found</h2>
+                                <p className="text-gray-500 cursor-default">
                                     Try using different keywords or check the spelling of your search term.
                                 </p>
                             </div>

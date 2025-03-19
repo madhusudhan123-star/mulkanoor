@@ -86,10 +86,10 @@ const Financial = () => {
         </div>
         <div className="relative container mx-auto px-6 py-24">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            <h1 className="text-4xl cursor-default md:text-5xl font-bold mb-6 text-white">
               Agricultural Financial Services
             </h1>
-            <p className="text-xl text-white max-w-2xl">
+            <p className="text-xl cursor-default text-white max-w-2xl">
               Empowering farmers with institutional lending solutions for modern farming operations
             </p>
           </div>
@@ -101,33 +101,33 @@ const Financial = () => {
         <div className="bg-white rounded-lg shadow-md p-8 mb-16">
           <div className="flex items-center mb-8">
             <FaSeedling className="w-10 h-10 text-blue-700 mr-4" />
-            <h2 className="text-3xl font-bold text-gray-900">Seasonal Crop Loans</h2>
+            <h2 className="text-3xl cursor-default font-bold text-gray-900">Seasonal Crop Loans</h2>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-blue-800">
+              <h3 className="text-xl cursor-default font-semibold mb-4 text-blue-800">
                 Supporting both Kharif and Rabi seasons
               </h3>
               <ul className="space-y-4">
-                <li className="flex items-start">
+                <li className="flex cursor-default items-start">
                   <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
                   <span>Currently, farmers can avail crop loans of ₹24,000 per acre, with a maximum limit of 10 acres (₹2,40,000) at an interest rate of 7% per annum.</span>
                 </li>
-                <li className="flex items-start">
+                <li className="flex cursor-default items-start">
                   <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
                   <span>Both the State and Central Governments offer a Zero-Interest Scheme for farmers who repay their crop loans on time.</span>
                 </li>
               </ul>
               
               <div className="bg-blue-50 p-6 rounded-lg mt-6">
-                <h4 className="text-lg font-semibold mb-3">Zero-Interest Scheme</h4>
+                <h4 className="text-lg cursor-default font-semibold mb-3">Zero-Interest Scheme</h4>
                 <ul className="space-y-3">
-                  <li className="flex items-start">
+                  <li className="flex cursor-default items-start">
                     <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
                     <span>For crop loans up to ₹1 lakh: 4% State + 3% Central subvention = 0% interest</span>
                   </li>
-                  <li className="flex items-start">
+                  <li className="flex cursor-default items-start">
                     <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
                     <span>For crop loans between ₹1-3 lakhs: 1% State + 3% Central subvention = 3% effective interest</span>
                   </li>
@@ -149,7 +149,7 @@ const Financial = () => {
         <div className="bg-white rounded-lg shadow-md p-8 mb-16">
           <div className="flex items-center mb-8">
             <FaTools className="w-10 h-10 text-blue-700 mr-4" />
-            <h2 className="text-3xl font-bold text-gray-900">Medium Term Loans</h2>
+            <h2 className="text-3xl cursor-default font-bold text-gray-900">Medium Term Loans</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -176,12 +176,12 @@ const Financial = () => {
             ].map((card, index) => (
               <div key={index} className="bg-blue-50 rounded-lg p-6">
                 {card.icon}
-                <h3 className="text-lg font-semibold mb-3">{card.title}</h3>
+                <h3 className="text-lg cursor-default font-semibold mb-3">{card.title}</h3>
                 <ul className="space-y-2">
                   {card.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start">
+                    <li key={idx} className="flex cursor-default items-start">
                       <span className="w-1.5 h-1.5 bg-blue-700 rounded-full mt-2 mr-2"></span>
-                      <span className="text-gray-700">{item}</span>
+                      <span className="text-gray-700 cursor-default">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -195,16 +195,16 @@ const Financial = () => {
           <div className="bg-white rounded-lg shadow-md p-8">
             <div className="flex items-center mb-6">
               <FaTractor className="w-10 h-10 text-blue-700 mr-4" />
-              <h2 className="text-2xl font-bold text-gray-900">Long-Term Loans</h2>
+              <h2 className="text-2xl cursor-default font-bold text-gray-900">Long-Term Loans</h2>
             </div>
             <ul className="space-y-4 mb-6">
               <li className="flex items-start">
                 <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
-                <span className="text-gray-700">Financing for tractors, harvesters, and paddy plantation machines</span>
+                <span className="text-gray-700 cursor-default">Financing for tractors, harvesters, and paddy plantation machines</span>
               </li>
               <li className="flex items-start">
                 <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
-                <span className="text-gray-700">Establishment of citrus and mango orchards with 5-year gestation period</span>
+                <span className="text-gray-700 cursor-default">Establishment of citrus and mango orchards with 5-year gestation period</span>
               </li>
             </ul>
             <img 
@@ -217,7 +217,7 @@ const Financial = () => {
           <div className="bg-white rounded-lg shadow-md p-8">
             <div className="flex items-center mb-6">
               <FaHouseUser className="w-10 h-10 text-blue-700 mr-4" />
-              <h2 className="text-2xl font-bold text-gray-900">General Term Loans</h2>
+              <h2 className="text-2xl cursor-default font-bold text-gray-900">General Term Loans</h2>
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
@@ -244,10 +244,10 @@ const Financial = () => {
               ].map((item, index) => (
                 <div key={index} className="bg-blue-50 rounded-lg p-4">
                   <div className="text-2xl mb-2">{item.icon}</div>
-                  <h3 className="font-medium mb-2">{item.title}</h3>
+                  <h3 className="font-medium cursor-default mb-2">{item.title}</h3>
                   <ul className="text-sm text-gray-600">
                     {item.items.map((sub, idx) => (
-                      <li key={idx} className="mb-1">{sub}</li>
+                      <li key={idx} className="mb-1 cursor-default">{sub}</li>
                     ))}
                   </ul>
                 </div>

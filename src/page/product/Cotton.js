@@ -92,10 +92,10 @@ const Cotton = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
                     >
-                        <h1 className="text-6xl md:text-7xl font-bold text-white mb-6">
+                        <h1 className="text-6xl cursor-default md:text-7xl font-bold text-white mb-6">
                             Cotton Division
                         </h1>
-                        <p className="text-xl text-white/90 max-w-2xl mx-auto">
+                        <p className="text-xl cursor-default text-white/90 max-w-2xl mx-auto">
                             Quality cotton products for sustainable agriculture
                         </p>
                     </motion.div>
@@ -127,8 +127,8 @@ const Cotton = () => {
                                 >
                                     {feature.icon}
                                 </motion.div>
-                                <h3 className="text-2xl font-bold mt-4 text-gray-800">{feature.title}</h3>
-                                <p className="mt-2 text-gray-600">{feature.description}</p>
+                                <h3 className="text-2xl cursor-default font-bold mt-4 text-gray-800">{feature.title}</h3>
+                                <p className="mt-2 cursor-default text-gray-600">{feature.description}</p>
                             </div>
                         </motion.div>
                     ))}
@@ -144,7 +144,7 @@ const Cotton = () => {
                     transition={{ duration: 0.5 }}
                 >
                     <div className="p-6 bg-gradient-to-r from-blue-600 to-indigo-600">
-                        <h2 className="text-3xl font-bold text-white flex items-center gap-3">
+                        <h2 className="text-3xl cursor-default font-bold text-white flex items-center gap-3">
                             <FaChartLine />
                             Performance Metrics
                         </h2>
@@ -154,12 +154,12 @@ const Cotton = () => {
                         <table className="w-full">
                             <thead>
                                 <tr className="border-b border-gray-200">
-                                    <th className="p-4 text-left text-gray-700">Financial Year</th>
-                                    <th className="p-4 text-left text-gray-700">Cotton Lint (Bales)</th>
-                                    <th className="p-4 text-left text-gray-700">Lint Value (₹)</th>
-                                    <th className="p-4 text-left text-gray-700">Cotton Seed (Tons)</th>
-                                    <th className="p-4 text-left text-gray-700">Seed Value (₹)</th>
-                                    <th className="p-4 text-left text-gray-700">Total Value (₹)</th>
+                                    <th className="p-4 cursor-default text-left text-gray-700">Financial Year</th>
+                                    <th className="p-4 cursor-default text-left text-gray-700">Cotton Lint (Bales)</th>
+                                    <th className="p-4 cursor-default text-left text-gray-700">Lint Value (₹)</th>
+                                    <th className="p-4 cursor-default text-left text-gray-700">Cotton Seed (Tons)</th>
+                                    <th className="p-4 cursor-default text-left text-gray-700">Seed Value (₹)</th>
+                                    <th className="p-4 cursor-default text-left text-gray-700">Total Value (₹)</th>
                                 </tr>
                             </thead>
                             <tbody>

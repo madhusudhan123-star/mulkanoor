@@ -168,7 +168,7 @@ const Insurance = () => {
             transition={{ duration: 0.8 }}
         >
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-8 overflow-hidden">
-                <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-8 flex items-center justify-center gap-2 sm:gap-3">
+                <h2 className="text-2xl cursor-default sm:text-3xl font-bold text-center mb-4 sm:mb-8 flex items-center justify-center gap-2 sm:gap-3">
                     <FaTable className="text-xl sm:text-2xl text-blue-300" />
                     Insurance Policy Data
                 </h2>
@@ -176,12 +176,12 @@ const Insurance = () => {
                     <div className="inline-block min-w-full align-middle p-4 sm:p-0">
                         <table className="w-full border-collapse">
                             <thead className="hidden sm:table-header-group">
-                                <tr className="bg-blue-800/40 text-left">
-                                    <th className="p-2 sm:p-4 rounded-tl-lg">S.No.</th>
-                                    <th className="p-2 sm:p-4">Particulars</th>
-                                    <th className="p-2 sm:p-4 text-center">No of Members</th>
-                                    <th className="p-2 sm:p-4 text-center">Premium Paid (Rs)</th>
-                                    <th className="p-2 sm:p-4 text-center rounded-tr-lg">Claims (Rs)</th>
+                                <tr className="bg-blue-800/40 cursor-default text-left">
+                                    <th className="p-2 cursor-default sm:p-4 rounded-tl-lg">S.No.</th>
+                                    <th className="p-2 cursor-default sm:p-4">Particulars</th>
+                                    <th className="p-2 cursor-default sm:p-4 text-center">No of Members</th>
+                                    <th className="p-2 cursor-default sm:p-4 text-center">Premium Paid (Rs)</th>
+                                    <th className="p-2 cursor-default sm:p-4 text-center rounded-tr-lg">Claims (Rs)</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -195,19 +195,19 @@ const Insurance = () => {
                                             transition={{ delay: index * 0.1 }}
                                         >
                                             <td className="block mb-2">
-                                                <span className="font-semibold text-blue-200">S.No: </span>{row.sno}
+                                                <span className="font-semibold cursor-default text-blue-200">S.No: </span>{row.sno}
                                             </td>
                                             <td className="block mb-2">
-                                                <span className="font-semibold text-blue-200">Particulars: </span>{row.particulars}
+                                                <span className="font-semibold cursor-default text-blue-200">Particulars: </span>{row.particulars}
                                             </td>
                                             <td className="block mb-2">
-                                                <span className="font-semibold text-blue-200">Members: </span>{row.members}
+                                                <span className="font-semibold cursor-default text-blue-200">Members: </span>{row.members}
                                             </td>
                                             <td className="block mb-2">
-                                                <span className="font-semibold text-blue-200">Premium: </span>{row.premiumPaid || "-"}
+                                                <span className="font-semibold cursor-default text-blue-200">Premium: </span>{row.premiumPaid || "-"}
                                             </td>
                                             <td className="block">
-                                                <span className="font-semibold text-blue-200">Claims: </span>{row.claims || "-"}
+                                                <span className="font-semibold cursor-default text-blue-200">Claims: </span>{row.claims || "-"}
                                             </td>
                                         </motion.tr>
                                         
@@ -218,29 +218,29 @@ const Insurance = () => {
                                             whileInView={{ opacity: 1, y: 0 }}
                                             transition={{ delay: index * 0.1 }}
                                         >
-                                            <td className="p-2 sm:p-4 border-t border-blue-900/30">{row.sno}</td>
-                                            <td className="p-2 sm:p-4 border-t border-blue-900/30">{row.particulars}</td>
-                                            <td className="p-2 sm:p-4 border-t border-blue-900/30 text-center">{row.members}</td>
-                                            <td className="p-2 sm:p-4 border-t border-blue-900/30 text-center">{row.premiumPaid}</td>
-                                            <td className="p-2 sm:p-4 border-t border-blue-900/30 text-center">{row.claims}</td>
+                                            <td className="p-2 cursor-default sm:p-4 border-t border-blue-900/30">{row.sno}</td>
+                                            <td className="p-2 cursor-default sm:p-4 border-t border-blue-900/30">{row.particulars}</td>
+                                            <td className="p-2 cursor-default sm:p-4 border-t border-blue-900/30 text-center">{row.members}</td>
+                                            <td className="p-2 cursor-default sm:p-4 border-t border-blue-900/30 text-center">{row.premiumPaid}</td>
+                                            <td className="p-2 cursor-default sm:p-4 border-t border-blue-900/30 text-center">{row.claims}</td>
                                         </motion.tr>
                                     </React.Fragment>
                                 ))}
                                 {/* Totals row - Mobile */}
                                 <tr className="sm:hidden bg-blue-700/30 font-bold block rounded-lg p-3">
                                     <td className="block mb-2">
-                                        <span className="font-semibold text-blue-200">Total Premium: </span>5,49,510.00
+                                        <span className="font-semibold cursor-default text-blue-200">Total Premium: </span>5,49,510.00
                                     </td>
                                     <td className="block">
-                                        <span className="font-semibold text-blue-200">Total Claims: </span>81,62,150.00
+                                        <span className="font-semibold cursor-default text-blue-200">Total Claims: </span>81,62,150.00
                                     </td>
                                 </tr>
                                 {/* Totals row - Desktop */}
                                 <tr className="hidden sm:table-row bg-blue-700/30 font-bold">
-                                    <td colSpan={2} className="p-2 sm:p-4 text-right rounded-bl-lg">Total</td>
+                                    <td colSpan={2} className="p-2 cursor-default sm:p-4 text-right rounded-bl-lg">Total</td>
                                     <td className="p-2 sm:p-4"></td>
-                                    <td className="p-2 sm:p-4 text-center">5,49,510.00</td>
-                                    <td className="p-2 sm:p-4 text-center rounded-br-lg">81,62,150.00</td>
+                                    <td className="p-2 cursor-default sm:p-4 text-center">5,49,510.00</td>
+                                    <td className="p-2 cursor-default sm:p-4 text-center rounded-br-lg">81,62,150.00</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -336,14 +336,14 @@ const Insurance = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center px-4">
                         <motion.h1
-                            className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-3 sm:mb-6"
+                            className="text-3xl cursor-default sm:text-4xl md:text-6xl font-bold text-white mb-3 sm:mb-6"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                         >
                             Insurance
                         </motion.h1>
                         <motion.p
-                            className="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto"
+                            className="text-base cursor-default sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.2 }}

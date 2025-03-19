@@ -76,7 +76,7 @@ const Fourth = () => {
     return (
         <div className="container mx-auto px-4 md:px-8">
             {/* Main Heading */}
-            <h1 className="text-2xl md:text-5xl text-center font-medium mb-10 md:mb-16">
+            <h1 className="text-2xl cursor-default md:text-5xl text-center font-medium mb-10 md:mb-16">
                 Initiatives for Community
             </h1>
 
@@ -109,13 +109,13 @@ const Fourth = () => {
                         
                         {/* Card Content */}
                         <div className="p-5 bg-white">
-                            <h3 className="text-xl font-bold mb-3">{card.title}</h3>
+                            <h3 className="text-xl cursor-default font-bold mb-3">{card.title}</h3>
                             <div className="h-0.5 w-16 bg-yellow-400 mb-4"></div>
-                            <p className="text-gray-700">{card.content}</p>
+                            <p className="text-gray-700 cursor-default">{card.content}</p>
                         </div>
                         
                         {/* Bottom gradient bar */}
-                        <div className={`h-1 w-full bg-gradient-to-r ${card.color}`}></div>
+                        <div className={`h-1 cursor-pointer w-full bg-gradient-to-r ${card.color}`}></div>
                     </motion.div>
                 ))}
             </div>

@@ -390,11 +390,11 @@ const Values = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                 >
-                    <h2 className="text-4xl font-bold bg-gradient-to-r from-[#4A3F35] to-[#8B7355] 
+                    <h2 className="text-4xl cursor-default font-bold bg-gradient-to-r from-[#4A3F35] to-[#8B7355] 
                         bg-clip-text text-transparent mb-4">
                         Processing Infrastructure
                     </h2>
-                    <p className="text-[#8B7355] max-w-2xl mx-auto">
+                    <p className="text-[#8B7355] cursor-default max-w-2xl mx-auto">
                         State-of-the-art processing facilities ensuring quality production and optimal resource utilization
                     </p>
                 </motion.div>
@@ -415,17 +415,17 @@ const Values = () => {
                                             {facility.icon}
                                         </div>
                                         <div>
-                                            <h3 className="text-2xl font-bold text-[#4A3F35]">{facility.title}</h3>
-                                            <p className="text-[#8B7355] font-medium">{facility.subtitle}</p>
+                                            <h3 className="text-2xl cursor-default font-bold text-[#4A3F35]">{facility.title}</h3>
+                                            <p className="text-[#8B7355] cursor-default font-medium">{facility.subtitle}</p>
                                         </div>
                                     </div>
                                     
-                                    <p className="text-[#4A3F35] mb-6 leading-relaxed">
+                                    <p className="text-[#4A3F35] cursor-default mb-6 leading-relaxed">
                                         {facility.description}
                                     </p>
                                     
                                     <div className="space-y-3 mt-8">
-                                        <h4 className="font-semibold text-[#4A3F35]">Process Steps:</h4>
+                                        <h4 className="font-semibold cursor-default text-[#4A3F35]">Process Steps:</h4>
                                         {facility.steps.map((step, idx) => (
                                             <motion.div
                                                 key={idx}
@@ -434,10 +434,10 @@ const Values = () => {
                                                 whileInView={{ opacity: 1, x: 0 }}
                                                 transition={{ delay: idx * 0.1 }}
                                             >
-                                                <div className="h-6 w-6 rounded-full bg-[#8B7355]/10 text-[#8B7355] flex items-center justify-center text-sm font-bold">
+                                                <div className="h-6 w-6 cursor-default rounded-full bg-[#8B7355]/10 text-[#8B7355] flex items-center justify-center text-sm font-bold">
                                                     {idx + 1}
                                                 </div>
-                                                <p className="text-[#4A3F35]">{step}</p>
+                                                <p className="text-[#4A3F35] cursor-default">{step}</p>
                                             </motion.div>
                                         ))}
                                     </div>
@@ -451,8 +451,8 @@ const Values = () => {
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
                                         <div className="text-white">
-                                            <h3 className="text-xl font-bold">{facility.title}</h3>
-                                            <p className="text-white/80">{facility.subtitle}</p>
+                                            <h3 className="text-xl cursor-default font-bold">{facility.title}</h3>
+                                            <p className="text-white/80 cursor-default">{facility.subtitle}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -476,7 +476,7 @@ const Values = () => {
                 <div className="absolute inset-0 bg-black/50" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
                     <motion.h1
-                        className="text-4xl md:text-6xl font-bold text-center mb-4"
+                        className="text-4xl md:text-6xl cursor-default font-bold text-center mb-4"
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
@@ -484,7 +484,7 @@ const Values = () => {
                         Value-Added Services
                     </motion.h1>
                     <motion.p
-                        className="text-lg md:text-xl text-center max-w-2xl px-4"
+                        className="text-lg md:text-xl cursor-default text-center max-w-2xl px-4"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}

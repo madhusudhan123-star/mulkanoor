@@ -314,10 +314,10 @@ const Endorsed = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
             >
-                <h1 className="text-4xl md:text-6xl font-bold text-center mb-4">
+                <h1 className="text-4xl cursor-default md:text-6xl font-bold text-center mb-4">
                     Our Visionary Leaders
                 </h1>
-                <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto text-center">
+                <p className="text-lg cursor-default md:text-xl text-gray-300 max-w-3xl mx-auto text-center">
                     The pioneers who shaped our cooperative movement
                 </p>
             </motion.div>
@@ -328,22 +328,22 @@ const Endorsed = () => {
                     {founders.map((founder, index) => (
                         <motion.div
                             key={founder.id}
-                            className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105"
+                            className="bg-white/5 backdrop-blur-sm cursor-pointer rounded-xl overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
                             onClick={() => setSelectedFounder(founder)}
                         >
-                            <div className="relative h-[400px]">
+                            <div className="relative cursor-pointer h-[400px]">
                                 <img
                                     src={founder.image}
                                     alt={founder.name}
                                     className="w-full h-full "
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t cursor-pointer from-black/80 via-black/40 to-transparent" />
                                 <div className="absolute bottom-0 p-4">
-                                    <h3 className="text-xl font-bold mb-1">{founder.name}</h3>
-                                    <p className="text-sm text-gray-300">{founder.position}</p>
+                                    <h3 className="text-xl cursor-default font-bold mb-1">{founder.name}</h3>
+                                    <p className="text-sm cursor-default text-gray-300">{founder.position}</p>
                                 </div>
                             </div>
                         </motion.div>

@@ -168,7 +168,7 @@ export const Third = () => {
                                     <div className="relative flex-grow overflow-hidden flex flex-col">
                                         <div className="text-3xl sm:text-5xl md:text-6xl text-yellow-300 opacity-20 absolute -top-3 sm:-top-5 -left-1 sm:-left-2">"</div>
                                         <div className="overflow-y-auto flex-grow pr-2 pb-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent max-h-[250px] sm:max-h-[300px] md:max-h-none">
-                                            <p className="text-sm sm:text-base md:text-lg leading-relaxed relative z-10 text-gray-800">
+                                            <p className="text-sm cursor-default sm:text-base md:text-lg leading-relaxed relative z-10 text-gray-800">
                                                 {testimonialsData[currentIndex].content.testimonial}
                                             </p>
                                         </div>
@@ -179,10 +179,10 @@ export const Third = () => {
                                     <div className="mt-2 sm:mt-3 md:mt-4 pt-2 border-t border-gray-200">
                                         <div className="flex items-center justify-between">
                                             <div className="mr-2 overflow-hidden">
-                                                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold truncate">
+                                                <h3 className="text-lg cursor-default sm:text-xl md:text-2xl font-semibold truncate">
                                                     {testimonialsData[currentIndex].name}
                                                 </h3>
-                                                <p className="text-gray-700 font-medium text-xs sm:text-sm truncate">
+                                                <p className="text-gray-700 cursor-default font-medium text-xs sm:text-sm truncate">
                                                     {testimonialsData[currentIndex].role}
                                                 </p>
                                                 <div className="text-xs sm:text-sm text-gray-600 truncate">
@@ -219,7 +219,7 @@ export const Third = () => {
                         className="text-xl sm:text-2xl md:text-4xl text-yellow-600 hover:text-yellow-700 transition-colors p-1.5 sm:p-2 touch-manipulation"
                         aria-label="Previous testimonial"
                     >
-                        <IoArrowBackCircle />
+                        <IoArrowBackCircle className='cursor-pointer' />
                     </button>
                     
                     {/* Navigation Dots - Hidden on mobile */}
@@ -243,7 +243,7 @@ export const Third = () => {
                         className="text-xl sm:text-2xl md:text-4xl text-yellow-600 hover:text-yellow-700 transition-colors p-1.5 sm:p-2 touch-manipulation"
                         aria-label="Next testimonial"
                     >
-                        <IoArrowForwardCircle />
+                        <IoArrowForwardCircle className='cursor-pointer' />
                     </button>
                 </div>
             </div>

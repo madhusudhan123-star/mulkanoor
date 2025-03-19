@@ -168,10 +168,10 @@ const Winning = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                        <h1 className="text-4xl cursor-default md:text-6xl font-bold text-white mb-4">
                             Our Winning Formula
                         </h1>
-                        <p className="text-xl text-white/90 max-w-2xl mx-auto">
+                        <p className="text-xl cursor-default text-white/90 max-w-2xl mx-auto">
                             The key principles that drive our success and empower our community
                         </p>
                     </motion.div>
@@ -198,9 +198,9 @@ const Winning = () => {
                                 <div className="p-8">
                                     <div className="flex items-center gap-4 text-[#4A3F35]">
                                         {formula.icon}
-                                        <h2 className="text-3xl font-bold">{formula.title}</h2>
+                                        <h2 className="text-3xl cursor-default font-bold">{formula.title}</h2>
                                     </div>
-                                    <p className="text-lg text-[#8B7355] leading-relaxed mt-4">
+                                    <p className="text-lg text-[#8B7355] cursor-default leading-relaxed mt-4">
                                         {formula.description}
                                     </p>
                                 </div>

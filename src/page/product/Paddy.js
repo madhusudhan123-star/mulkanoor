@@ -99,10 +99,10 @@ const Paddy = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
                     >
-                        <h1 className="text-6xl md:text-7xl font-bold text-white mb-6">
+                        <h1 className="text-6xl cursor-default md:text-7xl font-bold text-white mb-6">
                             Paddy Seeds
                         </h1>
-                        <p className="text-xl text-white/90 max-w-2xl mx-auto">
+                        <p className="text- cursor-default text-white/90 max-w-2xl mx-auto">
                             Quality seeds for prosperous harvests
                         </p>
                     </motion.div>
@@ -126,10 +126,10 @@ const Paddy = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <h2 className="text-4xl font-bold mb-4 text-white">
-                        <FaSeedling className="inline-block mr-3 mb-1" />
+                        <FaSeedling className="inline-block cursor-default mr-3 mb-1" />
                         Our Seed Production Process
                     </h2>
-                    <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+                    <p className="text-xl cursor-default text-gray-100 max-w-3xl mx-auto">
                         Multiplication of breeder paddy seed into Foundation seed then to truthful seed in progressive farmers fields under the expert supervision of our society Agriculture Officers.
                     </p>
                 </motion.div>
@@ -138,7 +138,7 @@ const Paddy = () => {
             {/* Varieties Section */}
             <section className="container mx-auto px-4 mb-20">
                 <h2 className="text-3xl font-bold mb-8 text-emerald-800 text-center">
-                    <FaSeedling className="inline-block mr-3 mb-1" />
+                    <FaSeedling className="inline-block cursor-default mr-3 mb-1" />
                     Available Varieties
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -155,7 +155,7 @@ const Paddy = () => {
                                 <img src={variety.image} alt={variety.name}  />
                             </div>
                             <div className="p-6">
-                                <h3 className="text-xl font-semibold text-emerald-900 mb-2">
+                                <h3 className="text-xl cursor-default font-semibold text-emerald-900 mb-2">
                                     {variety.name}
                                 </h3>
                             </div>
@@ -181,10 +181,10 @@ const Paddy = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <h2 className="text-4xl font-bold mb-4 text-white">
-                        <FaChartLine className="inline-block mr-3 mb-1" />
+                        <FaChartLine className="inline-block cursor-default mr-3 mb-1" />
                         Performance Metrics
                     </h2>
-                    <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+                    <p className="text-xl text-gray-100 cursor-default max-w-3xl mx-auto">
                         Our growing impact in numbers
                     </p>
                 </motion.div>
@@ -196,10 +196,10 @@ const Paddy = () => {
                     <table className="w-full bg-white rounded-xl shadow-lg">
                         <thead>
                             <tr className="bg-emerald-100">
-                                <th className="p-4 text-left text-emerald-900">Financial Year</th>
-                                <th className="p-4 text-left text-emerald-900">Quantity Marketed (Tons)</th>
-                                <th className="p-4 text-left text-emerald-900">Area Covered (Acres)</th>
-                                <th className="p-4 text-left text-emerald-900">Value (₹)</th>
+                                <th className="p-4 cursor-default text-left text-emerald-900">Financial Year</th>
+                                <th className="p-4 cursor-default text-left text-emerald-900">Quantity Marketed (Tons)</th>
+                                <th className="p-4 cursor-default text-left text-emerald-900">Area Covered (Acres)</th>
+                                <th className="p-4 cursor-default text-left text-emerald-900">Value (₹)</th>
                             </tr>
                         </thead>
                         <tbody>

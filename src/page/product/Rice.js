@@ -120,7 +120,7 @@ const SectionBanner = ({ image, title, icon: Icon, description }) => (
 
 const VarietiesSection = ({ varieties }) => (
   <section className="container mx-auto px-4 mb-20">
-    <h2 className="text-3xl font-bold mb-8 text-amber-800 text-center">
+    <h2 className="text-3xl cursor-default font-bold mb-8 text-amber-800 text-center">
       <FaBowlRice className="inline-block mr-3 mb-1" />
       Premium Varieties
     </h2>
@@ -138,7 +138,7 @@ const VarietiesSection = ({ varieties }) => (
             <img src={variety.image} className='' alt={variety.name} />
           </div>
           <div className="p-6">
-            <h3 className="text-xl font-semibold text-amber-900 mb-2">
+            <h3 className="text-xl cursor-default font-semibold text-amber-900 mb-2">
               {variety.name}
             </h3>
             <p>{variety.content}</p>
@@ -152,11 +152,11 @@ const VarietiesSection = ({ varieties }) => (
 const RetailSection = ({ outlets }) => (
   <section className="bg-gradient-to-r from-amber-100 to-orange-100 py-16 mb-20">
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-bold mb-8 text-amber-800 text-center">
+      <h2 className="text-3xl cursor-default font-bold mb-8 text-amber-800 text-center">
         <FaStore className="inline-block mr-3 mb-1" />
         Our Retail Outlets
       </h2>
-      <p className="text-center text-amber-700 mb-8">
+      <p className="text-center cursor-default text-amber-700 mb-8">
         Find us at over 20 locations across these major towns
       </p>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -180,18 +180,18 @@ const RetailSection = ({ outlets }) => (
 const PerformanceSection = ({ salesData }) => (
   <section className="container mx-auto px-4 mb-20">
     <h2 className="text-3xl font-bold mb-8 text-amber-800 text-center">
-      <FaChartLine className="inline-block mr-3 mb-1" />
+      <FaChartLine className="inline-block cursor-default mr-3 mb-1" />
       Performance Metrics
     </h2>
     <div className="overflow-x-auto">
       <table className="w-full bg-white rounded-xl shadow-lg">
         <thead>
           <tr className="bg-amber-100">
-            <th className="p-4 text-left text-amber-900">Financial Year</th>
-            <th className="p-4 text-left text-amber-900">Rice (Tons)</th>
-            <th className="p-4 text-left text-amber-900">Broken Rice (Tons)</th>
-            <th className="p-4 text-left text-amber-900">Bran (Tons)</th>
-            <th className="p-4 text-left text-amber-900">Total Value (₹)</th>
+            <th className="p-4 cursor-default text-left text-amber-900">Financial Year</th>
+            <th className="p-4 cursor-default text-left text-amber-900">Rice (Tons)</th>
+            <th className="p-4 cursor-default text-left text-amber-900">Broken Rice (Tons)</th>
+            <th className="p-4 cursor-default text-left text-amber-900">Bran (Tons)</th>
+            <th className="p-4 cursor-default text-left text-amber-900">Total Value (₹)</th>
           </tr>
         </thead>
         <tbody>

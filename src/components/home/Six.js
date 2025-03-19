@@ -48,7 +48,7 @@ const Six = () => {
             <div className="bg-yellow-50/60">
                 <div className="container mx-auto px-4 md:px-8">
                     <div className="text-center mb-12">
-                        <h2 className="text-2xl md:text-5xl font-medium mb-4">Connect With Us</h2>
+                        <h2 className="text-2xl cursor-default md:text-5xl font-medium mb-4">Connect With Us</h2>
                         <p className="text-gray-600 max-w-2xl mx-auto">
                             Join our growing community on social media for the latest updates,
                             farming tips, success stories, and exclusive content from Mulkanoor Cooperative.
@@ -71,8 +71,8 @@ const Six = () => {
                             >
                                 <div className="flex items-center flex-col mb-4">
                                     <div className="mb-3">{platform.icon}</div>
-                                    <h3 className="text-xl font-bold mb-1">{platform.name}</h3>
-                                    <p className="text-sm opacity-75">{platform.username}</p>
+                                    <h3 className="text-xl cursor-default font-bold mb-1">{platform.name}</h3>
+                                    <p className="text-sm cursor-default opacity-75">{platform.username}</p>
                                 </div>
 
                                 {/* <div className="w-full pt-4 border-t border-current/20">
@@ -87,8 +87,8 @@ const Six = () => {
 
                     {/* Call to Action */}
                     <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 md:p-8 shadow-lg text-center">
-                        <h3 className="text-xl md:text-2xl font-bold mb-4">Stay Updated with Mulkanoor Cooperative</h3>
-                        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                        <h3 className="text-xl cursor-default md:text-2xl font-bold mb-4">Stay Updated with Mulkanoor Cooperative</h3>
+                        <p className="text-gray-600 cursor-default mb-6 max-w-2xl mx-auto">
                             Follow us on social media to get updates on new initiatives, farming techniques,
                             success stories, and opportunities for farmers. Be part of our growing community!
                         </p>

@@ -130,10 +130,10 @@ const Cta = () => {
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.2, duration: 0.8 }}
                         >
-                            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
+                            <h1 className="text-3xl cursor-default md:text-5xl lg:text-6xl font-bold mb-4">
                                 Our Journey of Progress
                             </h1>
-                            <p className="text-lg md:text-xl text-white/90">
+                            <p className="text-lg cursor-default md:text-xl text-white/90">
                                 Transforming lives through sustainable cooperation
                             </p>
                         </motion.div>
@@ -151,12 +151,12 @@ const Cta = () => {
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-2xl md:text-4xl font-medium text-center text-[#005A32] mb-8">
+                        <h2 className="text-2xl cursor-default md:text-4xl font-medium text-center text-[#005A32] mb-8">
                             Empowering Farmers, Enriching Communities
                         </h2>
 
                         <div className="bg-white/70 backdrop-blur-sm rounded-xl p-6 md:p-8 shadow-lg border border-yellow-200">
-                            <p className="text-gray-700 leading-relaxed mb-6 text-lg md:text-xl">
+                            <p className="text-gray-700 cursor-default leading-relaxed mb-6 text-lg md:text-xl">
                                 Driving holistic progress to uplift farmers, their families, and the community,
                                 Mulkanoor Cooperative Society stands as a beacon of trust, innovation, and
                                 collaboration. Over decades, the society has transformed the lives of countless
@@ -164,13 +164,13 @@ const Cta = () => {
                                 fair financial opportunities, and reliable market linkages.
                             </p>
 
-                            <p className="text-gray-700 leading-relaxed mb-6 text-lg md:text-xl">
+                            <p className="text-gray-700 cursor-default leading-relaxed mb-6 text-lg md:text-xl">
                                 By fostering sustainable farming techniques, offering education and training,
                                 and ensuring equitable profit-sharing, Mulkanoor has created a thriving ecosystem
                                 where farmers are not just participants but empowered stakeholders.
                             </p>
 
-                            <p className="text-gray-700 leading-relaxed text-lg md:text-xl font-medium italic">
+                            <p className="text-gray-700 cursor-default leading-relaxed text-lg md:text-xl font-medium italic">
                                 "Together, we thrive as one family, rooted in trust, unity, and mutual growth."
                             </p>
                         </div>
@@ -188,10 +188,10 @@ const Cta = () => {
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-2xl md:text-4xl font-medium text-[#005A32] mb-3">
+                        <h2 className="text-2xl cursor-default md:text-4xl font-medium text-[#005A32] mb-3">
                             Our Impact in Numbers
                         </h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">
+                        <p className="text-gray-600 cursor-default max-w-2xl mx-auto">
                             Every number represents countless lives touched and communities strengthened through our collective efforts
                         </p>
                     </motion.div>
@@ -207,10 +207,10 @@ const Cta = () => {
                                 viewport={{ once: true }}
                             >
                                 <div className="flex justify-center mb-4">{metric.icon}</div>
-                                <h3 className="text-4xl md:text-5xl font-bold text-[#005A32] mb-3">
+                                <h3 className="text-4xl cursor-default md:text-5xl font-bold text-[#005A32] mb-3">
                                     {isInView ? <Counter value={metric.value} suffix={metric.suffix} /> : '0'}
                                 </h3>
-                                <h4 className="text-xl font-medium text-gray-800 mb-3">{metric.label}</h4>
+                                <h4 className="text-xl cursor-default font-medium text-gray-800 mb-3">{metric.label}</h4>
                                 <p className="text-gray-600">{metric.description}</p>
                             </motion.div>
                         ))}

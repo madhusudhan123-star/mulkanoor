@@ -151,11 +151,11 @@ const Organization = () => {
                 transition={{ duration: 0.8 }}
             >
                 <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-3 md:mb-4 text-[#4A3F35] relative">
-                    <span className="inline-block bg-gradient-to-r from-[#8B7355] to-[#C8AD7F] bg-clip-text text-transparent">
+                    <span className="inline-block cursor-default bg-gradient-to-r from-[#8B7355] to-[#C8AD7F] bg-clip-text text-transparent">
                         Organizational Structure
                     </span>
                 </h1>
-                <p className="text-lg md:text-xl text-[#8B7355]">
+                <p className="text-lg cursor-default md:text-xl text-[#8B7355]">
                     The backbone of our cooperative success
                 </p>
             </motion.div>
@@ -257,8 +257,8 @@ const Organization = () => {
                 <div className="bg-gradient-to-br from-[#C8AD7F]/20 to-white/20 backdrop-blur-sm 
                               rounded-lg md:rounded-xl p-4 md:p-8 shadow-xl"
                     style={{ border: '2px solid rgba(200, 173, 127, 0.3)' }}>
-                    <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-[#4A3F35]">Our Structure</h2>
-                    <p className="text-sm md:text-base text-[#8B7355] leading-relaxed">
+                    <h2 className="text-xl cursor-default md:text-2xl font-bold mb-3 md:mb-4 text-[#4A3F35]">Our Structure</h2>
+                    <p className="text-sm cursor-default md:text-base text-[#8B7355] leading-relaxed">
                         Our organizational structure ensures efficient operations and clear
                         communication channels that benefit our cooperative members. The General Body
                         comprises all society members who meet annually to elect the Managing Committee.

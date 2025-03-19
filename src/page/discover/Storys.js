@@ -97,62 +97,6 @@ const Storys = () => {
           })}
         </script>
       </Helmet>
-      {/* Hero Section with Video */}
-      {/* <div className="relative h-screen">
-        <img className="w-full h-full object-cover" src={banner} />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center px-4">
-          <h1 className="text-white text-5xl font-bold text-center max-w-4xl mb-6">
-            Empowering Farmers for Over 70 Years
-          </h1>
-          <p className="text-white text-xl text-center max-w-4xl leading-relaxed">
-            At Mulkanoor Cooperative Society, we believe in the power of community and the potential of every farmer. For over 70 years, we've been empowering farmers with access to affordable financial services and expert guidance, helping them grow their farms and improve their livelihoods.
-          </p>
-        </div>
-      </div> */}
-
-      {/* Image Gallery Section */}
-      {/* <section className="py-16 bg-earth-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="relative h-64 overflow-hidden rounded-xl"
-            >
-              <img
-                src={field}
-                alt="Farmers in the field"
-                className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
-              />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="relative h-64 overflow-hidden rounded-xl md:translate-y-12"
-            >
-              <img
-                src={Building}
-                alt="Cooperative Society Building"
-                className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
-              />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="relative h-64 overflow-hidden rounded-xl"
-            >
-              <img
-                src={Scene}
-                alt="Harvest Scene"
-                className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section> */}
 
       {/* History Section */}
       <motion.section
@@ -162,7 +106,7 @@ const Storys = () => {
         className="max-w-6xl mx-auto py-16 px-4 mt-20 relative"
       >
         <div className="absolute inset-0 pattern-wheat opacity-10"></div>
-        <h2 className="text-3xl font-bold mb-8 text-center text-earth-500">Our Journey</h2>
+        <h2 className="text-3xl cursor-default font-bold mb-8 text-center text-earth-500">Our Journey</h2>
 
         {/* Add historical images */}
         <div className="flex justify-center">
@@ -173,19 +117,19 @@ const Storys = () => {
               className="w-full h-full object-cover"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
-              <p className="text-sm">Late Sri A.K. Vishwanatha Reddy, Our Founder</p>
+              <p className="text-sm cursor-default">Late Sri A.K. Vishwanatha Reddy, Our Founder</p>
             </div>
           </div>
         </div>
 
         <div className="space-y-6 text-earth-400">
-          <p className="leading-relaxed">
+          <p className="leading-relaxed cursor-default ">
             The Mulkanoor Cooperative Bank was established in 1956 by its visionary founder, Late Sri A.K. Vishwanatha Reddy, under the Hyderabad Cooperative Society Act, 1952. After the enactment of the Cooperative Society Act, 1964, the society was deemed registered under the new legislation. Subsequently, with the introduction of the Mutually Aided Cooperative Society Act, 1995, it transitioned to operate under the MACS Act.
           </p>
-          <p className="leading-relaxed">
+          <p className="leading-relaxed cursor-default">
             The society serves 14 revenue villages and 18 Gram Panchayats within a drought-prone region characterized by uplands and hillocks. With limited irrigation options, the area depends primarily on small tanks, ponds, open wells, and bore wells. Over-reliance on groundwater has resulted in significant depletion of the water table, making agricultural activities challenging.
           </p>
-          <p className="leading-relaxed">
+          <p className="leading-relaxed cursor-default">
             Initially, the cooperative operated from the founder's residence for 14 years before establishing its own office premises in 1970. Today, the society boasts 7,629 members, a share capital of ₹13.96 crores, and thrift deposits amounting to ₹24.61 crores. The society achieved a turnover of ₹270.18 crores in 2015-16 and maintains an "A" Class audit classification.
           </p>
         </div>
@@ -198,7 +142,7 @@ const Storys = () => {
       <section className="bg-harvest-50 py-16 relative">
         <div className="absolute inset-0 pattern-field opacity-10"></div>
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center text-earth-500">Our Principles</h2>
+          <h2 className="text-3xl cursor-default font-bold mb-12 text-center text-earth-500">Our Principles</h2>
 
           {/* Updated Principles Grid */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -223,8 +167,8 @@ const Storys = () => {
                   <div className="bg-earth-100/50 w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:bg-earth-200/50 transition-colors duration-300">
                     <span className="text-2xl text-earth-600">{index + 1}</span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-crop-600">{principle.title}</h3>
-                  <p className="text-earth-600/90 flex-grow">{principle.description}</p>
+                  <h3 className="text-xl cursor-default font-semibold mb-3 text-crop-600">{principle.title}</h3>
+                  <p className="text-earth-600/90 cursor-default flex-grow">{principle.description}</p>
                   <div className="h-1 w-20 bg-gradient-to-r from-crop-400 to-crop-500 mt-4 group-hover:w-full transition-all duration-300"></div>
                 </div>
               </motion.div>

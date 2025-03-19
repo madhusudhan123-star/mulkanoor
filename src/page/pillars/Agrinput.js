@@ -168,7 +168,7 @@ const Agrinput = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-[#E8F5E9] via-[#C8E6C9] to-[#A5D6A7]">
+        <div className="min-h-screen bg-gradient-to-br from-[#E8F5E9] via-[#C8E6C9] cursor-default to-[#A5D6A7]">
             <Helmet>
                 <title>Agricultural Input Services - Mulkanoor Cooperative Society</title>
                 <meta 
@@ -231,10 +231,10 @@ const Agrinput = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
                     >
-                        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                        <h1 className="text-4xl cursor-default md:text-6xl font-bold text-white mb-6">
                             Agricultural Input Services
                         </h1>
-                        <p className="text-xl text-white/90 max-w-3xl mx-auto">
+                        <p className="text-xl cursor-default text-white/90 max-w-3xl mx-auto">
                             Supporting farmers with essential resources and modern solutions
                         </p>
                     </motion.div>
@@ -249,21 +249,21 @@ const Agrinput = () => {
                         {stats.map((stat, index) => (
                             <motion.div
                                 key={index}
-                                className="bg-white/80 backdrop-blur-sm rounded-xl p-6 text-center"
+                                className="bg-white/80 cursor-default backdrop-blur-sm rounded-xl p-6 text-center"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
                                 viewport={{ once: true }}
                             >
                                 <motion.div
-                                    className="text-3xl md:text-4xl font-bold text-[#2E7D32] mb-2"
+                                    className="text-3xl md:text-4xl cursor-default  font-bold text-[#2E7D32] mb-2"
                                     initial={{ scale: 0 }}
                                     whileInView={{ scale: 1 }}
                                     transition={{ type: "spring", delay: index * 0.1 }}
                                 >
                                     {stat.value}
                                 </motion.div>
-                                <div className="text-sm text-[#1B5E20]">{stat.label}</div>
+                                <div className="text-sm cursor-default text-[#1B5E20]">{stat.label}</div>
                             </motion.div>
                         ))}
                     </div>
@@ -272,7 +272,7 @@ const Agrinput = () => {
                 {/* New Content Sections */}
                 <div className="container mx-auto px-4 mb-20">
                     <motion.h2 
-                        className="text-4xl font-bold text-center text-[#1B5E20] mb-16"
+                        className="text-4xl font-bold text-center cursor-default text-[#1B5E20] mb-16"
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
@@ -300,9 +300,9 @@ const Agrinput = () => {
                                             <div className={`bg-gradient-to-br ${section.color} p-4 rounded-full text-white`}>
                                                 {section.icon}
                                             </div>
-                                            <h3 className="text-3xl font-bold text-[#1B5E20]">{section.title}</h3>
+                                            <h3 className="text-3xl cursor-default font-bold text-[#1B5E20] cursor-default">{section.title}</h3>
                                         </div>
-                                        <p className="text-[#2E7D32] leading-relaxed text-lg">
+                                        <p className="text-[#2E7D32] cursor-default leading-relaxed text-lg">
                                             {section.content}
                                         </p>
                                     </motion.div>
@@ -339,8 +339,8 @@ const Agrinput = () => {
                                 <div className="bg-gradient-to-br from-teal-600 to-green-700 p-5 inline-block rounded-full text-white mb-6">
                                     {agriImplementsData.icon}
                                 </div>
-                                <h3 className="text-3xl font-bold text-[#1B5E20] mb-4">{agriImplementsData.title}</h3>
-                                <p className="text-[#2E7D32] leading-relaxed text-lg mb-6">
+                                <h3 className="text-3xl cursor-default font-bold text-[#1B5E20] cursor-default mb-4">{agriImplementsData.title}</h3>
+                                <p className="text-[#2E7D32] cursor-default leading-relaxed text-lg mb-6">
                                     {agriImplementsData.content}
                                 </p>
                                 <div className="rounded-xl overflow-hidden shadow-xl mt-8 hidden lg:block">
@@ -362,8 +362,8 @@ const Agrinput = () => {
                                         whileInView={{ y: 0, opacity: 1 }}
                                         transition={{ duration: 0.5, delay: index * 0.1 }}
                                     >
-                                        <h4 className="text-xl font-bold text-[#2E7D32] mb-3">{category.title}</h4>
-                                        <p className="text-[#1B5E20]">{category.items}</p>
+                                        <h4 className="text-xl  cursor-default font-bold text-[#2E7D32] mb-3">{category.title}</h4>
+                                        <p className="text-[#1B5E20] cursor-default">{category.items}</p>
                                     </motion.div>
                                 ))}
                                 <motion.div

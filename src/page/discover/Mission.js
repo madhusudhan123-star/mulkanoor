@@ -75,11 +75,11 @@ const Mission = () => {
         
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center px-4">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            <h1 className="text-4xl cursor-default md:text-6xl font-bold text-white mb-4">
               Vision & Mission
             </h1>
             <div className="w-24 h-1 bg-[#d6b670] mx-auto mb-4"></div>
-            <p className="text-lg md:text-xl text-white max-w-2xl mx-auto">
+            <p className="text-lg cursor-default md:text-xl text-white max-w-2xl mx-auto">
               Building a sustainable future through cooperative excellence
             </p>
           </div>
@@ -98,11 +98,11 @@ const Mission = () => {
                   <div className="mr-4 bg-white/20 p-3 rounded-full">
                     <FaSeedling className="text-2xl" />
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold">Our Vision</h2>
+                  <h2 className="text-3xl cursor-default md:text-4xl font-bold">Our Vision</h2>
                 </div>
                 
                 <div className="mb-6 border-l-4 border-[#a9d18e] pl-4 italic">
-                  <p className="text-xl md:text-2xl font-medium">
+                  <p className="text-xl cursor-default md:text-2xl font-medium">
                     To uplift the farmers from Poverty to a better socio-economic status and have a dignified life.
                   </p>
                 </div>
@@ -126,11 +126,11 @@ const Mission = () => {
                   <div className="mr-4 bg-white/20 p-3 rounded-full">
                     <FaTractor className="text-2xl text-[#3b3d34]" />
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-[#3b3d34]">Our Mission</h2>
+                  <h2 className="text-3xl cursor-default md:text-4xl font-bold text-[#3b3d34]">Our Mission</h2>
                 </div>
                 
                 <div className="mb-6 border-l-4 border-[#3b6e46] pl-4 italic">
-                  <p className="text-xl md:text-2xl font-medium text-[#3b3d34]">
+                  <p className="text-xl cursor-default md:text-2xl font-medium text-[#3b3d34]">
                     Voluntary, Democratic, Accountable, Self Reliant Cooperative to ensure farmer control over Agricultural Production & Marketing.
                   </p>
                 </div>
@@ -151,9 +151,9 @@ const Mission = () => {
         {/* Values Section */}
         <section className="mb-16 md:mb-24">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#3b3d34] mb-4">Core Values</h2>
+            <h2 className="text-3xl cursor-default md:text-4xl font-bold text-[#3b3d34] mb-4">Core Values</h2>
             <div className="w-24 h-1 bg-[#d6b670] mx-auto mb-4"></div>
-            <p className="max-w-2xl mx-auto text-gray-600">
+            <p className="max-w-2xl cursor-default mx-auto text-gray-600">
               The foundational principles that guide our cooperative's actions and decisions
             </p>
           </div>
@@ -199,8 +199,8 @@ const Mission = () => {
                   <div className="mb-4 rounded-full bg-[#f0f4eb] text-[#3b6e46] p-3 inline-block">
                     <span className="text-2xl">{value.icon}</span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-[#3b3d34]">{value.title}</h3>
-                  <p className="text-gray-600">{value.description}</p>
+                  <h3 className="text-xl cursor-default font-semibold mb-3 text-[#3b3d34]">{value.title}</h3>
+                  <p className="text-gray-600 cursor-default">{value.description}</p>
                 </div>
               </div>
             ))}

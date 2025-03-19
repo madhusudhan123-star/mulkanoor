@@ -20,36 +20,36 @@ const Second = () => {
                     For 69+ years, Mulkanoor Coop has transformed into a holistic network of solutions, resources, and assistance for farmers, championing equity, openness, and sustainable development.
                 </p>
                 
-                <div className='grid grid-cols-2 md:grid-cols-4 gap-4 w-full mt-6 md:mt-8'>
+                <div className='grid  grid-cols-2 md:grid-cols-4 gap-4 w-full mt-6 md:mt-8'>
                     <a href='/pillars/extension'>
-                        <img  src={nav1} alt="Navigation Image 1" className='w-full rounded-lg hover:shadow-lg transition-all' />
+                        <img  src={nav1} alt="Navigation Image 1" className='w-full cursor-pointer rounded-lg hover:shadow-lg transition-all' />
                     </a>
                     <a href='/pillars/agri'>
-                    <img src={nav2} alt="Navigation Image 2" className='w-full rounded-lg  hover:shadow-lg transition-all' />
+                    <img src={nav2} alt="Navigation Image 2" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
                     </a>
                     <a href='/pillars/insurance'>
-                    <img src={nav3} alt="Navigation Image 3" className='w-full rounded-lg  hover:shadow-lg transition-all' />
+                    <img src={nav3} alt="Navigation Image 3" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
                     </a>
                     <a href='/pillars/winning'>
-                    <img src={nav4} alt="Navigation Image 4" className='w-full rounded-lg  hover:shadow-lg transition-all' />
+                    <img src={nav4} alt="Navigation Image 4" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
                     </a>
                     <a href='/pillars/values'>
-                    <img src={nav5} alt="Navigation Image 5" className='w-full rounded-lg  hover:shadow-lg transition-all' />
+                    <img src={nav5} alt="Navigation Image 5" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
                     </a>
                     <a href='/product/paddy'>
-                    <img src={nav6} alt="Navigation Image 6" className='w-full rounded-lg  hover:shadow-lg transition-all' />
+                    <img src={nav6} alt="Navigation Image 6" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
                     </a>
                     <a href='/pillars/winning'>
-                    <img src={nav7} alt="Navigation Image 7" className='w-full rounded-lg  hover:shadow-lg transition-all' />
+                    <img src={nav7} alt="Navigation Image 7" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
                     </a>
                     <a href='/pillars/Welfare'>
-                    <img src={nav8} alt="Navigation Image 8" className='w-full rounded-lg  hover:shadow-lg transition-all' />
+                    <img src={nav8} alt="Navigation Image 8" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
                     </a>
                     <a href='/pillars/extension'>
-                    <img src={nav9} alt="Navigation Image 8" className='w-full rounded-lg  hover:shadow-lg transition-all' />
+                    <img src={nav9} alt="Navigation Image 8" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
                     </a>
                     <a href='/pillars/values'>
-                    <img src={nav10} alt="Navigation Image 8" className='w-full rounded-lg  hover:shadow-lg transition-all' />
+                    <img src={nav10} alt="Navigation Image 8" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
                     </a>
                 </div>
             </div>
