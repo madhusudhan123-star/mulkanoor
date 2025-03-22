@@ -122,7 +122,7 @@ const Storys = () => {
           </div>
         </div>
 
-        <div className="space-y-6 text-earth-400">
+        <div className="space-y-6 text-earth-400 mt-10">
           <p className="leading-relaxed cursor-default ">
             The Mulkanoor Cooperative Bank was established in 1956 by its visionary founder, Late Sri A.K. Vishwanatha Reddy, under the Hyderabad Cooperative Society Act, 1952. After the enactment of the Cooperative Society Act, 1964, the society was deemed registered under the new legislation. Subsequently, with the introduction of the Mutually Aided Cooperative Society Act, 1995, it transitioned to operate under the MACS Act.
           </p>

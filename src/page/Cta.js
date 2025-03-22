@@ -18,7 +18,7 @@ const Cta = () => {
         {
             id: 1,
             icon: <FaUsers className="text-4xl md:text-5xl text-green-600" />,
-            value: 7600,
+            value: 15000,
             suffix: "+",
             label: "Farmers Empowered",
             description: "Members who have benefited directly from our cooperative model"
@@ -170,7 +170,7 @@ const Cta = () => {
                                 where farmers are not just participants but empowered stakeholders.
                             </p>
 
-                            <p className="text-gray-700 cursor-default leading-relaxed text-lg md:text-xl font-medium italic">
+                            <p className="text-gray-700 cursor-default leading-relaxed text-lg md:text-xl font-medium">
                                 "Together, we thrive as one family, rooted in trust, unity, and mutual growth."
                             </p>
                         </div>

@@ -42,17 +42,6 @@ export const Third = () => {
         },
         {
 
-            name: "Padma",
-
-            image: voice2,
-            content: {
-                testimonial: "Dale Padma, alongside her father, cultivates paddy on their 4 acres of land with dedication. With the support of Mulkanoor Cooperative Society, she availed an animal loan, which has greatly boosted her income. She is deeply thankful to Mulkanoor Cooperative for supporting her every step of the way.",
-                location: "Karimnagar District",
-            },
-            backgroundColor: "bg-green-100"
-        },
-        {
-
             name: "Shyamsunder Rao",
 
             image: voice3,
@@ -61,6 +50,17 @@ export const Third = () => {
                 location: "Warangal District",
             },
             backgroundColor: "bg-blue-50"
+        },
+        {
+
+            name: "Padma",
+
+            image: voice2,
+            content: {
+                testimonial: "Dale Padma, alongside her father, cultivates paddy on their 4 acres of land with dedication. With the support of Mulkanoor Cooperative Society, she availed an animal loan, which has greatly boosted her income. She is deeply thankful to Mulkanoor Cooperative for supporting her every step of the way.",
+                location: "Karimnagar District",
+            },
+            backgroundColor: "bg-green-100"
         },
         {
             name: "Vanga Sampath",

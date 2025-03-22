@@ -1076,7 +1076,7 @@ const Milestones = () => {
                                         </span>
                                     </div>
                                     <h3 className={`
-                                        mt-4 text-sm cursor-default md:text-base font-medium text-center w-32
+                                        mt-4 text-sm cursor-default md:text-base font-medium text-center w-64
                                         ${activeIndex === index
                                             ? 'text-white'
                                             : activeIndex > index
@@ -1118,7 +1118,7 @@ const Milestones = () => {
                                                 ))}
                                             </div>
                                         </div>
-                                        <p className="text-sm cursor-default md:text-base text-gray-400 italic">
+                                        <p className="text-sm cursor-default md:text-base text-gray-400">
                                             {timelineData[activeIndex].details}
                                         </p>
                                     </div>

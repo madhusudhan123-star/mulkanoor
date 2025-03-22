@@ -230,7 +230,7 @@ const Welfare = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                             >
-                                Community Welfare Initiatives
+                                Community Welfare Activities
                             </motion.h1>
                             <motion.p
                                 className="text-xl cursor-default text-white/90"

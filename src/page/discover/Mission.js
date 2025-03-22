@@ -101,7 +101,7 @@ const Mission = () => {
                   <h2 className="text-3xl cursor-default md:text-4xl font-bold">Our Vision</h2>
                 </div>
                 
-                <div className="mb-6 border-l-4 border-[#a9d18e] pl-4 italic">
+                <div className="mb-6 border-l-4 border-[#a9d18e] pl-4 ">
                   <p className="text-xl cursor-default md:text-2xl font-medium">
                     To uplift the farmers from Poverty to a better socio-economic status and have a dignified life.
                   </p>
@@ -129,7 +129,7 @@ const Mission = () => {
                   <h2 className="text-3xl cursor-default md:text-4xl font-bold text-[#3b3d34]">Our Mission</h2>
                 </div>
                 
-                <div className="mb-6 border-l-4 border-[#3b6e46] pl-4 italic">
+                <div className="mb-6 border-l-4 border-[#3b6e46] pl-4 ">
                   <p className="text-xl cursor-default md:text-2xl font-medium text-[#3b3d34]">
                     Voluntary, Democratic, Accountable, Self Reliant Cooperative to ensure farmer control over Agricultural Production & Marketing.
                   </p>

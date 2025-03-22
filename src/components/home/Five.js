@@ -230,7 +230,7 @@ const Five = () => {
                                                 ))}
                                             </div>
                                         </div>
-                                        <p className="text-sm md:text-base text-gray-600 italic">
+                                        <p className="text-sm md:text-base text-gray-600 ">
                                             {timelineData[activeIndex].details}
                                         </p>
                                     </div>
