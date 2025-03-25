@@ -18,7 +18,53 @@ const riceData = {
     { name: 'Telangana Sona (RNR 15048)', content: "The go-to rice for celebrations! Widely used in Telugu households for festivals and special occasions.", image: card3 }
   ],
   outlets: [
-    'Mulkanoor', 'Hanamkonda', 'Husnabad', 'Huzurabad', 'Karimnagar', 'Hyderabad'
+    { slNo: 1, shopName: 'BHAVANI RICE SHOP', area: 'HYDERABAD', areaPoint: 'UPPAL', ownerName: 'Thirupathi', cellNo: '9966035815' },
+    { slNo: 2, shopName: 'VENKATESHWARA RICE SHOP', area: 'HYDERABAD', areaPoint: 'UPPAL', ownerName: 'Venkateshwarlu', cellNo: '8500177817' },
+    { slNo: 3, shopName: 'M LAXMAREDDY', area: 'HYDERABAD', areaPoint: 'AMEERPET', ownerName: 'Laxma reddy', cellNo: '9848607979' },
+    { slNo: 4, shopName: 'CHANDRA MOHAN RICE SHOP', area: 'HYDERABAD', areaPoint: 'RAJENDRANAGAR', ownerName: 'Chandramohan', cellNo: '9908577040' },
+    { slNo: 5, shopName: 'M/S TEJASWINI RICE', area: 'HYDERABAD', areaPoint: 'NAGOL', ownerName: 'Anji babu', cellNo: '9849855490' },
+    { slNo: 6, shopName: 'E J R ENTERPRISES', area: 'HYDERABAD', areaPoint: 'KAWADIGUDA', ownerName: 'Vinay reddy', cellNo: '9849092626' },
+    { slNo: 7, shopName: 'DHANISHTA TRADERS', area: 'HYDERABAD', areaPoint: 'TARNAKA', ownerName: '', cellNo: '9440067069' },
+    { slNo: 8, shopName: 'LAXMI R/S', area: 'HYDERABAD', areaPoint: 'BACHUPALLY', ownerName: '', cellNo: '7382855991' },
+    { slNo: 9, shopName: 'VENKATESHWARA RICE SHOP', area: 'HYDERABAD', areaPoint: 'PATANCHERUVU', ownerName: '', cellNo: '9000756374' },
+    { slNo: 10, shopName: 'SRI VEERABADRA RICE SHOP', area: 'HANAMKONDA', areaPoint: 'NAIM NAGAR', ownerName: 'Sunny', cellNo: '8919188218' },
+    { slNo: 11, shopName: 'SRI THIRUMALA', area: 'HANAMKONDA', areaPoint: 'SHYAMALA GARDEN', ownerName: 'Rajaseker reddy', cellNo: '9948025768' },
+    { slNo: 12, shopName: 'MULKANOOR FINE RICE', area: 'HANAMKONDA', areaPoint: 'EXCISE COLONY', ownerName: 'Bhasker', cellNo: '9701777078' },
+    { slNo: 13, shopName: 'UMARANI Rice shop', area: 'HANAMKONDA', areaPoint: 'BALASAMUDRAM', ownerName: 'Ramana', cellNo: '9985139667' },
+    { slNo: 14, shopName: 'NANGUNURI DURGADEVI', area: 'HANAMKONDA', areaPoint: '100 FT ROAD', ownerName: 'Raju', cellNo: '7386464955' },
+    { slNo: 15, shopName: 'BHANU R/S', area: 'HANAMKONDA', areaPoint: 'ERRAGATTUGUTTA', ownerName: '', cellNo: '9676395274' },
+    { slNo: 16, shopName: 'SRI VENKATESHWARA', area: 'HANAMKONDA', areaPoint: 'THALLA GOPALPOOR', ownerName: '', cellNo: '9390597549' },
+    { slNo: 17, shopName: 'DHANALAXMI ENTERPRISES', area: 'WARANGAL', areaPoint: 'KASHUBUGGA', ownerName: 'Dhanalaxmi', cellNo: '8328331973' },
+    { slNo: 18, shopName: 'VINODHA RICE SHOP', area: 'WARANGAL', areaPoint: 'DOCTOR COLONY', ownerName: 'Vinoda', cellNo: '9177334424' },
+    { slNo: 19, shopName: 'B P C L RICE SHOP (PREETHI GAS)', area: 'WARANGAL', areaPoint: 'POCHAM MYADAN', ownerName: 'Bhasker', cellNo: '9866247525' },
+    { slNo: 20, shopName: 'SANTHOSHIMATHA R/S', area: 'WARANGAL', areaPoint: 'SANTHOSHIMATHA TEMPLE', ownerName: '', cellNo: '9948147429' },
+    { slNo: 21, shopName: 'RIDHEE ENTERPRISES', area: 'KARIMNAGAR', areaPoint: 'JYOTHINAGAR', ownerName: 'Rajaniker reddy', cellNo: '9704042947' },
+    { slNo: 22, shopName: 'SRI VENKATESHWARA', area: 'KARIMNAGAR', areaPoint: 'KOTHIRAMPOOR', ownerName: 'Vijay', cellNo: '8639618178' },
+    { slNo: 23, shopName: 'MALLIKARJUNA', area: 'KARIMNAGAR', areaPoint: 'KOTHIRAMPOOR', ownerName: 'Thirupathi reddy', cellNo: '9866441544' },
+    { slNo: 24, shopName: 'K D C C', area: 'KARIMNAGAR', areaPoint: 'MARKET ROAD', ownerName: 'Ram reddy', cellNo: '9885062400' },
+    { slNo: 25, shopName: 'SRI RAJARAJESHWARA', area: 'KARIMNAGAR', areaPoint: 'SHANIVARAM ANGADI', ownerName: 'Lavakumar', cellNo: '9949943660' },
+    { slNo: 26, shopName: 'MARUTHI RICE SHOP', area: 'KARIMNAGAR', areaPoint: 'BUSTAND', ownerName: 'Ramakrishna', cellNo: '9246937228' },
+    { slNo: 27, shopName: 'ANNAPURNA RICE DEPO', area: 'KARIMNAGAR', areaPoint: 'RAMNAGAR', ownerName: 'Naresh', cellNo: '7382063630' },
+    { slNo: 28, shopName: 'BHULAXMI RICE DEPO', area: 'KARIMNAGAR', areaPoint: 'RAMNAGAR', ownerName: 'Thirupathi', cellNo: '9885812962' },
+    { slNo: 29, shopName: 'BHAVANANDAN R', area: 'KARIMNAGAR', areaPoint: 'CHAITANYAPURI', ownerName: '', cellNo: '9885844292' },
+    { slNo: 30, shopName: 'SRI GAYATHRI R/S', area: 'KARIMNAGAR', areaPoint: 'NEAR APPOLLO HOSPITAL', ownerName: '', cellNo: '9447641499' },
+    { slNo: 31, shopName: 'ANNAPURNA RICE DEPO', area: 'KARIMNAGAR', areaPoint: 'GANESH NAGAR', ownerName: '', cellNo: '9849360649' },
+    { slNo: 32, shopName: 'MAHALAXMI', area: 'GANGADHARA', areaPoint: 'GANGADHARA', ownerName: '', cellNo: '9948005885' },
+    { slNo: 33, shopName: 'SRINIVASA RICE SHOP', area: 'GODAVARIKANI', areaPoint: 'THILAK NAGAR', ownerName: 'Srinivas', cellNo: '9912090098' },
+    { slNo: 34, shopName: 'SRI LAXMI RICE SHOP', area: 'GODAVARIKANI', areaPoint: 'JYOTHI NAGAR', ownerName: 'Rajesh', cellNo: '9949939920' },
+    { slNo: 35, shopName: 'SRI LAXMI RICE SHOP', area: 'KESHAVAPATNAM', areaPoint: 'KESHVAPATNAM', ownerName: '', cellNo: '8500570458' },
+    { slNo: 36, shopName: 'RAJARAJESHWARA', area: 'JAGITHYAL', areaPoint: 'MARKET', ownerName: 'Srinivas', cellNo: '9441774050' },
+    { slNo: 37, shopName: 'SRI RAJARAJESHWARA', area: 'JAGITHYAL', areaPoint: 'BUSTAND', ownerName: 'Mahesh', cellNo: '9849423861' },
+    { slNo: 38, shopName: 'BHARATHI RICE DEPO', area: 'ELKATHURTHY', areaPoint: 'NEAR POLICE STATION', ownerName: 'Ravinder', cellNo: '9966001665' },
+    { slNo: 39, shopName: 'SRIMATHI', area: 'ELKATHURTHY', areaPoint: 'SIDDIPET ROAD', ownerName: '', cellNo: '8897071866' },
+    { slNo: 40, shopName: 'SAGUMITHRA FARMERS', area: 'GOPALPOOR', areaPoint: '', ownerName: 'NAVEEN', cellNo: '9110777464' },
+    { slNo: 41, shopName: 'HUSNABAD RICE SHOP', area: 'HUSNABAD', areaPoint: 'HNK Road', ownerName: 'Mahender reddy', cellNo: '7981958509' },
+    { slNo: 42, shopName: 'HANSIKA RICE SHOP', area: 'HUZURZBAD', areaPoint: 'SAIDAPOOR ROAD', ownerName: 'Chakrapani', cellNo: '9393424530' },
+    { slNo: 43, shopName: 'SARGAM LAXMINARAYANA', area: 'HUZURZBAD', areaPoint: 'NEAR AMBEDKAR CENTRE', ownerName: '', cellNo: '9247125942' },
+    { slNo: 44, shopName: 'MANISHWARA', area: 'JAMMIKUNTA', areaPoint: 'VEENAVANKA ROAD', ownerName: 'Ashok', cellNo: '9989141333' },
+    { slNo: 45, shopName: 'SANTHOSH RICE SHOP', area: 'PARKAL', areaPoint: 'BUSTAND', ownerName: 'Santhosh', cellNo: '9849502353' },
+    { slNo: 46, shopName: 'SRINIVASA RICE SHOP', area: 'SYDAPOOR', areaPoint: '', ownerName: 'SRINIVAS', cellNo: '9441891220' },
+    { slNo: 47, shopName: 'LUCKY RICE SHOP', area: 'VELAIR', areaPoint: '', ownerName: 'SADANANDAM', cellNo: '9966512259' }
   ],
   salesData: [
     {
@@ -157,21 +203,40 @@ const RetailSection = ({ outlets }) => (
         Our Retail Outlets
       </h2>
       <p className="text-center cursor-default text-amber-700 mb-8">
-        Find us at over 20 locations across these major towns
+        Find our premium rice products at these authorized retail locations
       </p>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        {outlets.map((outlet, index) => (
-          <motion.div
-            key={index}
-            className="bg-white p-4 rounded-lg shadow-md text-center"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: index * 0.1 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <h3 className="text-amber-900 font-semibold">{outlet}</h3>
-          </motion.div>
-        ))}
+      
+      <div className="overflow-x-auto shadow-lg rounded-lg">
+        <table className="w-full bg-white">
+          <thead>
+            <tr className="bg-amber-100">
+              <th className="p-3 text-left text-amber-900 font-semibold border-b">SL. NO</th>
+              <th className="p-3 text-left text-amber-900 font-semibold border-b">SHOP NAME</th>
+              <th className="p-3 text-left text-amber-900 font-semibold border-b">AREA</th>
+              <th className="p-3 text-left text-amber-900 font-semibold border-b">AREA POINT</th>
+              <th className="p-3 text-left text-amber-900 font-semibold border-b">OWNER NAME</th>
+              <th className="p-3 text-left text-amber-900 font-semibold border-b">CELL NO</th>
+            </tr>
+          </thead>
+          <tbody>
+            {outlets.map((outlet, index) => (
+              <motion.tr
+                key={index}
+                className="border-b border-amber-50 hover:bg-amber-50"
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.02 }}
+              >
+                <td className="p-3 text-amber-900">{outlet.slNo}</td>
+                <td className="p-3 font-medium">{outlet.shopName}</td>
+                <td className="p-3">{outlet.area}</td>
+                <td className="p-3">{outlet.areaPoint}</td>
+                <td className="p-3">{outlet.ownerName || '-'}</td>
+                <td className="p-3">{outlet.cellNo}</td>
+              </motion.tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   </section>

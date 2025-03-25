@@ -38,7 +38,7 @@ const Agrinput = () => {
             id: "fertilizers",
             title: "Fertilizers",
             icon: <GiFertilizerBag className="text-5xl" />,
-            content: "Mulkanoor Cooperative Society supports farmers by providing a wide range of high-quality fertilizers essential for soil health and crop productivity. By ensuring access to the right fertilizers at affordable prices, the society helps farmers achieve better yields, sustain soil fertility, and enhance overall agricultural efficiency.",
+            content: "Mulkanoor Cooperative Society supports farmers by providing a wide range of high-quality fertilizers essential for soil health and crop productivity. By ensuring access to the right fertilizers at affordable prices, the society helps farmers achieve better yields, sustain soil fertility, and enhance overall agricultural efficiency.Mulkanoor Cooperative Society operates in 18 villages, ensuring easy access to fertilizers with dedicated outlets in each village. This strategic setup minimizes time, transportation, manpower costs, and resource wastage for farmers.",
             image: ag1,
             color: "from-green-700 to-green-600"
         },
@@ -69,21 +69,8 @@ const Agrinput = () => {
             {
                 title: "Agricultural Implements & Irrigation",
                 items: "Digging of wells, electric motors, pipelines, drip irrigation, and sprinklers."
-            },
-            {
-                title: "Farm Machinery",
-                items: "Maize shellers, rotovators, tractor trailers, and other essential equipment."
-            },
-            {
-                title: "Allied Agricultural Activities",
-                items: "Dairy farming, sheep rearing, horticulture crops, and sericulture."
-            },
-            {
-                title: "Welfare Initiatives",
-                items: "Construction of toilets, solar lanterns, and LPG gas connections."
             }
         ],
-        conclusion: "These loans help farmers improve productivity, adopt modern techniques, and enhance their overall well-being.",
         image: ag4
     };
 
@@ -243,31 +230,6 @@ const Agrinput = () => {
 
             {/* Main Content */}
             <div className="pt-16">
-                {/* Stats Section */}
-                <div className="container mx-auto px-4 mb-16">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        {stats.map((stat, index) => (
-                            <motion.div
-                                key={index}
-                                className="bg-white/80 cursor-default backdrop-blur-sm rounded-xl p-6 text-center"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.1 }}
-                                viewport={{ once: true }}
-                            >
-                                <motion.div
-                                    className="text-3xl md:text-4xl cursor-default  font-bold text-[#2E7D32] mb-2"
-                                    initial={{ scale: 0 }}
-                                    whileInView={{ scale: 1 }}
-                                    transition={{ type: "spring", delay: index * 0.1 }}
-                                >
-                                    {stat.value}
-                                </motion.div>
-                                <div className="text-sm cursor-default text-[#1B5E20]">{stat.label}</div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
 
                 {/* New Content Sections */}
                 <div className="container mx-auto px-4 mb-20">
@@ -366,14 +328,14 @@ const Agrinput = () => {
                                         <p className="text-[#1B5E20] cursor-default">{category.items}</p>
                                     </motion.div>
                                 ))}
-                                <motion.div
+                                {/* <motion.div
                                     className="bg-gradient-to-br from-green-600 to-green-700 rounded-xl p-6 text-white shadow-lg"
                                     initial={{ y: 30, opacity: 0 }}
                                     whileInView={{ y: 0, opacity: 1 }}
                                     transition={{ duration: 0.5, delay: 0.5 }}
                                 >
                                     <p className="text-lg font-medium">{agriImplementsData.conclusion}</p>
-                                </motion.div>
+                                </motion.div> */}
                                 <div className="rounded-xl overflow-hidden shadow-xl mt-8 lg:hidden">
                                     <img 
                                         src={agriImplementsData.image} 

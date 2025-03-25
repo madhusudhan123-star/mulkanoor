@@ -72,7 +72,7 @@ const Paddy = () => {
                 />
             </Helmet>
             {/* Interactive Hero Section */}
-            <div className="relative h-[500px] mb-16 overflow-hidden">
+            {/* <div className="relative h-[500px] mb-16 overflow-hidden">
                 <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600"
                     initial={{ opacity: 0 }}
@@ -107,7 +107,7 @@ const Paddy = () => {
                         </p>
                     </motion.div>
                 </div>
-            </div>
+            </div> */}
 
             {/* Process Banner */}
             <div className="relative mb-16">
@@ -129,9 +129,7 @@ const Paddy = () => {
                         <FaSeedling className="inline-block cursor-default mr-3 mb-1" />
                         Our Seed Production Process
                     </h2>
-                    <p className="text-xl cursor-default text-gray-100 max-w-3xl mx-auto">
-                        Multiplication of breeder paddy seed into Foundation seed then to truthful seed in progressive farmers fields under the expert supervision of our society Agriculture Officers.
-                    </p>
+                    <p className="text-xl cursor-default text-gray-100 max-w-3xl mx-auto">Multiplication of breeder paddy seed into Foundation seed then to truthful seed in farmers’ fields under the expert supervision of our society Agriculture Officers.</p>
                 </motion.div>
             </div>
 

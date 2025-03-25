@@ -161,9 +161,6 @@ const Home = () => {
                     {/* <Head /> */}
                 </section>
 
-                {/* Other sections with consistent spacing and animations */}
-                {/* <motion.section className="min-h-screen w-full overflow-hidden py-20">
-                </motion.section> */}
 
                 <motion.div
                     className="bg-white/95 backdrop-blur-sm text-black w-full overflow-hidden"

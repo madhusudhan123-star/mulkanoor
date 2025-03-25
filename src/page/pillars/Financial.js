@@ -17,6 +17,12 @@ import cardtwo from '../../assets/financial/card2.jpg';
 import banner from '../../assets/financial/banner.jpg';
 import card3 from '../../assets/financial/card3.jpg';
 import card4 from '../../assets/financial/card4.jpg';
+import card5 from '../../assets/financial/card5.png';
+import card6 from '../../assets/financial/card6.png';
+import card7 from '../../assets/financial/card1.png';
+import card8 from '../../assets/financial/card2.png';
+import card9 from '../../assets/financial/card3.png';
+import card10 from '../../assets/financial/card4.png';
 
 const Financial = () => {
   return (
@@ -112,7 +118,7 @@ const Financial = () => {
               <ul className="space-y-4">
                 <li className="flex cursor-default items-start">
                   <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
-                  <span>Currently, farmers can avail crop loans of ₹24,000 per acre, with a maximum limit of 10 acres (₹2,40,000) at an interest rate of 7% per annum.</span>
+                  <span>Currently, farmers can avail crop loans of ₹ 40,000 per acre, with a maximum limit of Rs 5 Lakh with an interest rate of 7% per annum</span>
                 </li>
                 <li className="flex cursor-default items-start">
                   <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
@@ -120,7 +126,7 @@ const Financial = () => {
                 </li>
               </ul>
               
-              <div className="bg-blue-50 p-6 rounded-lg mt-6">
+              {/* <div className="bg-blue-50 p-6 rounded-lg mt-6">
                 <h4 className="text-lg cursor-default font-semibold mb-3">Zero-Interest Scheme</h4>
                 <ul className="space-y-3">
                   <li className="flex cursor-default items-start">
@@ -132,7 +138,7 @@ const Financial = () => {
                     <span>For crop loans between ₹1-3 lakhs: 1% State + 3% Central subvention = 3% effective interest</span>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
             
             <div>
@@ -148,39 +154,42 @@ const Financial = () => {
         {/* Medium Term Loans Section */}
         <div className="bg-white rounded-lg shadow-md p-8 mb-16">
           <div className="flex items-center mb-8">
-            <FaTools className="w-10 h-10 text-blue-700 mr-4" />
-            <h2 className="text-3xl cursor-default font-bold text-gray-900">Medium Term Loans</h2>
+            <FaTools className="w-10 h-10 text-green-700 mr-4" />
+            <div className='flex flex-col'>
+              <h2 className="text-3xl cursor-default font-bold text-gray-900">Medium Term Loans</h2>
+              <p>The loan is to be repaid within 3 years at an interest rate of 10% per annum, with each crop cutting season considered as one instalment.</p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[{
-                icon: <FaWater className="w-8 h-8 text-blue-700 mb-2" />,
+                icon: <FaWater className="w-8 h-8 text-green-700 mb-2" />,
                 title: "Irrigation Solutions",
                 items: ["Minor irrigation projects", "Well digging & electric motors", "Pipelines", "Drip irrigation", "Sprinklers"]
               },
               {
-                icon: <FaTractor className="w-8 h-8 text-blue-700 mb-2" />,
+                icon: <FaTractor className="w-8 h-8 text-green-700 mb-2" />,
                 title: "Farm Machinery",
                 items: ["Maize shellers", "Rotovators", "Tractor trailers", "Modern implements"]
               },
               {
-                icon: <FaTree className="w-8 h-8 text-blue-700 mb-2" />,
+                icon: <FaTree className="w-8 h-8 text-green-700 mb-2" />,
                 title: "Agri-Allied Activities",
                 items: ["Dairy farming", "Sheep rearing", "Horticulture crops", "Sericulture"]
               },
               {
-                icon: <FaHandHoldingHeart className="w-8 h-8 text-blue-700 mb-2" />,
+                icon: <FaHandHoldingHeart className="w-8 h-8 text-green-700 mb-2" />,
                 title: "Welfare Activities",
                 items: ["Toilet construction", "Solar lanterns", "LPG gas connections", "Community infrastructure"]
               }
             ].map((card, index) => (
-              <div key={index} className="bg-blue-50 rounded-lg p-6">
+              <div key={index} className="bg-green-50 rounded-lg p-6">
                 {card.icon}
                 <h3 className="text-lg cursor-default font-semibold mb-3">{card.title}</h3>
                 <ul className="space-y-2">
                   {card.items.map((item, idx) => (
                     <li key={idx} className="flex cursor-default items-start">
-                      <span className="w-1.5 h-1.5 bg-blue-700 rounded-full mt-2 mr-2"></span>
+                      <span className="w-1.5 h-1.5 bg-green-700 rounded-full mt-2 mr-2"></span>
                       <span className="text-gray-700 cursor-default">{item}</span>
                     </li>
                   ))}
@@ -190,70 +199,73 @@ const Financial = () => {
           </div>
         </div>
 
-        {/* Long-Term & General Loans Section */}
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <div className="flex items-center mb-6">
-              <FaTractor className="w-10 h-10 text-blue-700 mr-4" />
-              <h2 className="text-2xl cursor-default font-bold text-gray-900">Long-Term Loans</h2>
+        {/* Long-Term */}
+          <div className="">
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <div className="flex items-center mb-6">
+                <FaTractor className="w-10 h-10 text-blue-700 mr-4" />
+                <h2 className="text-2xl cursor-default font-bold text-gray-900">Long-Term Loans</h2>
+              </div>
+              <ul className="space-y-4 mb-6">
+                <li className="flex items-start">
+            <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
+            <span className="text-gray-700 cursor-default">Long-term loans are to be repaid within 7 years at an interest rate of 10% per annum.</span>
+                </li>
+                <li className="flex items-start">
+            <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
+            <span className="text-gray-700 cursor-default">Financing for tractors, harvesters, and paddy plantation machines</span>
+                </li>
+              </ul>
+              <div className="grid grid-cols-2 gap-4">
+                <img 
+            src={card5} 
+            alt="Long-Term Loan Illustration" 
+            className="w-full h-auto rounded-lg shadow-md"
+                />
+                <img 
+            src={card6} 
+            alt="Long-Term Loan Illustration" 
+            className="w-full h-auto rounded-lg shadow-md"
+                />
+              </div>
             </div>
-            <ul className="space-y-4 mb-6">
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
-                <span className="text-gray-700 cursor-default">Financing for tractors, harvesters, and paddy plantation machines</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
-                <span className="text-gray-700 cursor-default">Establishment of citrus and mango orchards with 5-year gestation period</span>
-              </li>
-            </ul>
-            <img 
-              src={cardone} 
-              alt="Long-Term Loan Illustration" 
-              className="w-full h-auto rounded-lg shadow-md"
-            />
           </div>
 
-          <div className="bg-white rounded-lg shadow-md p-8">
+            {/* General Term Loans */}
+          <div className="bg-white rounded-lg shadow-md mt-4 p-8">
             <div className="flex items-center mb-6">
-              <FaHouseUser className="w-10 h-10 text-blue-700 mr-4" />
+              <FaHouseUser className="w-10 h-10 text-green-700 mr-4" />
               <h2 className="text-2xl cursor-default font-bold text-gray-900">General Term Loans</h2>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-4 gap-4">
               {[
                 {
-                  icon: "🏥",
-                  title: "Medical",
-                  items: ["Emergency care", "Hospitalization", "Treatment"]
+                  icon: card7,
+                  title: "Emergency Hospitalization support",
                 },
                 {
-                  icon: "🎓",
-                  title: "Education",
+                  icon: card8,
+                  title: "Higher Education",
                   items: ["School fees", "Higher education", "Skill development"]
                 },
                 {
-                  icon: "💒",
-                  title: "Marriage",
+                  icon: card9,
+                  title: "Community Celebrations",
                   items: ["Ceremony expenses", "Family events", "Community celebrations"]
                 },
                 {
-                  icon: "🏠",
+                  icon: card10,
                   title: "Housing",
                   items: ["Construction", "Renovation", "Infrastructure improvement"]
                 }
               ].map((item, index) => (
-                <div key={index} className="bg-blue-50 rounded-lg p-4">
-                  <div className="text-2xl mb-2">{item.icon}</div>
+                <div key={index} className="bg-green-50 rounded-lg p-4">
+                  <img src={item.icon} />
                   <h3 className="font-medium cursor-default mb-2">{item.title}</h3>
-                  <ul className="text-sm text-gray-600">
-                    {item.items.map((sub, idx) => (
-                      <li key={idx} className="mb-1 cursor-default">{sub}</li>
-                    ))}
-                  </ul>
                 </div>
               ))}
             </div>
-          </div>
+          
         </div>
       </div>
     </div>

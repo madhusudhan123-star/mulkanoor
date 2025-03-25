@@ -3,10 +3,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaChevronRight, FaUsers, FaRupeeSign, FaSeedling } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
-
-
-// Replace the dummy image with an actual image showing farmers or cooperative progress
-import heroImage from '../assets/dummy.jpeg'; // TODO: Replace with actual hero image path
+import card1 from '../assets/cta/card1.png';
+import card2 from '../assets/cta/card2.png';
 
 const Cta = () => {
     // Counter animation state and logic
@@ -104,43 +102,7 @@ const Cta = () => {
                 <title>Mulkanoor - Our Impact</title>
                 <meta name="description" content="Discover Mulkanoor Cooperative's impact through sustainable farming, financial empowerment, and community development. See our progress in numbers."/>
             </Helmet>
-            {/* Hero Section */}
-            <motion.div
-                className="relative h-[50vh] md:h-[60vh] overflow-hidden"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-            >
-                <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{
-                        backgroundImage: `url(${heroImage})`,
-                        backgroundPosition: 'center 30%'
-                    }}
-                >
-                    {/* Add a slightly stronger overlay to ensure text readability on any background */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/75 to-black/50" />
-                </div>
-
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="container mx-auto px-4 md:px-8">
-                        <motion.div
-                            className="max-w-3xl mx-auto text-center text-white"
-                            initial={{ y: 30, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 0.2, duration: 0.8 }}
-                        >
-                            <h1 className="text-3xl cursor-default md:text-5xl lg:text-6xl font-bold mb-4">
-                                Our Journey of Progress
-                            </h1>
-                            <p className="text-lg cursor-default md:text-xl text-white/90">
-                                Transforming lives through sustainable cooperation
-                            </p>
-                        </motion.div>
-                    </div>
-                </div>
-            </motion.div>
-
+            
             {/* Main Content */}
             <div className="py-16 md:py-20 bg-gradient-to-br from-[#F5F5DC]/40 to-white/90">
                 <div className="container mx-auto px-4 md:px-8">
@@ -175,6 +137,66 @@ const Cta = () => {
                             </p>
                         </div>
                     </motion.div>
+                </div>
+            </div>
+
+            {/* Before & After Transformation Section */}
+            <div className="py-16 md:py-20 bg-gradient-to-br from-white to-[#F5F5DC]/30">
+                <div className="container mx-auto px-4 md:px-8">
+                    <motion.div 
+                        className="text-center mb-12"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="text-2xl cursor-default md:text-4xl font-medium text-[#005A32] mb-3">
+                            Our Transformation Journey
+                        </h2>
+                        <p className="text-gray-600 cursor-default max-w-2xl mx-auto">
+                            Witness the remarkable evolution of our cooperative and its positive impact on the community
+                        </p>
+                    </motion.div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <motion.div
+                            className="relative"
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6 }}
+                            viewport={{ once: true }}
+                        >
+                            <div className="overflow-hidden rounded-xl shadow-lg border-2 border-[#98fb98]/30 h-80 md:h-96">
+                                <img 
+                                    src={card1} 
+                                    alt="Before - Initial farming conditions" 
+                                    className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
+                                />
+                            </div>
+                            <div className="absolute top-4 left-4 bg-[#005A32] text-white py-2 px-4 rounded-lg font-medium">
+                                BEFORE
+                            </div>
+                        </motion.div>
+                        
+                        <motion.div
+                            className="relative"
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                            viewport={{ once: true }}
+                        >
+                            <div className="overflow-hidden rounded-xl shadow-lg border-2 border-[#98fb98]/30 h-80 md:h-96">
+                                <img 
+                                    src={card2} 
+                                    alt="After - Improved agricultural practices" 
+                                    className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
+                                />
+                            </div>
+                            <div className="absolute top-4 right-4 bg-green-600 text-white py-2 px-4 rounded-lg font-medium">
+                                AFTER
+                            </div>
+                        </motion.div>
+                    </div>
                 </div>
             </div>
 

@@ -5,6 +5,8 @@ import { GiCottonFlower } from 'react-icons/gi';
 import CountUp from 'react-countup';
 import cottom from '../../assets/cotton/cotton.jpg'
 import { Helmet } from 'react-helmet'
+import card1 from '../../assets/cotton/card1.JPG'
+import card2 from '../../assets/cotton/card2.JPG'
 
 const Cotton = () => {
     const salesData = [
@@ -134,6 +136,55 @@ const Cotton = () => {
                     ))}
                 </div>
             </div>
+
+            {/* Cotton Factory Showcase */}
+            <section className="container mx-auto px-4 mb-20">
+                <motion.h2 
+                    className="text-3xl font-bold text-center mb-10 text-gray-800"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    Our Cotton Factory
+                </motion.h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <motion.div
+                        className="rounded-2xl overflow-hidden shadow-lg"
+                        initial={{ opacity: 0, x: -30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5 }}
+                        whileHover={{ scale: 1.03 }}
+                    >
+                        <img 
+                            src={card1} 
+                            alt="Cotton processing facility" 
+                            className="w-full h-64 object-cover"
+                        />
+                        {/* <div className="p-5 bg-white">
+                            <h3 className="text-xl font-semibold mb-2">Advanced Processing Facility</h3>
+                            <p className="text-gray-600">Our state-of-the-art cotton processing unit ensures premium quality lint production with optimal efficiency.</p>
+                        </div> */}
+                    </motion.div>
+                    
+                    <motion.div
+                        className="rounded-2xl overflow-hidden shadow-lg"
+                        initial={{ opacity: 0, x: 30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        whileHover={{ scale: 1.03 }}
+                    >
+                        <img 
+                            src={card2} 
+                            alt="Cotton production line" 
+                            className="w-full h-64 object-cover"
+                        />
+                        {/* <div className="p-5 bg-white">
+                            <h3 className="text-xl font-semibold mb-2">Quality Production</h3>
+                            <p className="text-gray-600">We maintain rigorous quality standards throughout our cotton processing and packaging operations.</p>
+                        </div> */}
+                    </motion.div>
+                </div>
+            </section>
 
             {/* Interactive Statistics Section */}
             <section className="container mx-auto px-4 mb-20">

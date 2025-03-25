@@ -8,7 +8,7 @@ import { IoMdWater } from 'react-icons/io';
 import { BiBuildingHouse, BiBookReader } from 'react-icons/bi';
 import { RiWomenLine, RiGovernmentLine } from 'react-icons/ri';
 import banner from '../../assets/values/banner.jpg';
-import card1 from '../../assets/values/card1.jpg';
+import card1 from '../../assets/values/card1.JPG';
 import card2 from '../../assets/values/card2.jpg';
 import card3 from '../../assets/values/card3.jpg';
 // import card4 from '../../assets/values/card4.png';
