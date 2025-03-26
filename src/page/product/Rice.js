@@ -13,9 +13,9 @@ import { Helmet } from 'react-helmet'
 // Data
 const riceData = {
   varieties: [
-    { name: 'Sona Masoori (BPT 5204)', content: "The preferred choice for over 15 years! Light, tasty, and perfect for everyday meals.", image: card1 },
-    { name: 'Jai Sri Ram', content: "ICAR-approved & patented! A healthier alternative with a low glycemic index, making it ideal for people with diabetes.", image: card2 },
-    { name: 'Telangana Sona (RNR 15048)', content: "The go-to rice for celebrations! Widely used in Telugu households for festivals and special occasions.", image: card3 }
+    { name: 'Sona Masoori (BPT 5204)', content: "The preferred choice for over 15 years ! Light, tasty, and perfect for everyday meals.", image: card1 },
+    { name: 'Jai Sri Ram', content: "The go-to rice for celebrations! Widely used in Telugu households for festivals and special occasions.", image: card2 },
+    { name: 'Telangana Sona (RNR 15048)', content: "ICAR-approved & patented! A healthier alternative with a low glycemic index, making it ideal for people with diabetes.", image: card3 }
   ],
   outlets: [
     { slNo: 1, shopName: 'BHAVANI RICE SHOP', area: 'HYDERABAD', areaPoint: 'UPPAL', ownerName: 'Thirupathi', cellNo: '9966035815' },
@@ -365,21 +365,21 @@ const Rice = () => {
       {/* Hero Section */}
       <HeroSection image={riceData.bannerImages.main} />
       {/* Varieties Section */}
-      <SectionBanner 
+      {/* <SectionBanner 
         image={riceData.bannerImages.varieties} 
         title="Discover Our Premium Varieties" 
         icon={FaBowlRice} 
         description="Each grain tells a story of quality and tradition" 
-      />
+      /> */}
       <VarietiesSection varieties={riceData.varieties} />
 
       {/* Retail Section */}
-      <SectionBanner 
+      {/* <SectionBanner 
         image={riceData.bannerImages.retail} 
         title="Our Distribution Network" 
         icon={FaStore} 
         description="Find us at convenient locations across major towns" 
-      />
+      /> */}
       <RetailSection outlets={riceData.outlets} />
 
       {/* Performance Section */}

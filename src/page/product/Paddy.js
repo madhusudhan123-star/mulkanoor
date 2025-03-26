@@ -109,7 +109,7 @@ const Paddy = () => {
                 </div>
             </div> */}
 
-            {/* Process Banner */}
+            {/* Seed Production Process - Now more prominent */}
             <div className="relative mb-16">
                 <div className="absolute inset-0 h-[300px] w-full">
                     <div className="absolute inset-0 bg-black/50 z-10" />
@@ -125,11 +125,15 @@ const Paddy = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2 className="text-4xl font-bold mb-4 text-white">
+                    <h2 className="text-4xl font-bold mb-6 text-white">
                         <FaSeedling className="inline-block cursor-default mr-3 mb-1" />
                         Our Seed Production Process
                     </h2>
-                    <p className="text-xl cursor-default text-gray-100 max-w-3xl mx-auto">Multiplication of breeder paddy seed into Foundation seed then to truthful seed in farmers’ fields under the expert supervision of our society Agriculture Officers.</p>
+                    <div className="bg-white/20 backdrop-blur-sm p-6 md:p-8 rounded-xl max-w-4xl mx-auto">
+                        <p className="text-xl cursor-default text-white font-medium leading-relaxed">
+                            Multiplication of breeder paddy seed into Foundation seed then to truthful seed in farmers' fields under the expert supervision of our society Agriculture Officers.
+                        </p>
+                    </div>
                 </motion.div>
             </div>
 

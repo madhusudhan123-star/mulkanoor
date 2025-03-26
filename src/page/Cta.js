@@ -120,8 +120,8 @@ const Cta = () => {
                         <div className="bg-white/70 backdrop-blur-sm rounded-xl p-6 md:p-8 shadow-lg border border-yellow-200">
                             <p className="text-gray-700 cursor-default leading-relaxed mb-6 text-lg md:text-xl">
                                 Driving holistic progress to uplift farmers, their families, and the community,
-                                Mulkanoor Cooperative Society stands as a beacon of trust, innovation, and
-                                collaboration. Over decades, the society has transformed the lives of countless
+                                Mulkanoor Cooperative Society stands as a beacon of trust, collaboration, and
+                                innovation. Over decades, the society has transformed the lives of countless
                                 farming families by providing them with access to modern agricultural practices,
                                 fair financial opportunities, and reliable market linkages.
                             </p>
@@ -176,6 +176,9 @@ const Cta = () => {
                             <div className="absolute top-4 left-4 bg-[#005A32] text-white py-2 px-4 rounded-lg font-medium">
                                 BEFORE
                             </div>
+                            <div>
+                                <h1 className='text-center text-gray-600 text-2xl mt-2 cursor-default max-w-2xl mx-auto'>Poor farmers in dire situations</h1>
+                            </div>
                         </motion.div>
                         
                         <motion.div
@@ -194,6 +197,9 @@ const Cta = () => {
                             </div>
                             <div className="absolute top-4 right-4 bg-green-600 text-white py-2 px-4 rounded-lg font-medium">
                                 AFTER
+                            </div>
+                            <div>
+                                <h1 className='text-center text-gray-600 text-2xl mt-2 cursor-default max-w-2xl mx-auto'>Smiles of Prosperity</h1>
                             </div>
                         </motion.div>
                     </div>

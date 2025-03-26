@@ -29,6 +29,8 @@ import SearchResults from "./page/SearchResults";
 import Cta from './page/Cta'
 import Media from "./page/Media";
 import { HelmetProvider } from "react-helmet-async";
+import Product from "./page/product/Product";
+import Marketing from "./page/Marketing";
 
 // Create a ScrollToTop component
 function ScrollToTop() {
@@ -74,6 +76,8 @@ function AppContent() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/cta" element={<Cta />} />
           <Route path="/media" element={<Media />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/marketing" element={<Marketing />} />
         </Routes>
       </div>
       <Footer />

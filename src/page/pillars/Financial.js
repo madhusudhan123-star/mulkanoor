@@ -122,7 +122,7 @@ const Financial = () => {
                 </li>
                 <li className="flex cursor-default items-start">
                   <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
-                  <span>Both the State and Central Governments offer a Zero-Interest Scheme for farmers who repay their crop loans on time.</span>
+                  <span> Under the Modified Interest Subvention Scheme, farmers who repay their loans on time are eligible for a 3% interest subvention from the Central Government.</span>
                 </li>
               </ul>
               
