@@ -20,7 +20,7 @@ const cardData = [
         title: "Cotton",
         // content: "Fostering holistic growth to enhance the overall well-being of farmers, their families, and the broader community.",
         image: card1,
-        url: '/discover/mission'
+        url: '/product/cotton'
     }
 ];
 

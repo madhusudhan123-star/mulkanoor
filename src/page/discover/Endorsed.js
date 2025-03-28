@@ -47,7 +47,7 @@ const Modal = ({ founder, isOpen, onClose }) => {
                         {founder.period && (
                             <p className="text-lg text-gray-400 mb-4">{founder.period}</p>
                         )}
-                        <p className="text-lg leading-relaxed text-gray-300">{founder.bio}</p>
+                        <p className="text-xl leading-relaxed text-yellow-400">{founder.bio}</p>
                     </div>
                 </div>
                 <button

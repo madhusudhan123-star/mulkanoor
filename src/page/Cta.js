@@ -121,9 +121,7 @@ const Cta = () => {
                             <p className="text-gray-700 cursor-default leading-relaxed mb-6 text-lg md:text-xl">
                                 Driving holistic progress to uplift farmers, their families, and the community,
                                 Mulkanoor Cooperative Society stands as a beacon of trust, collaboration, and
-                                innovation. Over decades, the society has transformed the lives of countless
-                                farming families by providing them with access to modern agricultural practices,
-                                fair financial opportunities, and reliable market linkages.
+                                innovation.Over decades, the society has transformed the lives of several farmers by providing them with access to fair financial opportunities, modern agricultural practices, and reliable market linkages.
                             </p>
 
                             <p className="text-gray-700 cursor-default leading-relaxed mb-6 text-lg md:text-xl">

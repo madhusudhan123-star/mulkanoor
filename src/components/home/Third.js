@@ -36,29 +36,29 @@ export const Third = () => {
             image: voice1,
             content: {
                 testimonial: "Latha, despite facing immense hardships, continues to move forward with unwavering determination. Losing her father, mother, and husband did not break her spirit. With the support of Mulkanoor Cooperative Society, she has been able to cultivate her 4 acres of land alongside her sisters and secure a bright future for her son through education. She remains ever grateful to Mulkanoor Cooperative for being a guiding light in her journey.",
-                location: "Mulkanoor Village",
+                location: "Kotthapalli",
             },
             backgroundColor: "bg-yellow-100"
         },
         {
 
-            name: "Shyamsunder Rao",
+            name: "Shyam Sunder",
 
             image: voice3,
             content: {
-                testimonial: "With the financial support from Mulkanoor Cooperative Society, I was able to invest in a new tractor. This has drastically reduced my labor costs and improved the efficiency of my farming operations. Today, my land productivity has increased, and I’m able to meet the growing demands of the market.",
-                location: "Warangal District",
+                testimonial: "Shyam Sunder, a paddy farmer from Gopalpur village, took a loan from Mulkanoor Cooperative Society to support his farming needs. With timely financial assistance, he successfully cultivated his crops, ensuring a bountiful harvest. Grateful for the support, he credits the cooperative for his farm’s growth and stability.",
+                location: "Gopalpur Village",
             },
             backgroundColor: "bg-blue-50"
         },
         {
 
-            name: "Padma",
+            name: "Dale Padma",
 
             image: voice2,
             content: {
                 testimonial: "Dale Padma, alongside her father, cultivates paddy on their 4 acres of land with dedication. With the support of Mulkanoor Cooperative Society, she availed an animal loan, which has greatly boosted her income. She is deeply thankful to Mulkanoor Cooperative for supporting her every step of the way.",
-                location: "Karimnagar District",
+                location: " Bheemadevarapally Village",
             },
             backgroundColor: "bg-green-100"
         },
@@ -66,8 +66,8 @@ export const Third = () => {
             name: "Vanga Sampath",
             image: voice4,
             content: {
-                testimonial: "With the financial support from Mulkanoor Cooperative Society, I was able to invest in a new tractor. This has drastically reduced my labor costs and improved the efficiency of my farming operations. Today, my land productivity has increased, and I’m able to meet the growing demands of the market.",
-                location: "Siddipet District",
+                testimonial: "He took a loan from Mulkanoor Cooperative Society to dig a well, which turned into a valuable water source for his farm. This well now provides a reliable irrigation system, ensuring better crop yields. He remains grateful to the cooperative for empowering his agricultural journey.",
+                location: "Ratnagiri village",
             },
             backgroundColor: "bg-amber-50"
         }

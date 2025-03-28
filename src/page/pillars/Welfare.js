@@ -299,15 +299,19 @@ const Welfare = () => {
                     image={images.water}
                     reverse={false}
                     content={
-                        <>
-                            <p>During times of continuous drought, the society took the initiative to provide drinking water to villages by digging bore wells, ensuring a reliable water source for the community in times of need.</p>
+                        <ul class="list-[circle] pl-5">
+                            <li className='pl-5'>Funeral expenses – Rs.10,000/- and 100 kg. fine rice is given to deceased family on demise of Member / Member Spouse.</li>
+                            <li className='pl-5'>Crop loan Waiver Scheme- Deceased Members Crop Loan amount up to Rs. 1,50,000/- is waived from society funds</li>
+                            <li className='pl-5'>  AKVR Old age Pension Scheme- Members having 35 years of Membership and age above 65 years are being paid pension @1000/- per month</li>
+
+                            <li className='pl-5'>During times of continuous drought, the society took the initiative to provide drinking water to villages by digging bore wells, ensuring a reliable water source for the community in times of need.</li>
                             
-                            <p>In the years following independence, the society played a crucial role in bringing electricity to villages and farms, lighting up rural communities and empowering farmers with better infrastructure for agriculture and daily life.</p>
+                            <li className='pl-5'>In the years following independence, the society played a crucial role in bringing electricity to villages and farms, lighting up rural communities and empowering farmers with better infrastructure for agriculture and daily life.</li>
                             
-                            <p>The society took the initiative to counsel eligible couples on family planning at a time when awareness was low, helping them make informed decisions for a better future.</p>
+                            <li className='pl-5'>The society took the initiative to counsel eligible couples on family planning at a time when awareness was low, helping them make informed decisions for a better future.</li>
                             
-                            <p>The society collaborated with NGOs to ensure access to clean drinking water by installing RO plants in villages, improving the health and well-being of the community.</p>
-                        </>
+                            <li className='pl-5'>The society collaborated with NGOs to ensure access to clean drinking water by installing RO plants in villages, improving the health and well-being of the community.</li>
+                        </ul>
                     }
                 />
 
@@ -317,13 +321,11 @@ const Welfare = () => {
                     image={images.community}
                     reverse={true}
                     content={
-                        <>
-                            <p>The society operates a Welfare Deposit Scheme for its members, with contributions ranging from ₹2,000 to ₹4,000, depending on the extent of cultivable land owned.</p>
+                        <ul class="list-[circle]">
+                            <li className='pl-5'>Member Welfare Scheme – In the unfortunate event of a member's passing, the society provides financial support to the bereaved family by paying 12.5 times the deposited amount (min Rs 25,000/-, max Rs 50,000/-).</li>
                             
-                            <p>In the unfortunate event of a member's passing, the society provides financial support to the bereaved family by paying 12.5 times the deposited amount.</p>
-                            
-                            <p>Since 1996, the cooperative has disbursed ₹265.78 lakhs to support 1,827 deceased members' families, demonstrating its commitment to the welfare of its members and their families during difficult times.</p>
-                        </>
+                            <li className='pl-5'>  The society operates a Welfare Deposit Scheme for its members, with contributions ranging from ₹2,000 to ₹4,000, depending on the extent of cultivable land owned.</li>
+                        </ul>
                     }
                 />
 
@@ -333,15 +335,13 @@ const Welfare = () => {
                     image={images.education}
                     reverse={false}
                     content={
-                        <>
-                            <p>The society has supported education by providing scholarships to meritorious students in 7th and 10th grade, benefiting 260 children with a total expenditure of ₹2.90 lakhs from 1996 to 2010.</p>
+                        <ul class="list-[circle] pl-5">
+                            <li className='pl-5'>The society has supported education by providing scholarships to meritorious students in 7th and 10th grade, enabling many children to pursue their education successfully.</li>
                             
-                            <p>Additionally, under the Janasree Bheema Yojana scheme of Life Insurance Corporation (LIC), scholarships have been granted to members' children studying in intermediate, covering up to two children per member.</p>
-                            
-                            <p>From 2005 to 2016, the society has spent ₹94.14 lakhs to support 8,422 students.</p>
-                            
-                            <p>Furthermore, for higher education, the society provides ₹11,000 for students admitted to professional medical courses and ₹8,500 for those pursuing engineering, agriculture, veterinary, and pharmacy courses.</p>
-                        </>
+                            <li className='pl-5'> Additionally, under the Janasree Bheema Yojana scheme of Life Insurance Corporation (LIC), scholarships have been granted to members' children studying in intermediate, covering up to two children per member.</li>
+                                                        
+                            <li className='pl-5'>Furthermore, for higher education, the society provides ₹20,000 for students admitted to professional medical courses (MBBS @ Rs. 20,000/-) and ₹15,000 for those pursuing B.TECH, B.PHARMACY, BSC AGRICULTURE, BSC VETERINARY courses.</li>
+                        </ul>
                     }
                 />
 
@@ -351,33 +351,31 @@ const Welfare = () => {
                     image={images.health}
                     reverse={true}
                     content={
-                        <>
-                            <p>The cooperative, in collaboration with Sharat Laser Eye Hospital (SLEH), Hanamkonda, regularly conducts eye camps for its members. Through these camps, many members receive essential eye care, and those in need of cataract surgery are recommended for operations. So far, 1,117 members and their spouses have undergone cataract surgery free of cost, with the cooperative covering 60% (Rs. 60.31 lakhs) of the total Rs. 100.53 lakh expenditure, while the hospital bore the remaining 40% (Rs. 40.22 lakhs).</p>
+                        <ul class="list-[circle] pl-5">
+                            <li className='pl-5'>The cooperative, in collaboration with Sharat Laser Eye Hospital (SLEH), Hanamkonda, regularly conducts eye camps for its members. Through these camps, many members receive essential eye care, and those in need of cataract surgery are recommended for operations. So far, 1000+ members and their spouses have undergone cataract surgery free of cost, with the cooperative covering 60% of the cost, while the hospital bore the remaining 40%.</li>
                             
-                            <p>To further support eye care, the cooperative, in association with SLEH, established a Vision Center at the Mulkanoor Society shopping complex in 2014. Over 5,000 patients have visited the center, which provides affordable consultations for a nominal fee of Rs. 30.</p>
+                            <li className='pl-5'>To further support eye care, the cooperative, in association with SLEH, established a Vision Center at the Mulkanoor Society shopping complex in 2014. Over 5,000 patients have visited the center, which provides affordable consultations for a nominal fee of Rs. 30.</li>
                             
-                            <p>In 2015, the cooperative, with the support of Dr. Suresh Chikatla, DNB Specialist and a member's son, organized a free spinal cord and knee joint pain camp. Around 424 members attended the camp, receiving expert checkups, medical advice, and prescriptions for their conditions.</p>
-                            
-                            <p>Additionally, the cooperative regularly conducts physiotherapy and yoga camps for its members and staff, promoting overall well-being and a healthier lifestyle.</p>
-                        </>
+                            <li className='pl-5'> Additionally, the cooperative regularly conducts physiotherapy and yoga camps for its members and staff, promoting overall well-being and a healthier lifestyle.</li>
+                        </ul>
                     }
                 />
 
-                <DetailSection 
+                {/* <DetailSection 
                     title="Animal Health Camps" 
                     icon={<FaDog className="text-4xl" />}
                     image={images.animal}
                     reverse={false}
                     content={
-                        <>
-                            <p>The society organizes Animal Health Camps in collaboration with the Animal Husbandry Department to provide essential veterinary care, vaccinations, and treatment for livestock, ensuring better health and productivity for farmers' animals.</p>
+                        <ul class="list-[circle] pl-5">
+                            <li className='pl-5'>The society organizes Animal Health Camps in collaboration with the Animal Husbandry Department to provide essential veterinary care, vaccinations, and treatment for livestock, ensuring better health and productivity for farmers' animals.</li>
                             
-                            <p>These camps help farmers maintain the health of their livestock, which is crucial for their livelihoods and the overall agricultural productivity of the community.</p>
+                            <li className='pl-5'>These camps help farmers maintain the health of their livestock, which is crucial for their livelihoods and the overall agricultural productivity of the community.</li>
                             
-                            <p>Through regular health checkups, preventive care, and treatment services, the society helps farmers reduce livestock mortality and increase productivity, contributing to the economic well-being of the farming community.</p>
-                        </>
+                            <li className='pl-5'>Through regular health checkups, preventive care, and treatment services, the society helps farmers reduce livestock mortality and increase productivity, contributing to the economic well-being of the farming community.</li>
+                        </ul>
                     }
-                />
+                /> */}
             </div>
         </div>
     );

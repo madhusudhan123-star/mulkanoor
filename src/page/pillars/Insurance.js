@@ -357,7 +357,7 @@ const Insurance = () => {
     );
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-[#1a237e] via-[#283593] to-[#3949ab] text-white">
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 pt-24">
             <Banner />
 
             <div className="container mx-auto px-4 py-8 sm:py-16">
