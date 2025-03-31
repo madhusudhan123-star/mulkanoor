@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet';
 import paddyImg from '../../assets/product/card1.jpg';
 import riceImg from '../../assets/product/card2.jpg';
 import cottonImg from '../../assets/product/card3.JPG';
+import banner from '../../assets/product/banner.jpg'
 
 const Product = () => {
     // Benefits data for the procurement process
@@ -69,7 +70,7 @@ const Product = () => {
                     <motion.div
                         className="absolute inset-0"
                         style={{
-                            // backgroundImage: `url('${paddyImg}')`,
+                            backgroundImage: `url('${banner}')`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                         }}

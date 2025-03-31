@@ -305,13 +305,13 @@ const Agrinput = () => {
                                 <p className="text-[#2E7D32] cursor-default leading-relaxed text-lg mb-6">
                                     {agriImplementsData.content}
                                 </p>
-                                <div className="rounded-xl overflow-hidden shadow-xl mt-8 hidden lg:block">
+                                {/* <div className="rounded-xl overflow-hidden shadow-xl mt-8 hidden lg:block">
                                     <img 
                                         src={agriImplementsData.image} 
                                         alt={agriImplementsData.title} 
-                                        className="w-full h-[300px] hover:scale-105 transition-transform duration-700"
+                                        className="w-full h-full hover:scale-105 transition-transform duration-700"
                                     />
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className="lg:col-span-3">
@@ -336,11 +336,11 @@ const Agrinput = () => {
                                 >
                                     <p className="text-lg font-medium">{agriImplementsData.conclusion}</p>
                                 </motion.div> */}
-                                <div className="rounded-xl overflow-hidden shadow-xl mt-8 lg:hidden">
+                                <div className="rounded-xl overflow-hidden shadow-xl mt-8">
                                     <img 
                                         src={agriImplementsData.image} 
                                         alt={agriImplementsData.title} 
-                                        className="w-full h-[300px]"
+                                        className="w-full h-full"
                                     />
                                 </div>
                             </div>
