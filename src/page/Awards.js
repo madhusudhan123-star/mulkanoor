@@ -2,11 +2,17 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaTrophy, FaMedal, FaAward, FaThList, FaThLarge, FaCube } from 'react-icons/fa';
 import banner from '../assets/awards/banner.jpg'
-import card1 from '../assets/awards/card1.png'
-import card2 from '../assets/awards/card2.png'
-import card3 from '../assets/awards/card3.png'
-import card4 from '../assets/awards/card4.png'
-import card5 from '../assets/awards/card5.jpg'
+import card1 from '../assets/awards/1.JPG'
+import card2 from '../assets/awards/2.jpg'
+import card3 from '../assets/awards/3.jpg'
+import card4 from '../assets/awards/4.JPG'
+import card5 from '../assets/awards/5.jpg'
+import card6 from '../assets/awards/6.jpeg'
+import card7 from '../assets/awards/7.jpeg'
+import card8 from '../assets/awards/8.jpg'
+import card9 from '../assets/awards/9.JPG'
+import card10 from '../assets/awards/10.jpeg'
+import card11 from '../assets/awards/11.JPG'
 import { Helmet } from 'react-helmet-async';
 
 
@@ -54,115 +60,65 @@ const Awards = () => {
             card2, // Agriculture
             card3,
             card4,
+            card5,
+            card6,
+            card7,
+            card8,
+            card9,
+            card10,
+            card11,
             // "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca", // Special felicitation
             // "https://images.unsplash.com/photo-1579621970795-87facc2f976d", // NCDC award
             // "https://images.unsplash.com/photo-1624953587687-daf255b6b80a", // Outstanding performer
             // "https://images.unsplash.com/photo-1542744173-8e7e53415bb0", // Business award
             // "https://images.unsplash.com/photo-1606836591695-4d58a73eba1e", // Jyothirgamayi
-            // card5,
-            card5  // Farmers society
         ]
     };
 
     const awards = [
         {
-            year: "1981",
-            title: "Manager of the Year",
-            recipient: "Sri A.K. Vishwanatha Reddy",
-            organization: "Hyderabad Management Association",
-            description: "First and only recipient from the cooperative sector to receive this prestigious honor.",
-            icon: <FaTrophy />,
+            title: "Manager of the Year- by Cooperative M",
             image: images.awards[0]
         },
         {
-            year: "2004",
-            title: "Citation for Services to Agriculture",
-            recipient: "MCRCMS",
-            organization: "Government of Andhra Pradesh",
-            description: "Recognition of Services Rendered to Agriculture on September 29, 2004.",
-            icon: <FaAward />,
+            title: "Best Cooperator - on Centenary Celebrations of Cooperative Movement in India",
             image: images.awards[1]
         },
         {
-            year: "2006",
-            title: "Model Cooperative Society",
-            recipient: "MCRCMS & Sri A. Praveen Reddy",
-            organization: "Sahakara Bharathi, Mumbai",
-            description: "Selected as one of the Model Cooperative Societies in India.",
-            icon: <FaMedal />,
+            title: "NCDC National Award for Cooperative Excellence 2014",
             image: images.awards[2]
         },
         {
-            year: "2006",
-            title: "Best Cooperative Award",
-            recipient: "MCRCMS & Sri A. Praveen Reddy",
-            organization: "National Cooperative Union of India",
-            description: "Recognition by NCUI and National Cooperative Training Institute, New Delhi.",
-            icon: <FaTrophy />,
+            title: "Best Primary Farmers Cooperative Society by Outlook Rxpress Ariculture Conclave and Swaraj Awards 2020",
             image: images.awards[3]
         },
         {
-            year: "2012",
-            title: "Special Felicitation",
-            recipient: "Sri A. Praveen Reddy",
-            organization: "NABARD",
-            description: "Recognition for significant contributions to Agriculture & Rural Development.",
-            icon: <FaAward />,
+            title: "Sahakaritha Vibhusan Award by  Krishak Bharathi Cooperative Ltd.,  (KRIBHCO)",
             image: images.awards[4]
         },
         {
-            year: "2014",
-            title: "NCDC National Award",
-            recipient: "MCRCMS",
-            organization: "NCDC",
-            description: "Cooperative Excellence Award presented to Sri A. Praveen Reddy.",
-            icon: <FaTrophy />,
+            title: "Sakhi Excellence Ward",
             image: images.awards[5]
         },
         {
-            year: "2015",
-            title: "Outstanding Performer Award",
-            recipient: "Sri A. Praveen Reddy",
-            organization: "Professor Jayashankar Telangana State Agriculture University",
-            description: "Recognition for exceptional contributions to the rural cooperative movement.",
-            icon: <FaMedal />,
+            title: "SahakaraBharathi - Annasaheb Godbole Memorial Award",
             image: images.awards[6]
         },
         {
-            year: "2019",
-            title: "Responsible Business Award",
-            recipient: "Sri A. Praveen Reddy",
-            organization: "Indian Achievers' Forum",
-            description: "Recognition at the India-International Business Summit in New Delhi.",
-            icon: <FaTrophy />,
+            title: "Responsible Buniness Award for Agriculture and Cooperative Sector by  ACHIEVERS FORM",
             image: images.awards[7]
         },
         {
-            year: "2019",
-            title: "Jyothirgamayi Award",
-            recipient: "Sri A. Praveen Reddy",
-            organization: "Association of Community Ophthalmologists of India",
-            description: "Recognition for Outstanding Professional Achievement & Inspiring Social Contribution.",
-            icon: <FaAward />,
+            title: "Outstanding Performer in the Rural Cooperative Movement Award",
             image: images.awards[8]
         },
         {
-            year: "2020",
-            title: "Best Primary Farmers Cooperative Society",
-            recipient: "Sri A. Praveen Reddy",
-            organization: "Ministry of Agriculture, Govt. of India",
-            description: "Honored at the Outlook Express Agriculture Conclave and Swaraj Awards.",
-            icon: <FaTrophy />,
+            title: "Agri. Business Award",
             image: images.awards[9]
         },
         {
-            year: "2020",
-            title: "Sakshi Excellence Awards",
-            recipient: "MR.Aligireddy Praveen Reddy",
-            organization: "Pesident Mulkanoor ",
-            // description: "Honored at the Outlook Express Agriculture Conclave and Swaraj Awards.",
-            icon: <FaTrophy />,
-            image: card5
+            title: "Jyothirgamai Award-2019",
+            image: images.awards[10]
         }
     ];
 

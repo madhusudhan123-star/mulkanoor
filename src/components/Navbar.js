@@ -142,7 +142,17 @@ const Navbar = () => {
         },
         {
             title: 'Media Center',
-            path: '/media'
+            path: '#media',
+            submenu: [
+                { title: 'Paper cuttes', path: '/media/paper' },
+                { title: 'Articeles post', path: '/media/articles' },
+                { title: 'Gallery', path: '/media/gallery' },
+                { title: 'Videos', path: '/media/videos' },
+            ]
+        },
+        {
+            title: 'Anual',
+            path:"/report"
         }
     ];
 

@@ -27,10 +27,15 @@ import Loading from "./components/Loading";
 import usePageLoading from "./hooks/usePageLoading";
 import SearchResults from "./page/SearchResults";
 import Cta from './page/Cta'
-import Media from "./page/Media";
+// import Media from "./page/Media";
 import { HelmetProvider } from "react-helmet-async";
 import Product from "./page/product/Product";
 import Marketing from "./page/Marketing";
+import Videos from "./page/media/Videos";
+import Gallery from "./page/media/Gallery";
+import Articeles from "./page/media/Articeles";
+import Paper from "./page/media/Paper";
+import Report from "./page/Report";
 
 // Create a ScrollToTop component
 function ScrollToTop() {
@@ -75,9 +80,15 @@ function AppContent() {
           <Route path="/search" element={<SearchResults />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cta" element={<Cta />} />
-          <Route path="/media" element={<Media />} />
+          {/* <Route path="/media" element={<Media />} /> */}
           <Route path="/product" element={<Product />} />
           <Route path="/marketing" element={<Marketing />} />
+          <Route path="/media/videos" element={<Videos />} />
+          <Route path="/media/gallery" element={<Gallery />} />
+          <Route path="/media/articles" element={<Articeles />} />
+          <Route path="/media/paper" element={<Paper />} />
+          <Route path='/report' element={<Report />} />
+          <Route path="*" element={<div className="text-center mt-20">404 Not Found</div>} />
         </Routes>
       </div>
       <Footer />
