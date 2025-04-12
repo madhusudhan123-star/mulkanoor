@@ -3,7 +3,7 @@ import CountUp from 'react-countup';
 import useInView from '../../hooks/useInView';
 import card1 from '../../assets/home/card1.jpg';
 import card2 from '../../assets/home/card2.jpg';
-import card3 from '../../assets/home/card3.jpg';
+import card3 from '../../assets/home/card3.JPG';
 import card4 from '../../assets/home/card4.jpg';
 
 const impactMetrics = {
@@ -15,25 +15,25 @@ const impactMetrics = {
 const cardData = [
     {
         title: "Empowering",
-        content: "Celebrating 69+ remarkable years of empowering farmers and nurturing the Mulkanoor Cooperative family with dedication, trust, and prosperity.",
+        content: "Celebrating 69+ years of services to farmers with dedication and trust.",
         image: card1,
         url: '/discover/story'
     },
     {
         title: "Farmers",
-        content: "For 69+ years, Mulkanoor Cooperative Society has been transforming farmers' lives through unwavering support, innovative practices, and a commitment to sustainable growth and prosperity.",
+        content: "Members are facilitated with credit, input supply and marketing for hassle free farming.",
         image: card2,
         url: '/farmer'
     },
     {
         title: "Enriching",
-        content: "Fostering holistic growth to enhance the overall well-being of farmers, their families, and the broader community.",
+        content: "Increasing farmer’s income, enabling dignified living, and creating better livelihood opportunities for farming communities.",
         image: card3,
         url: '/discover/mission'
     },
     {
         title: "Communities",
-        content: `Driving holistic progress to uplift farmers, their families, and the community, Mulkanoor Cooperative Society stands as a beacon of trust, innovation, and collaboration.`,
+        content: `So we prosper with trust, innovation and dedication being our core - from farms to future.`,
         image: card4,
         url: '/cta'
     }

@@ -102,13 +102,15 @@ const Mission = () => {
                 </div>
                 
                 <div className="mb-6 border-l-4 border-[#a9d18e] pl-4 ">
-                  <p className="text-xl cursor-default md:text-2xl font-medium">
-                    To uplift the farmers from Poverty to a better socio-economic status and have a dignified life.
-                  </p>
-                </div>
-              </div>
-              
-              {/* Right content - Image */}
+                    <ul className="list-disc pl-6 space-y-2 text-lg cursor-default">
+                      <li>To stop migration of farmers to urban areas in search of work</li>
+                      <li>To uplift socio-economic status of farmers</li>
+                      <li>To ensure farmer control over agriculture production and marketing</li>
+                    </ul>
+                    </div>
+                    </div>
+
+                    {/* Right content - Image */}
               <div className="md:w-1/2 h-64 md:h-auto">
                 <img src={card} alt="Vision illustration" className="w-full h-full object-cover" />
               </div>

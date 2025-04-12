@@ -14,14 +14,14 @@ import { Helmet } from 'react-helmet'
 
 const Storys = () => {
   const principles = [
-    { title: "Voluntary Membership", description: "Open to all who require its services" },
-    { title: "Democratic Management", description: "Operates on a 'one member, one vote' principle" },
-    { title: "Equity in Capital", description: "Share capital offers no special privileges except a limited return" },
-    { title: "Member-Centric Benefits", description: "Economic benefits based on utilization of services" },
-    { title: "Education & Training", description: "Regular initiatives for members, staff, and farmers" },
-    { title: "Equitable Surplus Distribution", description: "Surplus funds are distributed fairly among members" },
-    { title: "Cooperative Awareness", description: "Members are well-informed about cooperative practices" },
-    { title: "Collaboration", description: "Works with other cooperatives for mutual support" },
+    { title: "Voluntary and open membership", description: "membership rooted in inclusivity, embracing all individuals beyond gender, social standing, race, politics or faith" },
+    { title: "Democratic member control", description: "cooperative management is controlled by its members through voting rights. “one member one vote" },
+    { title: "Member economic participation", description: "members contribute and control the capital of the cooperative and share Benefits in proportion to the business they conduct with the cooperative." },
+    { title: "Autonomy and independence", description: "limited interference of government, and no external influence." },
+    { title: "Education, training and information", description: "all the stakeholders are continuously trained on cooperative principles and modern farming technologies from farm to fork." },
+    { title: "Cooperation among cooperatives", description: "works with other cooperatives for mutual benefit" },
+    { title: "Community development", description: "Invests in sustainable development of local communities through education and infrastructure support,  social welfare initiatives" },
+    // { title: "Collaboration", description: "Works with other cooperatives for mutual support" },
   ];
 
   return (
@@ -107,31 +107,32 @@ const Storys = () => {
       >
         <div className="absolute inset-0 pattern-wheat opacity-10"></div>
         <h2 className="text-3xl cursor-default font-bold mb-8 text-center text-earth-500">Our Journey</h2>
-
-        {/* Add historical images */}
-        <div className="flex justify-center">
-          <div className="relative rounded-xl overflow-hidden h-80">
-            <img
-              src={Founder}
-              alt="Founder A.K. Vishwanatha Reddy"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
-              <p className="text-sm cursor-default">Late Sri A.K. Vishwanatha Reddy, Our Founder</p>
+        <div className='flex gap-10 flex-col md:flex-row'>        
+          {/* Add historical images */}
+          <div className="flex justify-center items-center w-full md:w-1/2">
+            <div className="relative rounded-xl overflow-hidden h-4/5">
+              <img
+                src={Founder}
+                alt="Founder A.K. Vishwanatha Reddy"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                <p className="text-sm cursor-default">Late Sri A.K. Vishwanatha Reddy, Our Founder</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="space-y-6 text-earth-400 mt-10">
-          <p className="leading-relaxed cursor-default ">
-            The Mulkanoor Cooperative Bank was established in 1956 by its visionary founder, Late Sri A.K. Vishwanatha Reddy, under the Hyderabad Cooperative Society Act, 1952. After the enactment of the Cooperative Society Act, 1964, the society was deemed registered under the new legislation. Subsequently, with the introduction of the Mutually Aided Cooperative Society Act, 1995, it transitioned to operate under the MACS Act.
-          </p>
-          <p className="leading-relaxed cursor-default">
-            The society serves 14 revenue villages and 18 Gram Panchayats within a drought-prone region characterized by uplands and hillocks. With limited irrigation options, the area depends primarily on small tanks, ponds, open wells, and bore wells. Over-reliance on groundwater has resulted in significant depletion of the water table, making agricultural activities challenging.
-          </p>
-          <p className="leading-relaxed cursor-default">
-            Initially, the cooperative operated from the founder's residence for 14 years before establishing its own office premises in 1970. Today, the society boasts 7,629 members, a share capital of ₹13.96 crores, and thrift deposits amounting to ₹24.61 crores. The society achieved a turnover of ₹270.18 crores in 2015-16 and maintains an "A" Class audit classification.
-          </p>
+          <div className="md:w-1/2 w-full text-earth-400 mt-10">
+            <p className="leading-relaxed cursor-default ">
+              Mulkanoor cooperative rural bank was established in 1956 by esteemed visionary founder Late sri A.K Vishwanatha Reddy with the primary objective of uplifting socio-economic status of farmers. The society was initially registered under the Hyderabad cooperative societies act 1952. later, automatically deemed into A.P cooperative societies act 1964. After the enactment of Mutually aided cooperative societies act 1995 the cooperative transitioned under this new enactment.
+            </p>
+            <p className="leading-relaxed cursor-default">
+              The cooperative operates in its catchment of 14 revenue villages with a total of 18 gram panchayats. These villages then were in the drought prone region characterized by uplands and hillocks. There were conditions of lack of irrigation facilities,power supply, finance, agri-inputs, remunerative price for their produce. These situations made our ancestors build a temple of trust with a primary objective of countering these challenges and hardships faced by farmers.
+            </p>
+            <p className="leading-relaxed cursor-default">
+              Initially founded with 373 members and a share capital of RS 2300/- today society is 7629 active members strong with share capital of 17.96 crores and thrift deposits of 45.90 crores creating impact in the lives of 35000-40000 people. The present admission number of the society is 14908. The annual turnover is around 352 crores which displays the humongous success achieved and much more to come along. The society initially started operating from the founders’ residence for 14 years until it moved to its own office premise in 1970.
+            </p>
+          </div>
         </div>
       </motion.section>
 
@@ -164,9 +165,6 @@ const Storys = () => {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-transparent rounded-xl"></div>
                 <div className="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-earth-200/30 relative z-10 h-full flex flex-col">
-                  <div className="bg-earth-100/50 w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:bg-earth-200/50 transition-colors duration-300">
-                    <span className="text-2xl text-earth-600">{index + 1}</span>
-                  </div>
                   <h3 className="text-xl cursor-default font-semibold mb-3 text-crop-600">{principle.title}</h3>
                   <p className="text-earth-600/90 cursor-default flex-grow">{principle.description}</p>
                   <div className="h-1 w-20 bg-gradient-to-r from-crop-400 to-crop-500 mt-4 group-hover:w-full transition-all duration-300"></div>
