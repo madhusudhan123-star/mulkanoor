@@ -120,7 +120,7 @@ const HeroBanner = () => {
         <div className="relative z-10 px-2 md:px-4 py-4 md:py-0 min-h-screen flex justify-start items-start overflow-x-hidden">
             <div className="container mx-auto flex items-center flex-col text-center">
                 <h1 className='text-2xl cursor-default text-black md:text-3xl lg:text-5xl font-bold mb-6 md:mb-8 lg:mb-16 px-4'>
-                    Together We Cultivate Prosperity
+                    Elevating Lives Together: From Cooperation to Prosperity
                 </h1>
 
                 <div className='flex flex-col md:flex-row items-stretch justify-between gap-4 md:gap-2 w-full'>

@@ -106,10 +106,10 @@ const Storys = () => {
         className="max-w-6xl mx-auto py-16 px-4 mt-20 relative"
       >
         <div className="absolute inset-0 pattern-wheat opacity-10"></div>
-        <h2 className="text-3xl cursor-default font-bold mb-8 text-center text-earth-500">Our Journey</h2>
-        <div className='flex gap-10 flex-col md:flex-row'>        
+        {/* <h2 className="text-3xl cursor-default font-bold mb-8 text-center text-earth-500">Our Journey</h2> */}
+        <div className='flex gap-10 flex-col'>        
           {/* Add historical images */}
-          <div className="flex justify-center items-center w-full md:w-1/2">
+          <div className="flex justify-center items-center w-full">
             <div className="relative rounded-xl overflow-hidden h-4/5">
               <img
                 src={Founder}
@@ -122,7 +122,7 @@ const Storys = () => {
             </div>
           </div>
 
-          <div className="md:w-1/2 w-full text-earth-400 mt-10">
+          <div className="w-full text-earth-400 mt-10">
             <p className="leading-relaxed cursor-default ">
               Mulkanoor cooperative rural bank was established in 1956 by esteemed visionary founder Late sri A.K Vishwanatha Reddy with the primary objective of uplifting socio-economic status of farmers. The society was initially registered under the Hyderabad cooperative societies act 1952. later, automatically deemed into A.P cooperative societies act 1964. After the enactment of Mutually aided cooperative societies act 1995 the cooperative transitioned under this new enactment.
             </p>
