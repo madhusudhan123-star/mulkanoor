@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaHeartbeat, FaGraduationCap, FaHandHoldingHeart, FaPiggyBank, FaHospital, FaLightbulb, FaHandHoldingWater, FaDog } from 'react-icons/fa';
-import { GiHealthNormal, GiMedicalDrip } from 'react-icons/gi';
+import { FaHeartbeat, FaGraduationCap, FaHandHoldingHeart, FaPiggyBank, FaHospital, FaLightbulb, FaHandHoldingWater, FaDog, FaShieldAlt } from 'react-icons/fa';
+import { GiHealthNormal, GiMedicalDrip, GiReceiveMoney } from 'react-icons/gi';
 import { MdFamilyRestroom, MdOutlineWaterDrop, MdElectricalServices, MdHealthAndSafety } from 'react-icons/md';
 import { RiMentalHealthLine } from 'react-icons/ri';
 import { BiSolidDonateHeart } from 'react-icons/bi';
+import { BsBank2 } from 'react-icons/bs';
 import CountUp from 'react-countup';
 import banner from '../../assets/welfare/banner.jpg';
 import card1 from '../../assets/welfare/card1.jpg';
@@ -247,135 +248,74 @@ const Welfare = () => {
 
             {/* Main Content */}
             <div className="container mx-auto px-4 py-16">
-                {/* Initiative Cards */}
-                {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                    {initiatives.map((initiative, index) => (
-                        <motion.div
-                            key={index}
-                            className="bg-white/80 rounded-xl overflow-hidden shadow-xl"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 }}
-                        >
-                            <div className="h-48 relative overflow-hidden">
-                                <img
-                                    src={images[Object.keys(images)[index % 5 + 1]]}
-                                    alt={initiative.title}
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                    <div className="flex items-center gap-3 mb-2">
-                                        <span className="text-3xl">{initiative.icon}</span>
-                                        <h2 className="text-2xl font-bold">{initiative.title}</h2>
-                                    </div>
-                                    <p className="text-white/90">{initiative.description}</p>
-                                </div>
-                            </div>
-                            <div className="p-6">
-                                <ul className="space-y-3">
-                                    {initiative.details.map((detail, idx) => (
-                                        <motion.li
-                                            key={idx}
-                                            className="flex items-start gap-3 text-[#1B5E20]"
-                                            initial={{ opacity: 0, x: -20 }}
-                                            whileInView={{ opacity: 1, x: 0 }}
-                                            transition={{ delay: idx * 0.1 }}
-                                        >
-                                            <span className="h-2 w-2 bg-[#2E7D32] rounded-full mt-2 flex-shrink-0" />
-                                            {detail}
-                                        </motion.li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div> */}
-
-                {/* Detailed Sections */}
+                {/* Community Development Section */}
                 <DetailSection 
-                    title="Community Development" 
-                    icon={<MdOutlineWaterDrop className="text-4xl" />}
-                    image={images.water}
+                    title="Community Development Initiatives" 
+                    icon={<MdFamilyRestroom className="text-4xl" />}
+                    image={images.community}
                     reverse={false}
                     content={
-                        <ul class="list-[circle] pl-5">
-                            <li className='pl-5'>Funeral expenses – Rs.10,000/- and 100 kg. fine rice is given to deceased family on demise of Member / Member Spouse.</li>
-                            <li className='pl-5'>Crop loan Waiver Scheme- Deceased Members Crop Loan amount up to Rs. 1,50,000/- is waived from society funds</li>
-                            <li className='pl-5'>  AKVR Old age Pension Scheme- Members having 35 years of Membership and age above 65 years are being paid pension @1000/- per month</li>
-
-                            <li className='pl-5'>During times of continuous drought, the society took the initiative to provide drinking water to villages by digging bore wells, ensuring a reliable water source for the community in times of need.</li>
+                        <ul className="list-[circle] pl-5">
+                            <li className='pl-5'><strong>Village electrification:</strong> In the years following independence, the society played a crucial role in bringing electricity to society villages and farms, empowering farmers with better infrastructure for agriculture and daily life.</li>
                             
-                            <li className='pl-5'>In the years following independence, the society played a crucial role in bringing electricity to villages and farms, lighting up rural communities and empowering farmers with better infrastructure for agriculture and daily life.</li>
+                            <li className='pl-5'><strong>Drinking water:</strong> The society collaborated with NGOs to ensure access to clean drinking water by installing RO plants in villages, improving the health and well-being of the community.</li>
                             
-                            <li className='pl-5'>The society took the initiative to counsel eligible couples on family planning at a time when awareness was low, helping them make informed decisions for a better future.</li>
-                            
-                            <li className='pl-5'>The society collaborated with NGOs to ensure access to clean drinking water by installing RO plants in villages, improving the health and well-being of the community.</li>
+                            <li className='pl-5'><strong>Watershed activities:</strong> The society has implemented three watershed programs with financial assistance from the National Bank for Agricultural and Rural Development (NABARD), covering an area of 283.70 hectares.</li>
                         </ul>
                     }
                 />
 
                 <DetailSection 
-                    title="Member Welfare Scheme" 
-                    icon={<BiSolidDonateHeart className="text-4xl" />}
-                    image={images.community}
-                    reverse={true}
-                    content={
-                        <ul class="list-[circle]">
-                            <li className='pl-5'>Member Welfare Scheme – In the unfortunate event of a member's passing, the society provides financial support to the bereaved family by paying 12.5 times the deposited amount (min Rs 25,000/-, max Rs 50,000/-).</li>
-                            
-                            <li className='pl-5'>  The society operates a Welfare Deposit Scheme for its members, with contributions ranging from ₹2,000 to ₹4,000, depending on the extent of cultivable land owned.</li>
-                        </ul>
-                    }
-                />
-
-                <DetailSection 
-                    title="Education Support" 
+                    title="Health and Education" 
                     icon={<FaGraduationCap className="text-4xl" />}
                     image={images.education}
-                    reverse={false}
+                    reverse={true}
                     content={
-                        <ul class="list-[circle] pl-5">
-                            <li className='pl-5'>The society has supported education by providing scholarships to meritorious students in 7th and 10th grade, enabling many children to pursue their education successfully.</li>
+                        <ul className="list-[circle] pl-5">
+                            <li className='pl-5'><strong>Health camps:</strong> The cooperative, in partnership with hospitals, provides free cataract surgeries, affordable eye care, and specialized health camps. It also promotes well-being through physiotherapy and yoga camps, ensuring better healthcare for members.</li>
                             
-                            <li className='pl-5'> Additionally, under the Janasree Bheema Yojana scheme of Life Insurance Corporation (LIC), scholarships have been granted to members' children studying in intermediate, covering up to two children per member.</li>
-                                                        
-                            <li className='pl-5'>Furthermore, for higher education, the society provides ₹20,000 for students admitted to professional medical courses (MBBS @ Rs. 20,000/-) and ₹15,000 for those pursuing B.TECH, B.PHARMACY, BSC AGRICULTURE, BSC VETERINARY courses.</li>
+                            <li className='pl-5'><strong>Education:</strong> Also society established junior and degree colleges to promote higher education in the area.</li>
                         </ul>
                     }
                 />
 
                 <DetailSection 
-                    title="Health Camps for Members" 
-                    icon={<MdHealthAndSafety className="text-4xl" />}
+                    title="Financial Benefits" 
+                    icon={<GiReceiveMoney className="text-4xl" />}
                     image={images.health}
-                    reverse={true}
+                    reverse={false}
                     content={
-                        <ul class="list-[circle] pl-5">
-                            <li className='pl-5'>The cooperative, in collaboration with Sharat Laser Eye Hospital (SLEH), Hanamkonda, regularly conducts eye camps for its members. Through these camps, many members receive essential eye care, and those in need of cataract surgery are recommended for operations. So far, 1000+ members and their spouses have undergone cataract surgery free of cost, with the cooperative covering 60% of the cost, while the hospital bore the remaining 40%.</li>
+                        <ul className="list-[circle] pl-5">
+                            <li className='pl-5'><strong>Funeral expenses:</strong> Rs.10,000/- and 100 kg. Fine rice is given to the deceased family on the demise of the Member / Member Spouse.</li>
                             
-                            <li className='pl-5'>To further support eye care, the cooperative, in association with SLEH, established a Vision Center at the Mulkanoor Society shopping complex in 2014. Over 5,000 patients have visited the center, which provides affordable consultations for a nominal fee of Rs. 30.</li>
+                            <li className='pl-5'><strong>Member welfare:</strong> When a member has passed away a financial assistance of 12.5 times the deposited amount (min 2500/-, max 50000/-) is paid to the bereaved family from the member welfare deposit scheme.</li>
                             
-                            <li className='pl-5'> Additionally, the cooperative regularly conducts physiotherapy and yoga camps for its members and staff, promoting overall well-being and a healthier lifestyle.</li>
+                            <li className='pl-5'><strong>Crop loan waiver:</strong> Deceased Members Crop Loan amount up to Rs. 1,50,000/- is waived from society funds.</li>
+                            
+                            <li className='pl-5'><strong>Old age pension:</strong> For the financial and moral support to elderly people the society initiated an old age pension to members who are 65 years of age and completed 35 years as a member of the society.</li>
                         </ul>
                     }
                 />
 
-                {/* <DetailSection 
-                    title="Animal Health Camps" 
-                    icon={<FaDog className="text-4xl" />}
+                <DetailSection 
+                    title="Insurance" 
+                    icon={<FaShieldAlt className="text-4xl" />}
                     image={images.animal}
-                    reverse={false}
+                    reverse={true}
                     content={
-                        <ul class="list-[circle] pl-5">
-                            <li className='pl-5'>The society organizes Animal Health Camps in collaboration with the Animal Husbandry Department to provide essential veterinary care, vaccinations, and treatment for livestock, ensuring better health and productivity for farmers' animals.</li>
+                        <ul className="list-[circle] pl-5">
+                            <li className='pl-5'><strong>Member:</strong> The members are covered under various insurance policies for life and accidental coverage.</li>
                             
-                            <li className='pl-5'>These camps help farmers maintain the health of their livestock, which is crucial for their livelihoods and the overall agricultural productivity of the community.</li>
+                            <li className='pl-5'><strong>Animal:</strong> Animal insurance is assisted for the dairy and other livestock loans provided.</li>
                             
-                            <li className='pl-5'>Through regular health checkups, preventive care, and treatment services, the society helps farmers reduce livestock mortality and increase productivity, contributing to the economic well-being of the farming community.</li>
+                            <li className='pl-5'><strong>Vehicle:</strong> Vehicles provided by the financial assistance of society are insured through society.</li>
+                            
+                            <li className='pl-5'><strong>Stocks:</strong> Total society stocks, infrastructure and cash are insured as a safety net.</li>
+                            
+                            <li className='pl-5'>All the activities related to insurance from premiums, renewals and claims are managed by the society employees.</li>
                         </ul>
                     }
-                /> */}
+                />
             </div>
         </div>
     );

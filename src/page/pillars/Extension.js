@@ -206,7 +206,7 @@ const Extension = () => {
                                 <h2 className="text-3xl cursor-default font-bold text-[#2E7D32]">Farmers Training Centre</h2>
                             </div>
                             <p className="text-[#1B5E20] cursor-default mb-6">
-                                With the support of IFFCO (Indian Farmers Fertilizer Cooperative), Mulkanoor Cooperative Society has established a Farmer Information and Training Center at its headquarters. Equipped with state-of-the-art classroom technology, the center provides farmers with valuable learning resources. Visual aids depicting pest attacks are displayed on the walls, while a vast collection of agricultural books, magazines, and documentary films offer in-depth knowledge. This initiative ensures that farmers stay informed and trained in the latest agricultural practices.
+                                Mulkanoor Cooperative Society has established a Farmer Information and Training Center at its headquarters. Equipped with state-of-the-art classroom technology, the center provides farmers with valuable learning resources. Visual aids depicting pest attacks are displayed on the walls, while a vast collection of agricultural books, magazines, and documentary films offer in-depth knowledge. This initiative ensures that farmers stay informed and trained in the latest agricultural practices.
                             </p>
                         </div>
                         <div className="relative h-[300px] md:h-auto">
@@ -239,7 +239,7 @@ const Extension = () => {
                                 <h2 className="text-3xl cursor-default font-bold text-[#2E7D32]">Awareness Programs</h2>
                             </div>
                             <p className="text-[#1B5E20] cursor-default mb-6">
-                                The Cooperative has employed six agricultural graduates to oversee various production services and manage the seed production program. These experts provide continuous guidance to members, helping them improve both the quality and quantity of their crops. Additionally, the society collaborates with agricultural scientists from various disciplines to train farmers, ensuring they stay updated with the latest advancements. By maintaining close ties with leading institutions and organizations, the Cooperative ensures that farmers have access to the latest production techniques, maximizing their farm yields and overall profitability.
+                                The Cooperative has employed six agricultural graduates to conduct awareness programmes to the farmers. The farmers are provided with information related to new crop varieties, pests, diseases, crop rotation benefits, and package of practices to keep them aware and be prepared to face any situation. Additionally, the society collaborates with agricultural scientists from various disciplines to train farmers, ensuring they stay updated with the latest advancements.  By maintaining close ties with leading institutions and organizations, the Cooperative ensures that farmers have access to the latest production techniques, maximizing their farm yields and overall profitability.
                             </p>
                         </div>
                     </div>
@@ -320,7 +320,7 @@ const Extension = () => {
                 </div>
 
                 {/* Side Image Section */}
-                <motion.div 
+                {/* <motion.div 
                     className="bg-white/90 rounded-xl overflow-hidden mb-16"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -343,7 +343,7 @@ const Extension = () => {
                             />
                         </motion.div>
                     </div>
-                </motion.div>
+                </motion.div> */}
             </div>
         </div>
     );

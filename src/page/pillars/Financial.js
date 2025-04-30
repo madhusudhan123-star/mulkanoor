@@ -96,7 +96,7 @@ const Financial = () => {
               Agricultural Financial Services
             </h1>
             <p className="text-xl cursor-default text-white max-w-2xl">
-              Empowering farmers with institutional lending solutions for modern farming operations
+              100% recovery of our loans display ownership by members.
             </p>
           </div>
         </div>
@@ -104,25 +104,25 @@ const Financial = () => {
 
       <div className="container mx-auto px-6 py-16">
         {/* Seasonal Crop Loans Section */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-16">
+        <div className="rounded-lg p-8 mb-16">
           <div className="flex items-center mb-8">
             <FaSeedling className="w-10 h-10 text-blue-700 mr-4" />
             <h2 className="text-3xl cursor-default font-bold text-gray-900">Seasonal Crop Loans</h2>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="flex">
             <div>
-              <h3 className="text-xl cursor-default font-semibold mb-4 text-blue-800">
+              {/* <h3 className="text-xl cursor-default font-semibold mb-4 text-blue-800">
                 Supporting both Kharif and Rabi seasons
-              </h3>
+              </h3> */}
               <ul className="space-y-4">
                 <li className="flex cursor-default items-start">
                   <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
-                  <span>Currently, farmers can avail crop loans of ₹ 40,000 per acre, with a maximum limit of Rs 5 Lakh with an interest rate of 7% per annum</span>
+                  <span>Our member farmers can avail up to 40000/ acre with a maximum capping of 5 lakh @7% ROI per annum.</span>
                 </li>
                 <li className="flex cursor-default items-start">
                   <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
-                  <span> Under the Modified Interest Subvention Scheme, farmers who repay their loans on time are eligible for a 3% interest subvention from the Central Government.</span>
+                  <span>Farmers who repay these loans on time are eligible for 3% interest subvention under the modified interest subvention scheme of GOI.</span>
                 </li>
               </ul>
               
@@ -141,11 +141,11 @@ const Financial = () => {
               </div> */}
             </div>
             
-            <div>
+            <div className='flex justify-center'>
               <img 
                 src={onesideimg} 
                 alt="Crop Loan Services" 
-                className="w-full h-auto rounded-lg shadow-md"
+                className="w-[70%] rounded-lg shadow-md"
               />
             </div>
           </div>
@@ -157,30 +157,30 @@ const Financial = () => {
             <FaTools className="w-10 h-10 text-green-700 mr-4" />
             <div className='flex flex-col'>
               <h2 className="text-3xl cursor-default font-bold text-gray-900">Medium Term Loans</h2>
-              <p>The loan is to be repaid within 3 years at an interest rate of 10% per annum, with each crop cutting season considered as one instalment.</p>
+              <p>These loans are repaid in 3 years with 6 half yearly installments at ROI @10% per annum.</p>
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[{
-                icon: <FaWater className="w-8 h-8 text-green-700 mb-2" />,
-                title: "Irrigation Solutions",
-                items: ["Minor irrigation projects", "Well digging & electric motors", "Pipelines", "Drip irrigation", "Sprinklers"]
-              },
-              {
                 icon: <FaTractor className="w-8 h-8 text-green-700 mb-2" />,
                 title: "Farm Machinery",
-                items: ["Maize shellers", "Rotovators", "Tractor trailers", "Modern implements"]
+                items: ["Balers", "Rotovators", "Power Sprayers", "Power Tillers", "Tractor Trailer", "Tanker", "Level Blade", "Chaff Cutter", "Power Weeder"]
+              },
+              {
+                icon: <FaWater className="w-8 h-8 text-green-700 mb-2" />,
+                title: "Irrigation Solutions",
+                items: ["Digging of wells", "well ring construction", "Electric Pump Sets", "Pipe Lines", "Drip Irrigation System", "Sprinkler Irrigation System"]
               },
               {
                 icon: <FaTree className="w-8 h-8 text-green-700 mb-2" />,
                 title: "Agri-Allied Activities",
-                items: ["Dairy farming", "Sheep rearing", "Horticulture crops", "Sericulture"]
+                items: ["Dairy", "Poultry", "Sheep rearing", "Mango", "Citrus", "Papaya", "Sericulture", "Green House","Milking Machines"]
               },
               {
                 icon: <FaHandHoldingHeart className="w-8 h-8 text-green-700 mb-2" />,
                 title: "Welfare Activities",
-                items: ["Toilet construction", "Solar lanterns", "LPG gas connections", "Community infrastructure"]
+                items: ["Construction of Toilets", "LPG gas connections", "Rooftop Solar Systems", "Solar Fencing"]
               }
             ].map((card, index) => (
               <div key={index} className="bg-green-50 rounded-lg p-6">
@@ -209,11 +209,11 @@ const Financial = () => {
               <ul className="space-y-4 mb-6">
                 <li className="flex items-start">
             <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
-            <span className="text-gray-700 cursor-default">Long-term loans are to be repaid within 7 years at an interest rate of 10% per annum.</span>
+            <span className="text-gray-700 cursor-default">These loans are repaid in 7 years with 14 half yearly installments at ROI @10% per annum.</span>
                 </li>
                 <li className="flex items-start">
             <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
-            <span className="text-gray-700 cursor-default">Financing for tractors, harvesters, and paddy plantation machines</span>
+            <span className="text-gray-700 cursor-default">Majorly issued for tractors, harvesters and rice transplanters.</span>
                 </li>
               </ul>
               <div className="grid grid-cols-2 gap-4">
@@ -236,6 +236,8 @@ const Financial = () => {
             <div className="flex items-center mb-6">
               <FaHouseUser className="w-10 h-10 text-green-700 mr-4" />
               <h2 className="text-2xl cursor-default font-bold text-gray-900">General Term Loans</h2>
+            <span className="text-gray-700 cursor-default">These loans are repaid in 3-5 years with 6-10 half yearly installments at ROI @12% per annum.</span>
+
             </div>
             <div className="grid grid-cols-4 gap-4">
               {[

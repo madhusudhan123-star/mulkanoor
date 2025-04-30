@@ -27,18 +27,19 @@ const Second = () => {
                     <a href='/pillars/agri'>
                         <img src={nav2} alt="Navigation Image 2" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
                     </a>
+                    <a href='/pillars/extension'>
+                        <img src={nav9} alt="Navigation Image 8" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
+                    </a>
                     <a href='/product'>
                         <img src={nav6} alt="Navigation Image 6" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
                     </a>
-                    <a href='/pillars/values'>
+                    <a href='/processing'>
                         <img src={nav10} alt="Navigation Image 8" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
                     </a>
                     <a href='/marketing'>
                         <img src={nav5} alt="Navigation Image 5" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
                     </a>
-                    <a href='/pillars/extension'>
-                        <img src={nav9} alt="Navigation Image 8" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
-                    </a>
+
                     <a href='/pillars/Welfare'>
                         <img src={nav8} alt="Navigation Image 8" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
                     </a>

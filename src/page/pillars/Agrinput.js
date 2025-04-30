@@ -35,29 +35,30 @@ const Agrinput = () => {
     // New content sections data
     const contentSections = [
         {
-            id: "fertilizers",
-            title: "Fertilizers",
-            icon: <GiFertilizerBag className="text-5xl" />,
-            content: "Mulkanoor Cooperative Society supports farmers by providing a wide range of high-quality fertilizers essential for soil health and crop productivity. By ensuring access to the right fertilizers at affordable prices, the society helps farmers achieve better yields, sustain soil fertility, and enhance overall agricultural efficiency.Mulkanoor Cooperative Society operates in 18 villages, ensuring easy access to fertilizers with dedicated outlets in each village. This strategic setup minimizes time, transportation, manpower costs, and resource wastage for farmers.",
-            image: ag1,
-            color: "from-green-700 to-green-600"
-        },
-        {
-            id: "pesticides",
-            title: "Pesticides",
-            icon: <FaSprayCan className="text-5xl" />,
-            content: "Mulkanoor Cooperative Society provides farmers with a variety of high-quality pesticides to protect their crops from pests and diseases. By offering effective and affordable pest control solutions, the society helps farmers safeguard their yields, improve crop quality, and enhance overall farm productivity.",
-            image: ag2,
-            color: "from-green-600 to-emerald-500"
-        },
-        {
             id: "seeds",
             title: "Seeds",
             icon: <GiSprout className="text-5xl" />,
-            content: "Mulkanoor Cooperative Society supplies farmers with high-quality paddy seeds to ensure better yields and sustainable farming. From high-yielding varieties to climate-resistant, the society provides a diverse range suited for different crops and soil types. By ensuring access to truthful and superior seeds, Mulkanoor helps farmers enhance productivity, improve crop resilience, and achieve greater profitability.",
+            content: "The  seeds are supplied from society godown in each village. From these 18 godowns the Paddy, cotton, maize, and vegetables  seeds of high yielding varieties are available for farmers.",
             image: ag3,
             color: "from-emerald-500 to-teal-600"
-        }
+        },
+        {
+            id: "fertilizers",
+            title: "Fertilizers",
+            icon: <GiFertilizerBag className="text-5xl" />,
+            content: "The fertilizers are procured in advance of 3-4 months to ensure regular and timely availability to farmers and no member faces the shortage of fertilizers. The fertilizers are supplied through village godowns, This helps farmers by saving transportation costs, manpower and time  by getting fertilizers in his own village.",
+            image: ag1,
+            color: "from-green-700 to-green-600"
+        },
+        // {
+        //     id: "pesticides",
+        //     title: "Pesticides",
+        //     icon: <FaSprayCan className="text-5xl" />,
+        //     content: "Mulkanoor Cooperative Society provides farmers with a variety of high-quality pesticides to protect their crops from pests and diseases. By offering effective and affordable pest control solutions, the society helps farmers safeguard their yields, improve crop quality, and enhance overall farm productivity.",
+        //     image: ag2,
+        //     color: "from-green-600 to-emerald-500"
+        // },
+        
     ];
 
     // Agricultural implements section data
@@ -222,7 +223,7 @@ const Agrinput = () => {
                             Agricultural Input Services
                         </h1>
                         <p className="text-xl cursor-default text-white/90 max-w-3xl mx-auto">
-                            Supporting farmers with essential resources and modern solutions
+                            Supplying the best quality inputs through society to our members.
                         </p>
                     </motion.div>
                 </div>

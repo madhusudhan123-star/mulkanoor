@@ -36,6 +36,7 @@ import Gallery from "./page/media/Gallery";
 import Articeles from "./page/media/Articeles";
 import Paper from "./page/media/Paper";
 import Report from "./page/Report";
+import Processing from "./page/Processing";
 
 // Create a ScrollToTop component
 function ScrollToTop() {
@@ -80,6 +81,7 @@ function AppContent() {
           <Route path="/search" element={<SearchResults />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cta" element={<Cta />} />
+          <Route path="/processing" element={<Processing />} />
           {/* <Route path="/media" element={<Media />} /> */}
           <Route path="/product" element={<Product />} />
           <Route path="/marketing" element={<Marketing />} />

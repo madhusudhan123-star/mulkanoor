@@ -151,7 +151,7 @@ const Navbar = () => {
             ]
         },
         {
-            title: 'Anual',
+            title: 'Annual report',
             path:"/report"
         }
     ];
