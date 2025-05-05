@@ -2,14 +2,14 @@ import React from 'react'
 import banner from '../../assets/homebannersecond.jpg'
 import nav1 from '../../assets/home/nav1.jpg'
 import nav2 from '../../assets/home/nav2.jpg'
-import nav3 from '../../assets/home/nav3.jpg'
+import nav3 from '../../assets/home/nav3.png'
 import nav4 from '../../assets/home/nav4.jpg'
-import nav5 from '../../assets/home/nav5.jpg'
+import nav5 from '../../assets/home/nav5.png'
 import nav6 from '../../assets/home/nav6.jpg'
 import nav7 from '../../assets/home/nav7.jpg'
 import nav8 from '../../assets/home/nav8.jpg'
 import nav9 from '../../assets/home/nav9.jpg'
-import nav10 from '../../assets/home/nav10.jpg'
+import nav10 from '../../assets/home/nav10.png'
 
 const Second = () => {
     return (
@@ -39,12 +39,11 @@ const Second = () => {
                     <a href='/marketing'>
                         <img src={nav5} alt="Navigation Image 5" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
                     </a>
-
+                    <a href=''>
+                        <img src={nav3} alt="Navigation Image 3" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
+                    </a>
                     <a href='/pillars/Welfare'>
                         <img src={nav8} alt="Navigation Image 8" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
-                    </a>
-                    <a href='/pillars/insurance'>
-                        <img src={nav3} alt="Navigation Image 3" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
                     </a>
                 </div>
             </div>

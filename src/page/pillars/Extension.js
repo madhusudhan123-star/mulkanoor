@@ -211,7 +211,7 @@ const Extension = () => {
                         </div>
                         <div className="relative h-[300px] md:h-auto">
                             <img
-                                src={images.training.url}
+                                src={images.soil.url}
                                 alt="Farmers Information & Training Centre"
                                 className="w-full h-full object-cover"
                             />
@@ -228,7 +228,7 @@ const Extension = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2">
                         <div className="relative h-[300px] md:h-auto order-2 md:order-1">
                             <img
-                                src={images.soil.url}
+                                src={images.training.url}
                                 alt="Agri Awareness Programmes"
                                 className="w-full h-full object-cover"
                             />

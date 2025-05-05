@@ -110,7 +110,7 @@ const Storys = () => {
         <div className='flex gap-10 flex-col'>        
           {/* Add historical images */}
           <div className="flex justify-center items-center w-full">
-            <div className="relative rounded-xl overflow-hidden h-4/5">
+            <div className="relative rounded-xl overflow-hidden w-[50%]">
               <img
                 src={Founder}
                 alt="Founder A.K. Vishwanatha Reddy"

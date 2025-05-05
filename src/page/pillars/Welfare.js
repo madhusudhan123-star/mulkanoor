@@ -260,21 +260,11 @@ const Welfare = () => {
                             
                             <li className='pl-5'><strong>Drinking water:</strong> The society collaborated with NGOs to ensure access to clean drinking water by installing RO plants in villages, improving the health and well-being of the community.</li>
                             
-                            <li className='pl-5'><strong>Watershed activities:</strong> The society has implemented three watershed programs with financial assistance from the National Bank for Agricultural and Rural Development (NABARD), covering an area of 283.70 hectares.</li>
-                        </ul>
-                    }
-                />
-
-                <DetailSection 
-                    title="Health and Education" 
-                    icon={<FaGraduationCap className="text-4xl" />}
-                    image={images.education}
-                    reverse={true}
-                    content={
-                        <ul className="list-[circle] pl-5">
                             <li className='pl-5'><strong>Health camps:</strong> The cooperative, in partnership with hospitals, provides free cataract surgeries, affordable eye care, and specialized health camps. It also promotes well-being through physiotherapy and yoga camps, ensuring better healthcare for members.</li>
                             
                             <li className='pl-5'><strong>Education:</strong> Also society established junior and degree colleges to promote higher education in the area.</li>
+                            
+                            <li className='pl-5'><strong>Watershed activities:</strong> The society has implemented three watershed programs with financial assistance from the National Bank for Agricultural and Rural Development (NABARD), covering an area of 283.70 hectares.</li>
                         </ul>
                     }
                 />
@@ -283,7 +273,7 @@ const Welfare = () => {
                     title="Financial Benefits" 
                     icon={<GiReceiveMoney className="text-4xl" />}
                     image={images.health}
-                    reverse={false}
+                    reverse={true}
                     content={
                         <ul className="list-[circle] pl-5">
                             <li className='pl-5'><strong>Funeral expenses:</strong> Rs.10,000/- and 100 kg. Fine rice is given to the deceased family on the demise of the Member / Member Spouse.</li>
@@ -301,7 +291,7 @@ const Welfare = () => {
                     title="Insurance" 
                     icon={<FaShieldAlt className="text-4xl" />}
                     image={images.animal}
-                    reverse={true}
+                    reverse={false}
                     content={
                         <ul className="list-[circle] pl-5">
                             <li className='pl-5'><strong>Member:</strong> The members are covered under various insurance policies for life and accidental coverage.</li>

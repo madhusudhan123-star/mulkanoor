@@ -67,7 +67,7 @@ const Cotton = () => {
                 />
             </Helmet>
             {/* Interactive Hero Section */}
-            <div className="relative h-[500px] mb-16 overflow-hidden">
+            <div className="relative h-[300px] mb-16 overflow-hidden">
                 <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600"
                     initial={{ opacity: 0 }}
@@ -94,10 +94,10 @@ const Cotton = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
                     >
-                        <h1 className="text-6xl cursor-default md:text-7xl font-bold text-white mb-6">
+                        <h1 className="text-6xl cursor-default md:text-7xl font-bold text-black mb-6">
                             Cotton Division
                         </h1>
-                        <p className="text-xl cursor-default text-white/90 max-w-2xl mx-auto">
+                        <p className="text-xl cursor-default text-black/90 max-w-2xl mx-auto">
                             Quality cotton products for sustainable agriculture
                         </p>
                     </motion.div>

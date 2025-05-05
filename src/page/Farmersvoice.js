@@ -21,10 +21,10 @@ const Farmersvoice = () => {
                     </p>
                 </div>
                 
-                <Third />
+                {/* <Third /> */}
                 {/* Area of Operations Section */}
                 <div className="mb-16">
-                    <h2 className="text-2xl md:text-3xl font-bold text-earth-600 mb-8 text-center">Area of Operations</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold text-earth-600 mb-8 text-start">Area of Operations</h2>
                     <div className="flex flex-col md:flex-row gap-8 items-center">
                         <div className="md:w-1/2">
 

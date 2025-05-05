@@ -107,7 +107,7 @@ const Financial = () => {
         <div className="rounded-lg p-8 mb-16">
           <div className="flex items-center mb-8">
             <FaSeedling className="w-10 h-10 text-blue-700 mr-4" />
-            <h2 className="text-3xl cursor-default font-bold text-gray-900">Seasonal Crop Loans</h2>
+            <h2 className="text-3xl cursor-default font-bold text-gray-900">Seasonal Agricultural loans</h2>
           </div>
           
           <div className="flex">
@@ -208,12 +208,12 @@ const Financial = () => {
               </div>
               <ul className="space-y-4 mb-6">
                 <li className="flex items-start">
-            <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
-            <span className="text-gray-700 cursor-default">These loans are repaid in 7 years with 14 half yearly installments at ROI @10% per annum.</span>
+                  <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
+                  <span className="text-gray-700 cursor-default">These loans are repaid in 7 years with 14 half yearly installments at ROI @10% per annum.</span>
                 </li>
                 <li className="flex items-start">
-            <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
-            <span className="text-gray-700 cursor-default">Majorly issued for tractors, harvesters and rice transplanters.</span>
+                  <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
+                  <span className="text-gray-700 cursor-default">Majorly issued for tractors, harvesters and rice transplanters.</span>
                 </li>
               </ul>
               <div className="grid grid-cols-2 gap-4">
@@ -233,10 +233,35 @@ const Financial = () => {
 
             {/* General Term Loans */}
           <div className="bg-white rounded-lg shadow-md mt-4 p-8">
-            <div className="flex items-center mb-6">
+            <div className="flex flex-col items-start mb-6">
+              <div className="flex items-center mb-6">
+                <FaHouseUser className="w-10 h-10 text-blue-700 mr-4" />
+                <h2 className="text-2xl cursor-default font-bold text-gray-900">General-Term loans</h2>
+              </div>
+              <ul className="space-y-4 mb-6">
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
+                  <span className="text-gray-700 cursor-default">These loans are repaid in 3-5 years with 6-10 half yearly installments at ROI @12% per annum.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
+                  <span className="text-gray-700 cursor-default">These loans are issued for hospitalization, children higher education, marriages, construction of house.</span>
+                </li>
+              </ul>
+              {/* <div class name="">
               <FaHouseUser className="w-10 h-10 text-green-700 mr-4" />
-              <h2 className="text-2xl cursor-default font-bold text-gray-900">General Term Loans</h2>
-            <span className="text-gray-700 cursor-default">These loans are repaid in 3-5 years with 6-10 half yearly installments at ROI @12% per annum.</span>
+                <h2 className="text-2xl cursor-default font-bold text-gray-900">General Term Loans</h2>
+              </div>
+                <ul className="space-y-4 mb-6">
+                  <li className="flex items-start">
+              <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
+              <span className="text-gray-700 cursor-default">These loans are repaid in 7 years with 14 half yearly installments at ROI @10% per annum.</span>
+                  </li>
+                  <li className="flex items-start">
+              <span className="w-2 h-2 bg-blue-700 rounded-full mt-2 mr-3"></span>
+              <span className="text-gray-700 cursor-default">Majorly issued for tractors, harvesters and rice transplanters.</span>
+                  </li>
+                </ul> */}
 
             </div>
             <div className="grid grid-cols-4 gap-4">

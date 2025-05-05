@@ -4,14 +4,14 @@ import { motion } from 'framer-motion';
 
 const cardData = [
     {
-        title: "Rice",
+        title: "Mulkanoor Rice",
         content: "Premium quality rice varieties processed with state-of-the-art techniques, ensuring quality and taste.",
         image: "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
         url: '/product/rice'
     },
     {
-        title: "Seeds",
-        content: "100% pure and high yielding variety seeds",
+        title: "Mulkanoor  seeds",
+        content: "Genetically pure seeds of high-yielding varieties",
         image: "https://images.unsplash.com/photo-1620014093958-d76c2553e11a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
         url: '/product/paddy'
     },
