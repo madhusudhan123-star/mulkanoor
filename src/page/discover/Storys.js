@@ -123,6 +123,7 @@ const Storys = () => {
           </div>
 
           <div className="w-full text-earth-400 mt-10">
+            <h2 className="text-3xl cursor-default font-bold mb-8 text-center text-earth-500">Our Journey</h2>
             <p className="leading-relaxed cursor-default ">
               Mulkanoor cooperative rural bank was established in 1956 by esteemed visionary founder Late sri A.K Vishwanatha Reddy with the primary objective of uplifting socio-economic status of farmers. The society was initially registered under the Hyderabad cooperative societies act 1952. later, automatically deemed into A.P cooperative societies act 1964. After the enactment of Mutually aided cooperative societies act 1995 the cooperative transitioned under this new enactment.
             </p>
