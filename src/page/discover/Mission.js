@@ -7,11 +7,11 @@ import { Helmet } from 'react-helmet'
 import card from '../../assets/vision/card.jpg'
 const Mission = () => {
     const coreValues = [
-    { 
-      icon: <BsPeopleFill />, 
-      title: "Farmer-Centric Approach", 
-      description: "Prioritizing the needs and well-being of our farming community in every decision we make"
-    },
+      { 
+        icon: <BsPeopleFill />, 
+        title: "Farmer-Centric Approach", 
+        description: "Prioritizing the needs and well-being of our farming community in every decision we make"
+      },
     // ...other values
   ];
   return (

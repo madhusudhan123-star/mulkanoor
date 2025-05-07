@@ -15,7 +15,7 @@ const Farmersvoice = () => {
             </Helmet>
             <div className="container mx-auto px-4 md:px-8 mt-20 py-14 md:py-20">
                 <div className="mb-10 text-center">
-                    <h1 className="text-3xl cursor-default md:text-4xl font-bold text-earth-600 mb-4">Farmers' Voice</h1>
+                    {/* <h1 className="text-3xl cursor-default md:text-4xl font-bold text-earth-600 mb-4">Farmers' Voice</h1> */}
                     <p className="text-lg cursor-default md:text-xl text-earth-500 max-w-4xl mx-auto leading-relaxed">
                         The society started with the primary objective of socio economic development of the farmers of 14 revenue villages of bheemadevarapally, elkathurthy and velair mandals. The farmers who have cultivable land of at least an acre and reside in any of these villages are eligible for the membership of the cooperative.
                     </p>
@@ -40,17 +40,18 @@ const Farmersvoice = () => {
                             </div>
                         </div>
                         <div className="md:w-1/2 rounded-lg overflow-hidden h-80">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d61046.19853141186!2d79.27638409151968!3d18.192441697839815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1691034567890!5m2!1sen!2sin" 
-                                width="100%" 
-                                height="100%" 
-                                style={{ border: 0 }} 
-                                allowFullScreen="" 
-                                loading="lazy" 
-                                referrerPolicy="no-referrer-when-downgrade"
-                                title="Mulkanoor Operational Areas"
-                                className="rounded-lg shadow-md"
-                            ></iframe>
+                            <iframe
+                            src="https://www.google.com/maps?q=18.08078956604,79.3598556518555&z=14&output=embed"
+                            width="100%"
+                            height="100%"
+                            // style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Mulkanoor Operational Areas"
+                            class="rounded-lg shadow-md">
+                        </iframe>
+
                         </div>
                     </div>
                 </div>

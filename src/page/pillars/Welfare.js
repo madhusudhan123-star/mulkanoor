@@ -211,7 +211,7 @@ const Welfare = () => {
                 </script>
             </Helmet>
             {/* Hero Section */}
-            <div className="relative h-[60vh] overflow-hidden">
+            <div className="relative h-[300px] overflow-hidden">
                 <motion.div
                     initial={{ scale: 1.2 }}
                     animate={{ scale: 1 }}
@@ -256,15 +256,15 @@ const Welfare = () => {
                     reverse={false}
                     content={
                         <ul className="list-[circle] pl-5">
-                            <li className='pl-5'><strong>Village electrification:</strong> In the years following independence, the society played a crucial role in bringing electricity to society villages and farms, empowering farmers with better infrastructure for agriculture and daily life.</li>
+                            <li className='pl-5'><strong className='font-bold text-xl'>Village electrification:</strong> In the years following independence, the society played a crucial role in bringing electricity to society villages and farms, empowering farmers with better infrastructure for agriculture and daily life.</li>
                             
-                            <li className='pl-5'><strong>Drinking water:</strong> The society collaborated with NGOs to ensure access to clean drinking water by installing RO plants in villages, improving the health and well-being of the community.</li>
+                            <li className='pl-5'><strong className='font-bold text-xl'>Drinking water:</strong> The society collaborated with NGOs to ensure access to clean drinking water by installing RO plants in villages, improving the health and well-being of the community.</li>
                             
-                            <li className='pl-5'><strong>Health camps:</strong> The cooperative, in partnership with hospitals, provides free cataract surgeries, affordable eye care, and specialized health camps. It also promotes well-being through physiotherapy and yoga camps, ensuring better healthcare for members.</li>
+                            <li className='pl-5'><strong className='font-bold text-xl'>Health camps:</strong> The cooperative, in partnership with hospitals, provides free cataract surgeries, affordable eye care, and specialized health camps. It also promotes well-being through physiotherapy and yoga camps, ensuring better healthcare for members.</li>
                             
-                            <li className='pl-5'><strong>Education:</strong> Also society established junior and degree colleges to promote higher education in the area.</li>
+                            <li className='pl-5'><strong className='font-bold text-xl'>Education:</strong> Also society established junior and degree colleges to promote higher education in the area.</li>
                             
-                            <li className='pl-5'><strong>Watershed activities:</strong> The society has implemented three watershed programs with financial assistance from the National Bank for Agricultural and Rural Development (NABARD), covering an area of 283.70 hectares.</li>
+                            <li className='pl-5'><strong className='font-bold text-xl'>Watershed activities:</strong> The society has implemented three watershed programs with financial assistance from the National Bank for Agricultural and Rural Development (NABARD), covering an area of 283.70 hectares.</li>
                         </ul>
                     }
                 />
@@ -276,13 +276,13 @@ const Welfare = () => {
                     reverse={true}
                     content={
                         <ul className="list-[circle] pl-5">
-                            <li className='pl-5'><strong>Funeral expenses:</strong> Rs.10,000/- and 100 kg. Fine rice is given to the deceased family on the demise of the Member / Member Spouse.</li>
+                            <li className='pl-5'><strong className='font-bold text-xl'>Funeral expenses:</strong> Rs.10,000/- and 100 kg. Fine rice is given to the deceased family on the demise of the Member / Member Spouse.</li>
                             
-                            <li className='pl-5'><strong>Member welfare:</strong> When a member has passed away a financial assistance of 12.5 times the deposited amount (min 2500/-, max 50000/-) is paid to the bereaved family from the member welfare deposit scheme.</li>
+                            <li className='pl-5'><strong className='font-bold text-xl'>Member welfare:</strong> When a member has passed away a financial assistance of 12.5 times the deposited amount (min 2500/-, max 50000/-) is paid to the bereaved family from the member welfare deposit scheme.</li>
                             
-                            <li className='pl-5'><strong>Crop loan waiver:</strong> Deceased Members Crop Loan amount up to Rs. 1,50,000/- is waived from society funds.</li>
+                            <li className='pl-5'><strong className='font-bold text-xl'>Crop loan waiver:</strong> Deceased Members Crop Loan amount up to Rs. 1,50,000/- is waived from society funds.</li>
                             
-                            <li className='pl-5'><strong>Old age pension:</strong> For the financial and moral support to elderly people the society initiated an old age pension to members who are 65 years of age and completed 35 years as a member of the society.</li>
+                            <li className='pl-5'><strong className='font-bold text-xl'>Old age pension:</strong> For the financial and moral support to elderly people the society initiated an old age pension to members who are 65 years of age and completed 35 years as a member of the society.</li>
                         </ul>
                     }
                 />
@@ -294,13 +294,13 @@ const Welfare = () => {
                     reverse={false}
                     content={
                         <ul className="list-[circle] pl-5">
-                            <li className='pl-5'><strong>Member:</strong> The members are covered under various insurance policies for life and accidental coverage.</li>
+                            <li className='pl-5'><strong className='font-bold text-xl'>Member:</strong> The members are covered under various insurance policies for life and accidental coverage.</li>
                             
-                            <li className='pl-5'><strong>Animal:</strong> Animal insurance is assisted for the dairy and other livestock loans provided.</li>
+                            <li className='pl-5'><strong className='font-bold text-xl'>Animal:</strong> Animal insurance is assisted for the dairy and other livestock loans provided.</li>
                             
-                            <li className='pl-5'><strong>Vehicle:</strong> Vehicles provided by the financial assistance of society are insured through society.</li>
+                            <li className='pl-5'><strong className='font-bold text-xl'>Vehicle:</strong> Vehicles provided by the financial assistance of society are insured through society.</li>
                             
-                            <li className='pl-5'><strong>Stocks:</strong> Total society stocks, infrastructure and cash are insured as a safety net.</li>
+                            <li className='pl-5'><strong className='font-bold text-xl'>Stocks:</strong> Total society stocks, infrastructure and cash are insured as a safety net.</li>
                             
                             <li className='pl-5'>All the activities related to insurance from premiums, renewals and claims are managed by the society employees.</li>
                         </ul>

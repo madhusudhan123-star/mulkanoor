@@ -67,7 +67,7 @@ const Product = () => {
             </Helmet>
 
             {/* Hero Section */}
-            <div className="relative h-[400px] mb-16 overflow-hidden">
+            <div className="relative h-[300px] mb-16 overflow-hidden">
                 <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600"
                     initial={{ opacity: 0 }}

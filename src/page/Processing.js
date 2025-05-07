@@ -66,7 +66,7 @@ const Processing = () => {
       </Helmet>
 
       {/* Hero Banner */}
-      <div className="relative h-[50vh] overflow-hidden mb-16">
+      <div className="relative h-[300px] overflow-hidden mb-16">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <img 
           src="https://images.unsplash.com/photo-1580584126903-c17d41830450?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 

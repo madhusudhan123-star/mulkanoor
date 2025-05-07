@@ -81,7 +81,7 @@ const Financial = () => {
         </script>
       </Helmet>
       {/* Hero Section */}
-      <div className="relative">
+      <div className="relative h-[300px]">
         <div className="absolute inset-0">
           <img 
             src={banner} 

@@ -138,7 +138,7 @@ const Extension = () => {
                 </script>
             </Helmet>
             {/* Hero Banner */}
-            <div className="relative h-[60vh] overflow-hidden">
+            <div className="relative h-[300px] overflow-hidden">
                 <motion.div
                     initial={{ scale: 1.2 }}
                     animate={{ scale: 1 }}

@@ -187,7 +187,7 @@ const Cotton = () => {
             </section>
 
             {/* Interactive Statistics Section */}
-            <section className="container mx-auto px-4 mb-20">
+            {/* <section className="container mx-auto px-4 mb-20">
                 <motion.div
                     className="bg-white/80 backdrop-blur-md rounded-2xl shadow-xl overflow-hidden"
                     initial={{ opacity: 0 }}
@@ -245,7 +245,7 @@ const Cotton = () => {
                         </table>
                     </div>
                 </motion.div>
-            </section>
+            </section> */}
 
             {/* Interactive Background Elements */}
             <div className="fixed inset-0 pointer-events-none">

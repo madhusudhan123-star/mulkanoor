@@ -99,7 +99,7 @@ const riceData = {
 
 // Components
 const HeroSection = ({ image }) => (
-  <div className="relative h-[500px] mb-16 overflow-hidden">
+  <div className="relative h-[300px] mb-16 overflow-hidden">
     <motion.div
       className="absolute inset-0 bg-gradient-to-r from-amber-600 to-orange-600"
       initial={{ opacity: 0 }}
@@ -317,7 +317,7 @@ const BackgroundEffects = () => (
 const Rice = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50 pt-24">
-           <Helmet>
+      <Helmet>
         <title>Premium Rice Products - Mulkanoor Cooperative Society</title>
         <meta 
           name="description" 
@@ -380,16 +380,16 @@ const Rice = () => {
         icon={FaStore} 
         description="Find us at convenient locations across major towns" 
       /> */}
-      <RetailSection outlets={riceData.outlets} />
+      {/* <RetailSection outlets={riceData.outlets} /> */}
 
       {/* Performance Section */}
-      <SectionBanner 
+      {/* <SectionBanner 
         image={riceData.bannerImages.metrics} 
         title="Our Growth Story" 
         icon={FaChartLine} 
         description="Track our journey of success through numbers" 
       />
-      <PerformanceSection salesData={riceData.salesData} />
+      <PerformanceSection salesData={riceData.salesData} /> */}
 
       {/* Background Effects */}
       <BackgroundEffects />

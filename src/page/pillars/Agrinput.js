@@ -199,7 +199,7 @@ const Agrinput = () => {
                 </script>
             </Helmet>
             {/* Hero Banner */}
-            <div className="relative h-[60vh] overflow-hidden">
+            <div className="relative h-[300px] mt-0 md:mt-10 overflow-hidden">
                 <motion.div
                     initial={{ scale: 1.2 }}
                     animate={{ scale: 1 }}
