@@ -39,7 +39,7 @@ const Second = () => {
                     <a href='/marketing'>
                         <img src={nav5} alt="Navigation Image 5" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
                     </a>
-                    <a href=''>
+                    <a href='/consumer'>
                         <img src={nav3} alt="Navigation Image 3" className='w-full cursor-pointer rounded-lg  hover:shadow-lg transition-all' />
                     </a>
                     <a href='/pillars/Welfare'>

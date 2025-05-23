@@ -145,7 +145,7 @@ const Cotton = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    Our Cotton Factory
+                    Cotton Factory
                 </motion.h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <motion.div

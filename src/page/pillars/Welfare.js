@@ -275,15 +275,30 @@ const Welfare = () => {
                     image={images.health}
                     reverse={true}
                     content={
-                        <ul className="list-[circle] pl-5">
-                            <li className='pl-5'><strong className='font-bold text-xl'>Funeral expenses:</strong> Rs.10,000/- and 100 kg. Fine rice is given to the deceased family on the demise of the Member / Member Spouse.</li>
-                            
-                            <li className='pl-5'><strong className='font-bold text-xl'>Member welfare:</strong> When a member has passed away a financial assistance of 12.5 times the deposited amount (min 2500/-, max 50000/-) is paid to the bereaved family from the member welfare deposit scheme.</li>
-                            
-                            <li className='pl-5'><strong className='font-bold text-xl'>Crop loan waiver:</strong> Deceased Members Crop Loan amount up to Rs. 1,50,000/- is waived from society funds.</li>
-                            
-                            <li className='pl-5'><strong className='font-bold text-xl'>Old age pension:</strong> For the financial and moral support to elderly people the society initiated an old age pension to members who are 65 years of age and completed 35 years as a member of the society.</li>
-                        </ul>
+                        <>
+                            <ul className="list-[circle] pl-5">
+                                <li className='pl-5'><strong className='font-bold text-xl'>Funeral expenses:</strong> Rs.10,000/- and 100 kg. Fine rice is given to the deceased family on the demise of the Member / Member Spouse.</li>
+                                
+                                <li className='pl-5'><strong className='font-bold text-xl'>Member welfare:</strong> When a member has passed away a financial assistance of 12.5 times the deposited amount (min 2500/-, max 50000/-) is paid to the bereaved family from the member welfare deposit scheme.</li>
+                                
+                                <li className='pl-5'><strong className='font-bold text-xl'>Crop loan waiver:</strong> Deceased Members Crop Loan amount up to Rs. 1,50,000/- is waived from society funds.</li>
+                                
+                                <li className='pl-5'><strong className='font-bold text-xl'>Old age pension:</strong> For the financial and moral support to elderly people the society initiated an old age pension to members who are 65 years of age and completed 35 years as a member of the society.</li>
+                            </ul>
+                            <div className="mt-6 flex justify-center">
+                                <a 
+                                    href="https://drive.google.com/file/d/1gN_jDiJ0qB2gUGmWKYC8XBup-pF2hl20/view?usp=sharing"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center px-6 py-3 bg-[#2E7D32] text-white font-medium text-lg rounded-md hover:bg-[#1B5E20] transition-colors duration-300 shadow-md"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                    Download Financial Benefits Document
+                                </a>
+                            </div>
+                        </>
                     }
                 />
 

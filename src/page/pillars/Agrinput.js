@@ -317,18 +317,7 @@ const Agrinput = () => {
                         </div>
                         <div className="lg:col-span-3">
                             <div className="space-y-8">
-                                {agriImplementsData.categories.map((category, index) => (
-                                    <motion.div 
-                                        key={index}
-                                        className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg"
-                                        initial={{ y: 30, opacity: 0 }}
-                                        whileInView={{ y: 0, opacity: 1 }}
-                                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                                    >
-                                        <h4 className="text-xl  cursor-default font-bold text-[#2E7D32] mb-3">{category.title}</h4>
-                                        <p className="text-[#1B5E20] cursor-default">{category.items}</p>
-                                    </motion.div>
-                                ))}
+                                
                                 {/* <motion.div
                                     className="bg-gradient-to-br from-green-600 to-green-700 rounded-xl p-6 text-white shadow-lg"
                                     initial={{ y: 30, opacity: 0 }}

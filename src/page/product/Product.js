@@ -13,7 +13,12 @@ import card3 from '../../assets/product/paddy/card3.jpg';
 import card4 from '../../assets/product/paddy/card4.jpg';
 import card5 from '../../assets/product/paddy/card5.jpg';
 import card6 from '../../assets/product/paddy/card6.jpg';
-
+import paddy from '../../assets/product/paddy/PaddyProcurementone.JPG';
+import padd2 from '../../assets/product/paddy/PaddyProcurementtwo.JPG';
+import seed from '../../assets/product/paddy/PaddySeedProcurement1.JPG';
+import seed2 from '../../assets/product/paddy/PaddySeedProcurement2.JPG';
+import cotton from '../../assets/product/paddy/CottonProcurement1.JPG';
+import cotton2 from '../../assets/product/paddy/CottonProcurement2.JPG';
 
 const Product = () => {
     // Benefits data for the procurement process
@@ -39,7 +44,7 @@ const Product = () => {
         {
             icon: <FaChartLine className="text-4xl text-green-600" />,
             title: "Efficiency & Savings",
-            description: "Reduces labor and saves Rs. 100 per quintal.",
+            description: "Reduces labor and minimizes cost Rs. 100 per quintal.",
             // image: cottonImg
         }
     ];
@@ -130,8 +135,8 @@ const Product = () => {
                             transition={{ duration: 0.8 }} 
                             viewport={{ once: true }}
                         >
-                            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                                {[card1, card2, card3, card4, card5, card6].map((image, index) => (
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                {[paddy, padd2].map((image, index) => (
                                     <div key={index} className="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                                         <img 
                                             src={image} 
@@ -172,8 +177,8 @@ const Product = () => {
                             transition={{ duration: 0.8 }} 
                             viewport={{ once: true }}
                         >
-                            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                                {[card1, card2, card3, card4, card5, card6].map((image, index) => (
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                {[seed, seed2].map((image, index) => (
                                     <div key={index} className="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                                         <img 
                                             src={image} 
@@ -214,8 +219,8 @@ const Product = () => {
                             transition={{ duration: 0.8 }} 
                             viewport={{ once: true }}
                         >
-                            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                                {[card1, card2, card3, card4, card5, card6].map((image, index) => (
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                {[cotton, cotton2].map((image, index) => (
                                     <div key={index} className="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                                         <img 
                                             src={image} 
@@ -239,7 +244,7 @@ const Product = () => {
                     viewport={{ once: true }}
                 >
                     <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-4">
-                        Our Procurement Benefits
+                        Procurement Benefits
                     </h2>
                     {/* <p className="text-lg text-green-700 max-w-3xl mx-auto">
                         Mulkanoor Cooperative Society's agri-produce procurement ensures fair pricing, 

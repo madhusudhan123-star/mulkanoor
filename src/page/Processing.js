@@ -2,6 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaWarehouse, FaIndustry, FaSeedling, FaLeaf, FaBoxes } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
+import godowns from '../assets/processing/godowns.jpg'
+import ricemill from '../assets/processing/ricemill.jpg'
+import rawricemill from '../assets/processing/rawricemill.JPG'
+import seedprocessing from '../assets/processing/seedprocessing.JPG'
+import cottonprocessing from '../assets/processing/cottonprocessing.JPG'
+
 
 const Processing = () => {
   // Processing facility sections data with dummy internet images
@@ -11,35 +17,35 @@ const Processing = () => {
       title: 'Godowns',
       icon: <FaWarehouse className="text-3xl" />,
       description: 'In our 56000 MT capacity storage structures across 18 villages, we store both agri inputs and farm produce. The storage aids to manage agri input demand, provide the buffer time for value addition and  to time markets for fetching best price',
-      image: 'https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2FyZWhvdXNlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60'
+      image: godowns
     },
     {
       id: 'parboiled',
       title: 'Parboiled rice mill-4 ton/hr',
       icon: <FaIndustry className="text-3xl" />,
       description: 'In the fully automated parboiled rice mill unit the paddy undergoes cleaning, boiling, drying, dehusking, polishing and colour sorting, grading.  Here the final product rice is supplied to FCI or exported.',
-      image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60'
+      image: ricemill
     },
     {
       id: 'rawrice',
       title: 'Modern raw rice mill-4 ton/hr',
       icon: <FaBoxes className="text-3xl" />,
       description: 'The paddy is cleaned and then directly dehusked, polished to get fine rice. The rice is colour sorted and graded for automated packing. The process is fully automated and packed hygienically.',
-      image: 'https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60'
+      image: rawricemill
     },
     {
       id: 'seed',
       title: 'Seed processing units-23 ton/hr with 7 units',
       icon: <FaSeedling className="text-3xl" />,
       description: 'Once the seeds are procured they are cleaned, graded and packed.',
-      image: 'https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60'
+      image: seedprocessing
     },
     {
       id: 'cotton',
       title: 'Cotton ginning mills- 15 ton/day ginning machines',
       icon: <FaLeaf className="text-3xl" />,
       description: 'The cotton is cleaned, ginned and pressed into bales.',
-      image: 'https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2FyZWhvdXNlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60'
+      image: cottonprocessing
     }
   ];
 
@@ -69,7 +75,7 @@ const Processing = () => {
       <div className="relative h-[300px] overflow-hidden mb-16">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <img 
-          src="https://images.unsplash.com/photo-1580584126903-c17d41830450?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
+          src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1470&auto=format&fit=crop" 
           alt="Processing Facilities" 
           className="absolute w-full h-full object-cover"
         />

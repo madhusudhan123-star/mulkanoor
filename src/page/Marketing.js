@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import paddy from '../assets/marketing/paddy.jpg';
+import cotton from '../assets/marketing/cotton.jpg';
 
 const cardData = [
     {
@@ -12,13 +14,13 @@ const cardData = [
     {
         title: "Mulkanoor  seeds",
         content: "Genetically pure seeds of high-yielding varieties",
-        image: "https://images.unsplash.com/photo-1620014093958-d76c2553e11a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+        image: paddy,
         url: '/product/paddy'
     },
     {
         title: "Cotton",
         content: "Superior quality cotton, ethically sourced and carefully processed for premium markets.",
-        image: "https://images.unsplash.com/photo-1594659354132-b8820271e351?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        image: cotton,
         url: '/product/cotton'
     }
 ];

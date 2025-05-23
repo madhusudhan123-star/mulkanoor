@@ -37,6 +37,7 @@ import Articeles from "./page/media/Articeles";
 import Paper from "./page/media/Paper";
 import Report from "./page/Report";
 import Processing from "./page/Processing";
+import Consumer from "./page/Consumer";
 
 // Create a ScrollToTop component
 function ScrollToTop() {
@@ -90,6 +91,7 @@ function AppContent() {
           <Route path="/media/articles" element={<Articeles />} />
           <Route path="/media/paper" element={<Paper />} />
           <Route path='/report' element={<Report />} />
+          <Route path="/consumer" element={<Consumer />} />
           <Route path="*" element={<div className="text-center mt-20">404 Not Found</div>} />
         </Routes>
       </div>
