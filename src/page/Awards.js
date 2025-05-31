@@ -97,7 +97,7 @@ const Awards = () => {
             image: images.awards[4]
         },
         {
-            title: "Sakhi Excellence Ward",
+            title: "Sakshi Excellence Award",
             image: images.awards[5]
         },
         {
@@ -105,7 +105,7 @@ const Awards = () => {
             image: images.awards[6]
         },
         {
-            title: "Responsible Buniness Award for Agriculture and Cooperative Sector by  ACHIEVERS FORM",
+            title: "Responsible Business Award for Agriculture and Cooperative Sector by  ACHIEVERS FORM",
             image: images.awards[7]
         },
         {

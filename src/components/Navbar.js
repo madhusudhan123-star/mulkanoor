@@ -144,8 +144,8 @@ const Navbar = () => {
             title: 'Media Center',
             path: '#media',
             submenu: [
-                { title: 'Paper cuttes', path: '/media/paper' },
-                { title: 'Articeles post', path: '/media/articles' },
+                { title: 'Paper cuttings', path: '/media/paper' },
+                { title: 'Articles post', path: '/media/articles' },
                 { title: 'Gallery', path: '/media/gallery' },
                 { title: 'Videos', path: '/media/videos' },
             ]
