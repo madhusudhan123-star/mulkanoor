@@ -241,11 +241,22 @@ const Insurance = () => {
                                     <td className="p-2 sm:p-4"></td>
                                     <td className="p-2 cursor-default sm:p-4 text-center">5,49,510.00</td>
                                     <td className="p-2 cursor-default sm:p-4 text-center rounded-br-lg">81,62,150.00</td>
-                                </tr>
-                            </tbody>
+                                </tr>                            </tbody>
                         </table>
                     </div>
                 </div>
+                
+                {/* Pension Note */}
+                <motion.div 
+                    className="mt-6 p-4 bg-blue-800/20 rounded-lg border border-blue-700/30"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                >
+                    <p className="text-center text-blue-100 font-medium">
+                        <strong>Note:</strong> Pension - ₹1,000 per month
+                    </p>
+                </motion.div>
             </div>
         </motion.div>
     );

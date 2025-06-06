@@ -204,22 +204,20 @@ const Winning = () => {
                                         {formula.description}
                                     </p>
                                 </div>
-                            </div>
-
-                            {/* Enhanced Image Section */}
-                            <div className="flex-1">
+                            </div>                            {/* Enhanced Image Section */}
+                            <div className="flex-1 max-w-md mx-auto">
                                 <div className="relative rounded-2xl overflow-hidden group">
                                     <img
                                         src={formula.image}
                                         alt={formula.title}
-                                        className="w-full aspect-[5/3] transform transition-transform 
-                                            duration-700 group-hover:scale-110"
+                                        className="w-full aspect-[4/3] transform transition-transform 
+                                            duration-700 group-hover:scale-110 object-cover"
                                     />
                                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 
                                         transition-colors duration-300" />
                                     {/* Decorative Corner Patterns */}
-                                    <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-white/30" />
-                                    <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-white/30" />
+                                    <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-white/30" />
+                                    <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-white/30" />
                                 </div>
                             </div>
                         </motion.div>

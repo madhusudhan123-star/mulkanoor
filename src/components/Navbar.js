@@ -258,7 +258,7 @@ const Navbar = () => {
 
                     {/* Center - Title */}
                     <div className="hidden md:block text-center">
-                        <h1 className="text-2xl font-bold text-white">Mulkanoor Cooperative Rural & Credit Marketing Society</h1>
+                        <h1 className="text-2xl font-bold text-white">Mulkanoor Cooperative Rural Credit & Marketing Society</h1>
                     </div>
 
                     {/* Right - Menu and Search */}

@@ -122,14 +122,16 @@ const Contact = () => {
                         animate={{ opacity: 1, x: 0 }}
                     >
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3795.087281403!2d79.27659!3d18.19235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a334f36eb976d79%3A0x9f236b1b1049f432!2sMulkanoor%20Cooperative%20Rural%20Bank%20and%20Marketing%20Society!5e0!3m2!1sen!2sin!4v1708786037571!5m2!1sen!2sin"
+                            src="https://www.google.com/maps?q=18.08078956604,79.3598556518555&z=14&output=embed"
                             width="100%"
                             height="100%"
-                            style={{ border: 0 }}
-                            allowFullScreen=""
+                            // style="border:0;"
+                            allowfullscreen=""
                             loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                        ></iframe>
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Mulkanoor Operational Areas"
+                            class="rounded-lg shadow-md">
+                        </iframe>
                     </motion.div>
 
                     {/* Contact Form */}
