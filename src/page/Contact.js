@@ -19,19 +19,19 @@ const Contact = () => {
         {
             icon: <FaPhone className="text-2xl" />,
             title: "Phone",
-            details: ["+91 87904 36417", "+91 87904 36418"],
+            details: ["+91 9440800651"],
             animation: { y: [0, -5, 0], transition: { duration: 2, repeat: Infinity } }
         },
         {
             icon: <FaEnvelope className="text-2xl" />,
             title: "Email",
-            details: ["info@mulkanoor.coop", "support@mulkanoor.coop"],
+            details: ["mcrcms1956@gmail.com"],
             animation: { x: [-5, 5, -5], transition: { duration: 2, repeat: Infinity } }
         },
         {
             icon: <FaMapMarkerAlt className="text-2xl" />,
             title: "Address",
-            details: ["Mulkanoor village, Bheemdevarapally Mandal", "Hanamkonda District, Telangana - 506 345"],
+            details: ["MULKANOOR COOPERATIVE RURAL CREDIT AND MARKETING SOCIETY LTD., MULKANOOR VILLAGE, BHEEMADEVARAPALLY MANDAL, HANUMAKONDA DISTRICT-505471"],
             animation: { scale: [1, 1.1, 1], transition: { duration: 2, repeat: Infinity } }
         },
         {

@@ -37,17 +37,17 @@ const Footer = () => {
                         <div className="space-y-1 text-sm md:text-base">
                             <p className="flex items-center gap-2">
                                 <FaPhone className="flex-shrink-0" size={14} />
-                                <span>+91 8733 269 224</span>
+                                <span>+91 944 080 0651</span>
                             </p>
                             <p className="flex items-center gap-2">
                                 <FaEnvelope className="flex-shrink-0" size={14} />
-                                <span>info@mulkanoor.com</span>
+                                <span>mcrcms1956@gmail.com
+                                </span>
                             </p>
                             <p className="flex items-start gap-2">
                                 <FaMapMarkerAlt className="flex-shrink-0 mt-1" size={14} />
                                 <span className="text-xs md:text-sm">
-                                    Mulkanoor, Bheemadevarapally Mandal,
-                                    Hanamkonda District, Telangana - 506 345
+                                MULKANOOR COOPERATIVE RURAL CREDIT AND MARKETING SOCIETY LTD., MULKANOOR VILLAGE, BHEEMADEVARAPALLY MANDAL, HANUMAKONDA DISTRICT-505471
                                 </span>
                             </p>
                             <Link
