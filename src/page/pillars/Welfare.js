@@ -142,7 +142,7 @@ const Welfare = () => {
     );
 
     return (
-        <div className="min-h-screen bg-gradient-to-br mt-10 from-[#E8F5E9] via-[#C8E6C9] to-[#A5D6A7]">
+        <div className="min-h-screen bg-gradient-to-br mt-20 from-[#E8F5E9] via-[#C8E6C9] to-[#A5D6A7]">
             <Helmet>
                 <title>Community Welfare Initiatives - Mulkanoor Cooperative Society</title>
                 <meta 

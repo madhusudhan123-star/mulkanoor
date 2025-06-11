@@ -79,7 +79,7 @@ const Organization = () => {
     );
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-[#F5F5DC] via-[#F0EBE0] to-[#E8E3D9] pt-16 md:pt-28">
+        <div className="min-h-screen bg-gradient-to-br from-[#F5F5DC] via-[#F0EBE0] to-[#E8E3D9] pt-20 md:pt-28">
             <Helmet>
                 <title>Organizational Structure - Mulkanoor Cooperative Society</title>
                 <meta 

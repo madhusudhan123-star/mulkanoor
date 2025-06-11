@@ -90,7 +90,6 @@ const Navbar = () => {
         {
             title: 'Home',
             path: '/'
-            // Home no longer has submenu
         },
         {
             title: 'Discover Us',
@@ -128,23 +127,20 @@ const Navbar = () => {
         {
             title: 'Farmers Voice',
             path: '/farmer'
-            // Home no longer has submenu
         },
         {
             title: 'Awards & Accolades',
             path: '/awards'
-            // Home no longer has submenu
         },
         {
             title: 'Our Winning Formula',
             path: '/winning'
-            // Home no longer has submenu
         },
         {
             title: 'Media Center',
             path: '#media',
             submenu: [
-                { title: 'Paper cuttings', path: '/media/paper' },
+                { title: 'Press coverage', path: '/media/paper' },
                 { title: 'Articles post', path: '/media/articles' },
                 { title: 'Gallery', path: '/media/gallery' },
                 { title: 'Videos', path: '/media/videos' },
@@ -152,7 +148,7 @@ const Navbar = () => {
         },
         {
             title: 'Annual report',
-            path:"/report"
+            path: "/report"
         }
     ];
 
@@ -248,20 +244,21 @@ const Navbar = () => {
         <div className="relative overflow-x-hidden">
             {/* Main Navbar */}
             <nav className={`fixed w-full top-0 left-0 backdrop-blur-sm bg-green-600 border-b border-white/20 shadow-lg z-50 transition-transform duration-300 ${scrollDirection === 'down' ? '-translate-y-full' : 'translate-y-0'}`}>
-                <div className="flex justify-between items-center px-3 md:px-8 py-2 md:py-4">
+                {/* Top section with logo, title and search */}
+                <div className="flex justify-between items-center px-3 md:px-8 ">
                     {/* Left - Logo */}
                     <div className="flex items-center">
                         <a href='/'>
-                            <img src={logo} alt="Logo" className="h-10 md:h-16 rounded-full w-auto" />
+                            <img src={logo} alt="Logo" className="h-10 md:h-14 rounded-full w-auto" />
                         </a>
                     </div>
 
                     {/* Center - Title */}
-                    <div className="hidden md:block text-center">
+                    <div className="hidden md:block text-center flex-1">
                         <h1 className="text-2xl font-bold text-white">Mulkanoor Cooperative Rural Credit & Marketing Society</h1>
                     </div>
 
-                    {/* Right - Menu and Search */}
+                    {/* Right - Search and Mobile Menu Button */}
                     <div className="flex items-center gap-4">
                         {/* Social Icons - Hidden on mobile */}
                         <div className="hidden md:flex gap-4">
@@ -283,8 +280,8 @@ const Navbar = () => {
                             ))}
                         </div>
                         
-                        {/* Menu Button */}
-                        <button className="text-base md:text-xl text-white flex items-center gap-2" onClick={() => setIsOpen(!isOpen)}>
+                        {/* Menu Button - Only visible on mobile */}
+                        <button className="text-base md:hidden text-white flex items-center gap-2" onClick={() => setIsOpen(!isOpen)}>
                             <span className='p-2 hover:bg-green-700 bg-green-700/70 text-base transition-all duration-300 
                                 hover:scale-110 rounded-full backdrop-blur-lg flex items-center justify-center'>
                                 {isOpen ? <FaTimes size={18} /> : <FaBars size={18} />}
@@ -293,7 +290,51 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                {/* Search bar - made always accessible */}
+                {/* Desktop Menu - Horizontal below title */}
+                <div className="hidden md:block bg-green-700/80 backdrop-blur-sm border-t border-green-500/30">
+                    <div className="container mx-auto px-8">
+                        <div className="flex items-center justify-center">
+                            <nav className="flex space-x-1">
+                                {menuItems.map((item, index) => (
+                                    <div key={index} className="relative group">
+                                        {item.submenu ? (
+                                            <div className="relative">
+                                                <button className="flex items-center gap-1 px-4 py-3 text-white hover:bg-green-600/50 rounded-lg transition-all duration-200 group">
+                                                    <span className="text-sm font-medium">{item.title}</span>
+                                                    <FaChevronDown className="text-xs group-hover:rotate-180 transition-transform duration-200" />
+                                                </button>
+                                                
+                                                {/* Dropdown Menu */}
+                                                <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[100]">
+                                                    <div className="py-2">
+                                                        {item.submenu.map((subItem, subIndex) => (
+                                                            <a
+                                                                key={subIndex}
+                                                                href={subItem.path}
+                                                                className="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-800 transition-colors text-sm"
+                                                            >
+                                                                {subItem.title}
+                                                            </a>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ) : (
+                                            <a
+                                                href={item.path}
+                                                className="block px-4 py-3 text-white hover:bg-green-600/50 rounded-lg transition-all duration-200 text-sm font-medium"
+                                            >
+                                                {item.title}
+                                            </a>
+                                        )}
+                                    </div>
+                                ))}
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Search bar */}
                 <div className={`
                     w-full bg-white/90 transition-all duration-300 overflow-visible relative
                     ${showSearch ? 'max-h-20 py-3 visible' : 'max-h-0 py-0 hidden'}
@@ -341,9 +382,9 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            {/* Full-screen mobile menu - updated to slide from right and cover half screen */}
+            {/* Mobile menu - only for mobile */}
             <div className={`
-                fixed inset-0 bg-black/50 backdrop-blur-sm z-[60]
+                md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-[60]
                 transition-opacity duration-300 ease-in-out
                 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}
             `}>

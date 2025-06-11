@@ -157,725 +157,210 @@ const Milestones = () => {
 
     const timelineData = [
         {
-            year: "1956-57",
-            title: "Formation of the Society",
-            description: "Farmers registered the society with an initial membership of 373 and a share capital of ₹2,300.",
+            year: "1956-1960",
+            title: "Foundation & Early Growth",
+            description: "Formation of the society with 373 members and ₹2,300 share capital. Introduced electrification and pump sets for agricultural development.",
             image: year1956,
             achievements: [
-                "Initial membership of 373",
-                "Share capital of ₹2,300",
-                "Established to support farmers financially"
+                "Society registered with 373 founding members",
+                "Initial share capital of ₹2,300",
+                "First electric pump sets introduced",
+                "Started short-term loans for farmers",
+                "Built first fertilizer godown"
             ],
-            details: "A group of farmers came together to form the cooperative society, laying the foundation for future agricultural support."
+            details: "The foundational years saw farmers uniting to create a cooperative that would transform agriculture in the region through collective effort and financial support."
         },
         {
-            year: "1957-58",
-            title: "Registered at Founder President’s Residence",
-            description: "The society was registered at the Founder President’s residence, marking the start of its journey in farmer empowerment.",
-            image: year1957,
-            achievements: [
-                "First-ever short-term loans for farmers",
-                "Helped in timely crop cultivation"
-            ],
-            details: "This initiative marked the beginning of financial assistance to farmers, ensuring better productivity."
-        },
-        {
-            year: "1958-59",
-            title: "Electrification and Pump Set Sales",
-            description: "With electrification, the cooperative started selling electric pump sets to aid agricultural development.",
-            image: year1958,
-            achievements: [
-                "Electrification of the society's area",
-                "Introduction of electric pump sets for farmers"
-            ],
-            details: "Providing electric pump sets revolutionized irrigation, enhancing crop yields."
-        },
-        {
-            year: "1959-60",
-            title: "Storage and Expansion",
-            description: "First godown was built for fertilizers and produce, and sugar sales were introduced.",
-            image: year1959,
-            achievements: [
-                "Construction of first fertilizer godown",
-                "Initiation of sugar sales in the community"
-            ],
-            details: "Efficient inventory management and expansion into sugar sales strengthened the cooperative's role in the region."
-        },
-        {
-            year: "1960-61",
-            title: "Innovative Loan Disbursement",
-            description: "Loans were disbursed in kind, and medium-term loans for pump sets were introduced.",
-            image: year1960,
-            achievements: [
-                "Loans disbursed in kind before RBI recommendations",
-                "First medium-term loans for pump sets"
-            ],
-            details: "Farmers benefited from receiving loans in kind, ensuring direct investment into farming essentials."
-        },
-        {
-            year: "1961-62",
-            title: "Introduction of Hybrid Seeds",
-            description: "Hybrid maize seeds were introduced to improve agricultural productivity.",
-            image: year1961,
-            achievements: [
-                "First introduction of hybrid maize seeds"
-            ],
-            details: "Farmers adopted hybrid maize, leading to better yield and quality crops."
-        },
-        {
-            year: "1962-63",
-            title: "Pledge Loan Scheme Introduced",
-            description: "Pledge loans were introduced to support farmers financially.",
-            image: year1962,
-            achievements: [
-                "Introduction of pledge loans"
-            ],
-            details: "This scheme helped farmers secure loans against stored produce."
-        },
-        {
-            year: "1964-65",
-            title: "Milestone in Member Deposits",
-            description: "Member deposits surpassed ₹1.00 lakh, indicating financial stability.",
+            year: "1961-1965",
+            title: "Innovation & Diversification",
+            description: "Introduced hybrid seeds, pledge loans, and expanded into rice milling. Member deposits crossed ₹1 lakh milestone.",
             image: year1963,
             achievements: [
-                "Member deposits exceeded ₹1.00 lakh"
+                "First hybrid maize seeds introduced",
+                "Pledge loan scheme implemented",
+                "Member deposits exceeded ₹1.00 lakh",
+                "Rice mill installation began",
+                "Crop loan system established"
             ],
-            details: "A significant financial milestone showcasing trust in the cooperative."
+            details: "This period marked significant agricultural innovation with the introduction of modern farming techniques and diversified financial services."
         },
         {
-            year: "1965-66",
-            title: "Expansion into Rice Milling and Crop Loans",
-            description: "A rice mill was installed, and the crop loan system was introduced.",
-            image: year1965,
-            achievements: [
-                "Installation of a rice mill",
-                "Introduction of crop loan system as per RBI guidelines",
-                "Promotion of high-yield crop varieties"
-            ],
-            details: "Linking credit with marketing improved farmer income and productivity."
-        },
-        {
-            year: "1966-67",
-            title: "Oil Mill Addition and Incentives",
-            description: "An oil mill was added, and community prizes for 100% loan recovery were introduced.",
-            image: year1966,
-            achievements: [
-                "Oil mill established for expanded processing",
-                "Incentives introduced for villages with 100% loan recovery"
-            ],
-            details: "Encouraging prompt loan repayment and expanding agro-processing capabilities."
-        },
-        {
-            year: "1967-68",
-            title: "Staff Mobility Enhancement",
-            description: "The first motorcycle was purchased to facilitate staff mobility.",
-            image: year1967,
-            achievements: [
-                "Motorcycle purchase for staff transportation"
-            ],
-            details: "Improved efficiency and outreach for cooperative staff."
-        },
-        {
-            year: "1968-69",
-            title: "Irrigation and Non-Credit Loans",
-            description: "A drilling machine was purchased, and SBH loans were availed for non-credit activities.",
+            year: "1966-1970",
+            title: "Processing & Infrastructure",
+            description: "Major expansion in agro-processing with rice and oil mills. Enhanced staff mobility and irrigation infrastructure development.",
             image: year1968,
             achievements: [
-                "Drilling machine introduced to revitalize irrigation wells",
-                "Non-credit loans availed from SBH"
+                "Rice mill and oil mill established",
+                "100% loan recovery incentive program",
+                "First motorcycle for staff mobility",
+                "Drilling machine for irrigation wells",
+                "Transition to SBH loan services"
             ],
-            details: "Supporting farmers beyond credit services by improving irrigation infrastructure."
+            details: "Focused on building robust infrastructure for processing and expanding reach to better serve farming communities."
         },
         {
-            year: "1969-70",
-            title: "Transition to SBH Loans",
-            description: "All credit and non-credit loans were transferred to SBH.",
-            image: year1969,
-            achievements: [
-                "Loan services transitioned to SBH"
-            ],
-            details: "A major financial restructuring to enhance loan accessibility."
-        },
-        {
-            year: "1970-71",
-            title: "Area Development Schemes",
-            description: "Schemes for irrigation, dairy, poultry, and tractors were submitted to ARDC.",
-            image: year1970,
-            achievements: [
-                "Support for diverse agricultural activities",
-                "Funding facilitated by SBH"
-            ],
-            details: "These initiatives supported mechanization and productivity improvements."
-        },
-        {
-            year: "1971-72",
-            title: "Agricultural Extension Services Strengthened",
-            description: "An agricultural graduate was appointed to enhance farming techniques and modern tools adoption.",
-            image: year1971,
-            achievements: [
-                "Promotion of new seeds and balanced fertilization",
-                "Sale of sugar initiated"
-            ],
-            details: "Expert guidance improved farming efficiency and yields."
-        },
-        {
-            year: "1972-73",
-            title: "Expansion of Agro Services and Electrification",
-            description: "Strengthened Agro Services with tractors, lathe machines, and accessories.",
+            year: "1971-1975",
+            title: "Mechanization & Diversification",
+            description: "Comprehensive agricultural mechanization with tractors, lathe machines, and expansion into dairy and poultry sectors.",
             image: year1972,
             achievements: [
-                "NCDC-supported mechanization",
-                "All 14 villages electrified"
+                "Agricultural graduate appointed",
+                "NCDC-supported mechanization program",
+                "All 14 villages electrified",
+                "Dairy and poultry development schemes",
+                "Feed mixing plant installed",
+                "Six godowns constructed (3000 MT capacity)"
             ],
-            details: "A significant step in modernizing rural agriculture."
+            details: "Revolutionary period that brought modern machinery and livestock development to transform rural agriculture comprehensively."
         },
         {
-            year: "1973-74",
-            title: "Dairy and Poultry Development",
-            description: "ARDC sanctioned schemes for dairy and poultry development.",
-            image: year1973,
-            achievements: [
-                "Veterinary graduate appointed",
-                "Feed mixing plant installed"
-            ],
-            details: "Livestock and poultry businesses received structured support."
-        },
-        {
-            year: "1974-75",
-            title: "Pipeline Loans and Marketing Expansion",
-            description: "Pipeline loans introduced, and egg marketing centers established.",
-            image: year1974,
-            achievements: [
-                "Six godowns sanctioned (3000 MT capacity)",
-                "Full-fledged branch opened in Kothakonda"
-            ],
-            details: "Infrastructure growth supported agricultural expansion."
-        },
-        {
-            year: "1975-76",
-            title: "Modernization of Rice Mill",
-            description: "Rice mill upgraded and pest-proofing introduced.",
-            image: year1975,
-            achievements: [
-                "Additional agricultural graduate appointed",
-                "Improved grain storage methods"
-            ],
-            details: "Enhanced efficiency in grain processing and storage."
-        },
-        {
-            year: "1976-77",
-            title: "Seed Processing Advancement",
-            description: "Imported Petkus seed cleaner from East Germany.",
-            image: year1976,
-            achievements: [
-                "New maize and jowar varieties introduced",
-                "ARDC scheme for sheep rearing sanctioned"
-            ],
-            details: "Improved seed quality and livestock support."
-        },
-        {
-            year: "1977-78",
-            title: "Livestock and Farmer Support",
-            description: "Breeding bulls introduced; subsidies secured for small farmers.",
+            year: "1976-1980",
+            title: "Technology & Welfare Expansion",
+            description: "Advanced seed processing technology from Germany, livestock breeding, and expansion into insurance services.",
             image: year1977,
             achievements: [
-                "Weedicide adoption encouraged",
-                "Financial support for disadvantaged farmers"
+                "Imported Petkus seed cleaner from East Germany",
+                "New maize and jowar varieties introduced",
+                "Sheep rearing and breeding bulls program",
+                "LIC and GIC agency services",
+                "Rural electrification funding support",
+                "Cement stockist operations"
             ],
-            details: "Comprehensive support for diverse farming activities."
+            details: "Period of technological advancement and welfare expansion, establishing the cooperative as a comprehensive rural development agency."
         },
         {
-            year: "1978-79",
-            title: "Insurance and Electrification Support",
-            description: "Became an agent for LIC and GIC; funded electrification projects.",
-            image: year1978,
-            achievements: [
-                "Interest from deposits used for insurance premiums",
-                "Rural Debentures worth ₹1,50,000 purchased"
-            ],
-            details: "Financial security and electrification support improved rural infrastructure."
-        },
-        {
-            year: "1979-80",
-            title: "Cement and Construction Expansion",
-            description: "Became a cement stockist and expanded inventory with lime mixture.",
-            image: year1979,
-            achievements: [
-                "Increased support for rural construction",
-                "Diversified cooperative services"
-            ],
-            details: "Expanded cooperative services to new sectors."
-        },
-        {
-            year: "1980-81",
-            title: "Community Irrigation and Pump Dealership",
-            description: "Secured advanced loans for community irrigation wells and obtained a dealership for diesel pumps from Indian Oil Corporation at Mulkanoor.",
-            image: year1980,
-            achievements: [
-                "Advanced loans for community irrigation wells",
-                "Diesel pump dealership from Indian Oil Corporation"
-            ],
-            details: "Supporting small and marginal farmers with better irrigation facilities."
-        },
-        {
-            year: "1981",
-            title: "Infrastructure and Member Education Initiatives",
-            description: "Organized Silver Jubilee Celebrations, installed a kerosene bunk, upgraded feed mixing plant, and initiated door-to-door delivery services.",
-            image: year1981,
-            achievements: [
-                "Silver Jubilee Celebrations",
-                "New feed mixing plant",
-                "Door-to-door delivery using a new van",
-                "BBC documented cooperative activities"
-            ],
-            details: "Expanded operations with new infrastructure and educational programs."
-        },
-        {
-            year: "1982-83",
-            title: "Cluster Loans and Village Development",
-            description: "Sanctioned loans for weaker sections, provided drinking water facilities, and built warehouses in Bheemadevarapally and Ratnagiri villages.",
-            image: year1982,
-            achievements: [
-                "Loans for weaker sections and artisans",
-                "Drinking water facilities in four villages",
-                "Warehouses constructed in Bheemadevarapally and Ratnagiri"
-            ],
-            details: "Focused on supporting weaker sections and improving village infrastructure."
-        },
-        {
-            year: "1983-84",
-            title: "Agricultural Development",
-            description: "Provided long-term loans for citrus and mango orchards and purchased a second Petkus seed cleaner.",
-            image: year1983,
-            achievements: [
-                "Loans for citrus and mango orchards",
-                "Second Petkus seed cleaner purchased"
-            ],
-            details: "Promoting long-term agricultural sustainability."
-        },
-        {
-            year: "1984-85",
-            title: "Parboiled Rice Mill and Infrastructure Expansion",
-            description: "Installed a parboiled rice mill, a second poultry feed mixing plant, and a kerosene bunk in Kothakonda Village.",
+            year: "1981-1985",
+            title: "Silver Jubilee & Infrastructure Boom",
+            description: "25th anniversary celebrations with major infrastructure development including parboiled rice mill and expanded storage facilities.",
             image: year1984,
             achievements: [
-                "New parboiled rice mill installed",
-                "Second poultry feed mixing plant",
-                "Kerosene bunk at Kothakonda Village"
+                "Silver Jubilee celebrations conducted",
+                "BBC documentation of cooperative activities",
+                "Parboiled rice mill installation",
+                "Community irrigation wells projects",
+                "Warehouses in multiple villages",
+                "Drinking water facilities for four villages"
             ],
-            details: "Enhanced agricultural processing capabilities."
+            details: "Milestone period celebrating 25 years of success while significantly expanding infrastructure and community services."
         },
         {
-            year: "1985-86",
-            title: "Godown Protection and Sericulture Loans",
-            description: "Constructed compound walls around godowns and provided loans for sericulture activities.",
-            image: year1985,
-            achievements: [
-                "Compound walls for cooperative godowns",
-                "Loans for sericulture activities"
-            ],
-            details: "Improving infrastructure security and diversifying income opportunities."
-        },
-        {
-            year: "1987-88",
-            title: "Generator Installation and Welfare Schemes",
-            description: "Purchased a 125 KVA generator for the parboiled rice mill and introduced welfare schemes for members.",
-            image: year1987,
-            achievements: [
-                "125 KVA generator installed",
-                "Welfare schemes including funeral expenses and merit scholarships"
-            ],
-            details: "Strengthening industrial capacity and social welfare initiatives."
-        },
-        {
-            year: "1988-89",
-            title: "Community Welfare Initiatives",
-            description: "Organized an eye camp for members and provided television sets to villages that cleared 100% loans.",
-            image: year1988,
-            achievements: [
-                "Eye camp for members",
-                "Television sets for villages with 100% loan clearance"
-            ],
-            details: "Encouraging health and financial responsibility in the community."
-        },
-        {
-            year: "1989-90",
-            title: "Founder Recognition and Market Expansion",
-            description: "Unveiled a statue of the founder president and initiated citrus fruit marketing.",
+            year: "1986-1990",
+            title: "Modernization & Community Welfare",
+            description: "Generator installation, welfare schemes introduction, and expansion into fruit marketing with community health initiatives.",
             image: year1989,
             achievements: [
-                "Statue of founder president installed",
+                "125 KVA generator for rice mill",
+                "Welfare schemes including funeral expenses",
+                "Merit scholarships for members",
+                "Eye camp and health services",
                 "Citrus fruit marketing initiated",
-                "Sales counter opened at Bheemadevarapally"
+                "Founder president statue unveiled"
             ],
-            details: "Honoring leadership while expanding market operations."
+            details: "Focus shifted to community welfare and health while expanding market operations and honoring leadership legacy."
         },
         {
-            year: "1990-91",
-            title: "Financial and Insurance Innovations",
-            description: "Changed financial year cycle and introduced Janatha Accidental Insurance Policy for members.",
-            image: year1990,
-            achievements: [
-                "Financial year changed to April-March",
-                "Janatha Accidental Insurance Policy introduced",
-                "Insurance coverage for agricultural pumpsets"
-            ],
-            details: "Improving financial management and risk coverage for members."
-        },
-        {
-            year: "1992-93",
-            title: "Drip Irrigation and Storage Expansion",
-            description: "Introduced the drip irrigation system, received an award from Peddireddy Thimmareddy Farm Foundation, and constructed two godowns.",
-            image: year1992,
-            achievements: [
-                "Drip irrigation system introduced",
-                "Award from Peddireddy Thimmareddy Farm Foundation",
-                "Godowns at Errabelly and Musthafapoor (1000 MT total capacity)"
-            ],
-            details: "Expanding irrigation facilities and storage infrastructure."
-        },
-        {
-            year: "1993-94",
-            title: "Fuel and Storage Expansion",
-            description: "Added a petrol pump alongside the diesel pump and constructed multiple godowns.",
-            image: year1993,
-            achievements: [
-                "Petrol pump installed in Mulkanoor",
-                "Godowns built in multiple villages (3000 MT total capacity)"
-            ],
-            details: "Enhancing fuel access and storage facilities."
-        },
-        {
-            year: "1995-96",
-            title: "Regulatory Transition and Cotton Processing",
-            description: "Transitioned to A.P. Mutually Aided Cooperative Societies Act, conducted elections, and installed a cotton ginning plant.",
+            year: "1991-1995",
+            title: "Financial Innovation & Storage Expansion",
+            description: "Financial year restructuring, comprehensive insurance coverage, and advanced irrigation technology implementation.",
             image: year1995,
             achievements: [
-                "Transition to new cooperative act",
-                "Managing Committee elections conducted",
-                "Cotton ginning plant with 12 gins installed"
+                "Financial year changed to April-March",
+                "Janatha Accidental Insurance Policy",
+                "Drip irrigation system introduction",
+                "Award from Peddireddy Thimmareddy Foundation",
+                "Multiple godowns construction (4000+ MT capacity)",
+                "Cotton ginning plant with 12 gins"
             ],
-            details: "Adopting new regulatory frameworks while expanding cotton processing capabilities."
+            details: "Period of financial restructuring and technological advancement in irrigation, significantly expanding storage and processing capabilities."
         },
         {
-            year: "1996-97",
-            title: "Infrastructure Expansion & Member Support",
-            description: "Enhanced storage capacity and transportation while initiating member welfare programs.",
-            image: year1996,
-            achievements: [
-                "Constructed 1150 MT and 947 MT godowns at Kothapally/Gatlanarsingapoor",
-                "Installed 20 MT weighbridge",
-                "Converted lorry into oil tanker",
-                "Provided transformer loans under OYT Scheme"
-            ],
-            details: "Laid foundation for agricultural storage and energy infrastructure development."
-        },
-        {
-            year: "1997-98",
-            title: "Modernization & Social Security",
-            description: "Upgraded processing capabilities and introduced insurance coverage for members.",
-            image: year1997,
-            achievements: [
-                "Installed Binny Rice Mill (2 tons/hour capacity)",
-                "Implemented Janatha Accidental Insurance Scheme",
-                "Completed Mutharam godown"
-            ],
-            details: "Combined industrial modernization with comprehensive member protection."
-        },
-        {
-            year: "1998-99",
-            title: "Enhanced Insurance Coverage",
-            description: "Introduced comprehensive group insurance for all members.",
-            image: year1998,
-            achievements: [
-                "Group Insurance Policy (₹5,000 coverage)",
-                "Full premium borne by society"
-            ],
-            details: "Strengthened social security net for cooperative members."
-        },
-        {
-            year: "1999-2000",
-            title: "Multi-sector Development Push",
-            description: "Diversified into sanitation, technology, and agricultural processing.",
+            year: "1996-2000",
+            title: "Regulatory Transition & Modernization",
+            description: "Transition to new cooperative act, computerization beginning, and comprehensive member insurance coverage.",
             image: year1999,
             achievements: [
+                "Transition to A.P. Mutually Aided Cooperative Societies Act",
+                "Binny Rice Mill installation (2 tons/hour)",
+                "Computerization of operations initiated",
+                "Group Insurance Policy (₹25,000 coverage)",
                 "3rd seed processing plant at Kothapally",
-                "Initiated computerization of operations",
-                "Enhanced insurance coverage to ₹25,000",
-                "Loans for wells, pumpsets, and toilets"
+                "Enhanced storage network across villages"
             ],
-            details: "Comprehensive approach to rural development through multiple initiatives."
+            details: "Major regulatory and technological transformation period, embracing modern governance and digital operations."
         },
         {
-            year: "2000-01",
-            title: "Educational & Storage Infrastructure",
-            description: "Established educational institutions and expanded storage network.",
-            image: year2000,
-            achievements: [
-                "Founded AKV Reddy Rural Development Society",
-                "Established Intermediate Junior College",
-                "Constructed 6 village godowns"
-            ],
-            details: "Invested in both educational opportunities and agricultural infrastructure."
-        },
-        {
-            year: "2001-02",
-            title: "Sustainable Energy & Dairy Development",
-            description: "Promoted renewable energy and women's empowerment initiatives.",
-            image: year2001,
-            achievements: [
-                "Loans for solar lanterns",
-                "Modernized diesel bunk with IOC",
-                "Established women's cooperative dairy",
-                "Rainwater conservation systems"
-            ],
-            details: "Pioneered eco-friendly solutions and gender-focused economic programs."
-        },
-        {
-            year: "2002-03",
-            title: "Education & Youth Empowerment",
-            description: "Expanded higher education access and dairy entrepreneurship.",
-            image: year2002,
-            achievements: [
-                "Established degree college",
-                "Sanctioned 108 dairy units (₹1.08cr)",
-                "Margin money support through STEPKAR"
-            ],
-            details: "Focused on youth development through education and livelihood programs."
-        },
-        {
-            year: "2003-04",
-            title: "Integrated Rural Development",
-            description: "Implemented water management and agricultural modernization projects.",
-            image: year2003,
-            achievements: [
-                "Watershed program at Narahari Thanda",
-                "Lift Irrigation survey in 14 villages",
-                "BPCL LPG gas agency",
-                "Micro-irrigation loans for 500 members"
-            ],
-            details: "Holistic approach to resource management and farmer support."
-        },
-        {
-            year: "2004-05",
-            title: "National Recognition & Modernization",
-            description: "Received state honors while upgrading processing infrastructure.",
+            year: "2001-2005",
+            title: "Education & Sustainable Development",
+            description: "Established educational institutions, promoted renewable energy, and received national recognition for cooperative excellence.",
             image: year2004,
             achievements: [
-                "Modernized Satake rice mill with NCDC",
+                "AKV Reddy Rural Development Society founded",
+                "Intermediate Junior College established",
+                "Degree college establishment",
+                "Solar lanterns promotion",
+                "Women's cooperative dairy development",
                 "Best Cooperator award to A. Praveen Reddy"
             ],
-            details: "Combined operational excellence with national-level recognition."
+            details: "Comprehensive rural development through education, sustainable energy, and women's empowerment initiatives."
         },
         {
-            year: "2005-06",
-            title: "Digital Transformation & Capacity Building",
-            description: "Embraced technology and enhanced farmer support systems.",
-            image: year2005,
-            achievements: [
-                "Launched society website",
-                "Established Farmers Training Centre",
-                "2500 MT seed storage godown",
-                "Sahakarita Vibhushan Award"
-            ],
-            details: "Pioneered digital initiatives in cooperative management."
-        },
-        {
-            year: "2006-07",
-            title: "Jubilee Milestones & Healthcare",
-            description: "Celebrated 50 years with infrastructure and health initiatives.",
+            year: "2006-2010",
+            title: "Golden Jubilee & Quality Certification",
+            description: "50th anniversary celebrations with ISO certification, digital transformation, and enhanced healthcare services.",
             image: year2006,
             achievements: [
-                "ISO 1900:2001 Certification",
-                "4170 MT additional storage",
-                "Free cataract surgeries",
-                "Soil Testing Laboratory"
+                "ISO 1900:2001 Certification achieved",
+                "Society website launched",
+                "Farmers Training Centre established",
+                "Free cataract surgeries (423+ operations)",
+                "Soil Testing Laboratory setup",
+                "Defluoride water plant installation"
             ],
-            details: "Marked golden jubilee with quality certification and community health programs."
+            details: "Golden jubilee marked by quality certification, digital presence, and significant community health contributions."
         },
         {
-            year: "2007-08",
-            title: "Logistics Expansion & Healthcare",
-            description: "Enhanced transportation and community health services.",
-            image: year2007,
-            achievements: [
-                "600 MT additional storage",
-                "2 new lorries purchased",
-                "423 free cataract surgeries",
-                "Land acquisition for expansion"
-            ],
-            details: "Strengthened both operational capacity and social welfare programs."
-        },
-        {
-            year: "2008-09",
-            title: "Cotton Processing Automation",
-            description: "Modernized textile processing infrastructure.",
-            image: year2008,
-            achievements: [
-                "24-cotton ginning/pressing unit",
-                "NCDC-assisted project"
-            ],
-            details: "Upgraded cotton processing capabilities through automation."
-        },
-        {
-            year: "2009-10",
-            title: "Leadership & Water Purification",
-            description: "Achieved political recognition and addressed public health needs.",
-            image: year2009,
-            achievements: [
-                "President elected MLA & IFFCO Director",
-                "Defluoride water plant installed",
-                "Scholarships for professional courses"
-            ],
-            details: "Combined political success with essential public health infrastructure."
-        },
-        {
-            year: "2010-11",
-            title: "Infrastructure Development and Subsidy Support",
-            description: "Received a 35 HP Eicher tractor and seed planter under subsidy, and constructed godowns at Rangaiahpally and Jaganathpoor.",
-            image: year2010,
-            achievements: [
-                "35 HP Eicher tractor and seed planter provided under subsidy",
-                "Godowns constructed at Rangaiahpally and Jaganathpoor"
-            ],
-            details: "Enhanced agricultural infrastructure and resource availability for the society."
-        },
-        {
-            year: "2011-12",
-            title: "Expansion of Logistics and Ginning Capacity",
-            description: "Purchased 3 lorries and installed 11 additional ginning machines with NCDC financial assistance.",
-            image: year2011,
-            achievements: [
-                "3 lorries purchased",
-                "11 additional ginning machines installed"
-            ],
-            details: "Improved logistics and increased cotton ginning capacity."
-        },
-        {
-            year: "2012-13",
-            title: "Agricultural Mechanization and Solar Energy Loans",
-            description: "Provided loans for advanced agricultural machinery and solar inverters with subsidies.",
-            image: year2012,
-            achievements: [
-                "Loans for power weeders, rotavators, and Taiwan sprayers",
-                "Advanced loans for solar inverters"
-            ],
-            details: "Promoted modern farming techniques and renewable energy adoption."
-        },
-        {
-            year: "2013-14",
-            title: "Global Recognition and Sustainable Agriculture",
-            description: "Delivered a keynote address at the World Agriculture Forum 2013 on the success story of MCRBMS.",
-            image: year2013,
-            achievements: [
-                "Keynote address at World Agriculture Forum 2013"
-            ],
-            details: "Highlighted the society's achievements in sustainable agriculture."
-        },
-        {
-            year: "2014-15",
-            title: "Solar Power and Cooperative Excellence",
-            description: "Installed a rooftop solar power system, received the NCDC National Award, and conducted a health camp.",
+            year: "2011-2015",
+            title: "Global Recognition & Solar Innovation",
+            description: "World Agriculture Forum keynote, NCDC National Award, and pioneering solar power adoption in cooperative sector.",
             image: year2014,
             achievements: [
-                "7.5 Kwp rooftop solar power system installed",
+                "Keynote at World Agriculture Forum 2013",
                 "NCDC National Award for Cooperative Excellence",
-                "Health camp for spinal cord and disc problems conducted"
+                "7.5 Kwp rooftop solar power system",
+                "Enhanced ginning capacity (11 machines)",
+                "Advanced agricultural machinery loans",
+                "Health camps for specialized treatments"
             ],
-            details: "Advanced renewable energy adoption and community welfare initiatives."
+            details: "Period of global recognition and leadership in sustainable energy adoption within the cooperative movement."
         },
         {
-            year: "2015-16",
-            title: "Solar Power for Rice and Cotton Mills",
-            description: "NCDC sanctioned a 500 Kwp solar power plant to support rice and cotton ginning mills.",
-            image: year2015,
-            achievements: [
-                "500 Kwp solar power plant sanctioned"
-            ],
-            details: "Enhanced energy efficiency for rice and cotton processing operations."
-        },
-        {
-            year: "2016-17",
-            title: "Seed Processing Plant Expansion",
-            description: "NCDC sanctioned a 4 TPH paddy/maize seed processing plant at Ratnagiri.",
-            image: year2016,
-            achievements: [
-                "4 TPH seed processing plant sanctioned"
-            ],
-            details: "Increased capacity for seed processing to support agricultural productivity."
-        },
-        {
-            year: "2017-18",
-            title: "Rice Retail Outlets",
-            description: "Opened Rice Retail Outlets to expand market reach.",
-            image: year2017,
-            achievements: [
-                "Rice Retail Outlets opened"
-            ],
-            details: "Improved market access for rice products."
-        },
-        {
-            year: "2018-19",
-            title: "Modernization and Storage Expansion",
-            description: "Installed a modern raw rice mill, constructed godowns, and installed a weigh bridge.",
-            image: year2018,
-            achievements: [
-                "Modern Raw Rice Mill installed",
-                "Godowns constructed at multiple locations",
-                "60 Ton weigh bridge installed"
-            ],
-            details: "Enhanced storage and processing capabilities for rice production."
-        },
-        {
-            year: "2019-20",
-            title: "Social Welfare Initiative",
-            description: "Introduced AKVR Old Age Pension for members.",
+            year: "2016-2020",
+            title: "Large-Scale Solar & Infrastructure",
+            description: "Major solar power plant installation, modern rice mill setup, and expanded retail operations with elderly welfare programs.",
             image: year2019,
             achievements: [
-                "AKVR Old Age Pension introduced"
+                "500 Kwp solar power plant for mills",
+                "4 TPH paddy/maize seed processing plant",
+                "Rice Retail Outlets network",
+                "Modern Raw Rice Mill installation",
+                "60 Ton weigh bridge installation",
+                "AKVR Old Age Pension scheme"
             ],
-            details: "Provided financial support to elderly members of the society."
+            details: "Large-scale infrastructure development with renewable energy focus and comprehensive elderly care programs."
         },
         {
-            year: "2020-21",
-            title: "Modern Rice Mill Installation",
-            description: "Installed a Modern Raw Rice Mill to improve processing efficiency.",
-            image: year2020,
-            achievements: [
-                "Modern Raw Rice Mill installed"
-            ],
-            details: "Upgraded rice processing infrastructure for better quality and efficiency."
-        },
-        {
-            year: "2021-22",
-            title: "Cotton Bales Godown Construction",
-            description: "Initiated construction of a godown for cotton bales storage.",
+            year: "2021-Present",
+            title: "Modern Technology & Future Vision",
+            description: "Latest sorting technology, enhanced processing capacity, and continued expansion of storage facilities for future growth.",
             image: year2021,
             achievements: [
-                "Cotton Bales Godown construction started"
+                "Cotton Bales Godown construction",
+                "Modern Raw Rice Mill upgrades",
+                "Enhanced storage infrastructure",
+                "Technology modernization programs"
             ],
-            details: "Expanded storage capacity for cotton products."
-        },
-        // {
-        //     year: "2022-23",
-        //     title: "Technology Upgrade in Sorting",
-        //     description: "Replaced the old Sortex machine with the latest technology.",
-        //     image: year2022,
-        //     achievements: [
-        //         "Latest Sortex machine installed"
-        //     ],
-        //     details: "Improved sorting efficiency and product quality."
-        // },
-        // {
-        //     year: "2023-24",
-        //     title: "Seed Processing Capacity Upgrade",
-        //     description: "Upgraded seed processing machines from 15 TPH to 18 TPH.",
-        //     image: year2023,
-        //     achievements: [
-        //         "Seed processing capacity increased to 18 TPH"
-        //     ],
-        //     details: "Enhanced seed processing capabilities to meet growing demand."
-        // }
+            details: "Current focus on cutting-edge technology and infrastructure to meet future agricultural challenges and opportunities."
+        }
     ];
 
     // Update the onClick handler in the timeline items
