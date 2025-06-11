@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaTwitter, FaInstagram, FaPhone, FaEnvelope, FaMapMarkerAlt, FaYoutube } from 'react-icons/fa';
+import { FaL } from 'react-icons/fa6';
 
 const Footer = () => {
     return (
@@ -76,6 +77,9 @@ const Footer = () => {
                             <a href="https://youtube.com/@mulkanoorcooperative_1?si=3eJSaFOmvCC9sSai" className="hover:text-secondary transition-transform hover:scale-110">
                                 <FaYoutube size={18} />
                             </a>
+                            {/* <a href="https://youtube.com/@mulkanoorcooperative_1?si=3eJSaFOmvCC9sSai" className="hover:text-secondary transition-transform hover:scale-110">
+                                <FaLinkedin size={18} />
+                            </a> */}
                         </div>
                     </div>
                 </div>

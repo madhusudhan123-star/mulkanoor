@@ -162,98 +162,128 @@ const Insurance = () => {
 
     const PolicyTable = () => (
         <motion.div 
-            className="container mx-auto px-2 sm:px-4 py-8 sm:py-16"
+            className="container mx-auto px-3 sm:px-4 lg:px-6 py-6 sm:py-12 lg:py-16"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
         >
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-8 overflow-hidden">
-                <h2 className="text-2xl cursor-default sm:text-3xl font-bold text-center mb-4 sm:mb-8 flex items-center justify-center gap-2 sm:gap-3">
-                    <FaTable className="text-xl sm:text-2xl text-blue-300" />
-                    Insurance Policy Data
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-6 lg:p-8 overflow-hidden">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center mb-4 sm:mb-6 lg:mb-8 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
+                    <FaTable className="text-lg sm:text-xl lg:text-2xl text-blue-300" />
+                    <span className="cursor-default">Insurance Policy Data</span>
                 </h2>
-                <div className="overflow-x-auto -mx-4 sm:mx-0">
-                    <div className="inline-block min-w-full align-middle p-4 sm:p-0">
-                        <table className="w-full border-collapse">
-                            <thead className="hidden sm:table-header-group">
-                                <tr className="bg-blue-800/40 cursor-default text-left">
-                                    <th className="p-2 cursor-default sm:p-4 rounded-tl-lg">S.No.</th>
-                                    <th className="p-2 cursor-default sm:p-4">Particulars</th>
-                                    <th className="p-2 cursor-default sm:p-4 text-center">No of Members</th>
-                                    <th className="p-2 cursor-default sm:p-4 text-center">Premium Paid (Rs)</th>
-                                    <th className="p-2 cursor-default sm:p-4 text-center rounded-tr-lg">Claims (Rs)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {policyData.map((row, index) => (
-                                    <React.Fragment key={index}>
-                                        {/* Mobile view - card style */}
-                                        <motion.tr 
-                                            className="sm:hidden bg-white/10 block rounded-lg mb-4 p-3"
-                                            initial={{ opacity: 0, y: 10 }}
-                                            whileInView={{ opacity: 1, y: 0 }}
-                                            transition={{ delay: index * 0.1 }}
-                                        >
-                                            <td className="block mb-2">
-                                                <span className="font-semibold cursor-default text-blue-200">S.No: </span>{row.sno}
-                                            </td>
-                                            <td className="block mb-2">
-                                                <span className="font-semibold cursor-default text-blue-200">Particulars: </span>{row.particulars}
-                                            </td>
-                                            <td className="block mb-2">
-                                                <span className="font-semibold cursor-default text-blue-200">Members: </span>{row.members}
-                                            </td>
-                                            <td className="block mb-2">
-                                                <span className="font-semibold cursor-default text-blue-200">Premium: </span>{row.premiumPaid || "-"}
-                                            </td>
-                                            <td className="block">
-                                                <span className="font-semibold cursor-default text-blue-200">Claims: </span>{row.claims || "-"}
-                                            </td>
-                                        </motion.tr>
-                                        
-                                        {/* Desktop view */}
-                                        <motion.tr 
-                                            className={`hidden sm:table-row ${index % 2 === 0 ? "bg-white/5" : "bg-white/10"}`}
-                                            initial={{ opacity: 0, y: 10 }}
-                                            whileInView={{ opacity: 1, y: 0 }}
-                                            transition={{ delay: index * 0.1 }}
-                                        >
-                                            <td className="p-2 cursor-default sm:p-4 border-t border-blue-900/30">{row.sno}</td>
-                                            <td className="p-2 cursor-default sm:p-4 border-t border-blue-900/30">{row.particulars}</td>
-                                            <td className="p-2 cursor-default sm:p-4 border-t border-blue-900/30 text-center">{row.members}</td>
-                                            <td className="p-2 cursor-default sm:p-4 border-t border-blue-900/30 text-center">{row.premiumPaid}</td>
-                                            <td className="p-2 cursor-default sm:p-4 border-t border-blue-900/30 text-center">{row.claims}</td>
-                                        </motion.tr>
-                                    </React.Fragment>
-                                ))}
-                                {/* Totals row - Mobile */}
-                                <tr className="sm:hidden bg-blue-700/30 font-bold block rounded-lg p-3">
-                                    <td className="block mb-2">
-                                        <span className="font-semibold cursor-default text-blue-200">Total Premium: </span>5,49,510.00
-                                    </td>
-                                    <td className="block">
-                                        <span className="font-semibold cursor-default text-blue-200">Total Claims: </span>81,62,150.00
-                                    </td>
-                                </tr>
-                                {/* Totals row - Desktop */}
-                                <tr className="hidden sm:table-row bg-blue-700/30 font-bold">
-                                    <td colSpan={2} className="p-2 cursor-default sm:p-4 text-right rounded-bl-lg">Total</td>
-                                    <td className="p-2 sm:p-4"></td>
-                                    <td className="p-2 cursor-default sm:p-4 text-center">5,49,510.00</td>
-                                    <td className="p-2 cursor-default sm:p-4 text-center rounded-br-lg">81,62,150.00</td>
-                                </tr>                            </tbody>
-                        </table>
-                    </div>
+                
+                {/* Mobile View - Card Layout with Black Text */}
+                <div className="block lg:hidden space-y-3">
+                    {policyData.map((row, index) => (
+                        <motion.div
+                            key={index}
+                            className="bg-white/90 backdrop-blur-sm rounded-lg p-4 border border-gray-300/50"
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ delay: index * 0.1 }}
+                        >
+                            <div className="grid grid-cols-2 gap-3 text-sm">
+                                <div className="col-span-2 border-b border-gray-300/50 pb-2 mb-3">
+                                    <div className="flex items-center justify-between">
+                                        <span className="font-bold text-gray-700 text-xs">S.No:</span>
+                                        <span className="font-semibold text-black">{row.sno}</span>
+                                    </div>
+                                </div>
+                                
+                                <div className="col-span-2">
+                                    <div className="mb-2">
+                                        <span className="font-semibold text-gray-700 text-xs block mb-1">Particulars:</span>
+                                        <span className="text-black text-sm leading-relaxed">{row.particulars}</span>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <span className="font-semibold text-gray-700 text-xs block mb-1">Members:</span>
+                                    <span className="text-black font-medium">{row.members}</span>
+                                </div>
+                                
+                                <div>
+                                    <span className="font-semibold text-gray-700 text-xs block mb-1">Premium (₹):</span>
+                                    <span className="text-black font-medium">{row.premiumPaid || "-"}</span>
+                                </div>
+                                
+                                <div className="col-span-2">
+                                    <span className="font-semibold text-gray-700 text-xs block mb-1">Claims (₹):</span>
+                                    <span className="text-black font-medium">{row.claims || "-"}</span>
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
+                    
+                    {/* Mobile Totals Card with Black Text */}
+                    <motion.div
+                        className="bg-gray-100/90 backdrop-blur-sm rounded-lg p-4 border border-gray-400/50"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5 }}
+                    >
+                        <h3 className="font-bold text-gray-800 text-sm mb-3 text-center">Summary</h3>
+                        <div className="grid grid-cols-2 gap-4 text-sm">
+                            <div className="text-center">
+                                <span className="font-semibold text-gray-700 text-xs block mb-1">Total Premium:</span>
+                                <span className="text-black font-bold">₹5,49,510.00</span>
+                            </div>
+                            <div className="text-center">
+                                <span className="font-semibold text-gray-700 text-xs block mb-1">Total Claims:</span>
+                                <span className="text-black font-bold">₹81,62,150.00</span>
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
+
+                {/* Desktop View - Traditional Table */}
+                <div className="hidden lg:block overflow-x-auto">
+                    <table className="w-full border-collapse">
+                        <thead>
+                            <tr className="bg-blue-800/40 cursor-default text-left">
+                                <th className="p-3 lg:p-4 rounded-tl-lg text-sm lg:text-base">S.No.</th>
+                                <th className="p-3 lg:p-4 text-sm lg:text-base">Particulars</th>
+                                <th className="p-3 lg:p-4 text-center text-sm lg:text-base">No of Members</th>
+                                <th className="p-3 lg:p-4 text-center text-sm lg:text-base">Premium Paid (Rs)</th>
+                                <th className="p-3 lg:p-4 text-center rounded-tr-lg text-sm lg:text-base">Claims (Rs)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {policyData.map((row, index) => (
+                                <motion.tr 
+                                    key={index}
+                                    className={`${index % 2 === 0 ? "bg-white/5" : "bg-white/10"}`}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: index * 0.1 }}
+                                >
+                                    <td className="p-3 lg:p-4 cursor-default border-t border-blue-900/30 text-sm lg:text-base">{row.sno}</td>
+                                    <td className="p-3 lg:p-4 cursor-default border-t border-blue-900/30 text-sm lg:text-base">{row.particulars}</td>
+                                    <td className="p-3 lg:p-4 cursor-default border-t border-blue-900/30 text-center text-sm lg:text-base">{row.members}</td>
+                                    <td className="p-3 lg:p-4 cursor-default border-t border-blue-900/30 text-center text-sm lg:text-base">{row.premiumPaid}</td>
+                                    <td className="p-3 lg:p-4 cursor-default border-t border-blue-900/30 text-center text-sm lg:text-base">{row.claims}</td>
+                                </motion.tr>
+                            ))}
+                            {/* Desktop Totals row */}
+                            <tr className="bg-blue-700/30 font-bold">
+                                <td colSpan={2} className="p-3 lg:p-4 cursor-default text-right rounded-bl-lg text-sm lg:text-base">Total</td>
+                                <td className="p-3 lg:p-4"></td>
+                                <td className="p-3 lg:p-4 cursor-default text-center text-sm lg:text-base">5,49,510.00</td>
+                                <td className="p-3 lg:p-4 cursor-default text-center rounded-br-lg text-sm lg:text-base">81,62,150.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 
-                {/* Pension Note */}
+                {/* Pension Note - Enhanced mobile styling with Black Text */}
                 <motion.div 
-                    className="mt-6 p-4 bg-blue-800/20 rounded-lg border border-blue-700/30"
+                    className="mt-4 sm:mt-6 p-3 sm:p-4 bg-gray-100/90 lg:bg-blue-800/20 rounded-lg border border-gray-400/50 lg:border-blue-700/30"
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
                 >
-                    <p className="text-center text-blue-100 font-medium">
+                    <p className="text-center text-black lg:text-blue-100 font-medium text-sm sm:text-base">
                         <strong>Note:</strong> Pension - ₹1,000 per month
                     </p>
                 </motion.div>
@@ -261,9 +291,8 @@ const Insurance = () => {
         </motion.div>
     );
 
-
     const Banner = () => (
-        <div className="relative h-[40vh] sm:h-[50vh] md:h-[60vh] overflow-hidden">
+        <div className="relative h-[30vh] sm:h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
             <Helmet>
                 <title>Insurance Services - Mulkanoor Cooperative Society</title>
                 <meta 
@@ -345,16 +374,16 @@ const Insurance = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center px-4">
+                    <div className="text-center px-3 sm:px-4 lg:px-6">
                         <motion.h1
-                            className="text-3xl cursor-default sm:text-4xl md:text-6xl font-bold text-white mb-3 sm:mb-6"
+                            className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-2 sm:mb-3 lg:mb-6"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                         >
-                            Insurance
+                            <span className="cursor-default">Insurance</span>
                         </motion.h1>
                         <motion.p
-                            className="text-base cursor-default sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto"
+                            className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 max-w-3xl mx-auto cursor-default"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.2 }}
@@ -368,11 +397,10 @@ const Insurance = () => {
     );
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 pt-24">
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 pt-16 sm:pt-20 lg:pt-24">
             <Banner />
 
-            <div className="container mx-auto px-4 py-8 sm:py-16">
-                {/* New Policy Table Section */}
+            <div className="container mx-auto px-3 sm:px-4 lg:px-6 py-6 sm:py-12 lg:py-16">
                 <PolicyTable />
             </div>
         </div>

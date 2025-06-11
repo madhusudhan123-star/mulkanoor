@@ -103,51 +103,49 @@ const Storys = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="max-w-6xl mx-auto py-16 px-4 mt-20 relative"
+        className="max-w-6xl mx-auto py-8 md:py-16 px-4 mt-16 md:mt-20 relative"
       >
         <div className="absolute inset-0 pattern-wheat opacity-10"></div>
-        {/* <h2 className="text-3xl cursor-default font-bold mb-8 text-center text-earth-500">Our Journey</h2> */}
-        <div className='flex gap-10 flex-col'>        
-          {/* Add historical images */}
+        <div className='flex gap-6 md:gap-10 flex-col'>        
+          {/* Founder image - responsive sizing */}
           <div className="flex justify-center items-center w-full">
-            <div className="relative rounded-xl overflow-hidden w-[50%]">
+            <div className="relative rounded-xl overflow-hidden w-full sm:w-[80%] md:w-[60%] lg:w-[50%] max-w-md">
               <img
                 src={Founder}
                 alt="Founder A.K. Vishwanatha Reddy"
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-cover aspect-[4/5]"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
-                <p className="text-sm cursor-default">Late Sri A.K. Vishwanatha Reddy, Our Founder</p>
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-3 md:p-4">
+                <p className="text-xs md:text-sm cursor-default text-center">Late Sri A.K. Vishwanatha Reddy, Our Founder</p>
               </div>
             </div>
           </div>
 
-          <div className="w-full text-earth-400 mt-10">
-            <h2 className="text-3xl cursor-default font-bold mb-8 text-center text-earth-500">Our Journey</h2>
-            <p className="leading-relaxed cursor-default ">
-              Mulkanoor cooperative rural bank was established in 1956 by esteemed visionary founder Late sri A.K Vishwanatha Reddy with the primary objective of uplifting socio-economic status of farmers. The society was initially registered under the Hyderabad cooperative societies act 1952. later, automatically deemed into A.P cooperative societies act 1964. After the enactment of Mutually aided cooperative societies act 1995 the cooperative transitioned under this new enactment.
-            </p>
-            <p className="leading-relaxed cursor-default">
-              The cooperative operates in its catchment of 14 revenue villages with a total of 18 gram panchayats. These villages then were in the drought prone region characterized by uplands and hillocks. There were conditions of lack of irrigation facilities,power supply, finance, agri-inputs, remunerative price for their produce. These situations made our ancestors build a temple of trust with a primary objective of countering these challenges and hardships faced by farmers.
-            </p>
-            <p className="leading-relaxed cursor-default">
-              Initially founded with 373 members and a share capital of RS 2300/- today society is 7629 active members strong with share capital of 17.96 crores and thrift deposits of 45.90 crores creating impact in the lives of 35000-40000 people. The present admission number of the society is 14908. The annual turnover is around 352 crores which displays the humongous success achieved and much more to come along. The society initially started operating from the founders’ residence for 14 years until it moved to its own office premise in 1970.
-            </p>
+          <div className="w-full text-earth-400 mt-6 md:mt-10">
+            <h2 className="text-2xl md:text-3xl cursor-default font-bold mb-6 md:mb-8 text-center text-earth-500">Our Journey</h2>
+            <div className="space-y-4 md:space-y-6 text-sm md:text-base">
+              <p className="leading-relaxed cursor-default">
+                Mulkanoor cooperative rural bank was established in 1956 by esteemed visionary founder Late sri A.K Vishwanatha Reddy with the primary objective of uplifting socio-economic status of farmers. The society was initially registered under the Hyderabad cooperative societies act 1952. later, automatically deemed into A.P cooperative societies act 1964. After the enactment of Mutually aided cooperative societies act 1995 the cooperative transitioned under this new enactment.
+              </p>
+              <p className="leading-relaxed cursor-default">
+                The cooperative operates in its catchment of 14 revenue villages with a total of 18 gram panchayats. These villages then were in the drought prone region characterized by uplands and hillocks. There were conditions of lack of irrigation facilities,power supply, finance, agri-inputs, remunerative price for their produce. These situations made our ancestors build a temple of trust with a primary objective of countering these challenges and hardships faced by farmers.
+              </p>
+              <p className="leading-relaxed cursor-default">
+                Initially founded with 373 members and a share capital of RS 2300/- today society is 7629 active members strong with share capital of 17.96 crores and thrift deposits of 45.90 crores creating impact in the lives of 35000-40000 people. The present admission number of the society is 14908. The annual turnover is around 352 crores which displays the humongous success achieved and much more to come along. The society initially started operating from the founders' residence for 14 years until it moved to its own office premise in 1970.
+              </p>
+            </div>
           </div>
         </div>
       </motion.section>
 
-      {/* Our Impact Section */}
-
-
       {/* Principles Section */}
-      <section className="bg-harvest-50 py-16 relative">
+      <section className="bg-harvest-50 py-8 md:py-16 relative">
         <div className="absolute inset-0 pattern-field opacity-10"></div>
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl cursor-default font-bold mb-12 text-center text-earth-500">Our Principles</h2>
+          <h2 className="text-2xl md:text-3xl cursor-default font-bold mb-8 md:mb-12 text-center text-earth-500">Our Principles</h2>
 
-          {/* Updated Principles Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Responsive Principles Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
             {principles.map((principle, index) => (
               <motion.div
                 key={index}
@@ -158,17 +156,21 @@ const Storys = () => {
                   duration: 0.5
                 }}
                 whileHover={{
-                  scale: 1.05,
-                  rotate: [0, 1, -1, 0],
+                  scale: 1.02,
+                  rotate: [0, 0.5, -0.5, 0],
                   transition: { duration: 0.3 }
                 }}
                 className="relative group"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-transparent rounded-xl"></div>
-                <div className="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-earth-200/30 relative z-10 h-full flex flex-col">
-                  <h3 className="text-xl cursor-default font-semibold mb-3 text-crop-600">{principle.title}</h3>
-                  <p className="text-earth-600/90 cursor-default flex-grow">{principle.description}</p>
-                  <div className="h-1 w-20 bg-gradient-to-r from-crop-400 to-crop-500 mt-4 group-hover:w-full transition-all duration-300"></div>
+                <div className="bg-white/90 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-xl border border-earth-200/30 relative z-10 h-full flex flex-col min-h-[200px] sm:min-h-[220px]">
+                  <h3 className="text-base md:text-lg lg:text-xl cursor-default font-semibold mb-2 md:mb-3 text-crop-600 leading-tight">
+                    {principle.title}
+                  </h3>
+                  <p className="text-xs md:text-sm lg:text-base text-earth-600/90 cursor-default flex-grow leading-relaxed">
+                    {principle.description}
+                  </p>
+                  <div className="h-1 w-12 md:w-20 bg-gradient-to-r from-crop-400 to-crop-500 mt-3 md:mt-4 group-hover:w-full transition-all duration-300"></div>
                 </div>
               </motion.div>
             ))}

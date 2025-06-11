@@ -124,22 +124,20 @@ const Milestones = () => {
         }
     }, [activeIndex]);
 
-    // Update the scroll function
+    // Update the scroll function for mobile responsiveness
     const scroll = (direction) => {
         const container = scrollContainerRef.current;
         if (!container) return;
 
-        const itemWidth = 250;
+        const itemWidth = isMobile ? 180 : 250; // Smaller items on mobile
         const currentIndex = activeIndex;
 
-        // Change to single step navigation
         const newIndex = direction === 'left'
             ? Math.max(0, currentIndex - 1)
             : Math.min(timelineData.length - 1, currentIndex + 1);
 
         setActiveIndex(newIndex);
 
-        // Precise scroll calculation
         const containerWidth = container.clientWidth;
         const scrollPosition = Math.max(
             0,
@@ -363,11 +361,11 @@ const Milestones = () => {
         }
     ];
 
-    // Update the onClick handler in the timeline items
+    // Update the onClick handler for mobile responsiveness
     const handleItemClick = (index) => {
         const container = scrollContainerRef.current;
         if (container) {
-            const itemWidth = 250;
+            const itemWidth = isMobile ? 180 : 250;
             const containerWidth = container.clientWidth;
             const scrollPosition = Math.max(
                 0,
@@ -395,7 +393,7 @@ const Milestones = () => {
     };
 
     return (
-        <div className="min-h-screen pt-20 bg-gradient-to-b from-[#1a1a1a] to-[#2a2a2a] text-white">
+        <div className="min-h-screen pt-16 md:pt-20 bg-gradient-to-b from-[#1a1a1a] to-[#2a2a2a] text-white">
             <Helmet>
                 <title>Journey & Milestones - Mulkanoor Cooperative Society</title>
                 <meta 
@@ -458,7 +456,7 @@ const Milestones = () => {
             </Helmet>
             {/* Hero Section */}
             <motion.div
-                className="h-[40vh] relative flex items-center justify-center bg-fixed bg-cover bg-center"
+                className="h-[30vh] md:h-[40vh] relative flex items-center justify-center bg-fixed bg-cover bg-center"
                 style={{ backgroundImage: `url(${banner})` }}  // Fix: Wrap banner in url()
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -466,38 +464,39 @@ const Milestones = () => {
             >
                 <div className="absolute inset-0 bg-black/60" />
                 <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-                    <h1 className="text-4xl md:text-6xl font-bold mb-4">Our Journey of Growth</h1>
-                    <p className="text-lg md:text-xl text-gray-300">
+                    <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold mb-2 md:mb-4">Our Journey of Growth</h1>
+                    <p className="text-sm md:text-lg lg:text-xl text-gray-300">
                         Seven decades of empowering farmers and building communities through cooperative excellence
                     </p>
                 </div>
             </motion.div>
 
             {/* Timeline Section */}
-            <div className="container mx-auto px-4 py-16">
+            <div className="container mx-auto px-2 md:px-4 py-8 md:py-16">
                 <div className="relative">
+                    {/* Navigation arrows - hidden on mobile, visible on desktop */}
                     {isScrollable && (
                         <div className="hidden md:block absolute inset-0 pointer-events-none z-20">
                             <button
                                 onClick={() => scroll('left')}
                                 className="absolute -left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 
-                                backdrop-blur-sm p-4 rounded-full transition-all duration-300 shadow-lg hover:scale-110
+                                backdrop-blur-sm p-3 md:p-4 rounded-full transition-all duration-300 shadow-lg hover:scale-110
                                 pointer-events-auto cursor-pointer"
                             >
-                                <IoIosArrowBack className="text-3xl" />
+                                <IoIosArrowBack className="text-2xl md:text-3xl" />
                             </button>
                             <button
                                 onClick={() => scroll('right')}
                                 className="absolute -right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 
-                                backdrop-blur-sm p-4 rounded-full transition-all duration-300 shadow-lg hover:scale-110
+                                backdrop-blur-sm p-3 md:p-4 rounded-full transition-all duration-300 shadow-lg hover:scale-110
                                 pointer-events-auto cursor-pointer"
                             >
-                                <IoIosArrowForward className="text-3xl" />
+                                <IoIosArrowForward className="text-2xl md:text-3xl" />
                             </button>
                         </div>
                     )}
 
-                    {/* Timeline Items Container */}
+                    {/* Timeline Items Container - Mobile Responsive */}
                     <div
                         ref={scrollContainerRef}
                         className="overflow-x-auto relative scroll-smooth"
@@ -506,41 +505,27 @@ const Milestones = () => {
                             WebkitOverflowScrolling: 'touch',
                         }}
                     >
-                        <div className="flex items-center gap-6 md:gap-12 px-4 md:px-8 py-4">
-                            <div className="absolute top-[45px] md:top-[55px] left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+                        <div className="flex items-center gap-4 md:gap-6 lg:gap-12 px-2 md:px-4 lg:px-8 py-4">
+                            <div className="absolute top-[35px] md:top-[45px] lg:top-[55px] left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent" />
 
                             {timelineData.map((item, index) => (
                                 <motion.div
                                     key={index}
                                     className={`
                                         relative flex-shrink-0 flex flex-col items-center cursor-pointer
-                                        ${activeIndex === index ? 'scale-110 z-10' : 'scale-100'}
+                                        ${activeIndex === index ? 'scale-105 md:scale-110 z-10' : 'scale-100'}
                                         ${activeIndex > index ? 'opacity-50' : 'opacity-100'}
                                         transition-all duration-300 ease-in-out
-                                        min-w-[200px]
+                                        min-w-[140px] md:min-w-[180px] lg:min-w-[200px]
                                     `}
-                                    onClick={() => {
-                                        setActiveIndex(index);
-                                        const container = scrollContainerRef.current;
-                                        if (container) {
-                                            const itemWidth = 250;
-                                            const scrollPosition = Math.max(
-                                                0,
-                                                (itemWidth * index) - (container.clientWidth / 2) + (itemWidth / 2)
-                                            );
-                                            container.scrollTo({
-                                                left: scrollPosition,
-                                                behavior: 'smooth'
-                                            });
-                                        }
-                                    }}
-                                    whileHover={{ scale: 1.05 }}
+                                    onClick={() => handleItemClick(index)}
+                                    whileHover={{ scale: isMobile ? 1.02 : 1.05 }}
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: index * 0.1 }}
                                 >
                                     <div className={`
-                                        w-14 h-14 md:w-20 md:h-20 rounded-full 
+                                        w-10 h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full 
                                         flex items-center cursor-pointer justify-center
                                         ${activeIndex === index
                                             ? 'bg-white/30 shadow-lg shadow-white/20'
@@ -550,7 +535,7 @@ const Milestones = () => {
                                         transition-all duration-300
                                     `}>
                                         <span className={`
-                                            text-xl md:text-2xl font-bold
+                                            text-sm md:text-xl lg:text-2xl font-bold
                                             ${activeIndex === index
                                                 ? 'text-white'
                                                 : activeIndex > index
@@ -561,7 +546,8 @@ const Milestones = () => {
                                         </span>
                                     </div>
                                     <h3 className={`
-                                        mt-4 text-sm cursor-default md:text-base font-medium text-center w-64
+                                        mt-2 md:mt-4 text-xs md:text-sm lg:text-base font-medium text-center 
+                                        w-32 md:w-48 lg:w-64 leading-tight
                                         ${activeIndex === index
                                             ? 'text-white'
                                             : activeIndex > index
@@ -575,39 +561,39 @@ const Milestones = () => {
                         </div>
                     </div>
 
-                    {/* Enhanced Detailed Content Section */}
+                    {/* Enhanced Detailed Content Section - Mobile Responsive */}
                     {activeIndex !== null && (
                         <motion.div
-                            className="mt-16 max-w-6xl mx-auto"
+                            className="mt-8 md:mt-16 max-w-6xl mx-auto"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
                         >
-                            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-                                <div className="grid md:grid-cols-2 gap-8">
-                                    <div className="space-y-6">
-                                        <h2 className="text-3xl cursor-default md:text-4xl font-bold">
+                            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 lg:p-8">
+                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+                                    <div className="space-y-4 md:space-y-6 order-2 lg:order-1">
+                                        <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl cursor-default font-bold leading-tight">
                                             {timelineData[activeIndex].title}
                                         </h2>
-                                        <p className="text-lg cursor-default text-gray-300">
+                                        <p className="text-sm md:text-base lg:text-lg cursor-default text-gray-300 leading-relaxed">
                                             {timelineData[activeIndex].description}
                                         </p>
-                                        <div className="space-y-4">
-                                            <h3 className="text-xl cursor-default font-semibold">Key Achievements</h3>
-                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <div className="space-y-3 md:space-y-4">
+                                            <h3 className="text-lg md:text-xl cursor-default font-semibold">Key Achievements</h3>
+                                            <div className="grid grid-cols-1 gap-3 md:gap-4">
                                                 {timelineData[activeIndex].achievements.map((achievement, idx) => (
                                                     <div key={idx} className="flex items-start gap-3 bg-white/5 p-3 rounded-lg">
-                                                        <div className="w-2 h-2 bg-green-500 rounded-full mt-2" />
-                                                        <p className="text-sm cursor-default md:text-base">{achievement}</p>
+                                                        <div className="w-2 h-2 bg-green-500 rounded-full mt-1.5 md:mt-2 flex-shrink-0" />
+                                                        <p className="text-xs md:text-sm lg:text-base cursor-default leading-relaxed">{achievement}</p>
                                                     </div>
                                                 ))}
                                             </div>
                                         </div>
-                                        <p className="text-sm cursor-default md:text-base text-gray-400">
+                                        <p className="text-xs md:text-sm lg:text-base cursor-default text-gray-400 leading-relaxed">
                                             {timelineData[activeIndex].details}
                                         </p>
                                     </div>
-                                    <div className="relative h-[400px] rounded-xl overflow-hidden group">
+                                    <div className="relative h-[250px] md:h-[300px] lg:h-[400px] rounded-xl overflow-hidden group order-1 lg:order-2">
                                         <img
                                             src={timelineData[activeIndex].image}
                                             alt={timelineData[activeIndex].title}
