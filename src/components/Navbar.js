@@ -104,15 +104,6 @@ const Navbar = () => {
             ]
         },
         {
-            title: 'Product',
-            path: '#services',
-            submenu: [
-                { title: 'Paddy Seed', path: '/product/paddy' },
-                { title: 'Rice', path: '/product/rice' },
-                { title: 'Cotton', path: '/product/cotton' },
-            ]
-        },
-        {
             title: 'Our Services',
             path: '#pillars',
             submenu: [
@@ -124,6 +115,16 @@ const Navbar = () => {
                 { title: 'Welfare Activities', path: '/pillars/Welfare' },
             ]
         },
+        {
+            title: 'Products',
+            path: '#services',
+            submenu: [
+                { title: 'Paddy Seed', path: '/product/paddy' },
+                { title: 'Rice', path: '/product/rice' },
+                { title: 'Cotton', path: '/product/cotton' },
+            ]
+        },
+       
         {
             title: 'Farmers Voice',
             path: '/farmer'
