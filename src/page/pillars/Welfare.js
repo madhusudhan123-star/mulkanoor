@@ -283,7 +283,7 @@ const Welfare = () => {
                                 
                                 <li className='pl-5'><strong className='font-bold text-xl'>Crop loan waiver:</strong> Deceased Members Crop Loan amount up to Rs. 1,50,000/- is waived from society funds.</li>
                                 
-                                <li className='pl-5'><strong className='font-bold text-xl'>Old age pension:</strong> For the financial and moral support to elderly people the society initiated an old age pension to members who are 65 years of age and completed 35 years as a member of the society.</li>
+                                <li className='pl-5'><strong className='font-bold text-xl'>Old age pension:</strong> For the financial and moral support to elderly people the society initiated an old age pension Rs 1000/-  to members who are 65 years of age and completed 35 years as a member of the society.</li>
                             </ul>
                             <div className="mt-6 flex justify-center">
                                 <a 
