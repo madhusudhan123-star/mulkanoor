@@ -23,31 +23,26 @@ const Paper = () => {
       id: 2,
       image: paper2,
       title: "SAAKSHI",
-      date: "19-08-2024",
     },
     {
       id: 3,
       image: paper3,
       title: "Namaste Talangana",
-      date: "27-09-2024",
     },
     {
       id: 4,
       image: paper4,
       title: "Praja Mantalu",
-      date: "27-09-2024",
     },
     {
       id: 5,
       image: paper5,
       title: "Vijayakranthi",
-      date: "26-09-2024",
     },
     {
       id: 6,
       image: paper6,
       title: "2-Sakshi Paper",
-      date: "",
     }
   ];
 
@@ -80,7 +75,7 @@ const Paper = () => {
       {/* Hero Section */}
       <div className="container mx-auto px-4 mb-12">
         <div className="text-center">
-          <h1 className="text-3xl md:text-5xl font-bold text-green-800 mb-4">Press Coverage</h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-green-800 mb-4">Telugu Articles</h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Explore news articles and press coverage highlighting Mulkanoor Cooperative Society's 
             achievements, innovations, and contributions to agricultural development.

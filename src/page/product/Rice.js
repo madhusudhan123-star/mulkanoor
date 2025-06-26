@@ -13,7 +13,7 @@ const riceData = {
   varieties: [
     { name: 'Sona Masoori (BPT 5204)', content: "The preferred choice for over Decades ! Light, tasty, and perfect for everyday meals.", image: card1 },
     { name: 'Jai Sri Ram', content: "The go-to rice for celebrations! Widely used in all households for festivals and special occasions.", image: card2 },
-    { name: 'Telangana RNR (1048)', content: "ICAR-approved & patented! A healthier alternative with a low glycemic index, making it ideal for people with diabetes.", image: card3 }
+    { name: 'Telangana RNR (15048)', content: "ICAR-approved & patented! A healthier alternative with a low glycemic index, making it ideal for people with diabetes.", image: card3 }
   ],
   salesData: [
     {

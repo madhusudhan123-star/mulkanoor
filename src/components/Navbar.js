@@ -148,8 +148,13 @@ const Navbar = () => {
             ]
         },
         {
-            title: 'Annual report',
-            path: "/report"
+            title: 'Download',
+            path: "/report",
+            submenu: [
+                { title: 'Annual report', path: '/report' },
+                { title: 'PPT', path: '#' },
+                { title: 'Society Videos', path: '#' },
+            ]
         }
     ];
 
@@ -252,11 +257,12 @@ const Navbar = () => {
                         <a href='/'>
                             <img src={logo} alt="Logo" className="h-10 md:h-14 rounded-full w-auto" />
                         </a>
-                    </div>
-
-                    {/* Center - Title */}
-                    <div className="hidden md:block text-center flex-1">
-                        <h1 className="text-2xl font-bold text-white">Mulkanoor Cooperative Rural Credit & Marketing Society</h1>
+                    </div>                    {/* Center - Title */}
+                    <div className="text-center flex-1 mx-2">
+                        <h1 className="text-base sm:text-xl md:text-4xl font-bold text-white leading-tight">
+                            <span className="block md:inline">Mulkanoor Cooperative</span>
+                            <span className="block md:inline md:ml-1">Rural Credit & Marketing Society</span>
+                        </h1>
                     </div>
 
                     {/* Right - Search and Mobile Menu Button */}

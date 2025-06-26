@@ -9,14 +9,14 @@ import nav6 from '../../assets/home/nav6.jpg'
 import nav7 from '../../assets/home/nav7.jpg'
 import nav8 from '../../assets/home/nav8.jpg'
 import nav9 from '../../assets/home/nav9.jpg'
-import nav10 from '../../assets/home/nav10.png'
+import nav10 from '../../assets/home/nav10.jpg'
 
 const Second = () => {
     return (
         <div className='px-4 md:px-8 py-8 md:py-12 bg-transparent'>
             <div className='flex items-center text-center justify-center flex-col'>
-                <h1 className='text-3xl md:text-5xl'>Mulkanoor Cooperative Ecosystem</h1>
-                <p className='text-base md:text-lg w-full md:w-1/2 mt-4 md:mt-5 px-2'>
+                <h1 className='text-2xl md:text-5xl'>Mulkanoor Cooperative Ecosystem</h1>
+                <p className='text-sm md:text-lg w-full md:w-1/2 mt-4 md:mt-5 px-2'>
                     For 69+ years, Mulkanoor Coop has transformed into a holistic network of solutions, resources, and assistance for farmers, championing equity, openness, and sustainable development.
                 </p>
                 

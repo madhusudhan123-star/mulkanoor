@@ -278,12 +278,12 @@ const Insurance = () => {
                 
                 {/* Pension Note - Enhanced mobile styling with Black Text */}
                 <motion.div 
-                    className="mt-4 sm:mt-6 p-3 sm:p-4 bg-gray-100/90 lg:bg-blue-800/20 rounded-lg border border-gray-400/50 lg:border-blue-700/30"
+                    className="mt-4 sm:mt-6 p-3 sm:p-4 bg-gray-100/90 rounded-lg border border-gray-400/50 lg:border-blue-700/30"
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
                 >
-                    <p className="text-center text-black lg:text-blue-100 font-medium text-sm sm:text-base">
+                    <p className="text-center text-black lg:text-green-600 font-medium text-sm sm:text-base">
                         <strong>Note:</strong> Pension - ₹1,000 per month
                     </p>
                 </motion.div>

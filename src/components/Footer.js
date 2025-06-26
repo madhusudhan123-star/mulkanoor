@@ -48,7 +48,7 @@ const Footer = () => {
                             <p className="flex items-start gap-2">
                                 <FaMapMarkerAlt className="flex-shrink-0 mt-1" size={14} />
                                 <span className="text-xs md:text-sm">
-                                MULKANOOR COOPERATIVE RURAL CREDIT AND MARKETING SOCIETY LTD., MULKANOOR VILLAGE, BHEEMADEVARAPALLY MANDAL, HANUMAKONDA DISTRICT-505471
+                                Mulkanoor Cooperative Rural Credit and Marketing Society Ltd., Mulkanoor Village, Bheemadevarapally Mandal, Hanumakonda District-505471
                                 </span>
                             </p>
                             <Link

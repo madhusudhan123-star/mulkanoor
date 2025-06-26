@@ -17,25 +17,25 @@ const Contact = () => {
 
     const contactInfo = [
         {
-            icon: <FaPhone className="text-2xl" />,
+            // icon: <FaPhone className="text-2xl" />,
             title: "Phone",
             details: ["+91 9440800651"],
             animation: { y: [0, -5, 0], transition: { duration: 2, repeat: Infinity } }
         },
         {
-            icon: <FaEnvelope className="text-2xl" />,
+            // icon: <FaEnvelope className="text-2xl" />,
             title: "Email",
             details: ["mcrcms1956@gmail.com"],
             animation: { x: [-5, 5, -5], transition: { duration: 2, repeat: Infinity } }
         },
         {
-            icon: <FaMapMarkerAlt className="text-2xl" />,
+            // icon: <FaMapMarkerAlt className="text-2xl" />,
             title: "Address",
-            details: ["MULKANOOR COOPERATIVE RURAL CREDIT AND MARKETING SOCIETY LTD., MULKANOOR VILLAGE, BHEEMADEVARAPALLY MANDAL, HANUMAKONDA DISTRICT-505471"],
+            details: ["                                Mulkanoor Cooperative Rural Credit and Marketing Society Ltd., Mulkanoor Village, Bheemadevarapally Mandal, Hanumakonda District-505471"],
             animation: { scale: [1, 1.1, 1], transition: { duration: 2, repeat: Infinity } }
         },
         {
-            icon: <FaClock className="text-2xl" />,
+            // icon: <FaClock className="text-2xl" />,
             title: "Working Hours",
             details: ["Monday - Saturday", "9:00 AM - 6:00 PM"],
             animation: { rotate: [0, 5, -5, 0], transition: { duration: 3, repeat: Infinity } }
@@ -97,12 +97,12 @@ const Contact = () => {
                             transition={{ delay: index * 0.1 }}
                             whileHover={{ y: -5 }}
                         >
-                            <motion.div
+                            {/* <motion.div
                                 className="text-[#8B7355] mb-4"
                                 animate={info.animation}
                             >
                                 {info.icon}
-                            </motion.div>
+                            </motion.div> */}
                             <h3 className="text-xl cursor-default font-semibold text-[#4A3F35] mb-2">{info.title}</h3>
                             {info.details.map((detail, idx) => (
                                 <p key={idx} className="text-[#8B7355]">{detail}</p>

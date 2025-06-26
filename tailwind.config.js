@@ -9,7 +9,7 @@ module.exports = {
         'hero-pattern': "url('../src/assets/homebanner.webp')",
       },
       fontFamily: {
-        custom: ["PP Mori", "sans-serif"],
+        custom: ["sans-serif"],
       },
     },
   },

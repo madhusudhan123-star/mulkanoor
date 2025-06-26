@@ -325,8 +325,7 @@ const Endorsed = () => {
             {/* Founders Grid */}
             <div className="relative z-10 px-4 md:px-8 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {founders.map((founder, index) => (
-                        <motion.div
+                    {founders.map((founder, index) => (                        <motion.div
                             key={founder.id}
                             className="bg-white/5 backdrop-blur-sm cursor-pointer rounded-xl overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105"
                             initial={{ opacity: 0, y: 20 }}
@@ -334,16 +333,16 @@ const Endorsed = () => {
                             transition={{ delay: index * 0.1 }}
                             onClick={() => setSelectedFounder(founder)}
                         >
-                            <div className="relative cursor-pointer h-[400px]">
+                            <div className="relative cursor-pointer h-[280px] sm:h-[320px] md:h-[300px]">
                                 <img
                                     src={founder.image}
                                     alt={founder.name}
-                                    className="w-full h-full "
+                                    className="w-full h-full object-cover"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t cursor-pointer from-black/80 via-black/40 to-transparent" />
-                                <div className="absolute bottom-0 p-4">
-                                    <h3 className="text-xl cursor-default font-bold mb-1">{founder.name}</h3>
-                                    <p className="text-sm cursor-default text-gray-300">{founder.position}</p>
+                                <div className="absolute bottom-0 p-3 md:p-4">
+                                    <h3 className="text-lg md:text-xl cursor-default font-bold mb-1">{founder.name}</h3>
+                                    <p className="text-xs md:text-sm cursor-default text-gray-300">{founder.position}</p>
                                 </div>
                             </div>
                         </motion.div>

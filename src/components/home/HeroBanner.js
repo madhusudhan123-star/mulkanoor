@@ -42,51 +42,107 @@ const cardData = [
 const Card = ({ title, content, image, url, className = '', isHovered, onHover }) => (
     <div
         className={`
-            min-w-[200px] h-[70vh] flex-1 bg-black/40 backdrop-blur-sm p-4 md:p-6 rounded-lg 
-            transition-all duration-700 ease-out
-            transform hover:shadow-2xl
-            ${isHovered ? 'md:flex-grow-[3] scale-105' : 'md:flex-grow-[1] scale-100'}
-            ${!isHovered && onHover ? 'md:flex-grow-[0.7] scale-95' : ''}
+            /* Mobile Design (Enhanced) */
+            w-full sm:min-w-[280px] h-[70vh] sm:h-[75vh] 
+            md:min-w-[200px] md:h-[70vh] flex-1 
+            bg-black/50 md:bg-black/40 backdrop-blur-sm p-4 sm:p-5 md:p-6 
+            rounded-xl md:rounded-lg shadow-lg md:shadow-none
+            transition-all duration-700 ease-out cursor-pointer
+            transform hover:shadow-2xl border border-white/10 md:border-none
+            ${isHovered ? 'md:flex-grow-[3] scale-[1.02] md:scale-105 shadow-2xl' : 'md:flex-grow-[1] scale-100'}
+            ${!isHovered && onHover ? 'md:flex-grow-[0.7] md:scale-95' : ''}
             ${className}
-            hover:bg-black/60
+            hover:bg-black/60 active:scale-95 md:active:scale-100
             bg-cover bg-center bg-no-repeat
-            relative
-            cursor-pointer
+            relative overflow-hidden
         `}
         style={{
             backgroundImage: `url(${image})`
-        }}
-        onMouseEnter={() => onHover(true)}
-        onTouchStart={() => onHover(true)} // Add touch support
+        }} 
+        onMouseEnter={() => onHover(true)} 
         onMouseLeave={() => onHover(false)}
-        onTouchEnd={() => onHover(false)} // Add touch support
+        onTouchStart={() => onHover(true)}
+        onTouchEnd={() => onHover(false)}
+        onClick={() => {
+            // Toggle for mobile, navigate for desktop
+            if (window.innerWidth < 768) {
+                onHover(!isHovered);
+            } else {
+                window.location.href = url;
+            }
+        }}
     >
-        <a href={url}>
-
-            <div className="absolute inset-0 bg-black/40 hover:bg-black/60 transition-colors duration-700 rounded-lg"></div>
-            <div className="relative cursor-pointer z-10">
-                <h1 className='text-xl cursor-pointer md:text-2xl lg:text-4xl mb-3 md:mb-4 lg:mb-10 transition-transform duration-500'>{title}</h1>
-                <div className={`
-                transition-all duration-700 ease-in-out
-                transform
+        {/* Desktop: Simple overlay */}
+        <div className="hidden md:block absolute inset-0 bg-black/40 hover:bg-black/60 transition-colors duration-700 rounded-lg"></div>
+        
+        {/* Mobile: Gradient overlay */}
+        <div className="md:hidden absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 
+                        hover:from-black/90 hover:via-black/50 hover:to-black/30 
+                        transition-all duration-700 rounded-xl"></div>
+        
+        {/* Desktop Content Layout */}
+        <div className="hidden md:block relative z-10">
+            <h1 className='text-xl md:text-2xl lg:text-4xl mb-3 md:mb-4 lg:mb-10 transition-transform duration-500 text-white cursor-pointer'>
+                {title}
+            </h1>
+            <div className={`
+                transition-all duration-700 ease-in-out transform
                 ${isHovered
-                        ? 'opacity-100 max-h-[1000px] translate-y-0' // Increased max-height for mobile
-                        : 'md:opacity-0 md:max-h-0 md:translate-y-10 md:overflow-hidden opacity-100 max-h-full'
-                    }
+                    ? 'opacity-100 max-h-[1000px] translate-y-0'
+                    : 'md:opacity-0 md:max-h-0 md:translate-y-10 md:overflow-hidden opacity-100 max-h-full'
+                }
             `}>
-                    <p className={`
-                    text-start cursor-pointer
+                <p className={`
+                    text-start cursor-pointer text-white
                     transition-all duration-500
                     ${title === 'rooted in trust and collaboration'
-                            ? 'text-xs md:text-sm'
-                            : 'text-sm md:text-lg lg:text-2xl'}
-                    leading-relaxed /* Better readability */
+                        ? 'text-xs md:text-sm'
+                        : 'text-sm md:text-lg lg:text-2xl'}
+                    leading-relaxed
                 `}>
+                    {content}
+                </p>
+            </div>
+        </div>
+
+        {/* Mobile Content Layout */}
+        <div className="md:hidden relative z-10 h-full flex flex-col justify-between py-10">
+            {/* Title */}
+            <div className="flex-shrink-0">
+                <h2 className='text-xl sm:text-2xl font-bold text-white mb-2 
+                              transition-all duration-500 drop-shadow-lg leading-tight'>
+                    {title}
+                </h2>
+            </div>
+            
+            {/* Content */}
+            <div className={`
+                flex-grow flex items-end
+                transition-all duration-700 ease-in-out transform
+                ${isHovered
+                    ? 'opacity-100 max-h-[400px] translate-y-0' 
+                    : 'opacity-80 sm:opacity-60 max-h-[80px] sm:max-h-[100px] overflow-hidden'
+                }
+            `}>
+                <div className="w-full">
+                    <p className='text-white text-sm sm:text-base
+                                leading-relaxed drop-shadow-md
+                                transition-all duration-500'>
                         {content}
                     </p>
+                    
+                    {/* Call to action - only visible when hovered */}
+                    <div className={`
+                        mt-3 transition-all duration-500
+                        ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}
+                    `}>
+                        <span className="inline-flex items-center text-yellow-400 font-medium text-sm
+                                       hover:text-yellow-300 transition-colors">
+                        </span>
+                    </div>
                 </div>
             </div>
-        </a>
+        </div>
     </div>
 );
 
@@ -117,13 +173,30 @@ const HeroBanner = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     return (
-        <div className="relative z-10 px-2 md:px-4 py-4 md:py-0 min-h-screen flex justify-start items-start overflow-x-hidden">
-            <div className="container mx-auto flex items-center flex-col text-center">
-                <h1 className='text-2xl cursor-default text-black md:text-3xl lg:text-5xl font-bold mb-6 md:mb-8 lg:mb-16 px-4'>
-                    Elevating Lives Together: From Cooperation to Prosperity
-                </h1>
+        <div className="relative z-10 px-3 sm:px-4 md:px-2 lg:px-4 py-6 md:py-4 lg:py-12 
+                        min-h-[120vh] sm:min-h-[110vh] md:min-h-screen h-auto 
+                        pb-20 sm:pb-24 md:pb-0 lg:pb-20 xl:pb-24 
+                        flex justify-center md:justify-start items-center md:items-start overflow-x-hidden">
+            <div className="container mx-auto flex items-center flex-col text-center max-w-7xl">
+                {/* Main Title */}
+                <div className="mb-8 md:mb-6 lg:mb-8 xl:mb-16">
+                    <h1 className='text-2xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-6xl 
+                                 cursor-default text-black font-bold 
+                                 px-2 sm:px-4 leading-tight text-center
+                                 drop-shadow-sm'>
+                        <span className="text-black">
+                            Elevating Lives Together
+                        </span>
+                        <br className="hidden sm:block md:hidden lg:block" />
+                        <span className="block sm:inline md:inline sm:ml-2 md:ml-1">
+                            From Cooperation to Prosperity
+                        </span>
+                    </h1>
+                </div>
 
-                <div className='flex flex-col md:flex-row items-stretch justify-between gap-4 md:gap-2 w-full'>
+                {/* Cards Container */}
+                <div className='flex flex-col md:flex-row items-stretch justify-center md:justify-between 
+                              gap-4 sm:gap-5 md:gap-2 lg:gap-4 w-full max-w-6xl mb-12 sm:mb-16 md:mb-0'>
                     {cardData.map((card, index) => (
                         <Card
                             key={index}
@@ -139,7 +212,8 @@ const HeroBanner = () => {
                             }}
                             className={`
                                 mb-4 md:mb-0 
-                                ${hoveredIndex !== null && hoveredIndex !== index ? 'md:opacity-75' : ''}
+                                transition-all duration-500
+                                ${hoveredIndex !== null && hoveredIndex !== index ? 'md:opacity-75' : 'opacity-100 scale-100'}
                             `}
                         />
                     ))}

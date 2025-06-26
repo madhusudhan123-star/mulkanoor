@@ -156,7 +156,7 @@ const Home = () => {
             {/* Content sections */}
             <div className="relative">
                 {/* Video Hero Section */}
-                <section className="h-screen mt-28 w-full overflow-hidden snap-start">
+                <section className=" h-[160vh] md:h-[110vh] mt-10 md:mt-28 w-full overflow-hidden snap-start">
                     <HeroBanner />
                     {/* <Head /> */}
                 </section>
