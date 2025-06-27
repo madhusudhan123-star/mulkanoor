@@ -16,33 +16,32 @@ const Paper = () => {
     {
       id: 1,
       image: paper1,
-      title: "Eenadu paper",
-      date: "",
+      title: "ముల్కనూరు బియ్యం: నాణ్యత 100% - ఈనాడు ప్రత్యేక కథనం",
     },
     {
       id: 2,
       image: paper2,
-      title: "SAAKSHI",
+      title: "రైతుపాలిట కల్పతరువు: ముల్కనూరు సహకార గ్రామీణ పరపతి సంఘం – సాక్షి ప్రత్యేక కథనం",
     },
     {
       id: 3,
       image: paper3,
-      title: "Namaste Talangana",
+      title: "ముల్కనూరు సహకార గ్రామీణ పరపతి సంఘం: రైతుల పాలిట కల్పతరువు – నమస్తే తెలంగాణ ప్రత్యేక కథనం",
     },
     {
       id: 4,
       image: paper4,
-      title: "Praja Mantalu",
+      title: "రైతు సంక్షేమానికి కాంక్షించే ఏకైక సహకార సంఘం ముల్కనూరు బ్యాంక్- ప్రజామంటలు వారి ప్రత్యేక కథనం",
     },
     {
       id: 5,
       image: paper5,
-      title: "Vijayakranthi",
+      title: "సహకార సిగలో కాంతిరేఖ: ముల్కనూరు సహకార సంఘం- విజయక్రాంతి వారి ప్రత్యేక కథనం.",
     },
     {
       id: 6,
       image: paper6,
-      title: "2-Sakshi Paper",
+      title: "సహకార స్ఫూర్తికి జేజేలు అంటూ ముల్కనూరు సహకార సంఘం పై సాక్షి వారి ప్రత్యేక కథనం",
     }
   ];
 
@@ -104,7 +103,7 @@ const Paper = () => {
                 />
               </div>
               <div className="p-4">
-                <span className="text-xs text-green-700 font-medium">{paper.source} • {paper.date}</span>
+                {/* <span className="text-xs text-green-700 font-medium">{paper.source} • {paper.date}</span> */}
                 <h3 className="text-xl font-semibold text-gray-800 mt-1 cursor-pointer hover:text-green-700 transition-colors">{paper.title}</h3>
                 <div className="flex justify-end mt-2">
                   <button 
