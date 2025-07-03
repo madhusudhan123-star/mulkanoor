@@ -107,12 +107,16 @@ const Navbar = () => {
             title: 'Our Services',
             path: '#pillars',
             submenu: [
-                { title: 'Financial Services', path: '/pillars/winning' },
+                { title: 'Credit Facility', path: '/pillars/winning' },
                 { title: 'Agri Inputs', path: '/pillars/agri' },
                 { title: 'Agri Extension Services', path: '/pillars/extension' },
-                { title: 'Value-Added Services', path: '/pillars/values' },
-                { title: 'Insurance Services', path: '/pillars/insurance' },
+                { title: 'Agriproduce Procurement', path: '/product' },
+                { title: 'Processing Facilities', path: '/processing' },
+                { title: 'Value Added Products', path: '/marketing' },
+                { title: 'Consumer Services', path: '/consumer' },
                 { title: 'Welfare Activities', path: '/pillars/Welfare' },
+
+
             ]
         },
         {

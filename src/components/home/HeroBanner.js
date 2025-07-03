@@ -17,25 +17,22 @@ const cardData = [
         title: "Empowering",
         content: "Celebrating 69+ years of services to farmers with dedication and trust.",
         image: card1,
-        url: '/discover/story'
     },
     {
         title: "Farmers",
         content: "Members are facilitated with credit, input supply and marketing for hassle free farming.",
         image: card2,
-        url: '/farmer'
     },
     {
         title: "Enriching",
         content: "Increasing farmer’s income, enabling dignified living, and creating better livelihood opportunities for farming communities.",
         image: card3,
-        url: '/discover/mission'
+
     },
     {
         title: "Communities",
         content: `So we prosper with trust, innovation and dedication being our core - from farms to future.`,
         image: card4,
-        url: '/cta'
     }
 ];
 
@@ -47,7 +44,7 @@ const Card = ({ title, content, image, url, className = '', isHovered, onHover }
             md:min-w-[200px] md:h-[70vh] flex-1 
             bg-black/50 md:bg-black/40 backdrop-blur-sm p-4 sm:p-5 md:p-6 
             rounded-xl md:rounded-lg shadow-lg md:shadow-none
-            transition-all duration-700 ease-out cursor-pointer
+            transition-all duration-700 ease-out
             transform hover:shadow-2xl border border-white/10 md:border-none
             ${isHovered ? 'md:flex-grow-[3] scale-[1.02] md:scale-105 shadow-2xl' : 'md:flex-grow-[1] scale-100'}
             ${!isHovered && onHover ? 'md:flex-grow-[0.7] md:scale-95' : ''}
@@ -62,16 +59,7 @@ const Card = ({ title, content, image, url, className = '', isHovered, onHover }
         onMouseEnter={() => onHover(true)} 
         onMouseLeave={() => onHover(false)}
         onTouchStart={() => onHover(true)}
-        onTouchEnd={() => onHover(false)}
-        onClick={() => {
-            // Toggle for mobile, navigate for desktop
-            if (window.innerWidth < 768) {
-                onHover(!isHovered);
-            } else {
-                window.location.href = url;
-            }
-        }}
-    >
+        onTouchEnd={() => onHover(false)}>
         {/* Desktop: Simple overlay */}
         <div className="hidden md:block absolute inset-0 bg-black/40 hover:bg-black/60 transition-colors duration-700 rounded-lg"></div>
         
