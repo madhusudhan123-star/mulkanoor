@@ -9,15 +9,15 @@ const Videos = () => {
       id: 1,
       title: "Mulkanoor Cooperative Society - Our Journey",
       description: "Learn about the history and impact of Mulkanoor Cooperative Society on local farming communities and rural development.",
-      embedUrl: "https://www.youtube.com/embed/EXAMPLE_VIDEO_ID_1", // Replace with actual YouTube embed ID
-      thumbnailUrl: "https://img.youtube.com/vi/EXAMPLE_VIDEO_ID_1/maxresdefault.jpg" // Replace with actual thumbnail
+      embedUrl: "https://www.youtube.com/embed/6cA5lgAGJJ0", // Corrected embed URL
+      thumbnailUrl: "https://img.youtube.com/vi/6cA5lgAGJJ0/maxresdefault.jpg"
     },
     {
       id: 2,
       title: "Sustainable Agricultural Practices at Mulkanoor",
       description: "Explore the innovative agricultural techniques and sustainable farming practices implemented by our cooperative members.",
-      embedUrl: "https://www.youtube.com/embed/EXAMPLE_VIDEO_ID_2", // Replace with actual YouTube embed ID
-      thumbnailUrl: "https://img.youtube.com/vi/EXAMPLE_VIDEO_ID_2/maxresdefault.jpg" // Replace with actual thumbnail
+      embedUrl: "https://www.youtube.com/embed/gD-XybQhWSc", // Corrected embed URL
+      thumbnailUrl: "https://img.youtube.com/vi/gD-XybQhWSc/maxresdefault.jpg"
     }
   ];
 
@@ -57,24 +57,19 @@ const Videos = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="bg-white rounded-xl overflow-hidden shadow-xl"
+              className="bg-transparent rounded-xl overflow-hidden"
             >
               {/* Video Player */}
               <div className="aspect-w-16 aspect-h-9">
                 <iframe 
                   src={video.embedUrl}
                   title={video.title}
-                  className="w-full h-full"
+                  className="w-full h-64 md:h-80 lg:h-96"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
               </div>
               
-              {/* Video Information */}
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-slate-800 mb-3">{video.title}</h3>
-                <p className="text-slate-600">{video.description}</p>
-              </div>
             </motion.div>
           ))}
         </div>

@@ -138,20 +138,6 @@ const Winning = () => {
                                  group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                    
-                    {/* Icon Overlay */}
-                    {/* <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm 
-                                  rounded-full p-3 text-white transform transition-all duration-300
-                                  group-hover:scale-110 group-hover:bg-green-500/80">
-                        {formula.icon}
-                    </div> */}
-
-                    {/* Number Badge */}
-                    {/* <div className="absolute top-4 left-4 bg-green-600 text-white 
-                                  rounded-full w-8 h-8 flex items-center justify-center 
-                                  font-bold text-sm">
-                        {index + 1}
-                    </div> */}
                 </div>
 
                 {/* Content Section */}
@@ -221,7 +207,7 @@ const Winning = () => {
                     </p>
 
                     {/* Stats Row */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-3xl mx-auto">
+                    {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-3xl mx-auto">
                         {[
                             { number: "69+", label: "Years of Success" },
                             { number: "7600+", label: "Farmers Empowered" },
@@ -241,7 +227,7 @@ const Winning = () => {
                                 <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
                             </motion.div>
                         ))}
-                    </div>
+                    </div> */}
                 </motion.div>
             </div>
 

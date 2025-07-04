@@ -26,6 +26,13 @@ const Six = () => {
             url: "https://www.instagram.com/mulkanoor_coop/?hl=en",
             color: "bg-pink-100 text-pink-600 hover:bg-pink-600 hover:text-white",
         },
+        {
+            name: "YouTube",
+            icon: <FaYoutube size={24} />,
+            username: "@mulkanoorCoop",
+            url: "https://www.youtube.com/@mulkanoorbank4307",
+            color: "bg-red-100 text-red-600 hover:bg-red-600 hover:text-white",
+        },
     ];
 
     return (
@@ -55,7 +62,7 @@ const Six = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
                         {socialPlatforms.map((platform, index) => (
                             <a
                                 key={index}

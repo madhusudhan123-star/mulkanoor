@@ -124,7 +124,7 @@ export const Third = () => {
             {/* Testimonial Slider Section */}
             <div className="relative max-w-6xl mx-auto overflow-hidden" ref={testimonialRef}>
                 {/* Main Content Area */}
-                <div className="min-h-[500px] sm:min-h-[520px] md:min-h-[400px] relative">
+                <div className="min-h-[500px] sm:min-h-[550px] md:min-h-[340px] relative">
                     <AnimatePresence initial={false} custom={direction}>
                         <motion.div
                             key={currentIndex}
