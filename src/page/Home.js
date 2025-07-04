@@ -173,13 +173,13 @@ const Home = () => {
                     </motion.section>
 
                     <motion.section className="px-4 md:px-8">
-                                    <h1 className='text-2xl md:text-5xl text-center font-medium mb-8 md:mb-12'>
+                                    <h1 className='text-2xl md:text-5xl text-center font-medium mb-4'>
                 Farmer's Voice : What they Say about Us
             </h1>
                         <Third />
                     </motion.section>
 
-                    <motion.section className="px-4 md:px-8 py-20">
+                    <motion.section className="px-4 md:px-8">
                         <Fourth />
                     </motion.section>
 
@@ -187,7 +187,7 @@ const Home = () => {
                         <Five />
                     </motion.section> */}
 
-                    <motion.section className="w-full py-20">
+                    <motion.section className="w-full">
                         <Six />
                     </motion.section>
                 </motion.div>

@@ -119,7 +119,7 @@ export const Third = () => {
     };
 
     return (
-        <div className="container mx-auto px-2 sm:px-4 md:px-8 py-6 md:py-16 bg-transparent">
+        <div className="container mx-auto px-2 sm:px-4 md:px-8 bg-transparent">
 
             {/* Testimonial Slider Section */}
             <div className="relative max-w-6xl mx-auto overflow-hidden" ref={testimonialRef}>

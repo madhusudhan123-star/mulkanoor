@@ -442,7 +442,7 @@ const Navbar = () => {
                                 {showSuggestions && (
                                     <div
                                         ref={mobileSuggestionsRef}
-                                        className="absolute left-0 right-0 bg-white rounded-md shadow-md z-[100] mt-1 border border-gray-200 max-h-60 overflow-y-auto"
+                                        className="absolute left-0 right-0 bg-white rounded-md shadow-md z-[100] mt-1 border border-gray-200 max-h-72 overflow-y-auto"
                                     >
                                         {suggestions.map((item, index) => (
                                             <div
@@ -472,7 +472,7 @@ const Navbar = () => {
                                                     <FaChevronDown className={`transform transition-transform ${activeDropdown === index ? 'rotate-180' : ''}`} />
                                                 </button>
 
-                                                <div className={`overflow-hidden transition-all duration-200 ${activeDropdown === index ? 'max-h-60' : 'max-h-0'}`}>
+                                                <div className={`overflow-hidden transition-all duration-200 ${activeDropdown === index ? 'max-h-72' : 'max-h-0'}`}>
                                                     <div className="ml-3 border-l border-gray-100 pl-2">
                                                         {item.submenu.map((subItem, subIndex) => (
                                                             <a

@@ -161,13 +161,13 @@ const HeroBanner = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     return (
-        <div className="relative z-10 px-3 sm:px-4 md:px-2 lg:px-4 py-6 md:py-4 lg:py-12 
+        <div className="relative z-10 px-3 sm:px-4 md:px-2 lg:px-4 py-6 md:py-4 
                         min-h-[120vh] sm:min-h-[110vh] md:min-h-screen h-auto 
                         pb-20 sm:pb-24 md:pb-0 lg:pb-20 xl:pb-24 
                         flex justify-center md:justify-start items-center md:items-start overflow-x-hidden">
             <div className="container mx-auto flex items-center flex-col text-center max-w-7xl">
                 {/* Main Title */}
-                <div className="mb-8 md:mb-6 lg:mb-8 xl:mb-16">
+                <div className="mb-8 md:mb-6 lg:mb-8">
                     <h1 className='text-2xl sm:text-3xl md:text-3xl lg:text-5xl xl:text-6xl 
                                  cursor-default text-black font-bold 
                                  px-2 sm:px-4 leading-tight text-center

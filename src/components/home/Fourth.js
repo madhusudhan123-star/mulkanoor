@@ -76,7 +76,7 @@ const Fourth = () => {
     return (
         <div className="container mx-auto px-4 md:px-8">
             {/* Main Heading */}
-            <h1 className="text-2xl cursor-default md:text-5xl text-center font-medium mb-10 md:mb-16">
+            <h1 className="text-2xl cursor-default md:text-5xl text-center font-medium mb-5">
                 Initiatives for Community
             </h1>
 
